@@ -39,5 +39,34 @@ namespace EntiEspais.Classes
             FormAdministrador fAdministradors = new FormAdministrador();
             fAdministradors.ShowDialog();
         }
+
+        //ens obre un formulari esports
+        public static void obrirFormEsports()
+        {
+            FormEsports fEsports = new FormEsports();
+            fEsports.ShowDialog();
+        }
+
+        //ens obre un formulari esport
+        public static void obrirFormEsport()
+        {
+            FormEsport fEsport = new FormEsport();
+            fEsport.ShowDialog();
+        }
+
+        //ens obre un formulari sexes
+        public static void obrirFormSexes()
+        {
+            FormSexes fSexes = new FormSexes();
+            fSexes.ShowDialog();
+        }
+
+        //ens obre un formulari sexe
+        public static void obrirFormSexe()
+        {
+            FormSexe fSexe = new FormSexe();
+            fSexe.ShowDialog();
+        }
+
     }
 }

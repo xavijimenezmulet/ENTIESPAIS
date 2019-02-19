@@ -124,6 +124,54 @@
     <Compile Include="Formularis\FormAdministradors.Designer.cs">
       <DependentUpon>FormAdministradors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormCategoriaEdat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEdat.Designer.cs">
+      <DependentUpon>FormCategoriaEdat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEdats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEdats.Designer.cs">
+      <DependentUpon>FormCategoriaEdats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEquip.Designer.cs">
+      <DependentUpon>FormCategoriaEquip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEquips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormCategoriaEquips.Designer.cs">
+      <DependentUpon>FormCategoriaEquips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormCompeticio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormCompeticio.Designer.cs">
+      <DependentUpon>FormCompeticio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormCompeticions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormCompeticions.Designer.cs">
+      <DependentUpon>FormCompeticions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEsport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEsport.Designer.cs">
+      <DependentUpon>FormEsport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEsports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEsports.Designer.cs">
+      <DependentUpon>FormEsports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +183,18 @@
     </Compile>
     <Compile Include="Formularis\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormSexe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormSexe.Designer.cs">
+      <DependentUpon>FormSexe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormSexes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormSexes.Designer.cs">
+      <DependentUpon>FormSexes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularis\SplashInicio.cs">
       <SubType>Form</SubType>
@@ -196,11 +256,41 @@
     <EmbeddedResource Include="Formularis\FormAdministradors.resx">
       <DependentUpon>FormAdministradors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormCategoriaEdat.resx">
+      <DependentUpon>FormCategoriaEdat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormCategoriaEdats.resx">
+      <DependentUpon>FormCategoriaEdats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormCategoriaEquip.resx">
+      <DependentUpon>FormCategoriaEquip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormCategoriaEquips.resx">
+      <DependentUpon>FormCategoriaEquips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormCompeticio.resx">
+      <DependentUpon>FormCompeticio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormCompeticions.resx">
+      <DependentUpon>FormCompeticions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEsport.resx">
+      <DependentUpon>FormEsport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEsports.resx">
+      <DependentUpon>FormEsports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormSexe.resx">
+      <DependentUpon>FormSexe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormSexes.resx">
+      <DependentUpon>FormSexes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\SplashInicio.resx">
       <DependentUpon>SplashInicio.cs</DependentUpon>

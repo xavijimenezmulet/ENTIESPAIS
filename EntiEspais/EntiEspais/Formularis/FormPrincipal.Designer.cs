@@ -96,6 +96,27 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timerImagenes = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
+            this.dataGridViewInstalacions = new System.Windows.Forms.DataGridView();
+            this.labelLlistatEntitats = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.labelHora = new System.Windows.Forms.Label();
+            this.Reloj = new System.Windows.Forms.Timer(this.components);
+            this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contrasenyaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutaimagenDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.altitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.latitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSPAISDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hORARIINSTALACIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iNSTALACIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,27 +131,6 @@
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tELEFONSENTITATSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eNTITATSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewInstalacions = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contrasenyaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rutaimagenDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.altitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.latitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eSPAISDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hORARIINSTALACIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iNSTALACIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelLlistatEntitats = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.labelHora = new System.Windows.Forms.Label();
-            this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -142,11 +142,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eNTITATSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNSTALACIONSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNSTALACIONSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNTITATSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
             // 
@@ -327,17 +327,17 @@
             this.llistatActivitatsToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._026_health;
             this.llistatActivitatsToolStripMenuItem.Name = "llistatActivitatsToolStripMenuItem";
             this.llistatActivitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.llistatActivitatsToolStripMenuItem.Text = "Llistat Activitats";
             // 
             // afegirActivitatToolStripMenuItem
             // 
-            this.afegirActivitatToolStripMenuItem.Image = global::EntiEspais.Properties.Resources.add;
+            this.afegirActivitatToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._048_notification;
             this.afegirActivitatToolStripMenuItem.Name = "afegirActivitatToolStripMenuItem";
             this.afegirActivitatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.A)));
-            this.afegirActivitatToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.afegirActivitatToolStripMenuItem.Text = "Afegir Activitat";
+            this.afegirActivitatToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
+            this.afegirActivitatToolStripMenuItem.Text = "Llistat Demanda Activitats";
             // 
             // altresToolStripMenuItem
             // 
@@ -614,6 +614,7 @@
             this.toolStripButtonUsuaris.Name = "toolStripButtonUsuaris";
             this.toolStripButtonUsuaris.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonUsuaris.Text = "USUARIS";
+            this.toolStripButtonUsuaris.Click += new System.EventHandler(this.toolStripButtonUsuaris_Click);
             // 
             // toolStripButtonAltres
             // 
@@ -781,6 +782,225 @@
             this.dataGridViewEntitats.Size = new System.Drawing.Size(173, 271);
             this.dataGridViewEntitats.TabIndex = 9;
             // 
+            // dataGridViewInstalacions
+            // 
+            this.dataGridViewInstalacions.AllowUserToDeleteRows = false;
+            this.dataGridViewInstalacions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewInstalacions.AutoGenerateColumns = false;
+            this.dataGridViewInstalacions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.dataGridViewInstalacions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstalacions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewInstalacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInstalacions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.nomDataGridViewTextBoxColumn1,
+            this.contrasenyaDataGridViewTextBoxColumn1,
+            this.adresaDataGridViewTextBoxColumn1,
+            this.tipusDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn1,
+            this.rutaimagenDataGridViewTextBoxColumn1,
+            this.altitutDataGridViewTextBoxColumn,
+            this.latitutDataGridViewTextBoxColumn,
+            this.eSPAISDataGridViewTextBoxColumn,
+            this.hORARIINSTALACIODataGridViewTextBoxColumn,
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn});
+            this.dataGridViewInstalacions.DataSource = this.iNSTALACIONSBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewInstalacions.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewInstalacions.EnableHeadersVisualStyles = false;
+            this.dataGridViewInstalacions.GridColor = System.Drawing.Color.White;
+            this.dataGridViewInstalacions.Location = new System.Drawing.Point(1090, 111);
+            this.dataGridViewInstalacions.Name = "dataGridViewInstalacions";
+            this.dataGridViewInstalacions.ReadOnly = true;
+            this.dataGridViewInstalacions.RowHeadersVisible = false;
+            this.dataGridViewInstalacions.Size = new System.Drawing.Size(173, 271);
+            this.dataGridViewInstalacions.TabIndex = 10;
+            // 
+            // labelLlistatEntitats
+            // 
+            this.labelLlistatEntitats.AutoSize = true;
+            this.labelLlistatEntitats.BackColor = System.Drawing.Color.Transparent;
+            this.labelLlistatEntitats.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLlistatEntitats.ForeColor = System.Drawing.Color.Snow;
+            this.labelLlistatEntitats.Location = new System.Drawing.Point(31, 83);
+            this.labelLlistatEntitats.Name = "labelLlistatEntitats";
+            this.labelLlistatEntitats.Size = new System.Drawing.Size(135, 25);
+            this.labelLlistatEntitats.TabIndex = 11;
+            this.labelLlistatEntitats.Text = "Llistat Entitats";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(1085, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 25);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Llistat Instal·lacions";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Snow;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.Snow;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(558, 83);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(253, 25);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://www.santcugat.cat/";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
+            this.pictureBox7.Location = new System.Drawing.Point(1042, 27);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
+            // 
+            // labelHora
+            // 
+            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelHora.AutoSize = true;
+            this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.Location = new System.Drawing.Point(1060, 30);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(40, 15);
+            this.labelHora.TabIndex = 15;
+            this.labelHora.Text = "label2";
+            // 
+            // Reloj
+            // 
+            this.Reloj.Enabled = true;
+            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // nomDataGridViewTextBoxColumn1
+            // 
+            this.nomDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomDataGridViewTextBoxColumn1.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn1.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn1.Name = "nomDataGridViewTextBoxColumn1";
+            this.nomDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // contrasenyaDataGridViewTextBoxColumn1
+            // 
+            this.contrasenyaDataGridViewTextBoxColumn1.DataPropertyName = "contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn1.HeaderText = "contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn1.Name = "contrasenyaDataGridViewTextBoxColumn1";
+            this.contrasenyaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.contrasenyaDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // adresaDataGridViewTextBoxColumn1
+            // 
+            this.adresaDataGridViewTextBoxColumn1.DataPropertyName = "adresa";
+            this.adresaDataGridViewTextBoxColumn1.HeaderText = "adresa";
+            this.adresaDataGridViewTextBoxColumn1.Name = "adresaDataGridViewTextBoxColumn1";
+            this.adresaDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.adresaDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // tipusDataGridViewTextBoxColumn
+            // 
+            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "tipus";
+            this.tipusDataGridViewTextBoxColumn.HeaderText = "tipus";
+            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            this.tipusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipusDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            this.emailDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // rutaimagenDataGridViewTextBoxColumn1
+            // 
+            this.rutaimagenDataGridViewTextBoxColumn1.DataPropertyName = "ruta_imagen";
+            this.rutaimagenDataGridViewTextBoxColumn1.HeaderText = "ruta_imagen";
+            this.rutaimagenDataGridViewTextBoxColumn1.Name = "rutaimagenDataGridViewTextBoxColumn1";
+            this.rutaimagenDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.rutaimagenDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // altitutDataGridViewTextBoxColumn
+            // 
+            this.altitutDataGridViewTextBoxColumn.DataPropertyName = "altitut";
+            this.altitutDataGridViewTextBoxColumn.HeaderText = "altitut";
+            this.altitutDataGridViewTextBoxColumn.Name = "altitutDataGridViewTextBoxColumn";
+            this.altitutDataGridViewTextBoxColumn.ReadOnly = true;
+            this.altitutDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // latitutDataGridViewTextBoxColumn
+            // 
+            this.latitutDataGridViewTextBoxColumn.DataPropertyName = "latitut";
+            this.latitutDataGridViewTextBoxColumn.HeaderText = "latitut";
+            this.latitutDataGridViewTextBoxColumn.Name = "latitutDataGridViewTextBoxColumn";
+            this.latitutDataGridViewTextBoxColumn.ReadOnly = true;
+            this.latitutDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // eSPAISDataGridViewTextBoxColumn
+            // 
+            this.eSPAISDataGridViewTextBoxColumn.DataPropertyName = "ESPAIS";
+            this.eSPAISDataGridViewTextBoxColumn.HeaderText = "ESPAIS";
+            this.eSPAISDataGridViewTextBoxColumn.Name = "eSPAISDataGridViewTextBoxColumn";
+            this.eSPAISDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eSPAISDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // hORARIINSTALACIODataGridViewTextBoxColumn
+            // 
+            this.hORARIINSTALACIODataGridViewTextBoxColumn.DataPropertyName = "HORARI_INSTALACIO";
+            this.hORARIINSTALACIODataGridViewTextBoxColumn.HeaderText = "HORARI_INSTALACIO";
+            this.hORARIINSTALACIODataGridViewTextBoxColumn.Name = "hORARIINSTALACIODataGridViewTextBoxColumn";
+            this.hORARIINSTALACIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.hORARIINSTALACIODataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tELEFONSINSTALACIONSDataGridViewTextBoxColumn
+            // 
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.DataPropertyName = "TELEFONS_INSTALACIONS";
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.HeaderText = "TELEFONS_INSTALACIONS";
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.Name = "tELEFONSINSTALACIONSDataGridViewTextBoxColumn";
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iNSTALACIONSBindingSource
+            // 
+            this.iNSTALACIONSBindingSource.DataSource = typeof(EntiEspais.INSTALACIONS);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -889,225 +1109,6 @@
             // 
             this.eNTITATSBindingSource.DataSource = typeof(EntiEspais.ENTITATS);
             // 
-            // dataGridViewInstalacions
-            // 
-            this.dataGridViewInstalacions.AllowUserToDeleteRows = false;
-            this.dataGridViewInstalacions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewInstalacions.AutoGenerateColumns = false;
-            this.dataGridViewInstalacions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.dataGridViewInstalacions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInstalacions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewInstalacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInstalacions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.nomDataGridViewTextBoxColumn1,
-            this.contrasenyaDataGridViewTextBoxColumn1,
-            this.adresaDataGridViewTextBoxColumn1,
-            this.tipusDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn1,
-            this.rutaimagenDataGridViewTextBoxColumn1,
-            this.altitutDataGridViewTextBoxColumn,
-            this.latitutDataGridViewTextBoxColumn,
-            this.eSPAISDataGridViewTextBoxColumn,
-            this.hORARIINSTALACIODataGridViewTextBoxColumn,
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn});
-            this.dataGridViewInstalacions.DataSource = this.iNSTALACIONSBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInstalacions.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewInstalacions.EnableHeadersVisualStyles = false;
-            this.dataGridViewInstalacions.GridColor = System.Drawing.Color.White;
-            this.dataGridViewInstalacions.Location = new System.Drawing.Point(1090, 111);
-            this.dataGridViewInstalacions.Name = "dataGridViewInstalacions";
-            this.dataGridViewInstalacions.ReadOnly = true;
-            this.dataGridViewInstalacions.RowHeadersVisible = false;
-            this.dataGridViewInstalacions.Size = new System.Drawing.Size(173, 271);
-            this.dataGridViewInstalacions.TabIndex = 10;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // nomDataGridViewTextBoxColumn1
-            // 
-            this.nomDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomDataGridViewTextBoxColumn1.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn1.HeaderText = "nom";
-            this.nomDataGridViewTextBoxColumn1.Name = "nomDataGridViewTextBoxColumn1";
-            this.nomDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // contrasenyaDataGridViewTextBoxColumn1
-            // 
-            this.contrasenyaDataGridViewTextBoxColumn1.DataPropertyName = "contrasenya";
-            this.contrasenyaDataGridViewTextBoxColumn1.HeaderText = "contrasenya";
-            this.contrasenyaDataGridViewTextBoxColumn1.Name = "contrasenyaDataGridViewTextBoxColumn1";
-            this.contrasenyaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.contrasenyaDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // adresaDataGridViewTextBoxColumn1
-            // 
-            this.adresaDataGridViewTextBoxColumn1.DataPropertyName = "adresa";
-            this.adresaDataGridViewTextBoxColumn1.HeaderText = "adresa";
-            this.adresaDataGridViewTextBoxColumn1.Name = "adresaDataGridViewTextBoxColumn1";
-            this.adresaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.adresaDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // tipusDataGridViewTextBoxColumn
-            // 
-            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "tipus";
-            this.tipusDataGridViewTextBoxColumn.HeaderText = "tipus";
-            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
-            this.tipusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipusDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            this.emailDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // rutaimagenDataGridViewTextBoxColumn1
-            // 
-            this.rutaimagenDataGridViewTextBoxColumn1.DataPropertyName = "ruta_imagen";
-            this.rutaimagenDataGridViewTextBoxColumn1.HeaderText = "ruta_imagen";
-            this.rutaimagenDataGridViewTextBoxColumn1.Name = "rutaimagenDataGridViewTextBoxColumn1";
-            this.rutaimagenDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.rutaimagenDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // altitutDataGridViewTextBoxColumn
-            // 
-            this.altitutDataGridViewTextBoxColumn.DataPropertyName = "altitut";
-            this.altitutDataGridViewTextBoxColumn.HeaderText = "altitut";
-            this.altitutDataGridViewTextBoxColumn.Name = "altitutDataGridViewTextBoxColumn";
-            this.altitutDataGridViewTextBoxColumn.ReadOnly = true;
-            this.altitutDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // latitutDataGridViewTextBoxColumn
-            // 
-            this.latitutDataGridViewTextBoxColumn.DataPropertyName = "latitut";
-            this.latitutDataGridViewTextBoxColumn.HeaderText = "latitut";
-            this.latitutDataGridViewTextBoxColumn.Name = "latitutDataGridViewTextBoxColumn";
-            this.latitutDataGridViewTextBoxColumn.ReadOnly = true;
-            this.latitutDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // eSPAISDataGridViewTextBoxColumn
-            // 
-            this.eSPAISDataGridViewTextBoxColumn.DataPropertyName = "ESPAIS";
-            this.eSPAISDataGridViewTextBoxColumn.HeaderText = "ESPAIS";
-            this.eSPAISDataGridViewTextBoxColumn.Name = "eSPAISDataGridViewTextBoxColumn";
-            this.eSPAISDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eSPAISDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // hORARIINSTALACIODataGridViewTextBoxColumn
-            // 
-            this.hORARIINSTALACIODataGridViewTextBoxColumn.DataPropertyName = "HORARI_INSTALACIO";
-            this.hORARIINSTALACIODataGridViewTextBoxColumn.HeaderText = "HORARI_INSTALACIO";
-            this.hORARIINSTALACIODataGridViewTextBoxColumn.Name = "hORARIINSTALACIODataGridViewTextBoxColumn";
-            this.hORARIINSTALACIODataGridViewTextBoxColumn.ReadOnly = true;
-            this.hORARIINSTALACIODataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tELEFONSINSTALACIONSDataGridViewTextBoxColumn
-            // 
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.DataPropertyName = "TELEFONS_INSTALACIONS";
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.HeaderText = "TELEFONS_INSTALACIONS";
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.Name = "tELEFONSINSTALACIONSDataGridViewTextBoxColumn";
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iNSTALACIONSBindingSource
-            // 
-            this.iNSTALACIONSBindingSource.DataSource = typeof(EntiEspais.INSTALACIONS);
-            // 
-            // labelLlistatEntitats
-            // 
-            this.labelLlistatEntitats.AutoSize = true;
-            this.labelLlistatEntitats.BackColor = System.Drawing.Color.Transparent;
-            this.labelLlistatEntitats.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLlistatEntitats.ForeColor = System.Drawing.Color.Snow;
-            this.labelLlistatEntitats.Location = new System.Drawing.Point(31, 83);
-            this.labelLlistatEntitats.Name = "labelLlistatEntitats";
-            this.labelLlistatEntitats.Size = new System.Drawing.Size(135, 25);
-            this.labelLlistatEntitats.TabIndex = 11;
-            this.labelLlistatEntitats.Text = "Llistat Entitats";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(1085, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 25);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Llistat Instal·lacions";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Snow;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.Snow;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(558, 83);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(253, 25);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.santcugat.cat/";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
-            this.pictureBox7.Location = new System.Drawing.Point(1042, 27);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 14;
-            this.pictureBox7.TabStop = false;
-            // 
-            // labelHora
-            // 
-            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHora.AutoSize = true;
-            this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.Location = new System.Drawing.Point(1060, 30);
-            this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(40, 15);
-            this.labelHora.TabIndex = 15;
-            this.labelHora.Text = "label2";
-            // 
-            // Reloj
-            // 
-            this.Reloj.Enabled = true;
-            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
-            // 
             // bindingSourceEntitats
             // 
             this.bindingSourceEntitats.DataSource = typeof(EntiEspais.ENTITATS);
@@ -1156,11 +1157,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eNTITATSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNSTALACIONSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNSTALACIONSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNTITATSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

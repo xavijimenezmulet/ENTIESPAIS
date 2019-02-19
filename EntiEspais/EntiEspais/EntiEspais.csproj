@@ -235,6 +235,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\048-notification.png" />
     <None Include="Resources\040-compass.png" />
     <None Include="Resources\037-clock.png" />
     <None Include="Resources\012-idea.png" />

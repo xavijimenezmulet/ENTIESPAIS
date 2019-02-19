@@ -166,11 +166,17 @@
   <data name="gears" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\gears.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="040-compass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\040-compass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CEE_Activat_20180209_1024x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\CEE_Activat_20180209_1024x768.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGOPRINCIPAL_copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\LOGOPRINCIPAL copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondoescritoriofull_copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\fondoescritoriofull copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,9 +186,6 @@
   </data>
   <data name="CEE_Logo_20180209_1024x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\CEE_Logo_20180209_1024x768.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="google_mapspng_open_2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\google-maps-png-open-2000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="025-music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\025-music.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,10 +202,10 @@
   <data name="CEE_Participa_20180209_1024x768" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\CEE_Participa_20180209_1024x768.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGOPRINCIPAL_copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\LOGOPRINCIPAL copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="google_mapspng_open_2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\google-maps-png-open-2000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="040-compass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\040-compass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="048-notification" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\048-notification.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

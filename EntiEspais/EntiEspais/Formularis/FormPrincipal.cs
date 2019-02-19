@@ -113,5 +113,10 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormAdministrador();
         }
+
+        private void toolStripButtonUsuaris_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormAdministradors();
+        }
     }
 }

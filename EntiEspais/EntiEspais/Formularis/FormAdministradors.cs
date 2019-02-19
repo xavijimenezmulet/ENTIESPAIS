@@ -48,5 +48,10 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormAdministrador();
         }
+
+        private void toolStripButtonSortir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

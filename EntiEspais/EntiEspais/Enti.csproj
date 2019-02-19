@@ -1,0 +1,460 @@
+ï»¿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{862E9C26-EEAB-4AB1-83B9-4CDB916B8BE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Enti</RootNamespace>
+    <AssemblyName>Enti</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.9.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.2\lib\net40\GMap.NET.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.9.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.2\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.9.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.9.2\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACTIVITATS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMINISTRADORS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIA_EDAT.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIA_EQUIP.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\blowfish.cs" />
+    <Compile Include="Classes\ObridorFormulari.cs" />
+    <Compile Include="Classes\Utilitats.cs" />
+    <Compile Include="COMPETICIONS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEMANDA_ACT.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIA_SEMANA.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITATS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EQUIPS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESPAIS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESPORTS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAQS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\SplashInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\SplashInicio.Designer.cs">
+      <DependentUpon>SplashInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HORARI_ACTIVITAT.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HORARI_INSTALACIO.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HORES.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INSTALACIONS.cs">
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntiEspais.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntiEspais.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEntiEspais.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEntiEspais.tt</DependentUpon>
+    </Compile>
+    ×  
+ {¯  r poÓ  
+ {¯  r poÔ  
+ {¯  r! poÕ  
+ {¯  oÖ  
+ {¯  o×  
+ {°  ra poÓ  
+ {°  ra poÔ  
+ {°  ri poÕ  
+ {°  oÖ  
+ {°  o×  
+ {±  r£ poÓ  
+ {±  r£ poÔ  
+ {±  r¯ poÕ  
+ {±  oÖ  
+ {±  o×  
+ {²  rí poÓ  
+ {²  rí poÔ  
+ {²  r poÕ  
+ {²  oÖ  
+ {²  o×  
+ {³  rM poÓ  
+ {³  rM poÔ  
+ {³  rc poÕ  
+ {³  oÖ  
+ {³  o×  
+ {´  r© poÓ  
+ {´  r© poÔ  
+ {´  r¹ poÕ  
+ {´  oÖ  
+ {´  o×  
+ {µ  rû poÓ  
+ {µ  rû poÔ  
+ {µ  r poÕ  
+ {µ  oÖ  
+ {µ  o×  
+ {¶  oØ  
+ {¶  rM poÓ  
+ {¶  rM poÔ  
+ {¶  rU poÕ  
+ {¶  oÖ  
+ {·  r¹ poÓ  
+ {·  r¹ poÔ  
+ {·  r poÕ  
+ {·  oÖ  
+ {·  o×  
+ {¸  rÏ poÓ  
+ {¸  rÏ poÔ  
+ {¸  ró poÕ  
+ {¸  oÖ  
+ {¸  o×  
+ "  À@"  PAs  
+(  
+ (  
+ (“ o‘  
+ o_  
+  û   [  sd  
+(’  
+ (“  
+{–  o”  
+ (“  
+{•  o”  
+ (“  
+{‰  o”  
+ (“  
+{ˆ  o”  
+ (“  
+{‡  o”  
+ (“  
+{†  o”  
+ (“  
+{…  o”  
+ (“  
+{ƒ  o”  
+ (“  
+{‚  o”  
+ (“  
+{  o”  
+ (“  
+{€  o”  
+ (“  
+{  o”  
+ (“  
+{~  o”  
+ (“  
+{}  o”  
+ (“  
+{t  o”  
+ (“  
+{s  o”  
+ o•  
+ r× po–  
+tz  (—  
+ {s  (Ù  
+ (˜  
+ rG p(c  
+ (Ú  
+ r po5  
+ (™  
+ şô  sm  
+(š  
+ {s  oœ  
+ {s  o  
+ {t  oœ  
+ {t  o  
+ {}  o›  
+ {~  o›  
+ {  o›  
+ {€  o›  
+ {  o›  
+ {‚  o›  
+ {ƒ  o›  
+ {…  o›  
+ {†  o›  
+ {•  o›  
+ {¹  o›  
+ (œ  
+ (  
+ *Ö}º  (2  
+  (ş   {»  ov  
+ {»   p  o¿  
+ *v {»  oÛ  
+ (Ü  
+ (£  
+ *Š (Ú  
+ (M  
+o^  
+ (M  
+(İ  
+ *0 +      ,{º  ş+
+, {º  oN  
+  (O  
+ * 0 ä        sP  
+}º  {º  sX  
+}»  ([  
+ {»  şû  sm  
+ow  
+ "  À@"  PAs  
+(  
+ (  
+ (˜ o‘  
+ o_  
+  Ø   n  sd  
+(’  
+ o•  
+ (Ş  
+ rc p(c  
+ (Ú  
+ r} po5  
+ (]  
+(İ  
+ (™  
+ şü  sm  
+(š  
+ (œ  
+ *{¼  *"}¼  *{½  *"}½  *{¾  *"}¾  *{¿  *"}¿  *{À  *"}À  *{Á  *"}Á  *{Â  *"}Â  *{Ã  *"}Ã  *{Ä  *"}Ä  *{Å  *"}Å  *{Æ  *"}Æ  *{Ç  *"}Ç  *¶(  
+  s0  
+o!  s+  
+o#  s/  
+o%  *{È  *"}È  *{É  *"}É  *{Ê  *"}Ê  *{Ë  *"}Ë  *{Ì  *"}Ì  *{Í  *"}Í  *¶(  
+  sß  
+o:  s/  
+o<  sà  
+o>  *{Î  *"}Î  *{Ï  *"}Ï  *{Ğ  *"}Ğ  *{Ñ  *"}Ñ  *{Ò  *"}Ò  *{Ó  *"}Ó  *{Ô  *"}Ô  *{Õ  *"}Õ  *{Ö  *"}Ö  *{×  *"}×  *{Ø  *"}Ø  *{Ù  *"}Ù  *:r‰ p(á  
+  * sâ  
+z{Ú  *"}Ú  *{Û  *"}Û  *{Ü  *"}Ü  *{İ  *"}İ  *{Ş  *"}Ş  *{ß  *"}ß  *{à  *"}à  *{á  *"}á  *{â  *"}â  *{ã  *"}ã  *{ä  *"}ä  *{å  *"}å  *{æ  *"}æ  *{ç  *"}ç  *{è  *"}è  *{é  *"}é  *{ê  *"}ê  *{ë  *"}ë  *{ì  *"}ì  *0 /      (ã  
+ (ä  
+ sú  
+oå  
+ş, sè  (æ  
+  *V(  
+  s-  
+on  *{í  *"}í  *{î  *"}î  *{ï  *"}ï  *{ğ  *"}ğ  *{ñ  *"}ñ  *{ò  *"}ò  *{ó  *"}ó  *{ô  *"}ô  *{õ  *"}õ  *{ö  *"}ö  *{÷  *"}÷  *{ø  *"}ø  *&(  
+  * 0 9      ~ù  ş
+," r» pĞ  (Q  
+oç  
+sè  
+€ù   ~ù  + *   0       ~ú  
++ *" €ú  *0 !      („ rï p~ú  oé  
+
+t9  + *   0 !      („ r p~ú  oé  
+
+t9  + *   0 !      („ r p~ú  oé  
+
+t9  + *   0 !      („ r- p~ú  oé  
+
+t9  + *   0 !      („ r9 p~ú  oé  
+
+t9  + *   0 !      („ rC p~ú  oé  
+
+t9  + *   0 !      („ r p~ú  oé  
+
+t9  + *   0 !      („ rÁ p~ú  oé  
+
+t9  + *   0 !      („ rı p~ú  oé  
+
+t9  + *   0 !      („ r3 p~ú  oé  
+
+t9  + *   0 !      („ rs p~ú  oé  
+
+t9  + *   0 !      („ r¯ p~ú  oé  
+
+t9  + *   0 !      („ rã p~ú  oé  
+
+t9  + *   0 !      („ r p~ú  oé  
+
+t9  + *   0 !      („ r3 p~ú  oé  
+
+t9  + *   0 !      („ r? p~ú  oé  
+
+t9  + *   0 !      („ rs p~ú  oé  
+
+t9  + *   0 !      („ r p~ú  oé  
+
+t9  + *   0 !      („ r§ p~
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEE_Activat_20180209_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEE_Comparteix_20180209_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEE_Gaudeix_20180209_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEE_Participa_20180209_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEE_Superat_20180212_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEE_Logo_20180209_1024x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\badge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stadium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\football-field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026-health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040-fired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\037-clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelEntiEspais.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
+      <LastGenOutput>ModelEntiEspais.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelEntiEspais.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
+      <LastGenOutput>ModelEntiEspais.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauraciÃ³n de paquetes NuGet para descargarlos. Para obtener mÃ¡s informaciÃ³n, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -10,6 +10,9 @@ namespace EntiEspais.Classes
 {
     public static class Utilitats
     {
+        /**
+         * ENS SERVEIX PER FICAR LA HORA A LA LABEL DEL MENU
+         **/
         public static String ponerHoraMenu()
         {
             String hora = DateTime.Now.ToString("H:mm") + " " + DateTime.Now.ToLongDateString();

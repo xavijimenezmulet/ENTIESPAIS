@@ -162,5 +162,23 @@ namespace EntiEspais
             markersOverlay.Markers.Add(marker);
             gMapControl1.Overlays.Add(markersOverlay);
         }
+
+        /**
+         * SI ES TORNA A ACTIVAR EL FORMULARI REINCIEM ELS TEXTBOX PER SEGURETAT
+         **/
+        private void FormLogin_Activated(object sender, EventArgs e)
+        {
+            if( !textBoxEmail.Equals( "Email" ))
+            {
+                textBoxEmail.Text = "Email";
+                textBoxEmail.ForeColor = Color.Gray;
+            }
+            if( !textBoxContrassenya.Equals( "Contrassenya"))
+            {
+                textBoxContrassenya.Text = "Contrassenya";
+                textBoxContrassenya.PasswordChar = '\0';
+                textBoxContrassenya.ForeColor = Color.Gray;
+            }
+        }
     }
 }

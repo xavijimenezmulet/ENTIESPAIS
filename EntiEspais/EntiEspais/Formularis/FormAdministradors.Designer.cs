@@ -484,7 +484,7 @@
             this.fAQsToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._012_idea;
             this.fAQsToolStripMenuItem.Name = "fAQsToolStripMenuItem";
             this.fAQsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.fAQsToolStripMenuItem.Text = "FAQ\'s";
             this.fAQsToolStripMenuItem.Click += new System.EventHandler(this.fAQsToolStripMenuItem_Click);
             // 
@@ -606,6 +606,7 @@
             // 
             // dataGridViewAdministradors
             // 
+            this.dataGridViewAdministradors.AllowUserToAddRows = false;
             this.dataGridViewAdministradors.AllowUserToDeleteRows = false;
             this.dataGridViewAdministradors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 

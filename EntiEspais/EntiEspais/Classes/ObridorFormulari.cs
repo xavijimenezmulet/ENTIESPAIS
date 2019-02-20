@@ -40,6 +40,13 @@ namespace EntiEspais.Classes
             fAdministradors.ShowDialog();
         }
 
+        //ens obre un formulari administrador per modificar
+        public static void obrirFormAdministradorModificar(ADMINISTRADORS administrador)
+        {
+            FormAdministrador fAdministradors = new FormAdministrador(administrador);
+            fAdministradors.ShowDialog();
+        }
+
         //ens obre un formulari esports
         public static void obrirFormEsports()
         {

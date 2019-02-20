@@ -54,5 +54,25 @@ namespace EntiEspais.ORM
             return _admins;
 
         }
+
+        /**
+         * ENS ACTUALITZA UN HOTEL ADMINISTADOR DE LA BASE DE DADES 
+         **/
+        public static String UpdateHotel(ADMINISTRADORS administrador)
+        {
+            String missatgeError = "";
+            ADMINISTRADORS a = GeneralORM.bd.ADMINISTRADORS.Find(administrador.id);
+
+            a.nom           = administrador.nom;
+            a.cognoms       = administrador.cognoms;
+            a.contrasenya   = administrador.contrasenya;
+            a.dni           = administrador.dni;
+            a.email         = administrador.email;
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
+        }
     }
 }

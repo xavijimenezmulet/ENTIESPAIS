@@ -265,6 +265,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ORM\AdministradorsORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
     <Compile Include="Program.cs" />

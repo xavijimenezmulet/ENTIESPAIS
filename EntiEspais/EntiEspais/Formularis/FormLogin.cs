@@ -1,4 +1,6 @@
-﻿using EntiEspais.Classes;
+﻿using BlowFishCS;
+using EntiEspais.Classes;
+using EntiEspais.ORM;
 using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
@@ -45,6 +47,7 @@ namespace EntiEspais
         {
             Reloj.Start();
             pictureBox1.Select();
+
         }
 
         
@@ -53,9 +56,40 @@ namespace EntiEspais
          **/
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormPrincipal();
+            if (textBoxEmail.Text.Equals("Email"))
+            {
+                MessageBox.Show("Escriu un Email!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxEmail.Select();
+            }
+            else if (!Utilitats.isAnEmail(textBoxEmail.Text))
+            {
+                MessageBox.Show("Email mal escrit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxEmail.Select();
+            }
+            else if (textBoxContrassenya.Text.Equals("Contrassenya"))
+            {
+                MessageBox.Show("Escriu una Contrassenya!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxContrassenya.Select();
+            }
+            else if (textBoxContrassenya.TextLength < 4)
+            {
+                MessageBox.Show("Contrassenya massa curta!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxEmail.Select();
+            }
+            else if(!AdministradorsORM.FindAdminByEmailAndPassword(textBoxEmail.Text, textBoxContrassenya.Text))
+            {
+                MessageBox.Show("Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxEmail.Select();
+            }
+            else
+            {
+                ObridorFormulari.obrirFormPrincipal();
+            }
         }
 
+        /**
+         * ENTER DE EMAIL QUAN ES CLICA ES BUIDA
+         **/
         private void textBoxEmail_Enter(object sender, EventArgs e)
         {
             if (textBoxEmail.Text.Equals("Email"))
@@ -66,6 +100,9 @@ namespace EntiEspais
                 
         }
 
+        /**
+         * SI SURTS DEL EMAIL I ESTÀ BUID ES TORNA A OMPLIR EL HOLDER
+         **/
         private void textBoxEmail_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
@@ -75,6 +112,9 @@ namespace EntiEspais
             }
         }
 
+        /**
+         * ENTER DE CONTRASSENYA QUAN ES CLICA ES BUIDA
+         **/
         private void textBoxContrassenya_Enter(object sender, EventArgs e)
         {
             if (textBoxContrassenya.Text.Equals("Contrassenya"))
@@ -86,6 +126,9 @@ namespace EntiEspais
             }
         }
 
+        /**
+         * SI SURTS DE CONTRASSENYA I ESTÀ BUID ES TORNA A OMPLIR EL HOLDER
+         **/
         private void textBoxContrassenya_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBoxContrassenya.Text))

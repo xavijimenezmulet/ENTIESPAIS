@@ -118,5 +118,55 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormAdministradors();
         }
+
+        private void toolStripButtonMain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonEntitats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriaEdatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCategoriaEdats();
+        }
+
+        private void categoriaEquipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCategoriaEquips();
+        }
+
+        private void sexeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormSexes();
+        }
+
+        private void competicionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCompeticions();
+        }
+
+        private void telefonsEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormTelefonsEntitats();
+        }
+
+        private void telefonsInstalacionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormTelefonsInstalacions();
+        }
+
+        private void fAQsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormFaqsAndroid();
+        }
+
+        private void toolStripButtonAltres_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormFaqsAndroid();
+        }
     }
 }

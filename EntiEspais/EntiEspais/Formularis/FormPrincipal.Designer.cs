@@ -400,6 +400,7 @@
             this.categoriaEdatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.categoriaEdatToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.categoriaEdatToolStripMenuItem.Text = "Categoria Edat";
+            this.categoriaEdatToolStripMenuItem.Click += new System.EventHandler(this.categoriaEdatToolStripMenuItem_Click);
             // 
             // categoriaEquipToolStripMenuItem
             // 
@@ -408,6 +409,7 @@
             this.categoriaEquipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.categoriaEquipToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.categoriaEquipToolStripMenuItem.Text = "Categoria Equip";
+            this.categoriaEquipToolStripMenuItem.Click += new System.EventHandler(this.categoriaEquipToolStripMenuItem_Click);
             // 
             // sexeToolStripMenuItem
             // 
@@ -416,6 +418,7 @@
             this.sexeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.sexeToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.sexeToolStripMenuItem.Text = "Sexe";
+            this.sexeToolStripMenuItem.Click += new System.EventHandler(this.sexeToolStripMenuItem_Click);
             // 
             // competicionsToolStripMenuItem
             // 
@@ -424,6 +427,7 @@
             this.competicionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.competicionsToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.competicionsToolStripMenuItem.Text = "Competicions";
+            this.competicionsToolStripMenuItem.Click += new System.EventHandler(this.competicionsToolStripMenuItem_Click);
             // 
             // teléfonsToolStripMenuItem
             // 
@@ -442,6 +446,7 @@
             this.telefonsEntitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
             this.telefonsEntitatsToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.telefonsEntitatsToolStripMenuItem.Text = "Telefons Entitats";
+            this.telefonsEntitatsToolStripMenuItem.Click += new System.EventHandler(this.telefonsEntitatsToolStripMenuItem_Click);
             // 
             // telefonsInstalacionsToolStripMenuItem
             // 
@@ -451,6 +456,7 @@
             | System.Windows.Forms.Keys.G)));
             this.telefonsInstalacionsToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.telefonsInstalacionsToolStripMenuItem.Text = "Telefons Instalacions";
+            this.telefonsInstalacionsToolStripMenuItem.Click += new System.EventHandler(this.telefonsInstalacionsToolStripMenuItem_Click);
             // 
             // relacionatsAmbDatesToolStripMenuItem
             // 
@@ -523,8 +529,9 @@
             this.fAQsToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._012_idea;
             this.fAQsToolStripMenuItem.Name = "fAQsToolStripMenuItem";
             this.fAQsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fAQsToolStripMenuItem.Text = "FAQ\'s";
+            this.fAQsToolStripMenuItem.Click += new System.EventHandler(this.fAQsToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -555,6 +562,7 @@
             this.toolStripButtonMain.Name = "toolStripButtonMain";
             this.toolStripButtonMain.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonMain.Text = "MENU PRINCIPAL";
+            this.toolStripButtonMain.Click += new System.EventHandler(this.toolStripButtonMain_Click);
             // 
             // toolStripSeparator1
             // 
@@ -569,6 +577,7 @@
             this.toolStripButtonEntitats.Name = "toolStripButtonEntitats";
             this.toolStripButtonEntitats.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonEntitats.Text = "ENTITATS";
+            this.toolStripButtonEntitats.Click += new System.EventHandler(this.toolStripButtonEntitats_Click);
             // 
             // toolStripButtonEquips
             // 
@@ -619,11 +628,12 @@
             // toolStripButtonAltres
             // 
             this.toolStripButtonAltres.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonAltres.Image = global::EntiEspais.Properties.Resources.gears;
+            this.toolStripButtonAltres.Image = global::EntiEspais.Properties.Resources._012_idea;
             this.toolStripButtonAltres.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonAltres.Name = "toolStripButtonAltres";
             this.toolStripButtonAltres.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonAltres.Text = "ALTRES";
+            this.toolStripButtonAltres.Text = "FAQ\'S ANDROID";
+            this.toolStripButtonAltres.Click += new System.EventHandler(this.toolStripButtonAltres_Click);
             // 
             // toolStripSeparator2
             // 
@@ -877,7 +887,7 @@
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
-            this.pictureBox7.Location = new System.Drawing.Point(1042, 27);
+            this.pictureBox7.Location = new System.Drawing.Point(1012, 27);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(18, 19);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -890,7 +900,7 @@
             this.labelHora.AutoSize = true;
             this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.Location = new System.Drawing.Point(1060, 30);
+            this.labelHora.Location = new System.Drawing.Point(1030, 30);
             this.labelHora.Name = "labelHora";
             this.labelHora.Size = new System.Drawing.Size(40, 15);
             this.labelHora.TabIndex = 15;

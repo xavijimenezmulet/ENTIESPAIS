@@ -22,5 +22,15 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormFaqAndroid();
         }
+
+        private void FormFaqsAndroid_Load(object sender, EventArgs e)
+        {
+            Reloj.Start();
+        }
+
+        private void Reloj_Tick(object sender, EventArgs e)
+        {
+            labelHora.Text = Utilitats.ponerHoraMenu();
+        }
     }
 }

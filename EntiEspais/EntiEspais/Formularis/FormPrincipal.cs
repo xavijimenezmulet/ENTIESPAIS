@@ -1,4 +1,5 @@
 ﻿using EntiEspais.Classes;
+using EntiEspais.ORM;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,7 +72,8 @@ namespace EntiEspais
             pictureBoxImagenPrincipal.Image = pictureBox1.Image;
             Reloj.Start();  //incia el rellotge
             pictureBoxImagenPrincipal.Select(); //seleccionem imatge perque no es seleccioni ninguna grid
-
+            bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual("2018-2019");
+    
             
         }
 

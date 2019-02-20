@@ -40,5 +40,19 @@ namespace EntiEspais.ORM
             return verdader;
 
         }
+
+        /**
+         * ENS RETORNA LA SELECT AMB TOTS ELS ADMINISTRADORS
+         **/
+        public static List<ADMINISTRADORS> SelectAllAdministradors()
+        {
+            List<ADMINISTRADORS> _admins =
+                 (from a in GeneralORM.bd.ADMINISTRADORS
+                  orderby a.nom
+                  select a).ToList();
+
+            return _admins;
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using EntiEspais.Classes;
+using EntiEspais.ORM;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,7 @@ namespace EntiEspais.Formularis
         {
             Reloj.Start();
             pictureBox7.Select();
+            bindingSourceAdministradors.DataSource = AdministradorsORM.SelectAllAdministradors();
         }
 
         private void buttonAfegir_Click(object sender, EventArgs e)

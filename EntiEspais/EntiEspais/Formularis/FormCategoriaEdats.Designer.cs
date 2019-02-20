@@ -35,8 +35,8 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
-            this.dataGridViewEsports = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsports)).BeginInit();
+            this.dataGridViewCategoriaEdats = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategoriaEdats)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminar
@@ -77,15 +77,16 @@
             this.buttonAfegir.TabIndex = 23;
             this.buttonAfegir.Text = "Afegir";
             this.buttonAfegir.UseVisualStyleBackColor = false;
+            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
             // 
-            // dataGridViewEsports
+            // dataGridViewCategoriaEdats
             // 
-            this.dataGridViewEsports.AllowUserToDeleteRows = false;
-            this.dataGridViewEsports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewCategoriaEdats.AllowUserToDeleteRows = false;
+            this.dataGridViewCategoriaEdats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewEsports.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.dataGridViewEsports.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewCategoriaEdats.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.dataGridViewCategoriaEdats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LimeGreen;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,8 +94,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEsports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewEsports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCategoriaEdats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewCategoriaEdats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,13 +103,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEsports.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEsports.EnableHeadersVisualStyles = false;
-            this.dataGridViewEsports.GridColor = System.Drawing.Color.White;
-            this.dataGridViewEsports.Location = new System.Drawing.Point(9, 29);
-            this.dataGridViewEsports.MultiSelect = false;
-            this.dataGridViewEsports.Name = "dataGridViewEsports";
-            this.dataGridViewEsports.ReadOnly = true;
+            this.dataGridViewCategoriaEdats.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewCategoriaEdats.EnableHeadersVisualStyles = false;
+            this.dataGridViewCategoriaEdats.GridColor = System.Drawing.Color.White;
+            this.dataGridViewCategoriaEdats.Location = new System.Drawing.Point(9, 29);
+            this.dataGridViewCategoriaEdats.MultiSelect = false;
+            this.dataGridViewCategoriaEdats.Name = "dataGridViewCategoriaEdats";
+            this.dataGridViewCategoriaEdats.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,11 +117,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEsports.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewEsports.RowHeadersVisible = false;
-            this.dataGridViewEsports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEsports.Size = new System.Drawing.Size(333, 214);
-            this.dataGridViewEsports.TabIndex = 22;
+            this.dataGridViewCategoriaEdats.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewCategoriaEdats.RowHeadersVisible = false;
+            this.dataGridViewCategoriaEdats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCategoriaEdats.Size = new System.Drawing.Size(333, 214);
+            this.dataGridViewCategoriaEdats.TabIndex = 22;
             // 
             // FormCategoriaEdats
             // 
@@ -132,14 +133,14 @@
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.buttonAfegir);
-            this.Controls.Add(this.dataGridViewEsports);
+            this.Controls.Add(this.dataGridViewCategoriaEdats);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCategoriaEdats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CATEGORIA EDATS";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategoriaEdats)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,6 +150,6 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonAfegir;
-        private System.Windows.Forms.DataGridView dataGridViewEsports;
+        private System.Windows.Forms.DataGridView dataGridViewCategoriaEdats;
     }
 }

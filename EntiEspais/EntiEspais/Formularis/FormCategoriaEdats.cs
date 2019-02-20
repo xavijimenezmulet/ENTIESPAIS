@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntiEspais.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace EntiEspais.Formularis
         public FormCategoriaEdats()
         {
             InitializeComponent();
+        }
+
+        private void buttonAfegir_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCategoriaEdat();
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCompeticio));
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonAfegir = new System.Windows.Forms.Button();
+            this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -48,20 +48,21 @@
             this.buttonCancelar.TabIndex = 25;
             this.buttonCancelar.Text = "Cancel·lar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // buttonAfegir
+            // buttonAceptar
             // 
-            this.buttonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAfegir.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAfegir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.buttonAfegir.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAfegir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAfegir.Location = new System.Drawing.Point(38, 76);
-            this.buttonAfegir.Name = "buttonAfegir";
-            this.buttonAfegir.Size = new System.Drawing.Size(93, 23);
-            this.buttonAfegir.TabIndex = 24;
-            this.buttonAfegir.Text = "Acceptar";
-            this.buttonAfegir.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAceptar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.buttonAceptar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonAceptar.Location = new System.Drawing.Point(38, 76);
+            this.buttonAceptar.Name = "buttonAceptar";
+            this.buttonAceptar.Size = new System.Drawing.Size(93, 23);
+            this.buttonAceptar.TabIndex = 24;
+            this.buttonAceptar.Text = "Acceptar";
+            this.buttonAceptar.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -93,7 +94,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 161);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonAfegir);
+            this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -110,7 +111,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonAfegir;
+        private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
     }

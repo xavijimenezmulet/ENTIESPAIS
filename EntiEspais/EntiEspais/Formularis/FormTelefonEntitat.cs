@@ -1,5 +1,4 @@
-﻿using EntiEspais.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,21 @@ using System.Windows.Forms;
 
 namespace EntiEspais.Formularis
 {
-    public partial class FormCategoriaEquips : Form
+    public partial class FormTelefonEntitat : Form
     {
-        public FormCategoriaEquips()
+        public FormTelefonEntitat()
         {
             InitializeComponent();
         }
 
-        private void buttonAfegir_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormCategoriaEquip();
+
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

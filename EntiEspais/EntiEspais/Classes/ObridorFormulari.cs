@@ -68,5 +68,90 @@ namespace EntiEspais.Classes
             fSexe.ShowDialog();
         }
 
+        //ens obre un formulari Categoria Edats
+        public static void obrirFormCategoriaEdats()
+        {
+            FormCategoriaEdats fCategoriaEdats = new FormCategoriaEdats();
+            fCategoriaEdats.ShowDialog();
+        }
+
+        //ens obre un formulari Categoria Edat
+        public static void obrirFormCategoriaEdat()
+        {
+            FormCategoriaEdat fCategoriaEdat = new FormCategoriaEdat();
+            fCategoriaEdat.ShowDialog();
+        }
+
+        //ens obre un formulari Categoria Equips
+        public static void obrirFormCategoriaEquips()
+        {
+            FormCategoriaEquips fCategoriaEquips = new FormCategoriaEquips();
+            fCategoriaEquips.ShowDialog();
+        }
+
+        //ens obre un formulari Categoria Equip
+        public static void obrirFormCategoriaEquip()
+        {
+            FormCategoriaEquip fCategoriaEquip = new FormCategoriaEquip();
+            fCategoriaEquip.ShowDialog();
+        }
+
+        //ens obre un formulari Competicions
+        public static void obrirFormCompeticions()
+        {
+            FormCompeticions fCompeticions = new FormCompeticions();
+            fCompeticions.ShowDialog();
+        }
+
+        //ens obre un formulari Competicio
+        public static void obrirFormCompeticio()
+        {
+            FormCompeticio fCompeticio = new FormCompeticio();
+            fCompeticio.ShowDialog();
+        }
+
+        //ens obre un formulari Telefons Entitats
+        public static void obrirFormTelefonsEntitats()
+        {
+            FormTelefonsEntitats fTelefonsEntitats = new FormTelefonsEntitats();
+            fTelefonsEntitats.ShowDialog();
+        }
+
+        //ens obre un formulari Telefon Entitat
+        public static void obrirFormTelefonEntitat()
+        {
+            FormTelefonEntitat fTelefonEntitat = new FormTelefonEntitat();
+            fTelefonEntitat.ShowDialog();
+        }
+
+        //ens obre un formulari Telefons Instalacions
+        public static void obrirFormTelefonsInstalacions()
+        {
+            FormTelefonsInstalacions fTelefonsInstalacions = new FormTelefonsInstalacions();
+            fTelefonsInstalacions.ShowDialog();
+        }
+
+        //ens obre un formulari Telefon Instalacio
+        public static void obrirFormTelefonInstalacio()
+        {
+            FormTelefonInstalacio fTelefonInstalacio = new FormTelefonInstalacio();
+            fTelefonInstalacio.ShowDialog();
+        }
+
+        //ens obre un formulari Faqs Android
+        public static void obrirFormFaqsAndroid()
+        {
+            FormFaqsAndroid fFaqsAndroid = new FormFaqsAndroid();
+            fFaqsAndroid.ShowDialog();
+        }
+
+        //ens obre un formulari Faq Android
+        public static void obrirFormFaqAndroid()
+        {
+            FormFaqAndroid fFaqAndroid = new FormFaqAndroid();
+            fFaqAndroid.ShowDialog();
+        }
+
+
     }
 }

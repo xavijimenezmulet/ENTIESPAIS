@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace EntiEspais.Formularis
 {
-    public partial class FormCategoriaEquips : Form
+    public partial class FormFaqsAndroid : Form
     {
-        public FormCategoriaEquips()
+        public FormFaqsAndroid()
         {
             InitializeComponent();
         }
 
         private void buttonAfegir_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormCategoriaEquip();
+            ObridorFormulari.obrirFormFaqAndroid();
         }
     }
 }

@@ -39,8 +39,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.buttonAfegir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAceptar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -103,30 +103,30 @@
             resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.Name = "textBox5";
             // 
-            // buttonAfegir
+            // buttonAceptar
             // 
-            resources.ApplyResources(this.buttonAfegir, "buttonAfegir");
-            this.buttonAfegir.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAfegir.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAfegir.Name = "buttonAfegir";
-            this.buttonAfegir.UseVisualStyleBackColor = false;
+            resources.ApplyResources(this.buttonAceptar, "buttonAceptar");
+            this.buttonAceptar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAceptar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAceptar.Name = "buttonAceptar";
+            this.buttonAceptar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonCancelar
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.buttonCancelar, "buttonCancelar");
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonCancelar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormAdministrador
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonAfegir);
+            this.Controls.Add(this.buttonCancelar);
+            this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
@@ -159,7 +159,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button buttonAfegir;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.Button buttonCancelar;
     }
 }

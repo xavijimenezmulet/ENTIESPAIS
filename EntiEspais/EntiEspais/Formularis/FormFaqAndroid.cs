@@ -1,5 +1,4 @@
-﻿using EntiEspais.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,16 @@ using System.Windows.Forms;
 
 namespace EntiEspais.Formularis
 {
-    public partial class FormCategoriaEquips : Form
+    public partial class FormFaqAndroid : Form
     {
-        public FormCategoriaEquips()
+        public FormFaqAndroid()
         {
             InitializeComponent();
         }
 
-        private void buttonAfegir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormCategoriaEquip();
+            this.Close();
         }
     }
 }

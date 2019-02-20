@@ -1,6 +1,6 @@
 ﻿namespace EntiEspais.Formularis
 {
-    partial class FormCategoriaEquip
+    partial class FormTelefonInstalacio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategoriaEquip));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelefonInstalacio));
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(150, 76);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(93, 23);
-            this.buttonCancelar.TabIndex = 25;
+            this.buttonCancelar.TabIndex = 33;
             this.buttonCancelar.Text = "Cancel·lar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -60,7 +60,7 @@
             this.buttonAceptar.Location = new System.Drawing.Point(38, 76);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(93, 23);
-            this.buttonAceptar.TabIndex = 24;
+            this.buttonAceptar.TabIndex = 32;
             this.buttonAceptar.Text = "Acceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
             // 
@@ -71,7 +71,7 @@
             this.textBox1.Location = new System.Drawing.Point(56, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 23;
+            this.textBox1.TabIndex = 31;
             // 
             // label1
             // 
@@ -82,11 +82,11 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(16, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 15);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Nom";
+            this.label1.Size = new System.Drawing.Size(26, 15);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Tel.";
             // 
-            // FormCategoriaEquip
+            // FormTelefonInstalacio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +101,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FormCategoriaEquip";
+            this.Name = "FormTelefonInstalacio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();

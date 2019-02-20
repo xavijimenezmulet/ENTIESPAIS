@@ -87,7 +87,7 @@ namespace EntiEspais.ORM
             String missatgeError = "";
             try
             {
-                //bd.SaveChanges();
+                bd.SaveChanges();
             }
             catch (DbUpdateException ex)
             {

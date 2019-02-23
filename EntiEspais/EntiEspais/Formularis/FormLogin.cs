@@ -83,8 +83,10 @@ namespace EntiEspais
             }
             else
             {
-                ObridorFormulari.obrirFormPrincipal();
+                
             }
+
+            ObridorFormulari.obrirFormPrincipal();
         }
 
         /**

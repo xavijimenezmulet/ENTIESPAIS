@@ -159,6 +159,16 @@ namespace EntiEspais.Classes
             fFaqAndroid.ShowDialog();
         }
 
+        #region FORMULARIOS DAVID
+
+        //ens obre un formulari amb les Instalacions
+        public static void obrirFormInstalacions()
+        {
+            FormInstalacions formInstalacions = new FormInstalacions();
+            formInstalacions.ShowDialog();
+        }
+
+        #endregion
 
     }
 }

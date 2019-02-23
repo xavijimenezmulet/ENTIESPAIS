@@ -170,5 +170,15 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormFaqsAndroid();
         }
+
+        private void afegirInstallacióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llistatInstallacionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacions();
+        }
     }
 }

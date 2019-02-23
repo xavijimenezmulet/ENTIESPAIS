@@ -184,6 +184,12 @@
     <Compile Include="Formularis\FormFaqsAndroid.Designer.cs">
       <DependentUpon>FormFaqsAndroid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormInstalacions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormInstalacions.Designer.cs">
+      <DependentUpon>FormInstalacions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,7 @@
     <Compile Include="ORM\AdministradorsORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
+    <Compile Include="ORM\InstalacionsORM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -322,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormFaqsAndroid.resx">
       <DependentUpon>FormFaqsAndroid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormInstalacions.resx">
+      <DependentUpon>FormInstalacions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

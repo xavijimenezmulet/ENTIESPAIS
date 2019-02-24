@@ -20,13 +20,13 @@ namespace EntiEspais.Formularis
         //Load
         private void FormInstalacions_Load(object sender, EventArgs e)
         {
-            bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.selectInstalacions();
+            refrescarGrid();
         }
 
         //Activated
         private void FormInstalacions_Activated(object sender, EventArgs e)
         {
-            bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.selectInstalacions();
+            refrescarGrid();
         }
 
         //Botón añadir
@@ -63,6 +63,12 @@ namespace EntiEspais.Formularis
         private void buttonEspais_Click(object sender, EventArgs e)
         {
             Classes.ObridorFormulari.obrirFormEspais((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+        }
+
+        //Refrescar DataGrid
+        private void refrescarGrid()
+        {
+            bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.selectInstalacions();
         }
     }
 }

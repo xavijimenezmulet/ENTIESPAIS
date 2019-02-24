@@ -8,12 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+
 namespace EntiEspais.Formularis
 {
     public partial class FormInstalacioAlta : Form
     {
         INSTALACIONS _instalacio;
         bool modificar = false;
+
+        GMarkerGoogle markerGoogle;
+        GMapOverlay markerOverlay;
+        int filaSeleccionada = 0;
+        double latInicial = 41.389129;
+        double lonInicial = 2.173028;
 
         public FormInstalacioAlta()
         {
@@ -41,6 +52,8 @@ namespace EntiEspais.Formularis
                 textBoxAltitud.Text = _instalacio.altitut.ToString();
                 textBoxLatitud.Text = _instalacio.latitut.ToString();
             }
+
+            gestionMapa();
         }
 
         //Añadir una instalación o modificarla
@@ -78,5 +91,59 @@ namespace EntiEspais.Formularis
                 textBoxRutaImatge.Text = openFileDialog.FileName;
             }
         }
+
+        //Gestión mapa
+        private void gestionMapa()
+        {
+            gMapControl1.DragButton = MouseButtons.Left;
+            gMapControl1.CanDragMap = true; //Permite hacer drag
+            gMapControl1.MapProvider = GMapProviders.GoogleMap; //Usar google maps
+            gMapControl1.MaxZoom = 20;
+            gMapControl1.MinZoom = 0;
+            gMapControl1.Zoom = 15;
+            gMapControl1.AutoScroll = true;
+
+            if(!modificar)
+            {
+                gMapControl1.Position = new PointLatLng(41.389129, 2.173028);
+
+                //Marcador
+                markerOverlay = new GMapOverlay("Marcador");
+                markerGoogle = new GMarkerGoogle(new PointLatLng(latInicial, lonInicial), GMarkerGoogleType.red);
+                markerOverlay.Markers.Add(markerGoogle);
+
+                //Agregar mapa y marcador al MapControl
+                gMapControl1.Overlays.Add(markerOverlay);
+            }
+            else
+            {
+                gMapControl1.Position = new PointLatLng(_instalacio.latitut, _instalacio.altitut);
+
+                //Marcador
+                markerOverlay = new GMapOverlay("Marcador");
+                markerGoogle = new GMarkerGoogle(new PointLatLng(_instalacio.latitut, _instalacio.altitut), GMarkerGoogleType.red);
+                markerOverlay.Markers.Add(markerGoogle);
+
+                //Agregar mapa y marcador al MapControl
+                gMapControl1.Overlays.Add(markerOverlay);
+            }
+
+        }
+
+        //Doble click sobre el mapa
+        private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //Obtenemos los datos de lat y lon del mapa donde el usuario presionó
+            double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
+            double lon = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
+
+            //Rellenar TextBox con coordenadas
+            textBoxLatitud.Text = lat.ToString();
+            textBoxAltitud.Text = lon.ToString();
+
+            //Mover marker a la posición
+            markerGoogle.Position = new PointLatLng(lat, lon);
+        }
+
     }
 }

@@ -47,6 +47,7 @@
             this.textBoxAltitud = new System.Windows.Forms.TextBox();
             this.comboBoxTipus = new System.Windows.Forms.ComboBox();
             this.buttonRuta = new System.Windows.Forms.Button();
+            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -205,7 +206,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(39, 263);
+            this.label7.Location = new System.Drawing.Point(301, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 39;
@@ -213,8 +214,9 @@
             // 
             // textBoxLatitud
             // 
+            this.textBoxLatitud.Enabled = false;
             this.textBoxLatitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxLatitud.Location = new System.Drawing.Point(374, 258);
+            this.textBoxLatitud.Location = new System.Drawing.Point(112, 257);
             this.textBoxLatitud.Name = "textBoxLatitud";
             this.textBoxLatitud.Size = new System.Drawing.Size(128, 20);
             this.textBoxLatitud.TabIndex = 42;
@@ -226,7 +228,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(301, 263);
+            this.label9.Location = new System.Drawing.Point(39, 262);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 15);
             this.label9.TabIndex = 41;
@@ -234,8 +236,9 @@
             // 
             // textBoxAltitud
             // 
+            this.textBoxAltitud.Enabled = false;
             this.textBoxAltitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxAltitud.Location = new System.Drawing.Point(112, 258);
+            this.textBoxAltitud.Location = new System.Drawing.Point(374, 257);
             this.textBoxAltitud.Name = "textBoxAltitud";
             this.textBoxAltitud.Size = new System.Drawing.Size(128, 20);
             this.textBoxAltitud.TabIndex = 43;
@@ -262,13 +265,41 @@
             this.buttonRuta.UseVisualStyleBackColor = true;
             this.buttonRuta.Click += new System.EventHandler(this.buttonRuta_Click);
             // 
+            // gMapControl1
+            // 
+            this.gMapControl1.Bearing = 0F;
+            this.gMapControl1.CanDragMap = true;
+            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMapControl1.GrayScaleMode = false;
+            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMapControl1.LevelsKeepInMemmory = 5;
+            this.gMapControl1.Location = new System.Drawing.Point(108, 339);
+            this.gMapControl1.MarkersEnabled = true;
+            this.gMapControl1.MaxZoom = 2;
+            this.gMapControl1.MinZoom = 2;
+            this.gMapControl1.MouseWheelZoomEnabled = true;
+            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControl1.Name = "gMapControl1";
+            this.gMapControl1.NegativeMode = false;
+            this.gMapControl1.PolygonsEnabled = true;
+            this.gMapControl1.RetryLoadTile = 0;
+            this.gMapControl1.RoutesEnabled = true;
+            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMapControl1.ShowTileGridLines = false;
+            this.gMapControl1.Size = new System.Drawing.Size(394, 150);
+            this.gMapControl1.TabIndex = 46;
+            this.gMapControl1.Zoom = 0D;
+            this.gMapControl1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gMapControl1_MouseDoubleClick);
+            // 
             // FormInstalacioAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(571, 456);
+            this.ClientSize = new System.Drawing.Size(571, 515);
+            this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.buttonRuta);
             this.Controls.Add(this.comboBoxTipus);
             this.Controls.Add(this.textBoxAltitud);
@@ -318,5 +349,6 @@
         private System.Windows.Forms.TextBox textBoxAltitud;
         private System.Windows.Forms.ComboBox comboBoxTipus;
         private System.Windows.Forms.Button buttonRuta;
+        private GMap.NET.WindowsForms.GMapControl gMapControl1;
     }
 }

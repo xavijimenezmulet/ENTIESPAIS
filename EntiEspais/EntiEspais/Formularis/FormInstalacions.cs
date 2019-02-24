@@ -53,20 +53,16 @@ namespace EntiEspais.Formularis
         }
 
         //Botón modificar
-        //Hago el ShowDialog aquí porque no puedo pasarle a la clase ObridorFormulario el objeto de la DataGrid
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
-            formInstalacioAlta.Text = "MODIFICAR INSTALACIÓ";
-            formInstalacioAlta.ShowDialog();
+            Classes.ObridorFormulari.obrirFormInstalacioModificar((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
         }
 
         //Buton espais
         //Le pasaremos la instalación para mostrar sus espacios
         private void buttonEspais_Click(object sender, EventArgs e)
         {
-            FormEspais formEspais = new FormEspais((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
-            formEspais.ShowDialog();
+            Classes.ObridorFormulari.obrirFormEspais((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
         }
     }
 }

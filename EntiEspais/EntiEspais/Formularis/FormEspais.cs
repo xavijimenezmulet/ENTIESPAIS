@@ -40,16 +40,13 @@ namespace EntiEspais.Formularis
         //Buton añadir
         private void buttonAfegir_Click(object sender, EventArgs e)
         {
-            FormEspaiAlta formEspaiAlta = new FormEspaiAlta(_instalacio.id);
-            formEspaiAlta.ShowDialog();
+            Classes.ObridorFormulari.obrirFormEspaisAlta(_instalacio.id);
         }
 
         //Buton modificar
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            FormEspaiAlta formEspaiAlta = new FormEspaiAlta((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
-            formEspaiAlta.Text = "MODIFICAR ESPAI";
-            formEspaiAlta.ShowDialog();
+            Classes.ObridorFormulari.obrirFormEspaisModificar((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
         }
 
         //Buton eliminar

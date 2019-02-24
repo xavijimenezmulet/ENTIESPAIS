@@ -12,6 +12,8 @@ namespace EntiEspais.Classes
 {
     public static class ObridorFormulari
     {
+        #region FORMULARIOS XAVI
+
         // ens obre un formulari login
         public static void obrirFormLogin()
         {
@@ -159,6 +161,8 @@ namespace EntiEspais.Classes
             fFaqAndroid.ShowDialog();
         }
 
+        #endregion
+
         #region FORMULARIOS DAVID
 
         //ens obre un formulari amb les Instalacions
@@ -168,11 +172,41 @@ namespace EntiEspais.Classes
             formInstalacions.ShowDialog();
         }
 
-        //ens obre un formulari per donar de alta una instalació
+        //ens obre un formulari per donar d'alta una instalació
         public static void obrirFormInstalacioAlta()
         {
             FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta();
             formInstalacioAlta.ShowDialog();
+        }
+
+        //ens obre un formulari per modificar una instalació
+        public static void obrirFormInstalacioModificar(INSTALACIONS _instalacio)
+        {
+            FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta(_instalacio);
+            formInstalacioAlta.Text = "MODIFICAR INSTALACIÓ";
+            formInstalacioAlta.ShowDialog();
+        }
+
+        //ens obre un formulari amb els espais de la instalació
+        public static void obrirFormEspais(INSTALACIONS _instalacio)
+        {
+            FormEspais formEspais = new FormEspais(_instalacio);
+            formEspais.ShowDialog();
+        }
+
+        //ens obre un formulari per donar d'alta un espai
+        public static void obrirFormEspaisAlta(int id_instalacio)
+        {
+            FormEspaiAlta formEspaiAlta = new FormEspaiAlta(id_instalacio);
+            formEspaiAlta.ShowDialog();
+        }
+
+        //ens obre un formulari per modificar un espai
+        public static void obrirFormEspaisModificar(ESPAIS _espais)
+        {
+            FormEspaiAlta formEspaiAlta = new FormEspaiAlta(_espais);
+            formEspaiAlta.Text = "MODIFICAR ESPAI";
+            formEspaiAlta.ShowDialog();
         }
 
         #endregion

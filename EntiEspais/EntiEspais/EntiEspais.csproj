@@ -124,6 +124,12 @@
     <Compile Include="Formularis\FormAdministradors.Designer.cs">
       <DependentUpon>FormAdministradors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormInstalacioAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormInstalacioAlta.Designer.cs">
+      <DependentUpon>FormInstalacioAlta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormCategoriaEdat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormFaqsAndroid.resx">
       <DependentUpon>FormFaqsAndroid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormInstalacioAlta.resx">
+      <DependentUpon>FormInstalacioAlta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormInstalacions.resx">
       <DependentUpon>FormInstalacions.cs</DependentUpon>

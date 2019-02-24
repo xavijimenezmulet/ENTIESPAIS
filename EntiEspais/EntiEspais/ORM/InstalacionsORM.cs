@@ -9,7 +9,7 @@ namespace EntiEspais.ORM
     public class InstalacionsORM
     {
         //Retorna el SELECT amb totes les instalacions
-        public static List<INSTALACIONS> SelectInstalacions()
+        public static List<INSTALACIONS> selectInstalacions()
         {
             List<INSTALACIONS> _instalacions =
                  (from e in GeneralORM.bd.INSTALACIONS
@@ -18,6 +18,50 @@ namespace EntiEspais.ORM
 
             return _instalacions;
 
+        }
+
+        //Alta instalació
+        public static void altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
+        {
+            INSTALACIONS _instalacio = new INSTALACIONS();
+
+            _instalacio.nom = nom;
+            _instalacio.contrasenya = contrasenya;
+            _instalacio.adresa = adresa;
+            _instalacio.tipus = tipus;
+            _instalacio.email = email;
+            _instalacio.ruta_imagen = ruta_imagen;
+            _instalacio.altitut = altitud;
+            _instalacio.latitut = latitud;
+
+            ORM.GeneralORM.bd.INSTALACIONS.Add(_instalacio);
+
+            ORM.GeneralORM.bd.SaveChanges();
+        }
+
+        //Eliminar instalació
+        public static void eliminarInstalacio(INSTALACIONS _instalacio)
+        {
+            ORM.GeneralORM.bd.INSTALACIONS.Remove(_instalacio);
+
+            ORM.GeneralORM.bd.SaveChanges();
+        }
+
+        //Modificar instalació
+        public static void modificarinstalacio(int id, String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
+        {
+            INSTALACIONS _instalacio = ORM.GeneralORM.bd.INSTALACIONS.Find(id);
+
+            _instalacio.nom = nom;
+            _instalacio.contrasenya = contrasenya;
+            _instalacio.adresa = adresa;
+            _instalacio.tipus = tipus;
+            _instalacio.email = email;
+            _instalacio.ruta_imagen = ruta_imagen;
+            _instalacio.altitut = altitud;
+            _instalacio.latitut = latitud;
+
+            ORM.GeneralORM.bd.SaveChanges();
         }
     }
 }

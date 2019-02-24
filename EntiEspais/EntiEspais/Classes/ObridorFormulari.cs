@@ -168,6 +168,13 @@ namespace EntiEspais.Classes
             formInstalacions.ShowDialog();
         }
 
+        //ens obre un formulari per donar de alta una instalació
+        public static void obrirFormInstalacioAlta()
+        {
+            FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta();
+            formInstalacioAlta.ShowDialog();
+        }
+
         #endregion
 
     }

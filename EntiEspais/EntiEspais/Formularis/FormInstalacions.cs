@@ -17,9 +17,48 @@ namespace EntiEspais.Formularis
             InitializeComponent();
         }
 
+        //Load
         private void FormInstalacions_Load(object sender, EventArgs e)
         {
-            bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.SelectInstalacions();
+            bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.selectInstalacions();
+        }
+
+        //Activated
+        private void FormInstalacions_Activated(object sender, EventArgs e)
+        {
+            bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.selectInstalacions();
+        }
+
+        //Botón añadir
+        private void buttonAfegir_Click(object sender, EventArgs e)
+        {
+            Classes.ObridorFormulari.obrirFormInstalacioAlta();
+        }
+
+        //Botón eliminar
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Desitja esborrar aquesta instalació?", "ATENCIÓ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (dr == DialogResult.Yes)
+            {
+                ORM.InstalacionsORM.eliminarInstalacio((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+                MessageBox.Show("ESBORRAT");
+            }
+            else
+            {
+                MessageBox.Show("ACCIÓ CANCELADA");
+            }
+
+        }
+
+        //Botón modificar
+        //Hago el ShowDialog aquí porque no puedo pasarle a la clase ObridorFormulario el objeto de la DataGrid
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+            formInstalacioAlta.Text = "MODIFICAR INSTALACIÓ";
+            formInstalacioAlta.ShowDialog();
         }
     }
 }

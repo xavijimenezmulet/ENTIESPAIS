@@ -173,7 +173,7 @@ namespace EntiEspais
 
         private void afegirInstallacióToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ObridorFormulari.obrirFormInstalacioAlta();
         }
 
         private void llistatInstallacionsToolStripMenuItem_Click(object sender, EventArgs e)

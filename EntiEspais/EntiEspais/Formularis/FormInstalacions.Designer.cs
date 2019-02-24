@@ -46,6 +46,7 @@
             this.altitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.latitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceInstalacio = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonEspais = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonEliminar.Location = new System.Drawing.Point(947, 155);
+            this.buttonEliminar.Location = new System.Drawing.Point(947, 287);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
             this.buttonEliminar.TabIndex = 33;
@@ -70,7 +71,7 @@
             this.buttonModificar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonModificar.Location = new System.Drawing.Point(947, 92);
+            this.buttonModificar.Location = new System.Drawing.Point(947, 224);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(160, 23);
             this.buttonModificar.TabIndex = 32;
@@ -84,7 +85,7 @@
             this.buttonAfegir.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonAfegir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAfegir.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAfegir.Location = new System.Drawing.Point(947, 221);
+            this.buttonAfegir.Location = new System.Drawing.Point(947, 161);
             this.buttonAfegir.Name = "buttonAfegir";
             this.buttonAfegir.Size = new System.Drawing.Size(160, 23);
             this.buttonAfegir.TabIndex = 31;
@@ -216,6 +217,20 @@
             // 
             this.bindingSourceInstalacio.DataSource = typeof(EntiEspais.INSTALACIONS);
             // 
+            // buttonEspais
+            // 
+            this.buttonEspais.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEspais.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEspais.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEspais.ForeColor = System.Drawing.Color.Snow;
+            this.buttonEspais.Location = new System.Drawing.Point(947, 32);
+            this.buttonEspais.Name = "buttonEspais";
+            this.buttonEspais.Size = new System.Drawing.Size(160, 44);
+            this.buttonEspais.TabIndex = 34;
+            this.buttonEspais.Text = "ESPAIS";
+            this.buttonEspais.UseVisualStyleBackColor = false;
+            this.buttonEspais.Click += new System.EventHandler(this.buttonEspais_Click);
+            // 
             // FormInstalacions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +238,7 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1119, 450);
+            this.Controls.Add(this.buttonEspais);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.buttonAfegir);
@@ -254,5 +270,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rutaimagenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn altitutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn latitutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonEspais;
     }
 }

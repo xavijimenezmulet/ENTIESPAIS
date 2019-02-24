@@ -60,5 +60,13 @@ namespace EntiEspais.Formularis
             formInstalacioAlta.Text = "MODIFICAR INSTALACIÓ";
             formInstalacioAlta.ShowDialog();
         }
+
+        //Buton espais
+        //Le pasaremos la instalación para mostrar sus espacios
+        private void buttonEspais_Click(object sender, EventArgs e)
+        {
+            FormEspais formEspais = new FormEspais((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+            formEspais.ShowDialog();
+        }
     }
 }

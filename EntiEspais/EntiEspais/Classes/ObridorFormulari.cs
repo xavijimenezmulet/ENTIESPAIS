@@ -209,6 +209,13 @@ namespace EntiEspais.Classes
             formEspaiAlta.ShowDialog();
         }
 
+        //ens obre un formulari amb tots els espais
+        public static void obrirFormEspaisTots()
+        {
+            FormEspaisTodos formEspaisTodos = new FormEspaisTodos();
+            formEspaisTodos.ShowDialog();
+        }
+
         #endregion
 
     }

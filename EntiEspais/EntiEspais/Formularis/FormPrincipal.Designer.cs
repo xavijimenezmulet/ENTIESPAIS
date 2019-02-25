@@ -304,6 +304,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click);
             // 
             // afegirEspaiToolStripMenuItem
             // 

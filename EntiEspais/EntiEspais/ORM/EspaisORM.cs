@@ -8,6 +8,16 @@ namespace EntiEspais.ORM
 {
     public class EspaisORM
     {
+        //Select todos los espacios
+        public static List<ESPAIS> selectEspais()
+        {
+            List<ESPAIS> _espais = (from e in GeneralORM.bd.ESPAIS
+                                    orderby e.id_instalacio
+                                    select e).ToList();
+
+            return _espais;
+        }
+
         //Alta espai
         public static String altaEspai(String nom, float preu, bool tipus, int id_instalacio)
         {

@@ -136,6 +136,12 @@
     <Compile Include="Formularis\FormEspais.Designer.cs">
       <DependentUpon>FormEspais.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormEspaisTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEspaisTodos.Designer.cs">
+      <DependentUpon>FormEspaisTodos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormInstalacioAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormEspais.resx">
       <DependentUpon>FormEspais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEspaisTodos.resx">
+      <DependentUpon>FormEspaisTodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormEsport.resx">
       <DependentUpon>FormEsport.cs</DependentUpon>

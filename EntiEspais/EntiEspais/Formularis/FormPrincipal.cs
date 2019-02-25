@@ -180,5 +180,10 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormInstalacions();
         }
+
+        private void llistatEspaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEspaisTots();
+        }
     }
 }

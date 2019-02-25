@@ -22,7 +22,6 @@ namespace EntiEspais
     
         public int id { get; set; }
         public string nom { get; set; }
-        public string esport { get; set; }
         public bool te_discapacitat { get; set; }
         public int id_entitat { get; set; }
         public string temporada { get; set; }

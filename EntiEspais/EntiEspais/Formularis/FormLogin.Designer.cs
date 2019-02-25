@@ -128,7 +128,7 @@
             this.textBoxContrassenya.Location = new System.Drawing.Point(305, 345);
             this.textBoxContrassenya.Name = "textBoxContrassenya";
             this.textBoxContrassenya.Size = new System.Drawing.Size(366, 20);
-            this.textBoxContrassenya.TabIndex = 8;
+            this.textBoxContrassenya.TabIndex = 2;
             this.textBoxContrassenya.Text = "Contrassenya";
             this.textBoxContrassenya.Enter += new System.EventHandler(this.textBoxContrassenya_Enter);
             this.textBoxContrassenya.Leave += new System.EventHandler(this.textBoxContrassenya_Leave);

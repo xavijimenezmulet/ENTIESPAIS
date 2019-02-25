@@ -14,6 +14,8 @@ namespace EntiEspais.Formularis
 {
     public partial class FormAdministradors : Form
     {
+        public static Boolean verdadero;
+
         public FormAdministradors()
         {
             InitializeComponent();
@@ -108,7 +110,47 @@ namespace EntiEspais.Formularis
 
         private void dataGridViewAdministradors_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
+            String missatge = "";
+            DialogResult resultat = MessageBox.Show( "Estàs segur de borrar l'usuari?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
 
+            if ( resultat == DialogResult.Yes )
+            {
+
+                missatge = AdministradorsORM.DeleteByAdministrador((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem );
+                if ( !missatge.Equals( "" ) )
+                {
+                    MessageBox.Show( missatge, "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+
+
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormAdministradorModificar((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
+        }
+
+        private void FormAdministradors_Activated(object sender, EventArgs e)
+        {
+            if ( verdadero )
+            {
+                bindingSourceAdministradors.DataSource = AdministradorsORM.SelectAllAdministradors();
+                verdadero = false;
+            }
+        }
+
+        private void dataGridViewAdministradors_DoubleClick(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormAdministradorModificar((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
         }
     }
 }

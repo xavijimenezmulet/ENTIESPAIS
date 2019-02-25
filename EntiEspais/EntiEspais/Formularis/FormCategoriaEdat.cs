@@ -14,6 +14,15 @@ namespace EntiEspais.Formularis
     {
         public FormCategoriaEdat()
         {
+            this.Text = "NOVA CATEGORIA EDAT";
+            FormCategoriaEdats.verdadero = true;
+            InitializeComponent();
+        }
+
+        public FormCategoriaEdat(CATEGORIA_EDAT categoria)
+        {
+            this.Text = "MODIFICAR CATEGORIA EDAT";
+            FormCategoriaEdats.verdadero = true;
             InitializeComponent();
         }
 

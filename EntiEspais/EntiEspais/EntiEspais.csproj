@@ -266,6 +266,7 @@
       <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
     </Compile>
     <Compile Include="ORM\AdministradorsORM.cs" />
+    <Compile Include="ORM\CategoriaPerEdatORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
     <Compile Include="Program.cs" />
@@ -364,6 +365,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ADMINISTRADORS.datasource" />
+    <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\INSTALACIONS.datasource" />
     <None Include="Properties\Settings.settings">

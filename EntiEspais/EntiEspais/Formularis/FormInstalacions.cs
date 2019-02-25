@@ -20,6 +20,7 @@ namespace EntiEspais.Formularis
         //Load
         private void FormInstalacions_Load(object sender, EventArgs e)
         {
+            dataGridViewInstalacions.ClearSelection();
             refrescarGrid();
         }
 
@@ -38,24 +39,38 @@ namespace EntiEspais.Formularis
         //Botón eliminar
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Desitja esborrar aquesta instalació?", "ATENCIÓ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-            if (dr == DialogResult.Yes)
+            if (dataGridViewInstalacions.RowCount == 0)
             {
-                ORM.InstalacionsORM.eliminarInstalacio((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
-                MessageBox.Show("ESBORRAT");
+                MessageBox.Show("SELECCIONA UN ELEMENT");
             }
             else
             {
-                MessageBox.Show("ACCIÓ CANCELADA");
-            }
+                DialogResult dr = MessageBox.Show("Desitja esborrar aquesta instalació?", "ATENCIÓ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
+                if (dr == DialogResult.Yes)
+                {
+                    ORM.InstalacionsORM.eliminarInstalacio((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+                    MessageBox.Show("ESBORRAT");
+                }
+                else
+                {
+                    MessageBox.Show("ACCIÓ CANCELADA");
+                }
+            }
+                
         }
 
         //Botón modificar
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            Classes.ObridorFormulari.obrirFormInstalacioModificar((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+            if(dataGridViewInstalacions.RowCount == 0)
+            {
+                MessageBox.Show("SELECCIONA UN ELEMENT");
+            }
+            else
+            {
+                Classes.ObridorFormulari.obrirFormInstalacioModificar((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+            }
         }
 
         //Buton espais

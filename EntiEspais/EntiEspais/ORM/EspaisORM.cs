@@ -9,8 +9,9 @@ namespace EntiEspais.ORM
     public class EspaisORM
     {
         //Alta espai
-        public static void altaEspai(String nom, float preu, bool tipus, int id_instalacio)
+        public static String altaEspai(String nom, float preu, bool tipus, int id_instalacio)
         {
+            String mensaje = "";
             ESPAIS _espai = new ESPAIS();
 
             _espai.nom = nom;
@@ -20,27 +21,36 @@ namespace EntiEspais.ORM
 
             ORM.GeneralORM.bd.ESPAIS.Add(_espai);
 
-            ORM.GeneralORM.bd.SaveChanges();
+            mensaje = ORM.GeneralORM.SaveChanges();
+
+            return mensaje;
         }
 
         //Modificar espai
-        public static void modificarEspai(int id, String nom, float preu, bool tipus)
+        public static String modificarEspai(int id, String nom, float preu, bool tipus)
         {
+            String mensaje = "";
             ESPAIS _espai = ORM.GeneralORM.bd.ESPAIS.Find(id);
 
             _espai.nom = nom;
             _espai.preu = preu;
             _espai.es_exterior = tipus;
 
-            ORM.GeneralORM.bd.SaveChanges();
+            mensaje = ORM.GeneralORM.SaveChanges();
+
+            return mensaje;
         }
 
         //Eliminar espai
-        public static void eliminarEspai(ESPAIS _espais)
+        public static String eliminarEspai(ESPAIS _espais)
         {
+            String mensaje = "";
+
             ORM.GeneralORM.bd.ESPAIS.Remove(_espais);
 
-            ORM.GeneralORM.bd.SaveChanges();
+            mensaje = ORM.GeneralORM.SaveChanges();
+
+            return mensaje;
         }
     }
 }

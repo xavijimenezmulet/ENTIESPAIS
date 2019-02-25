@@ -28,6 +28,7 @@ namespace EntiEspais.Formularis
         //Load
         private void FormEspais_Load(object sender, EventArgs e)
         {
+            dataGridViewEspais.ClearSelection();
             refrescarGrid();
         }
 
@@ -46,23 +47,38 @@ namespace EntiEspais.Formularis
         //Buton modificar
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            Classes.ObridorFormulari.obrirFormEspaisModificar((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
+            if (dataGridViewEspais.RowCount == 0)
+            {
+                MessageBox.Show("SELECCIONA UN ELEMENT");
+            }
+            else
+            {
+                Classes.ObridorFormulari.obrirFormEspaisModificar((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
+            }
         }
 
         //Buton eliminar
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Desitja esborrar aquest espai?", "ATENCIÓ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-            if (dr == DialogResult.Yes)
+            if (dataGridViewEspais.RowCount == 0)
             {
-                ORM.EspaisORM.eliminarEspai((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
-                MessageBox.Show("ESBORRAT");
+                MessageBox.Show("SELECCIONA UN ELEMENT");
             }
             else
             {
-                MessageBox.Show("ACCIÓ CANCELADA");
+                DialogResult dr = MessageBox.Show("Desitja esborrar aquest espai?", "ATENCIÓ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (dr == DialogResult.Yes)
+                {
+                    ORM.EspaisORM.eliminarEspai((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
+                    MessageBox.Show("ESBORRAT");
+                }
+                else
+                {
+                    MessageBox.Show("ACCIÓ CANCELADA");
+                }
             }
+                
         }
 
         //Refrescar grid

@@ -21,8 +21,9 @@ namespace EntiEspais.ORM
         }
 
         //Alta instalació
-        public static void altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
+        public static String altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
         {
+            String mensaje = "";
             INSTALACIONS _instalacio = new INSTALACIONS();
 
             _instalacio.nom = nom;
@@ -36,20 +37,26 @@ namespace EntiEspais.ORM
 
             ORM.GeneralORM.bd.INSTALACIONS.Add(_instalacio);
 
-            ORM.GeneralORM.bd.SaveChanges();
+            mensaje = ORM.GeneralORM.SaveChanges();
+
+            return mensaje;
         }
 
         //Eliminar instalació
-        public static void eliminarInstalacio(INSTALACIONS _instalacio)
+        public static String eliminarInstalacio(INSTALACIONS _instalacio)
         {
+            String mensaje = "";
             ORM.GeneralORM.bd.INSTALACIONS.Remove(_instalacio);
 
-            ORM.GeneralORM.bd.SaveChanges();
+            mensaje = ORM.GeneralORM.SaveChanges();
+
+            return mensaje;
         }
 
         //Modificar instalació
-        public static void modificarinstalacio(int id, String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
+        public static String modificarinstalacio(int id, String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
         {
+            String mensaje = "";
             INSTALACIONS _instalacio = ORM.GeneralORM.bd.INSTALACIONS.Find(id);
 
             _instalacio.nom = nom;
@@ -61,7 +68,9 @@ namespace EntiEspais.ORM
             _instalacio.altitut = altitud;
             _instalacio.latitut = latitud;
 
-            ORM.GeneralORM.bd.SaveChanges();
+            mensaje = ORM.GeneralORM.SaveChanges();
+
+            return mensaje;
         }
     }
 }

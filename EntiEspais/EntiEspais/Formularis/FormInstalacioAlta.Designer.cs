@@ -119,8 +119,10 @@
             this.textBoxContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.textBoxContrasenya.Location = new System.Drawing.Point(112, 60);
             this.textBoxContrasenya.Name = "textBoxContrasenya";
+            this.textBoxContrasenya.PasswordChar = ' ';
             this.textBoxContrasenya.Size = new System.Drawing.Size(390, 20);
             this.textBoxContrasenya.TabIndex = 26;
+            this.textBoxContrasenya.UseSystemPasswordChar = true;
             // 
             // label2
             // 

@@ -658,6 +658,7 @@
             this.dataGridViewAdministradors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAdministradors.Size = new System.Drawing.Size(897, 354);
             this.dataGridViewAdministradors.TabIndex = 10;
+            this.dataGridViewAdministradors.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewAdministradors_UserDeletingRow);
             // 
             // idDataGridViewTextBoxColumn
             // 

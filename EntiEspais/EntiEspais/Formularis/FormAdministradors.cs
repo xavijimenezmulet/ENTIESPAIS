@@ -105,5 +105,10 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormFaqsAndroid();
         }
+
+        private void dataGridViewAdministradors_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+
+        }
     }
 }

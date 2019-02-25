@@ -21,5 +21,50 @@ namespace EntiEspais.ORM
             return _categoriaEdats;
 
         }
+
+        /**
+         * ENS ACTUALITZA UNA CATEGORIA PER EDAT DE LA BASE DE DADES 
+         **/
+        public static String UpdateCategoriaPerEdat(CATEGORIA_EDAT categoria)
+        {
+            String missatgeError = "";
+            CATEGORIA_EDAT a = GeneralORM.bd.CATEGORIA_EDAT.Find(categoria.id);
+
+            a.nom = categoria.nom;
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
+        }
+
+        /**
+         * ENS INSERTA A LA BASE DE DADES UNA CATEGORIA PER EDAT NOVA
+         **/
+        public static String InsertCategoriaPerEdat(CATEGORIA_EDAT categoria)
+        {
+            String missatgeError = "";
+
+            GeneralORM.bd.CATEGORIA_EDAT.Add(categoria);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+        }
+
+        /**
+         * ENS BORRA UNA CATEGORIA PER EDAT DE LA BASE DE DADES QUE LI PASSEM PER PARAMETRE
+         **/
+        public static String DeleteByCategoriaPerEdat(CATEGORIA_EDAT categoria)
+        {
+            String missatgeError = "";
+
+            GeneralORM.bd.CATEGORIA_EDAT.Remove(categoria);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
+        }
     }
 }

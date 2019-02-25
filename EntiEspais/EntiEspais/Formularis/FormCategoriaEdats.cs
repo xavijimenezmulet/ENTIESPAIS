@@ -39,5 +39,46 @@ namespace EntiEspais.Formularis
                 verdadero = false;
             }
         }
+
+        private void dataGridViewCategoriaEdats_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            String missatge = "";
+            DialogResult resultat = MessageBox.Show("Estàs segur de borrar la categoria?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultat == DialogResult.Yes)
+            {
+
+                missatge = CategoriaPerEdatORM.DeleteByCategoriaPerEdat((CATEGORIA_EDAT)dataGridViewCategoriaEdats.SelectedRows[0].DataBoundItem);
+                if (!missatge.Equals(""))
+                {
+                    MessageBox.Show(missatge, "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+
+
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void dataGridViewCategoriaEdats_DoubleClick(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCategoriaEdat((CATEGORIA_EDAT)dataGridViewCategoriaEdats.SelectedRows[0].DataBoundItem);
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCategoriaEdat((CATEGORIA_EDAT)dataGridViewCategoriaEdats.SelectedRows[0].DataBoundItem);
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

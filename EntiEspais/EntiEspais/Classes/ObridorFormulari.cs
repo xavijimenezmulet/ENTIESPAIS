@@ -93,7 +93,7 @@ namespace EntiEspais.Classes
         //ens obre un formulari Categoria Edat per modificar
         public static void obrirFormCategoriaEdat(CATEGORIA_EDAT categoria)
         {
-            FormCategoriaEdat fCategoriaEdat = new FormCategoriaEdat();
+            FormCategoriaEdat fCategoriaEdat = new FormCategoriaEdat(categoria);
             fCategoriaEdat.ShowDialog();
         }
 

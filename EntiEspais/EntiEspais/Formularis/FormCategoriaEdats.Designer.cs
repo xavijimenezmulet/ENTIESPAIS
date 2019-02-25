@@ -57,6 +57,7 @@
             this.buttonEliminar.TabIndex = 25;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
@@ -70,6 +71,7 @@
             this.buttonModificar.TabIndex = 24;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAfegir
             // 
@@ -134,6 +136,8 @@
             this.dataGridViewCategoriaEdats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCategoriaEdats.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewCategoriaEdats.TabIndex = 22;
+            this.dataGridViewCategoriaEdats.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewCategoriaEdats_UserDeletingRow);
+            this.dataGridViewCategoriaEdats.DoubleClick += new System.EventHandler(this.dataGridViewCategoriaEdats_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

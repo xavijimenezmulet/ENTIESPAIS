@@ -74,5 +74,37 @@ namespace EntiEspais.ORM
             return missatgeError;
 
         }
+
+        /**
+         * ENS INSERTA A LA BASE DE DADES UN ADMINISTRADOR NOU
+         **/
+        public static String InsertAdministrador(ADMINISTRADORS administrador)
+        {
+            String missatgeError = "";
+            
+            GeneralORM.bd.ADMINISTRADORS.Add(administrador);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+        }
+
+        /**
+         * ENS BORRA UN ADMINISTRADOR DE LA BASE DE DADES QUE LI PASSEM PER PARAMETRE
+         **/
+        public static String DeleteByAdministrador(ADMINISTRADORS administrador)
+        {
+            String missatgeError = "";
+
+            GeneralORM.bd.ADMINISTRADORS.Remove(administrador);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
+        }
+
+
+
     }
 }

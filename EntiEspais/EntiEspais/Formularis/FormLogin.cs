@@ -56,29 +56,29 @@ namespace EntiEspais
          **/
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxEmail.Text.Equals("Email"))
+            if ( textBoxEmail.Text.Equals( "Email" ) )
             {
-                MessageBox.Show("Escriu un Email!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show( "Escriu un Email!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
-            else if (!Utilitats.isAnEmail(textBoxEmail.Text))
+            else if ( !Utilitats.isAnEmail( textBoxEmail.Text ) )
             {
-                MessageBox.Show("Email mal escrit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show( "Email mal escrit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
-            else if (textBoxContrassenya.Text.Equals("Contrassenya"))
+            else if ( textBoxContrassenya.Text.Equals( "Contrassenya" ) )
             {
-                MessageBox.Show("Escriu una Contrassenya!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show( "Escriu una Contrassenya!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxContrassenya.Select();
             }
-            else if (textBoxContrassenya.TextLength < 4)
+            else if ( textBoxContrassenya.TextLength < 4 )
             {
-                MessageBox.Show("Contrassenya massa curta!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show( "Contrassenya massa curta!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
-            else if(!AdministradorsORM.FindAdminByEmailAndPassword(textBoxEmail.Text, textBoxContrassenya.Text))
+            else if( !AdministradorsORM.FindAdminByEmailAndPassword( textBoxEmail.Text, textBoxContrassenya.Text ) )
             {
-                MessageBox.Show("Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show( "Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
             else
@@ -92,10 +92,10 @@ namespace EntiEspais
          **/
         private void textBoxEmail_Enter(object sender, EventArgs e)
         {
-            if (textBoxEmail.Text.Equals("Email"))
+            if ( textBoxEmail.Text.Equals( "Email" ) )
             {
-                textBoxEmail.Text = "";
-                textBoxEmail.ForeColor = Color.Black;
+                textBoxEmail.Text       = "";
+                textBoxEmail.ForeColor  = Color.Black;
             }
                 
         }
@@ -107,8 +107,8 @@ namespace EntiEspais
         {
             if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
             {
-                textBoxEmail.Text = "Email";
-                textBoxEmail.ForeColor = Color.Gray;
+                textBoxEmail.Text       = "Email";
+                textBoxEmail.ForeColor  = Color.Gray;
             }
         }
 
@@ -119,8 +119,8 @@ namespace EntiEspais
         {
             if (textBoxContrassenya.Text.Equals("Contrassenya"))
             {
-                textBoxContrassenya.Text = "";
-                textBoxContrassenya.ForeColor = Color.Black;
+                textBoxContrassenya.Text         = "";
+                textBoxContrassenya.ForeColor    = Color.Black;
                 textBoxContrassenya.PasswordChar = '*';
                 
             }
@@ -134,8 +134,8 @@ namespace EntiEspais
             if (string.IsNullOrWhiteSpace(textBoxContrassenya.Text))
             {
                 textBoxContrassenya.PasswordChar = '\0';
-                textBoxContrassenya.Text = "Contrassenya";
-                textBoxContrassenya.ForeColor = Color.Gray;
+                textBoxContrassenya.Text         = "Contrassenya";
+                textBoxContrassenya.ForeColor    = Color.Gray;
             }
         }
 
@@ -145,13 +145,13 @@ namespace EntiEspais
          **/
         private void gMapControl1_Load(object sender, EventArgs e)
         {
-            GMapProvider.WebProxy = WebRequest.GetSystemWebProxy();
-            gMapControl1.DragButton = MouseButtons.Left;
-            gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(41.470774, 2.085289);
-            gMapControl1.MinZoom = 0;
-            gMapControl1.MaxZoom = 24;
-            gMapControl1.Zoom = 17;
+            GMapProvider.WebProxy       = WebRequest.GetSystemWebProxy();
+            gMapControl1.DragButton     = MouseButtons.Left;
+            gMapControl1.MapProvider    = GMapProviders.GoogleMap;
+            gMapControl1.Position       = new PointLatLng(41.470774, 2.085289);
+            gMapControl1.MinZoom        = 0;
+            gMapControl1.MaxZoom        = 24;
+            gMapControl1.Zoom           = 17;
 
 
 
@@ -170,14 +170,14 @@ namespace EntiEspais
         {
             if( !textBoxEmail.Equals( "Email" ))
             {
-                textBoxEmail.Text = "Email";
-                textBoxEmail.ForeColor = Color.Gray;
+                textBoxEmail.Text       = "Email";
+                textBoxEmail.ForeColor  = Color.Gray;
             }
-            if( !textBoxContrassenya.Equals( "Contrassenya"))
+            if( !textBoxContrassenya.Equals( "Contrassenya" ) )
             {
-                textBoxContrassenya.Text = "Contrassenya";
+                textBoxContrassenya.Text         = "Contrassenya";
                 textBoxContrassenya.PasswordChar = '\0';
-                textBoxContrassenya.ForeColor = Color.Gray;
+                textBoxContrassenya.ForeColor    = Color.Gray;
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using BlowFishCS;
+using EntiEspais.ORM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,65 @@ namespace EntiEspais.Classes
 
             return verdader;
 
+        }
+
+        /**
+         * ENS INTRODUEXI DE FORMA AUTOMATICA ELS INTERVALS DE HORES
+         **/
+        public static void InsertHores()
+        {
+            
+            TimeSpan inici = new TimeSpan(0, 0, 0);
+            TimeSpan final = new TimeSpan(0, 0, 0);
+            HORES hores = new HORES();
+
+            for (int i = 0; i < 24; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (i < 23)
+                    {
+                        if (j < 3)
+                        {
+                            inici = new TimeSpan(i, j * 15, 0);
+                            final = new TimeSpan(i, (j * 15) + 15, 0);
+                            hores.inici = inici;
+                            hores.fi = final;
+                            GeneralORM.InsertHoresInterval(hores);
+
+
+                        }
+                        else
+                        {
+                            inici = new TimeSpan(i, j * 15, 0);
+                            final = new TimeSpan(i + 1, 0, 0);
+                            hores.inici = inici;
+                            hores.fi = final;
+                            GeneralORM.InsertHoresInterval(hores);
+                        }
+                    }
+                    else
+                    {
+                        if (j < 3)
+                        {
+                            inici = new TimeSpan(i, j * 15, 0);
+                            final = new TimeSpan(i, (j * 15) + 15, 0);
+                            hores.inici = inici;
+                            hores.fi = final;
+                            GeneralORM.InsertHoresInterval(hores);
+                        }
+                        else
+                        {
+                            inici = new TimeSpan(i, j * 15, 0);
+                            final = new TimeSpan(0, 0, 0);
+                            hores.inici = inici;
+                            hores.fi = final;
+                            GeneralORM.InsertHoresInterval(hores);
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

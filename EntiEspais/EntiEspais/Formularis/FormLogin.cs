@@ -47,7 +47,7 @@ namespace EntiEspais
         {
             Reloj.Start();
             pictureBox1.Select();
-
+            
         }
 
         

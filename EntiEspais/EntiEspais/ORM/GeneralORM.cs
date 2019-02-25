@@ -98,6 +98,16 @@ namespace EntiEspais.ORM
 
             return missatgeError;
         }
+
+        public static String InsertHoresInterval(HORES hores)
+        {
+            String missatgeError= "";
+            GeneralORM.bd.HORES.Add(hores);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+        }
     }
 
 }

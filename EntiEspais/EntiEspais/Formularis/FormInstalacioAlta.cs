@@ -117,6 +117,7 @@ namespace EntiEspais.Formularis
             gMapControl1.MapProvider = GMapProviders.GoogleMap; //Usar google maps
             gMapControl1.MaxZoom = 20;
             gMapControl1.MinZoom = 0;
+            gMapControl1.ShowCenter = false;
             gMapControl1.Zoom = 15;
             gMapControl1.AutoScroll = true;
 
@@ -151,8 +152,9 @@ namespace EntiEspais.Formularis
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //Obtenemos los datos de lat y lon del mapa donde el usuario presionó
-            double lat = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lat;
-            double lon = gMapControl1.FromLocalToLatLng(e.X, e.Y).Lng;
+            var point = gMapControl1.FromLocalToLatLng(e.X, e.Y);
+            double lat = point.Lat;
+            double lon = point.Lng;
 
             //Rellenar TextBox con coordenadas
             textBoxLatitud.Text = lat.ToString();
@@ -160,24 +162,40 @@ namespace EntiEspais.Formularis
 
             //Mover marker a la posición
             markerGoogle.Position = new PointLatLng(lat, lon);
+
+            //Tomar dirección
+            /*
+             var adresses = GetAddress(point);
+
+            if (adresses != null)
+            {
+                textBoxAdresa.Text = adresses[0];
+            }
+            else
+            {
+                textBoxAdresa.Text = "No se ha podido tomar la dirección";
+            }
+            */
+
         }
 
-        //Reverse Geocoding
-        private void dada()
+        //Tomar localización
+        private List<String> GetAddress(PointLatLng point)
         {
-            /*
-            string address = "123 something st, somewhere";
-            string requestUri = string.Format("http://maps.googleapis.com/maps/api/geocode/xml?address={0}&sensor=false", Uri.EscapeDataString(address));
+            List<Placemark> placemarks = null;
+            var statusCode = GMapProviders.GoogleMap.GetPlacemarks(point,out placemarks);
+            List<String> adresses = null;
 
-            WebRequest request = WebRequest.Create(requestUri);
-            WebResponse response = request.GetResponse();
-            XDocument xdoc = XDocument.Load(response.GetResponseStream());
+            if (statusCode == GeoCoderStatusCode.OK && placemarks != null)
+            {
+                adresses = new List<string>();
+                foreach (var placemark in placemarks)
+                {
+                    adresses.Add(placemark.Address);
+                }
 
-            XElement result = xdoc.Element("GeocodeResponse").Element("result");
-            XElement locationElement = result.Element("geometry").Element("location");
-            XElement lat = locationElement.Element("lat");
-            XElement lng = locationElement.Element("lng");
-            */
+            }
+            return adresses;
         }
     }
 }

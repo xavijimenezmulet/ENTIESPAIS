@@ -19,7 +19,7 @@ namespace EntiEspais
             SplashInicio inicio = new SplashInicio();
             if (inicio.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new FormLogin());
+                Application.Run(/*new FormLogin()*/ new Formularis.FormEquips());
             }
         }
     }

@@ -160,6 +160,18 @@
     <Compile Include="Formularis\FormCompeticions.Designer.cs">
       <DependentUpon>FormCompeticions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEquip.designer.cs">
+      <DependentUpon>FormEquip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEquips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEquips.designer.cs">
+      <DependentUpon>FormEquips.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormEsport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +279,7 @@
     </Compile>
     <Compile Include="ORM\AdministradorsORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
+    <Compile Include="ORM\EquipsORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -310,6 +323,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormCompeticions.resx">
       <DependentUpon>FormCompeticions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEquip.resx">
+      <DependentUpon>FormEquip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEquips.resx">
+      <DependentUpon>FormEquips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormEsport.resx">
       <DependentUpon>FormEsport.cs</DependentUpon>

@@ -159,6 +159,25 @@ namespace EntiEspais.Classes
             fFaqAndroid.ShowDialog();
         }
 
+        //ens obre un formulari Equips
+        public static void obrirFormEquips()
+        {
+            FormEquips fEquips = new FormEquips();
+            fEquips.ShowDialog();
+        }
 
+        //ens obre un formulari Equip per afegir-ne un.
+        public static void obrirFormEquipPerAfegir()
+        {
+            FormEquip fEquip = new FormEquip("Afegir equip");
+            fEquip.ShowDialog();
+        }
+
+        //ens obre un formulari Equip per modificar-ne un.
+        public static void obrirFormEquipPerModificar(EQUIPS modificar_equip)
+        {
+            FormEquip fEquip = new FormEquip("Modificar equip", modificar_equip);
+            fEquip.ShowDialog();
+        }
     }
 }

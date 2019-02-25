@@ -49,8 +49,17 @@ namespace EntiEspais.Formularis
 
                 if (dr == DialogResult.Yes)
                 {
-                    ORM.InstalacionsORM.eliminarInstalacio((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
-                    MessageBox.Show("ESBORRAT");
+                    String mensaje = ORM.InstalacionsORM.eliminarInstalacio((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+
+                    if (mensaje != "")
+                    {
+                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ESBORRAT");
+                    }
+                    
                 }
                 else
                 {

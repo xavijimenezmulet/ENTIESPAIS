@@ -70,8 +70,15 @@ namespace EntiEspais.Formularis
 
                 if (dr == DialogResult.Yes)
                 {
-                    ORM.EspaisORM.eliminarEspai((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
-                    MessageBox.Show("ESBORRAT");
+                    String mensaje = ORM.EspaisORM.eliminarEspai((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
+                    if (mensaje != "")
+                    {
+                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ESBORRAT");
+                    }
                 }
                 else
                 {

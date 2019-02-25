@@ -72,11 +72,29 @@ namespace EntiEspais.Formularis
 
             if (!modificar)
             {
-                ORM.EspaisORM.altaEspai(textBoxNom.Text, float.Parse(textBoxPreu.Text), exterior, id_instalacio);
+                String mensaje = ORM.EspaisORM.altaEspai(textBoxNom.Text, float.Parse(textBoxPreu.Text), exterior, id_instalacio);
+
+                if (mensaje != "")
+                {
+                    MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("AGREGAT");
+                }
             }
             else
             {
-                ORM.EspaisORM.modificarEspai(_espai.id, textBoxNom.Text, float.Parse(textBoxPreu.Text), exterior);
+                String mensaje = ORM.EspaisORM.modificarEspai(_espai.id, textBoxNom.Text, float.Parse(textBoxPreu.Text), exterior);
+
+                if (mensaje != "")
+                {
+                    MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("MODIFICAT");
+                }
             }
 
             this.Close();

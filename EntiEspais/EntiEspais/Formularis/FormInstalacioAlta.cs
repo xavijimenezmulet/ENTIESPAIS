@@ -22,7 +22,6 @@ namespace EntiEspais.Formularis
 
         GMarkerGoogle markerGoogle;
         GMapOverlay markerOverlay;
-        int filaSeleccionada = 0;
         double latInicial = 41.389129;
         double lonInicial = 2.173028;
 
@@ -62,14 +61,32 @@ namespace EntiEspais.Formularis
             //Añadir
             if (!modificar)
             {
-                ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
+                String mensaje = ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
                      comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+
+                if (mensaje != "")
+                {
+                    MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("AGREGAT");
+                }
             }
             //Modificar
             else
             {
-                ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
+                String mensaje = ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
                      comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+
+                if (mensaje != "")
+                {
+                    MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("MODIFICAT");
+                }
             }
 
             this.Close();

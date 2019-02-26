@@ -142,7 +142,7 @@ namespace EntiEspais.Classes
         //ens obre un formulari Competicio per modificar
         public static void obrirFormCompeticio(COMPETICIONS competicio)
         {
-            FormCompeticio fCompeticio = new FormCompeticio();
+            FormCompeticio fCompeticio = new FormCompeticio(competicio);
             fCompeticio.ShowDialog();
         }
 

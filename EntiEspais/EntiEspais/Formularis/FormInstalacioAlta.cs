@@ -112,14 +112,20 @@ namespace EntiEspais.Formularis
         //Gestión mapa
         private void gestionMapa()
         {
+            GMapControl gcontrol = new GMapControl();
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true; //Permite hacer drag
-            gMapControl1.MapProvider = GMapProviders.GoogleMap; //Usar google maps
+            gMapControl1.MapProvider = GoogleMapProvider.Instance; //Usar google maps
             gMapControl1.MaxZoom = 20;
             gMapControl1.MinZoom = 0;
             gMapControl1.ShowCenter = false;
             gMapControl1.Zoom = 15;
             gMapControl1.AutoScroll = true;
+
+
+            gcontrol.SetPositionByKeywords("address");
+            gMapControl1.Position = gcontrol.Position;
+
 
             if(!modificar)
             {
@@ -151,10 +157,17 @@ namespace EntiEspais.Formularis
         //Doble click sobre el mapa
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            var p = gMapControl1.FromLocalToLatLng(e.X, e.Y);
+            double lat = 41.389129;
+            double lon = 2.173028;
+
+            String dir = "Barcelona";
+            //gMapControl1.GetPositionByKeywords(dir, p);
+
             //Obtenemos los datos de lat y lon del mapa donde el usuario presionó
             var point = gMapControl1.FromLocalToLatLng(e.X, e.Y);
-            double lat = point.Lat;
-            double lon = point.Lng;
+            //double lat = point.Lat;
+            //double lon = point.Lng;
 
             //Rellenar TextBox con coordenadas
             textBoxLatitud.Text = lat.ToString();
@@ -182,6 +195,9 @@ namespace EntiEspais.Formularis
         //Tomar localización
         private List<String> GetAddress(PointLatLng point)
         {
+        
+
+      
             List<Placemark> placemarks = null;
             var statusCode = GMapProviders.GoogleMap.GetPlacemarks(point,out placemarks);
             List<String> adresses = null;
@@ -197,5 +213,7 @@ namespace EntiEspais.Formularis
             }
             return adresses;
         }
+
+        //Request 
     }
 }

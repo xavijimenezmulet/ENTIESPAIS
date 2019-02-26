@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Classes\blowfish.cs" />
     <Compile Include="Classes\ObridorFormulari.cs" />
+    <Compile Include="Classes\Requests.cs" />
     <Compile Include="Classes\Utilitats.cs" />
     <Compile Include="COMPETICIONS.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>

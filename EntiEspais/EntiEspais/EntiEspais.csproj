@@ -190,6 +190,12 @@
     <Compile Include="Formularis\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormModificadorContrassenya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormModificadorContrassenya.Designer.cs">
+      <DependentUpon>FormModificadorContrassenya.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormModificadorContrassenya.resx">
+      <DependentUpon>FormModificadorContrassenya.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

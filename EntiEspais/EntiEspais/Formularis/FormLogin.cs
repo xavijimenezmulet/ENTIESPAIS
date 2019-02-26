@@ -147,15 +147,17 @@ namespace EntiEspais
         {
             GMapProvider.WebProxy       = WebRequest.GetSystemWebProxy();
             gMapControl1.DragButton     = MouseButtons.Left;
-            gMapControl1.MapProvider    = GMapProviders.GoogleMap;
-            gMapControl1.Position       = new PointLatLng(41.470774, 2.085289);
+            gMapControl1.MapProvider    = GoogleMapProvider.Instance;
+            GMapControl gcontrol        = new GMapControl();
+            gcontrol.SetPositionByKeywords("Ajuntament Sant Cugat Vallès");
+            gMapControl1.Position       = gcontrol.Position;
             gMapControl1.MinZoom        = 0;
             gMapControl1.MaxZoom        = 24;
             gMapControl1.Zoom           = 17;
 
 
 
-            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(41.470774, 2.085289), GMarkerGoogleType.red_dot);
+            GMarkerGoogle marker = new GMarkerGoogle(gMapControl1.Position, GMarkerGoogleType.red_dot);
             GMapOverlay markersOverlay = new GMapOverlay("markers");
 
 

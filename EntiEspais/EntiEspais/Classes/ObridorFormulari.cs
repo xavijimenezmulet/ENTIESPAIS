@@ -47,6 +47,13 @@ namespace EntiEspais.Classes
             fAdministradors.ShowDialog();
         }
 
+        //ens obre un formulari per cambiar la contrassenya
+        public static void obrirFormModificadorContrassenya(ADMINISTRADORS administrador)
+        {
+            FormModificadorContrassenya fModificador = new FormModificadorContrassenya(administrador);
+            fModificador.ShowDialog();
+        }
+
         //ens obre un formulari esports
         public static void obrirFormEsports()
         {

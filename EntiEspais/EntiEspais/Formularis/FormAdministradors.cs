@@ -110,7 +110,17 @@ namespace EntiEspais.Formularis
 
         private void dataGridViewAdministradors_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            eliminarAdmins(sender, e);
+            
+            Boolean correcto = eliminar();
+
+            if (!correcto )
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                verdadero = true;
+            }
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
@@ -132,36 +142,42 @@ namespace EntiEspais.Formularis
             ObridorFormulari.obrirFormAdministradorModificar((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
         }
 
-        private void eliminarAdmins(object sender, DataGridViewRowCancelEventArgs e)
+
+        private Boolean eliminar()
         {
+            Boolean correcto = true;
+
             String missatge = "";
             DialogResult resultat = MessageBox.Show("Estàs segur de borrar l'usuari?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultat == DialogResult.Yes)
             {
-
                 missatge = AdministradorsORM.DeleteByAdministrador((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
                 if (!missatge.Equals(""))
                 {
                     MessageBox.Show(missatge, "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    correcto = false;
                 }
-                else
-                {
-                    e.Cancel = true;
-                }
-
-
             }
             else
             {
-                e.Cancel = true;
+                correcto = false;
             }
+
+            return correcto;
 
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            
+            eliminar();
+            verdadero = true;
+            bindingSourceAdministradors.DataSource = AdministradorsORM.SelectAllAdministradors();
+        }
+
+        private void buttonCambiarContrassenya_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormModificadorContrassenya((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
         }
     }
 }

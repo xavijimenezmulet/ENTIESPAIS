@@ -5,7 +5,7 @@ namespace EntiEspais.Formularis
 {
     public partial class FormEquip : Form
     {
-        public EQUIPS equip2;
+        EQUIPS equip2;
 
         public FormEquip()
         {
@@ -16,6 +16,7 @@ namespace EntiEspais.Formularis
         {
             InitializeComponent();
             this.Text = titulo;
+            
         }
 
         public FormEquip(string titulo, EQUIPS equip)
@@ -23,6 +24,7 @@ namespace EntiEspais.Formularis
             InitializeComponent();
             this.Text = titulo;
             equip2 = equip;
+            
         }
 
         //Tanca el formulari una vegada fem clic al botó cancel·lar.
@@ -36,64 +38,65 @@ namespace EntiEspais.Formularis
         {
             if (textBoxNomEquip.Text == "")
             {
-                DialogResult mensaje = MessageBox.Show("¡Nom obligatori!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Nom obligatori!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxNomEquip.Focus();
             }
             else if (!radioButtonSi.Checked && !radioButtonNo.Checked)
             {
-                DialogResult mensaje = MessageBox.Show("¡Marcar discapacitat obligatori!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Marcar discapacitat incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            /*else if ( comboBoxEntitat.SelectedIndex == -1 )
+            else if ( comboBoxEntitat.SelectedIndex == -1 )
             {
-                DialogResult mensaje = MessageBox.Show("¡Entitat obligatòria!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Entitat incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxEntitat.Focus();
             }
             else if ( comboBoxCompeticio.SelectedIndex == -1)
             {
-                DialogResult mensaje = MessageBox.Show("¡Competició obligatòria!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Competició incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxCompeticio.Focus();
             }
             else if ( comboBoxCategoriaEdat.SelectedIndex == -1)
             {
-                DialogResult mensaje = MessageBox.Show("¡Categoria edat obligatòria!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Categoria edat incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxCategoriaEdat.Focus();
             }
             else if ( comboBoxCategoriaEquip.SelectedIndex == -1)
             {
-                DialogResult mensaje = MessageBox.Show("¡Categoria de l'equip obligatòria!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Categoria de l'equip incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxCategoriaEquip.Focus();
             }
             else if ( comboBoxSexe.SelectedIndex == -1)
             {
-                DialogResult mensaje = MessageBox.Show("¡Sexe obligatori!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Sexe incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxSexe.Focus();
             }
             else if (comboBoxEsport.SelectedIndex == -1)
             {
-                DialogResult mensaje = MessageBox.Show("¡Esport obligatori!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBox.Show("Esport incorrecte!", "ATENCIÓ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxEsport.Focus();
-            }*/
+            }
             else
             {
                 if (this.Text == "Afegir equip")
                 {
+                    EQUIPS equip3 = new EQUIPS();
                     String missatge = "";
-                    equip2.nom = textBoxNomEquip.Text;
+                    equip3.nom = textBoxNomEquip.Text;
 
                     if (radioButtonSi.Checked)
                     {
-                        equip2.te_discapacitat = true;
-                    } else { equip2.te_discapacitat = false; }
+                        equip3.te_discapacitat = true;
+                    } else { equip3.te_discapacitat = false; }
 
-                    equip2.id_entitat = int.Parse(comboBoxEntitat.SelectedValue.ToString());
-                    equip2.temporada = Classes.Utilitats.tempActual();
-                    equip2.id_competicio = int.Parse(comboBoxCompeticio.SelectedValue.ToString());
-                    equip2.id_categoria_edat = int.Parse(comboBoxCategoriaEdat.SelectedValue.ToString());
-                    equip2.id_categoria_equip = int.Parse(comboBoxCategoriaEquip.SelectedValue.ToString());
-                    equip2.id_sexe = int.Parse(comboBoxSexe.SelectedValue.ToString());
-                    equip2.id_esport = int.Parse(comboBoxEsport.SelectedValue.ToString());
+                    equip3.id_entitat = int.Parse(comboBoxEntitat.SelectedValue.ToString());
+                    equip3.temporada = Classes.Utilitats.tempActual();
+                    equip3.id_competicio = int.Parse(comboBoxCompeticio.SelectedValue.ToString());
+                    equip3.id_categoria_edat = int.Parse(comboBoxCategoriaEdat.SelectedValue.ToString());
+                    equip3.id_categoria_equip = int.Parse(comboBoxCategoriaEquip.SelectedValue.ToString());
+                    equip3.id_sexe = int.Parse(comboBoxSexe.SelectedValue.ToString());
+                    equip3.id_esport = int.Parse(comboBoxEsport.SelectedValue.ToString());
 
-                    missatge = ORM.EquipsORM.InsertEquip(equip2);
+                    missatge = ORM.EquipsORM.InsertEquip(equip3);
 
                     if (missatge != "")
                     {
@@ -107,7 +110,34 @@ namespace EntiEspais.Formularis
                 }
                 else
                 {
+                    String missatge = "";
+                    equip2.nom = textBoxNomEquip.Text;
 
+                    if (radioButtonSi.Checked)
+                    {
+                        equip2.te_discapacitat = true;
+                    }
+                    else { equip2.te_discapacitat = false; }
+
+                    equip2.id_entitat = int.Parse(comboBoxEntitat.SelectedValue.ToString());
+                    equip2.temporada = Classes.Utilitats.tempActual();
+                    equip2.id_competicio = int.Parse(comboBoxCompeticio.SelectedValue.ToString());
+                    equip2.id_categoria_edat = int.Parse(comboBoxCategoriaEdat.SelectedValue.ToString());
+                    equip2.id_categoria_equip = int.Parse(comboBoxCategoriaEquip.SelectedValue.ToString());
+                    equip2.id_sexe = int.Parse(comboBoxSexe.SelectedValue.ToString());
+                    equip2.id_esport = int.Parse(comboBoxEsport.SelectedValue.ToString());
+
+                    missatge = ORM.EquipsORM.UpdateEquip(equip2);
+
+                    if (missatge != "")
+                    {
+                        MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Equip modificat!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Close();
                 }
             }
         }

@@ -61,6 +61,10 @@ namespace EntiEspais.Formularis
                     MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     
                 }
+                else
+                {
+                    RefrescarEquips();
+                }
             }
             else
             {

@@ -32,7 +32,6 @@
             this.labelNomEquip = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAcceptar = new System.Windows.Forms.Button();
-            this.textBoxNomEquip = new System.Windows.Forms.TextBox();
             this.labelEsport = new System.Windows.Forms.Label();
             this.labelDiscapacitat = new System.Windows.Forms.Label();
             this.radioButtonSi = new System.Windows.Forms.RadioButton();
@@ -50,6 +49,7 @@
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
             this.labelid = new System.Windows.Forms.Label();
             this.textBoxid = new System.Windows.Forms.TextBox();
+            this.textBoxNomEquip = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +82,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(373, 479);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(160, 23);
-            this.buttonCancelar.TabIndex = 10;
+            this.buttonCancelar.TabIndex = 11;
             this.buttonCancelar.Text = "Cancel·lar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
@@ -97,17 +97,10 @@
             this.buttonAcceptar.Location = new System.Drawing.Point(49, 479);
             this.buttonAcceptar.Name = "buttonAcceptar";
             this.buttonAcceptar.Size = new System.Drawing.Size(160, 23);
-            this.buttonAcceptar.TabIndex = 9;
+            this.buttonAcceptar.TabIndex = 10;
             this.buttonAcceptar.Text = "Acceptar";
             this.buttonAcceptar.UseVisualStyleBackColor = false;
             this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
-            // 
-            // textBoxNomEquip
-            // 
-            this.textBoxNomEquip.Location = new System.Drawing.Point(115, 43);
-            this.textBoxNomEquip.Name = "textBoxNomEquip";
-            this.textBoxNomEquip.Size = new System.Drawing.Size(214, 20);
-            this.textBoxNomEquip.TabIndex = 0;
             // 
             // labelEsport
             // 
@@ -142,7 +135,7 @@
             this.radioButtonSi.Name = "radioButtonSi";
             this.radioButtonSi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radioButtonSi.Size = new System.Drawing.Size(36, 17);
-            this.radioButtonSi.TabIndex = 1;
+            this.radioButtonSi.TabIndex = 2;
             this.radioButtonSi.TabStop = true;
             this.radioButtonSi.Text = "Sí";
             this.radioButtonSi.UseVisualStyleBackColor = false;
@@ -156,7 +149,7 @@
             this.radioButtonNo.Name = "radioButtonNo";
             this.radioButtonNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.radioButtonNo.Size = new System.Drawing.Size(39, 17);
-            this.radioButtonNo.TabIndex = 2;
+            this.radioButtonNo.TabIndex = 3;
             this.radioButtonNo.TabStop = true;
             this.radioButtonNo.Text = "No";
             this.radioButtonNo.UseVisualStyleBackColor = false;
@@ -179,7 +172,7 @@
             this.comboBoxEntitat.Location = new System.Drawing.Point(115, 111);
             this.comboBoxEntitat.Name = "comboBoxEntitat";
             this.comboBoxEntitat.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxEntitat.TabIndex = 3;
+            this.comboBoxEntitat.TabIndex = 4;
             // 
             // labelCompeticio
             // 
@@ -199,7 +192,7 @@
             this.comboBoxCompeticio.Location = new System.Drawing.Point(115, 157);
             this.comboBoxCompeticio.Name = "comboBoxCompeticio";
             this.comboBoxCompeticio.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxCompeticio.TabIndex = 4;
+            this.comboBoxCompeticio.TabIndex = 5;
             // 
             // labelCategoriaEdat
             // 
@@ -219,7 +212,7 @@
             this.comboBoxCategoriaEdat.Location = new System.Drawing.Point(115, 206);
             this.comboBoxCategoriaEdat.Name = "comboBoxCategoriaEdat";
             this.comboBoxCategoriaEdat.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxCategoriaEdat.TabIndex = 5;
+            this.comboBoxCategoriaEdat.TabIndex = 6;
             // 
             // labelCategoriaEquip
             // 
@@ -239,7 +232,7 @@
             this.comboBoxCategoriaEquip.Location = new System.Drawing.Point(115, 254);
             this.comboBoxCategoriaEquip.Name = "comboBoxCategoriaEquip";
             this.comboBoxCategoriaEquip.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxCategoriaEquip.TabIndex = 6;
+            this.comboBoxCategoriaEquip.TabIndex = 7;
             // 
             // labelSexe
             // 
@@ -259,7 +252,7 @@
             this.comboBoxSexe.Location = new System.Drawing.Point(115, 302);
             this.comboBoxSexe.Name = "comboBoxSexe";
             this.comboBoxSexe.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxSexe.TabIndex = 7;
+            this.comboBoxSexe.TabIndex = 8;
             // 
             // comboBoxEsport
             // 
@@ -267,7 +260,7 @@
             this.comboBoxEsport.Location = new System.Drawing.Point(115, 346);
             this.comboBoxEsport.Name = "comboBoxEsport";
             this.comboBoxEsport.Size = new System.Drawing.Size(214, 21);
-            this.comboBoxEsport.TabIndex = 8;
+            this.comboBoxEsport.TabIndex = 9;
             // 
             // labelid
             // 
@@ -286,8 +279,15 @@
             this.textBoxid.Location = new System.Drawing.Point(115, 9);
             this.textBoxid.Name = "textBoxid";
             this.textBoxid.Size = new System.Drawing.Size(214, 20);
-            this.textBoxid.TabIndex = 38;
+            this.textBoxid.TabIndex = 0;
             this.textBoxid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxNomEquip
+            // 
+            this.textBoxNomEquip.Location = new System.Drawing.Point(115, 47);
+            this.textBoxNomEquip.Name = "textBoxNomEquip";
+            this.textBoxNomEquip.Size = new System.Drawing.Size(214, 20);
+            this.textBoxNomEquip.TabIndex = 1;
             // 
             // FormEquip
             // 
@@ -296,6 +296,7 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 514);
+            this.Controls.Add(this.textBoxNomEquip);
             this.Controls.Add(this.textBoxid);
             this.Controls.Add(this.labelid);
             this.Controls.Add(this.comboBoxEsport);
@@ -313,7 +314,6 @@
             this.Controls.Add(this.radioButtonSi);
             this.Controls.Add(this.labelDiscapacitat);
             this.Controls.Add(this.labelEsport);
-            this.Controls.Add(this.textBoxNomEquip);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAcceptar);
             this.Controls.Add(this.labelNomEquip);
@@ -333,7 +333,6 @@
         private System.Windows.Forms.Label labelNomEquip;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonAcceptar;
-        private System.Windows.Forms.TextBox textBoxNomEquip;
         private System.Windows.Forms.Label labelEsport;
         private System.Windows.Forms.Label labelDiscapacitat;
         private System.Windows.Forms.RadioButton radioButtonSi;
@@ -351,5 +350,6 @@
         private System.Windows.Forms.ComboBox comboBoxEsport;
         private System.Windows.Forms.Label labelid;
         private System.Windows.Forms.TextBox textBoxid;
+        private System.Windows.Forms.TextBox textBoxNomEquip;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace EntiEspais.ORM
 {
@@ -18,30 +19,9 @@ namespace EntiEspais.ORM
         //------------------------------------------//
 
         //Insertar un equip a la base de dades.
-        public static string InsertEquip(string nom,
-            string esport,
-            bool discapacitat,
-            int id_entitat,
-            string temporada,
-            int id_competicio,
-            int id_categoria_edat,
-            int id_categoria_equip,
-            int id_sexe,
-            int id_esport)
+        public static string InsertEquip(EQUIPS equip)
         {
             string mensaje = "";
-
-            EQUIPS equip = new EQUIPS();
-
-            equip.nom = nom;
-            equip.te_discapacitat = discapacitat;
-            equip.id_entitat = id_entitat;
-            //equip.temporada = ;//INSERTAR MÉTODO PARA SABER TEMPORADA ACTUAL.
-            equip.id_competicio = id_competicio;
-            equip.id_categoria_edat = id_categoria_edat;
-            equip.id_categoria_equip = id_categoria_equip;
-            equip.id_sexe = id_sexe;
-            equip.id_esport = id_esport;
 
             GeneralORM.bd.EQUIPS.Add(equip);
 
@@ -52,23 +32,25 @@ namespace EntiEspais.ORM
         //------------------------------------------//
 
         //Modificar un equip de la base de dades.
-        public static string UpdateEquip(string nom,
-            bool discapacitat,
-            int id_entitat,
-            string temporada,
-            int id_competicio,
-            int id_categoria_edat,
-            int id_categoria_equip,
-            int id_sexe,
-            int id_esport)
+        public static String UpdateEquip(EQUIPS equip)
         {
-            string mensaje = "";
-            //
-            EQUIPS equip = GeneralORM.bd.EQUIPS.Find("????"); //INSERTAR CLAVE PRIMARIA <--
-            //
-            mensaje = GeneralORM.SaveChanges();
+            String missatgeError = "";
+            EQUIPS eq = GeneralORM.bd.EQUIPS.Find(equip.id);
 
-            return mensaje;
+            eq.nom = equip.nom;
+            eq.te_discapacitat = equip.te_discapacitat;
+            eq.id_entitat = equip.id_entitat;
+            eq.temporada = equip.temporada;
+            eq.id_competicio = equip.id_competicio;
+            eq.id_categoria_edat = equip.id_categoria_edat;
+            eq.id_categoria_equip = equip.id_categoria_equip;
+            eq.id_sexe = equip.id_sexe;
+            eq.id_esport = equip.id_esport;
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
         }
         //------------------------------------------//
 

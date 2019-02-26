@@ -109,6 +109,7 @@
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tELEFONSENTITATSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.eNTITATSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewInstalacions = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,7 +132,6 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
             this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagenPrincipal)).BeginInit();
@@ -142,12 +142,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNTITATSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNSTALACIONSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -256,6 +256,7 @@
             | System.Windows.Forms.Keys.T)));
             this.afegirEquipToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.afegirEquipToolStripMenuItem.Text = "Afegir Equip";
+            this.afegirEquipToolStripMenuItem.Click += new System.EventHandler(this.afegirEquipToolStripMenuItem_Click);
             // 
             // installacionsToolStripMenuItem
             // 
@@ -897,6 +898,10 @@
             this.tELEFONSENTITATSDataGridViewTextBoxColumn.ReadOnly = true;
             this.tELEFONSENTITATSDataGridViewTextBoxColumn.Visible = false;
             // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(EntiEspais.ENTITATS);
+            // 
             // eNTITATSBindingSource
             // 
             this.eNTITATSBindingSource.DataSource = typeof(EntiEspais.ENTITATS);
@@ -1120,10 +1125,6 @@
             this.Reloj.Enabled = true;
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
             // 
-            // bindingSourceEntitats
-            // 
-            this.bindingSourceEntitats.DataSource = typeof(EntiEspais.ENTITATS);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1168,12 +1169,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNTITATSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNSTALACIONSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

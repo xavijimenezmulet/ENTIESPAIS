@@ -103,7 +103,7 @@ namespace EntiEspais
 
         private void llistaEquipsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ObridorFormulari.obrirFormEquips();
         }
 
         private void llistatUsuarisToolStripAdministradors_Click(object sender, EventArgs e)
@@ -169,6 +169,11 @@ namespace EntiEspais
         private void toolStripButtonAltres_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormFaqsAndroid();
+        }
+
+        private void afegirEquipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEquipPerAfegir();
         }
     }
 }

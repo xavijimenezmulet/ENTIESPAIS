@@ -56,7 +56,7 @@ namespace EntiEspais
          **/
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if ( textBoxEmail.Text.Equals( "Email" ) )
+            /*if ( textBoxEmail.Text.Equals( "Email" ) )
             {
                 MessageBox.Show( "Escriu un Email!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
@@ -82,9 +82,9 @@ namespace EntiEspais
                 textBoxEmail.Select();
             }
             else
-            {
+            {*/
                 ObridorFormulari.obrirFormPrincipal();
-            }
+           // }
         }
 
         /**

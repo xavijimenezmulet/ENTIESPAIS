@@ -16,7 +16,7 @@ namespace EntiEspais.Formularis
         //Omple la GridView amb tots els equips que hi hagi a la base de dades.
         private void RefrescarEquips()
         {
-            dataGridViewEquips.DataSource = ORM.EquipsORM.SelectAllEquips();
+            bindingSourceEquips.DataSource = ORM.EquipsORM.SelectAllEquips();
         }
 
         //Cada tick del rellotge posa l'hora en una label.
@@ -28,8 +28,9 @@ namespace EntiEspais.Formularis
         private void FormEquips_Load(object sender, EventArgs e)
         {
             Reloj.Start();
-            
+
             RefrescarEquips();
+           
         }
         
         private void buttonAfegirEquipo_Click(object sender, EventArgs e)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using EntiEspais.Classes;
 namespace EntiEspais
 {
     static class Program
@@ -16,11 +16,12 @@ namespace EntiEspais
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SplashInicio inicio = new SplashInicio();
-            if (inicio.ShowDialog() == DialogResult.OK)
-            {
-                Application.Run(/*new FormLogin()*/ new Formularis.FormEquips());
-            }
+            /*SplashInicio inicio = new SplashInicio();*/
+            //if (inicio.ShowDialog() == DialogResult.OK)
+            //{
+
+                Application.Run( new FormLogin() );
+            //}
         }
     }
 }

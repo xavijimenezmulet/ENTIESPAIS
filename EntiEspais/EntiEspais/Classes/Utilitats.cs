@@ -1,11 +1,7 @@
 ﻿using BlowFishCS;
 using EntiEspais.ORM;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 /**
  * CLASSE UTILTIATS (ENS SERVIRÀ PER UTILITZAR MÈTODES DE LA CLASSE PER REUTILITZAR CODI
  **/
@@ -122,5 +118,28 @@ namespace EntiEspais.Classes
                 }
             }
         }
+
+        /**
+         *METODE PER TENIR LA TEMPORADA ACTUAL 
+         **/
+        public static string tempActual()
+        {
+            string temp = "";
+            int monthN = System.DateTime.Now.Month;
+            int yearN = System.DateTime.Now.Year;
+            
+
+            if (monthN < 7)
+            {
+                temp = (yearN - 1) + "-" + yearN;
+            }
+            else
+            {
+                temp = yearN + "-" + (yearN + 1);
+            }
+
+            return temp;
+        }
+
     }
 }

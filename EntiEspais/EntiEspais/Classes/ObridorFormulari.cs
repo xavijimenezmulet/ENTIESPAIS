@@ -121,7 +121,7 @@ namespace EntiEspais.Classes
         //ens obre un formulari Categoria Equip per modificar
         public static void obrirFormCategoriaEquip(CATEGORIA_EQUIP categoria)
         {
-            FormCategoriaEquip fCategoriaEquip = new FormCategoriaEquip();
+            FormCategoriaEquip fCategoriaEquip = new FormCategoriaEquip(categoria);
             fCategoriaEquip.ShowDialog();
         }
 

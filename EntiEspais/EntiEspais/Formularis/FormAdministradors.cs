@@ -110,28 +110,7 @@ namespace EntiEspais.Formularis
 
         private void dataGridViewAdministradors_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            String missatge = "";
-            DialogResult resultat = MessageBox.Show( "Estàs segur de borrar l'usuari?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
-
-            if ( resultat == DialogResult.Yes )
-            {
-
-                missatge = AdministradorsORM.DeleteByAdministrador((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem );
-                if ( !missatge.Equals( "" ) )
-                {
-                    MessageBox.Show( missatge, "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error );
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-
-
-            }
-            else
-            {
-                e.Cancel = true;
-            }
+            eliminarAdmins(sender, e);
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
@@ -151,6 +130,38 @@ namespace EntiEspais.Formularis
         private void dataGridViewAdministradors_DoubleClick(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormAdministradorModificar((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
+        }
+
+        private void eliminarAdmins(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            String missatge = "";
+            DialogResult resultat = MessageBox.Show("Estàs segur de borrar l'usuari?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultat == DialogResult.Yes)
+            {
+
+                missatge = AdministradorsORM.DeleteByAdministrador((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
+                if (!missatge.Equals(""))
+                {
+                    MessageBox.Show(missatge, "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+
+
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

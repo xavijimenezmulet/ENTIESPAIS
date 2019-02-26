@@ -86,12 +86,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewAdministradors = new System.Windows.Forms.DataGridView();
-            this.labelHora = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.buttonAfegir = new System.Windows.Forms.Button();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonModificar = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,11 +94,17 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCTIVITATSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceAdministradors = new System.Windows.Forms.BindingSource(this.components);
+            this.labelHora = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Reloj = new System.Windows.Forms.Timer(this.components);
+            this.buttonAfegir = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonModificar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdministradors)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAdministradors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -661,76 +661,6 @@
             this.dataGridViewAdministradors.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewAdministradors_UserDeletingRow);
             this.dataGridViewAdministradors.DoubleClick += new System.EventHandler(this.dataGridViewAdministradors_DoubleClick);
             // 
-            // labelHora
-            // 
-            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHora.AutoSize = true;
-            this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.Location = new System.Drawing.Point(856, 30);
-            this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(40, 15);
-            this.labelHora.TabIndex = 17;
-            this.labelHora.Text = "label2";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
-            this.pictureBox7.Location = new System.Drawing.Point(838, 27);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
-            // 
-            // Reloj
-            // 
-            this.Reloj.Enabled = true;
-            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
-            // 
-            // buttonAfegir
-            // 
-            this.buttonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAfegir.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAfegir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAfegir.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAfegir.Location = new System.Drawing.Point(915, 207);
-            this.buttonAfegir.Name = "buttonAfegir";
-            this.buttonAfegir.Size = new System.Drawing.Size(160, 23);
-            this.buttonAfegir.TabIndex = 18;
-            this.buttonAfegir.Text = "Afegir";
-            this.buttonAfegir.UseVisualStyleBackColor = false;
-            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonEliminar.Location = new System.Drawing.Point(915, 362);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
-            this.buttonEliminar.TabIndex = 19;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = false;
-            // 
-            // buttonModificar
-            // 
-            this.buttonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonModificar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonModificar.Location = new System.Drawing.Point(915, 285);
-            this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(160, 23);
-            this.buttonModificar.TabIndex = 20;
-            this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = false;
-            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -792,6 +722,77 @@
             // 
             this.bindingSourceAdministradors.DataSource = typeof(EntiEspais.ADMINISTRADORS);
             // 
+            // labelHora
+            // 
+            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelHora.AutoSize = true;
+            this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.Location = new System.Drawing.Point(856, 30);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(40, 15);
+            this.labelHora.TabIndex = 17;
+            this.labelHora.Text = "label2";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
+            this.pictureBox7.Location = new System.Drawing.Point(838, 27);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // Reloj
+            // 
+            this.Reloj.Enabled = true;
+            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
+            // 
+            // buttonAfegir
+            // 
+            this.buttonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAfegir.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAfegir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAfegir.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAfegir.Location = new System.Drawing.Point(915, 207);
+            this.buttonAfegir.Name = "buttonAfegir";
+            this.buttonAfegir.Size = new System.Drawing.Size(160, 23);
+            this.buttonAfegir.TabIndex = 18;
+            this.buttonAfegir.Text = "Afegir";
+            this.buttonAfegir.UseVisualStyleBackColor = false;
+            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonEliminar.Location = new System.Drawing.Point(915, 362);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
+            this.buttonEliminar.TabIndex = 19;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // buttonModificar
+            // 
+            this.buttonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonModificar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonModificar.Location = new System.Drawing.Point(915, 285);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(160, 23);
+            this.buttonModificar.TabIndex = 20;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
+            // 
             // FormAdministradors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -820,8 +821,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdministradors)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAdministradors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

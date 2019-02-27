@@ -1,7 +1,5 @@
 ﻿using EntiEspais.Classes;
 using System;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace EntiEspais.Formularis
@@ -30,9 +28,9 @@ namespace EntiEspais.Formularis
             Reloj.Start();
 
             RefrescarEquips();
-           
+
         }
-        
+
         private void buttonAfegirEquipo_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormEquipPerAfegir();
@@ -51,7 +49,7 @@ namespace EntiEspais.Formularis
         private void buttonEliminarEquipo_Click(object sender, EventArgs e)
         {
             String mensaje = "";
-            DialogResult resultado = MessageBox.Show("¿Estàs segur d'eliminar aquest equip?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("Segur que vols eliminar aquest equip?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
@@ -59,7 +57,7 @@ namespace EntiEspais.Formularis
                 if (!mensaje.Equals(""))
                 {
                     MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
+
                 }
                 else
                 {
@@ -68,8 +66,44 @@ namespace EntiEspais.Formularis
             }
             else
             {
-                
+
             }
+        }
+
+        private void dataGridViewEquips_DoubleClick(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEquipPerModificar((EQUIPS)dataGridViewEquips.CurrentRow.DataBoundItem);
+        }
+
+        private void dataGridViewEquips_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            String mensaje = "";
+            DialogResult resultado = MessageBox.Show("Segur que vols eliminar aquest equip?", "PREGUNTA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                mensaje = ORM.EquipsORM.DeleteEquip((EQUIPS)dataGridViewEquips.SelectedRows[0].DataBoundItem);
+                if (!mensaje.Equals(""))
+                {
+                    MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+                /*
+                else {
+                    RefrescarEquips();
+                }
+
+                */
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void sortirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

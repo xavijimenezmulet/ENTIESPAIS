@@ -221,15 +221,5 @@ namespace EntiEspais.Formularis
         }
 
 
-
-
-        //CODE:
-        //· buttonAcceptar_Click()
-        //1. Funcion insert.
-        //2. Funcion update.
-        //· FormEquip_Load()
-        //1. Rellenar los combobox con los datos de la BD.
-
-
     }
 }

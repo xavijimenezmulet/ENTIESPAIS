@@ -68,6 +68,13 @@ namespace EntiEspais.Classes
             fEsport.ShowDialog();
         }
 
+        //ens obre un formulari esport per modificar
+        public static void obrirFormEsport(ESPORTS esport)
+        {
+            FormEsport fEsport = new FormEsport(esport);
+            fEsport.ShowDialog();
+        }
+
         //ens obre un formulari sexes
         public static void obrirFormSexes()
         {

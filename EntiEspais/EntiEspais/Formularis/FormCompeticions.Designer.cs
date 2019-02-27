@@ -37,10 +37,10 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewCompeticions = new System.Windows.Forms.DataGridView();
-            this.bindingSourceCompeticions = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceCompeticions = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCompeticions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCompeticions)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,7 @@
             this.buttonModificar.TabIndex = 24;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAfegir
             // 
@@ -137,10 +138,6 @@
             this.dataGridViewCompeticions.TabIndex = 22;
             this.dataGridViewCompeticions.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewCompeticions_UserDeletingRow);
             // 
-            // bindingSourceCompeticions
-            // 
-            this.bindingSourceCompeticions.DataSource = typeof(EntiEspais.COMPETICIONS);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -164,6 +161,10 @@
             this.eQUIPSDataGridViewTextBoxColumn.Name = "eQUIPSDataGridViewTextBoxColumn";
             this.eQUIPSDataGridViewTextBoxColumn.ReadOnly = true;
             this.eQUIPSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceCompeticions
+            // 
+            this.bindingSourceCompeticions.DataSource = typeof(EntiEspais.COMPETICIONS);
             // 
             // FormCompeticions
             // 

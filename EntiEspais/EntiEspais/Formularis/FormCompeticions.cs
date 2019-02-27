@@ -83,5 +83,10 @@ namespace EntiEspais.Formularis
             verdadero = true;
             bindingSourceCompeticions.DataSource = CompeticionsORM.SelectAllCompeticions();
         }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCompeticio((COMPETICIONS)dataGridViewCompeticions.SelectedRows[0].DataBoundItem);
+        }
     }
 }

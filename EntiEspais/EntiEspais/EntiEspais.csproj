@@ -311,11 +311,13 @@
     <Compile Include="ORM\CategoriaPerEdatORM.cs" />
     <Compile Include="ORM\CategoriaPerEquipORM.cs" />
     <Compile Include="ORM\CompeticionsORM.cs" />
+    <Compile Include="ORM\DiesSemanaORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\EquipsORM.cs" />
     <Compile Include="ORM\EsportsORM.cs" />
     <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
+    <Compile Include="ORM\HoresORM.cs" />
     <Compile Include="ORM\SexesORM.cs" />
     <Compile Include="ORM\TelefonsEntitatsORM.cs" />
     <Compile Include="ORM\TelefonsInstalacionsORM.cs" />
@@ -439,10 +441,12 @@
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_EQUIP.datasource" />
     <None Include="Properties\DataSources\COMPETICIONS.datasource" />
+    <None Include="Properties\DataSources\DIA_SEMANA.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\ESPORTS.datasource" />
     <None Include="Properties\DataSources\FAQS.datasource" />
     <None Include="Properties\DataSources\EQUIPS.datasource" />
+    <None Include="Properties\DataSources\HORES.datasource" />
     <None Include="Properties\DataSources\INSTALACIONS.datasource" />
     <None Include="Properties\DataSources\SEXE.datasource" />
     <None Include="Properties\DataSources\TELEFONS_ENTITATS.datasource" />

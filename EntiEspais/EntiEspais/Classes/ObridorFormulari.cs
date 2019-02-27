@@ -243,5 +243,47 @@ namespace EntiEspais.Classes
             FormEquip fEquip = new FormEquip("Modificar equip", modificar_equip);
             fEquip.ShowDialog();
         }
+
+        //ens obre un formulari Dies Semana
+        public static void obrirFormDiesSemana()
+        {
+            FormDiesSemana fDiesSemana = new FormDiesSemana();
+            fDiesSemana.ShowDialog();
+        }
+
+        //ens obre un formulari Dia Semana
+        public static void obrirFormDiaSemana()
+        {
+            FormDiaSemana fDiaSemana = new FormDiaSemana();
+            fDiaSemana.ShowDialog();
+        }
+
+        //ens obre un formulari Dia Semana per modificar
+        public static void obrirFormDiaSemana(DIA_SEMANA dia)
+        {
+            FormDiaSemana fDiaSemana = new FormDiaSemana(dia);
+            fDiaSemana.ShowDialog();
+        }
+
+        //ens obre un formulari Hores
+        public static void obrirFormHores()
+        {
+            FormHores fHores = new FormHores();
+            fHores.ShowDialog();
+        }
+
+        //ens obre un formulari Hora
+        public static void obrirFormHora()
+        {
+            FormHora fHora = new FormHora();
+            fHora.ShowDialog();
+        }
+
+        //ens obre un formulari Hora per modificar
+        public static void obrirFormHora(HORES hora)
+        {
+            FormHora fHora = new FormHora(hora);
+            fHora.ShowDialog();
+        }
     }
 }

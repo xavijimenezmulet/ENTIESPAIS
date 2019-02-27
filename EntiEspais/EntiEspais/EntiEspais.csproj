@@ -362,6 +362,12 @@
     <EmbeddedResource Include="Formularis\FormCompeticions.resx">
       <DependentUpon>FormCompeticions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormDiaSemana.resx">
+      <DependentUpon>FormDiaSemana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormDiesSemana.resx">
+      <DependentUpon>FormDiesSemana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormEquip.resx">
       <DependentUpon>FormEquip.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormFaqsAndroid.resx">
       <DependentUpon>FormFaqsAndroid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormHora.resx">
+      <DependentUpon>FormHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormHores.resx">
+      <DependentUpon>FormHores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

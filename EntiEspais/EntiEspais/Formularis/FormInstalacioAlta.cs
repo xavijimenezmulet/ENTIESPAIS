@@ -22,6 +22,7 @@ namespace EntiEspais.Formularis
 
         GMarkerGoogle markerGoogle;
         GMapOverlay markerOverlay;
+        GMapControl gcontrol;
         double latInicial = 41.389129;
         double lonInicial = 2.173028;
 
@@ -112,22 +113,28 @@ namespace EntiEspais.Formularis
         //Gestión mapa
         private void gestionMapa()
         {
-            GMapControl gcontrol = new GMapControl();
+            gcontrol = new GMapControl();
             gMapControl1.DragButton = MouseButtons.Left;
             gMapControl1.CanDragMap = true; //Permite hacer drag
-            gMapControl1.MapProvider = GoogleMapProvider.Instance; //Usar google maps
+            //gMapControl1.MapProvider = GoogleMapProvider.Instance; //Usar google maps
+            gMapControl1.MapProvider = GMapProviders.GoogleMap;
             gMapControl1.MaxZoom = 20;
             gMapControl1.MinZoom = 0;
             gMapControl1.ShowCenter = false;
             gMapControl1.Zoom = 15;
             gMapControl1.AutoScroll = true;
 
+            markerOverlay = new GMapOverlay("Marcador");
+            markerGoogle = new GMarkerGoogle(new PointLatLng(latInicial, lonInicial), GMarkerGoogleType.red);
+            markerOverlay.Markers.Add(markerGoogle);
 
-            gcontrol.SetPositionByKeywords("address");
-            gMapControl1.Position = gcontrol.Position;
 
+            textBoxLatitud.Text = latInicial.ToString();
+            textBoxAltitud.Text = lonInicial.ToString();
 
-            if(!modificar)
+            markerGoogle.Position = new PointLatLng(latInicial, lonInicial);
+
+            if (!modificar)
             {
                 gMapControl1.Position = new PointLatLng(41.389129, 2.173028);
 
@@ -157,17 +164,10 @@ namespace EntiEspais.Formularis
         //Doble click sobre el mapa
         private void gMapControl1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var p = gMapControl1.FromLocalToLatLng(e.X, e.Y);
-            double lat = 41.389129;
-            double lon = 2.173028;
-
-            String dir = "Barcelona";
-            //gMapControl1.GetPositionByKeywords(dir, p);
-
             //Obtenemos los datos de lat y lon del mapa donde el usuario presionó
             var point = gMapControl1.FromLocalToLatLng(e.X, e.Y);
-            //double lat = point.Lat;
-            //double lon = point.Lng;
+            double lat = point.Lat;
+            double lon = point.Lng;
 
             //Rellenar TextBox con coordenadas
             textBoxLatitud.Text = lat.ToString();
@@ -176,44 +176,27 @@ namespace EntiEspais.Formularis
             //Mover marker a la posición
             markerGoogle.Position = new PointLatLng(lat, lon);
 
-            //Tomar dirección
-            /*
-             var adresses = GetAddress(point);
-
-            if (adresses != null)
-            {
-                textBoxAdresa.Text = adresses[0];
-            }
-            else
-            {
-                textBoxAdresa.Text = "No se ha podido tomar la dirección";
-            }
-            */
+            var dir = gcontrol.GetPositionByKeywords("hello",out point);
 
         }
 
-        //Tomar localización
-        private List<String> GetAddress(PointLatLng point)
+        //Buscar
+        private void buttonBuscar_Click(object sender, EventArgs e)
         {
-        
+            //Dirección mediante letras
+            gcontrol.SetPositionByKeywords(textBoxAdresa.Text);
+            gMapControl1.Position = gcontrol.Position;
 
-      
-            List<Placemark> placemarks = null;
-            var statusCode = GMapProviders.GoogleMap.GetPlacemarks(point,out placemarks);
-            List<String> adresses = null;
+            //Transformamos en lat y lng
+            double lat = gcontrol.Position.Lat;
+            double lng = gcontrol.Position.Lng;
 
-            if (statusCode == GeoCoderStatusCode.OK && placemarks != null)
-            {
-                adresses = new List<string>();
-                foreach (var placemark in placemarks)
-                {
-                    adresses.Add(placemark.Address);
-                }
+            //Rellenar TextBox con coordenadas
+            textBoxLatitud.Text = lat.ToString();
+            textBoxAltitud.Text = lng.ToString();
 
-            }
-            return adresses;
+            //Mover marker a la posición
+            markerGoogle.Position = new PointLatLng(lat, lng);
         }
-
-        //Request 
     }
 }

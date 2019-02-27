@@ -48,6 +48,7 @@
             this.comboBoxTipus = new System.Windows.Forms.ComboBox();
             this.buttonRuta = new System.Windows.Forms.Button();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -98,7 +99,7 @@
             this.textBoxAdresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.textBoxAdresa.Location = new System.Drawing.Point(112, 98);
             this.textBoxAdresa.Name = "textBoxAdresa";
-            this.textBoxAdresa.Size = new System.Drawing.Size(390, 20);
+            this.textBoxAdresa.Size = new System.Drawing.Size(359, 20);
             this.textBoxAdresa.TabIndex = 28;
             // 
             // label3
@@ -294,13 +295,26 @@
             this.gMapControl1.Zoom = 0D;
             this.gMapControl1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gMapControl1_MouseDoubleClick);
             // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBuscar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonBuscar.Location = new System.Drawing.Point(477, 98);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(25, 23);
+            this.buttonBuscar.TabIndex = 48;
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
             // FormInstalacioAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(571, 515);
+            this.ClientSize = new System.Drawing.Size(571, 516);
+            this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.buttonRuta);
             this.Controls.Add(this.comboBoxTipus);
@@ -352,5 +366,6 @@
         private System.Windows.Forms.ComboBox comboBoxTipus;
         private System.Windows.Forms.Button buttonRuta;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
+        private System.Windows.Forms.Button buttonBuscar;
     }
 }

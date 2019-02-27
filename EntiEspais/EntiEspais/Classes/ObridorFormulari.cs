@@ -174,6 +174,13 @@ namespace EntiEspais.Classes
             fTelefonEntitat.ShowDialog();
         }
 
+        //ens obre un formulari Telefon Entitat per modificar
+        public static void obrirFormTelefonEntitat(TELEFONS_ENTITATS tEntitat)
+        {
+            FormTelefonEntitat fTelefonEntitat = new FormTelefonEntitat(tEntitat);
+            fTelefonEntitat.ShowDialog();
+        }
+
         //ens obre un formulari Telefons Instalacions
         public static void obrirFormTelefonsInstalacions()
         {
@@ -185,6 +192,13 @@ namespace EntiEspais.Classes
         public static void obrirFormTelefonInstalacio()
         {
             FormTelefonInstalacio fTelefonInstalacio = new FormTelefonInstalacio();
+            fTelefonInstalacio.ShowDialog();
+        }
+
+        //ens obre un formulari Telefon Instalacio per modificar
+        public static void obrirFormTelefonInstalacio(TELEFONS_INSTALACIONS tInstalacio)
+        {
+            FormTelefonInstalacio fTelefonInstalacio = new FormTelefonInstalacio(tInstalacio);
             fTelefonInstalacio.ShowDialog();
         }
 

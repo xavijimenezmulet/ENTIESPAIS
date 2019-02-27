@@ -95,6 +95,7 @@
             this.dataGridViewEsports.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewEsports.TabIndex = 11;
             this.dataGridViewEsports.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEsports_UserDeletingRow);
+            this.dataGridViewEsports.DoubleClick += new System.EventHandler(this.dataGridViewEsports_DoubleClick);
             // 
             // buttonAfegir
             // 

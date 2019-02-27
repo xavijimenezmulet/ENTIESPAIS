@@ -37,10 +37,10 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewCategoriaEquips = new System.Windows.Forms.DataGridView();
-            this.bindingSourceCategoriaEquips = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceCategoriaEquips = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategoriaEquips)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCategoriaEquips)).BeginInit();
             this.SuspendLayout();
@@ -137,10 +137,7 @@
             this.dataGridViewCategoriaEquips.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewCategoriaEquips.TabIndex = 22;
             this.dataGridViewCategoriaEquips.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewCategoriaEquips_UserDeletingRow);
-            // 
-            // bindingSourceCategoriaEquips
-            // 
-            this.bindingSourceCategoriaEquips.DataSource = typeof(EntiEspais.CATEGORIA_EQUIP);
+            this.dataGridViewCategoriaEquips.DoubleClick += new System.EventHandler(this.dataGridViewCategoriaEquips_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -165,6 +162,10 @@
             this.eQUIPSDataGridViewTextBoxColumn.Name = "eQUIPSDataGridViewTextBoxColumn";
             this.eQUIPSDataGridViewTextBoxColumn.ReadOnly = true;
             this.eQUIPSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceCategoriaEquips
+            // 
+            this.bindingSourceCategoriaEquips.DataSource = typeof(EntiEspais.CATEGORIA_EQUIP);
             // 
             // FormCategoriaEquips
             // 

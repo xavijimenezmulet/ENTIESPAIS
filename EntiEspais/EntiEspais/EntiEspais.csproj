@@ -277,6 +277,7 @@
     <Compile Include="ORM\CompeticionsORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\EsportsORM.cs" />
+    <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -382,6 +383,7 @@
     <None Include="Properties\DataSources\COMPETICIONS.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\ESPORTS.datasource" />
+    <None Include="Properties\DataSources\FAQS.datasource" />
     <None Include="Properties\DataSources\INSTALACIONS.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

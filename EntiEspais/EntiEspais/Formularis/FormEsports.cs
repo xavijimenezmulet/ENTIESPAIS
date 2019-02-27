@@ -88,5 +88,10 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormEsport((ESPORTS)dataGridViewEsports.SelectedRows[0].DataBoundItem);
         }
+
+        private void dataGridViewEsports_DoubleClick(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEsport((ESPORTS)dataGridViewEsports.SelectedRows[0].DataBoundItem);
+        }
     }
 }

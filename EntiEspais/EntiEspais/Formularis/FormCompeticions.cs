@@ -88,5 +88,10 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormCompeticio((COMPETICIONS)dataGridViewCompeticions.SelectedRows[0].DataBoundItem);
         }
+
+        private void dataGridViewCompeticions_DoubleClick(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCompeticio((COMPETICIONS)dataGridViewCompeticions.SelectedRows[0].DataBoundItem);
+        }
     }
 }

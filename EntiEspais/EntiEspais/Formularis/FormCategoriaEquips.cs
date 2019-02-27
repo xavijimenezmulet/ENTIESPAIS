@@ -89,5 +89,10 @@ namespace EntiEspais.Formularis
             verdadero = true;
             bindingSourceCategoriaEquips.DataSource = CategoriaPerEquipORM.SelectAllCategoriesPerEquip();
         }
+
+        private void dataGridViewCategoriaEquips_DoubleClick(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormCategoriaEquip((CATEGORIA_EQUIP)dataGridViewCategoriaEquips.SelectedRows[0].DataBoundItem);
+        }
     }
 }

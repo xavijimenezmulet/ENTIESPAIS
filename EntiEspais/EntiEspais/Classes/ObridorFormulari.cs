@@ -198,7 +198,7 @@ namespace EntiEspais.Classes
         //ens obre un formulari Faq Android per modificar
         public static void obrirFormFaqAndroid(FAQS faq)
         {
-            FormFaqAndroid fFaqAndroid = new FormFaqAndroid();
+            FormFaqAndroid fFaqAndroid = new FormFaqAndroid(faq);
             fFaqAndroid.ShowDialog();
         }
 

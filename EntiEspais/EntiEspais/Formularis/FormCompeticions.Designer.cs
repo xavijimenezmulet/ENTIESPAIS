@@ -137,6 +137,7 @@
             this.dataGridViewCompeticions.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewCompeticions.TabIndex = 22;
             this.dataGridViewCompeticions.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewCompeticions_UserDeletingRow);
+            this.dataGridViewCompeticions.DoubleClick += new System.EventHandler(this.dataGridViewCompeticions_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

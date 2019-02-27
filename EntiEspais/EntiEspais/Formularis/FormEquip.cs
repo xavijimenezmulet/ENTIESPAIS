@@ -155,11 +155,11 @@ namespace EntiEspais.Formularis
             comboBoxCategoriaEdat.ValueMember = "id";
             comboBoxCategoriaEdat.DisplayMember = "nom";
             //
-            comboBoxCategoriaEquip.DataSource = ORM.CategoriaDelEquipORM.SelectAllCategoriesEquips();
+            comboBoxCategoriaEquip.DataSource = ORM.CategoriaPerEquipORM.SelectAllCategoriesPerEquip();
             comboBoxCategoriaEquip.ValueMember = "id";
             comboBoxCategoriaEquip.DisplayMember = "nom";
             //
-            comboBoxSexe.DataSource = ORM.SexeORM.SelectAllSexes();
+            comboBoxSexe.DataSource = ORM.SexesORM.SelectAllSexes();
             comboBoxSexe.ValueMember = "id";
             comboBoxSexe.DisplayMember = "tipus";
             //

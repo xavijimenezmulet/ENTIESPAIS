@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,7 +37,14 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewTelefonEntitats = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.identitatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temporadaentitatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNTITATSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceTelefonsEntitats = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelefonEntitats)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefonsEntitats)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminar
@@ -51,6 +59,7 @@
             this.buttonEliminar.TabIndex = 29;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
@@ -64,6 +73,7 @@
             this.buttonModificar.TabIndex = 28;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAfegir
             // 
@@ -81,10 +91,11 @@
             // 
             // dataGridViewTelefonEntitats
             // 
-            this.dataGridViewTelefonEntitats.AllowUserToDeleteRows = false;
+            this.dataGridViewTelefonEntitats.AllowUserToAddRows = false;
             this.dataGridViewTelefonEntitats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewTelefonEntitats.AutoGenerateColumns = false;
             this.dataGridViewTelefonEntitats.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewTelefonEntitats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -96,6 +107,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTelefonEntitats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTelefonEntitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTelefonEntitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.numeroDataGridViewTextBoxColumn,
+            this.identitatDataGridViewTextBoxColumn,
+            this.temporadaentitatDataGridViewTextBoxColumn,
+            this.eNTITATSDataGridViewTextBoxColumn});
+            this.dataGridViewTelefonEntitats.DataSource = this.bindingSourceTelefonsEntitats;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +140,52 @@
             this.dataGridViewTelefonEntitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTelefonEntitats.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewTelefonEntitats.TabIndex = 26;
+            this.dataGridViewTelefonEntitats.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewTelefonEntitats_UserDeletingRow);
+            this.dataGridViewTelefonEntitats.DoubleClick += new System.EventHandler(this.dataGridViewTelefonEntitats_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "numero";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // identitatDataGridViewTextBoxColumn
+            // 
+            this.identitatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.identitatDataGridViewTextBoxColumn.DataPropertyName = "id_entitat";
+            this.identitatDataGridViewTextBoxColumn.HeaderText = "id_entitat";
+            this.identitatDataGridViewTextBoxColumn.Name = "identitatDataGridViewTextBoxColumn";
+            this.identitatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // temporadaentitatDataGridViewTextBoxColumn
+            // 
+            this.temporadaentitatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.temporadaentitatDataGridViewTextBoxColumn.DataPropertyName = "temporada_entitat";
+            this.temporadaentitatDataGridViewTextBoxColumn.HeaderText = "temporada_entitat";
+            this.temporadaentitatDataGridViewTextBoxColumn.Name = "temporadaentitatDataGridViewTextBoxColumn";
+            this.temporadaentitatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eNTITATSDataGridViewTextBoxColumn
+            // 
+            this.eNTITATSDataGridViewTextBoxColumn.DataPropertyName = "ENTITATS";
+            this.eNTITATSDataGridViewTextBoxColumn.HeaderText = "ENTITATS";
+            this.eNTITATSDataGridViewTextBoxColumn.Name = "eNTITATSDataGridViewTextBoxColumn";
+            this.eNTITATSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eNTITATSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceTelefonsEntitats
+            // 
+            this.bindingSourceTelefonsEntitats.DataSource = typeof(EntiEspais.TELEFONS_ENTITATS);
             // 
             // FormTelefonsEntitats
             // 
@@ -141,7 +205,10 @@
             this.Name = "FormTelefonsEntitats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TELÈFONS ENTITATS";
+            this.Activated += new System.EventHandler(this.FormTelefonsEntitats_Activated);
+            this.Load += new System.EventHandler(this.FormTelefonsEntitats_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTelefonEntitats)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefonsEntitats)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +219,11 @@
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonAfegir;
         private System.Windows.Forms.DataGridView dataGridViewTelefonEntitats;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identitatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn temporadaentitatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eNTITATSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSourceTelefonsEntitats;
     }
 }

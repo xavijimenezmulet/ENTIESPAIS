@@ -50,7 +50,6 @@
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Enabled = false;
             this.textBoxNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.textBoxNom.Location = new System.Drawing.Point(56, 36);
             this.textBoxNom.Name = "textBoxNom";

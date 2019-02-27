@@ -74,7 +74,6 @@
             // 
             // textBoxPregunta
             // 
-            this.textBoxPregunta.Enabled = false;
             this.textBoxPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.textBoxPregunta.Location = new System.Drawing.Point(104, 39);
             this.textBoxPregunta.Name = "textBoxPregunta";

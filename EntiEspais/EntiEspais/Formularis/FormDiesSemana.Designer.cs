@@ -59,6 +59,7 @@
             this.buttonEliminar.TabIndex = 29;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
@@ -72,6 +73,7 @@
             this.buttonModificar.TabIndex = 28;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAfegir
             // 
@@ -85,6 +87,7 @@
             this.buttonAfegir.TabIndex = 27;
             this.buttonAfegir.Text = "Afegir";
             this.buttonAfegir.UseVisualStyleBackColor = false;
+            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
             // 
             // dataGridViewDiesSemana
             // 
@@ -137,6 +140,8 @@
             this.dataGridViewDiesSemana.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDiesSemana.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewDiesSemana.TabIndex = 26;
+            this.dataGridViewDiesSemana.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewDiesSemana_UserDeletingRow);
+            this.dataGridViewDiesSemana.DoubleClick += new System.EventHandler(this.dataGridViewDiesSemana_DoubleClick);
             // 
             // bindingSourceDiesSemana
             // 
@@ -200,6 +205,8 @@
             this.Name = "FormDiesSemana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DIES SEMANA";
+            this.Activated += new System.EventHandler(this.FormDiesSemana_Activated);
+            this.Load += new System.EventHandler(this.FormDiesSemana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDiesSemana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiesSemana)).EndInit();
             this.ResumeLayout(false);

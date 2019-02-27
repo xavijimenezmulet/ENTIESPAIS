@@ -31,5 +31,13 @@ namespace EntiEspais.Formularis
         {
             this.Close();
         }
+
+        private void FormTelefonInstalacio_Load(object sender, EventArgs e)
+        {
+            if (this.Text.Equals("MODIFICAR TELÈFON"))
+            {
+                textBoxNom.Text = this.tInstalacio.telefon.ToString();
+            }
+        }
     }
 }

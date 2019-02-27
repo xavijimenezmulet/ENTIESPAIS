@@ -216,6 +216,20 @@ namespace EntiEspais.Classes
             formEspaisTodos.ShowDialog();
         }
 
+        //ens obre un formulari per afegir un espai
+        public static void FormEspaisTodosAlta()
+        {
+            FormEspaisTodosAlta formEspaisTodosAlta = new FormEspaisTodosAlta();
+            formEspaisTodosAlta.ShowDialog();
+        }
+
+        //ens obre un formulari per modificar un espai
+        public static void FormEspaisTodosModificar(ESPAIS _espai)
+        {
+            FormEspaisTodosAlta formEspaisTodosAlta = new FormEspaisTodosAlta(_espai);
+            formEspaisTodosAlta.ShowDialog();
+        }
+
         #endregion
 
     }

@@ -185,5 +185,10 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormEspaisTots();
         }
+
+        private void afegirEspaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.FormEspaisTodosAlta();
+        }
     }
 }

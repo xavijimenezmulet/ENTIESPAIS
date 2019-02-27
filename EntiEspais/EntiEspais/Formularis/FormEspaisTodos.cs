@@ -17,9 +17,34 @@ namespace EntiEspais.Formularis
             InitializeComponent();
         }
 
+        //Load
         private void FormEspaisTodos_Load(object sender, EventArgs e)
         {
             bindingSourceEspais.DataSource = ORM.EspaisORM.selectEspais();
+        }
+
+        //Activated
+        private void FormEspaisTodos_Activated(object sender, EventArgs e)
+        {
+            bindingSourceEspais.DataSource = ORM.EspaisORM.selectEspais();
+        }
+
+        //Añadir
+        private void buttonAfegir_Click(object sender, EventArgs e)
+        {
+            Classes.ObridorFormulari.FormEspaisTodosAlta();
+        }
+
+        //Modificar
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            Classes.ObridorFormulari.FormEspaisTodosModificar((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
+        }
+
+        //Eliminar
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            ORM.EspaisORM.eliminarEspai((ESPAIS)dataGridViewEspais.SelectedRows[0].DataBoundItem);
         }
     }
 }

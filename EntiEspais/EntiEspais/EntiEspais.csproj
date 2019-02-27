@@ -160,6 +160,18 @@
     <Compile Include="Formularis\FormCompeticions.Designer.cs">
       <DependentUpon>FormCompeticions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormDiaSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormDiaSemana.Designer.cs">
+      <DependentUpon>FormDiaSemana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormDiesSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormDiesSemana.Designer.cs">
+      <DependentUpon>FormDiesSemana.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormEquip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +207,18 @@
     </Compile>
     <Compile Include="Formularis\FormFaqsAndroid.Designer.cs">
       <DependentUpon>FormFaqsAndroid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormHora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormHora.Designer.cs">
+      <DependentUpon>FormHora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormHores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormHores.Designer.cs">
+      <DependentUpon>FormHores.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularis\FormLogin.cs">
       <SubType>Form</SubType>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntiEspais.ORM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,12 @@ namespace EntiEspais.Formularis
             this.Text = "MODIFICAR INTERVAL D'HORES";
             this.intervalHores = intervalHores;
             InitializeComponent();
+        }
+
+        private void FormHora_Load(object sender, EventArgs e)
+        {
+            bindingSourceInici.DataSource = HoresORM.SelectAllHores();
+            bindingSourceFinal.DataSource = HoresORM.SelectAllHores();
         }
     }
 }

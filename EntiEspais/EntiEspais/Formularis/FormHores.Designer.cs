@@ -37,13 +37,13 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewHores = new System.Windows.Forms.DataGridView();
-            this.bindingSourceHores = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iniciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dEMANDAACTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hORARIACTIVITATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hORARIINSTALACIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceHores = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHores)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             this.buttonAfegir.TabIndex = 27;
             this.buttonAfegir.Text = "Afegir";
             this.buttonAfegir.UseVisualStyleBackColor = false;
+            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
             // 
             // dataGridViewHores
             // 
@@ -140,10 +141,6 @@
             this.dataGridViewHores.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewHores.TabIndex = 26;
             // 
-            // bindingSourceHores
-            // 
-            this.bindingSourceHores.DataSource = typeof(EntiEspais.HORES);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -191,6 +188,10 @@
             this.hORARIINSTALACIODataGridViewTextBoxColumn.Name = "hORARIINSTALACIODataGridViewTextBoxColumn";
             this.hORARIINSTALACIODataGridViewTextBoxColumn.ReadOnly = true;
             this.hORARIINSTALACIODataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceHores
+            // 
+            this.bindingSourceHores.DataSource = typeof(EntiEspais.HORES);
             // 
             // FormHores
             // 

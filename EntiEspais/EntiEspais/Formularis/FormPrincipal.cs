@@ -175,5 +175,15 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormEquipPerAfegir();
         }
+
+        private void diaSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormDiesSemana();
+        }
+
+        private void horesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormHores();
+        }
     }
 }

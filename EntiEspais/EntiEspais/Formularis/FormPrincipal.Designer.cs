@@ -506,6 +506,7 @@
             this.diaSemanaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.diaSemanaToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
             this.diaSemanaToolStripMenuItem.Text = "Dia Semana";
+            this.diaSemanaToolStripMenuItem.Click += new System.EventHandler(this.diaSemanaToolStripMenuItem_Click);
             // 
             // horesToolStripMenuItem
             // 
@@ -515,6 +516,7 @@
             | System.Windows.Forms.Keys.Y)));
             this.horesToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
             this.horesToolStripMenuItem.Text = "Hores";
+            this.horesToolStripMenuItem.Click += new System.EventHandler(this.horesToolStripMenuItem_Click);
             // 
             // relacionatsAmbAndroidToolStripMenuItem
             // 

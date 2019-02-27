@@ -89,6 +89,13 @@ namespace EntiEspais.Classes
             fSexe.ShowDialog();
         }
 
+        //ens obre un formulari sexe per modificar
+        public static void obrirFormSexe(SEXE sexe)
+        {
+            FormSexe fSexe = new FormSexe(sexe);
+            fSexe.ShowDialog();
+        }
+
         //ens obre un formulari Categoria Edats
         public static void obrirFormCategoriaEdats()
         {

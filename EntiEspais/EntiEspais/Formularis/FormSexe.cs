@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntiEspais.ORM;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,60 @@ namespace EntiEspais.Formularis
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormSexe_Load(object sender, EventArgs e)
+        {
+            if (this.Text.Equals("MODIFICAR SEXE"))
+            {
+                textBoxNom.Text = this.s.tipus.ToString();
+            }
+        }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            if (textBoxNom.Text.Equals(""))
+            {
+                MessageBox.Show("Sexe buid!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxNom.Select();
+            }
+            else if (this.Text.Equals("NOU SEXE"))
+            {
+                String missatge = "";
+
+                this.s.tipus = textBoxNom.Text.ToString();
+
+                missatge = SexesORM.InsertSexe(this.s);
+
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Introduït perfectament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+
+            }
+            else if (this.Text.Equals("MODIFICAR SEXE"))
+            {
+                String missatge = "";
+
+                this.s.tipus = textBoxNom.Text.ToString();
+
+                missatge = SexesORM.UpdateSexe(this.s);
+
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Introduït perfectament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+            }
         }
     }
 }

@@ -63,6 +63,7 @@
             this.buttonAceptar.TabIndex = 24;
             this.buttonAceptar.Text = "Acceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // textBoxNom
             // 
@@ -104,6 +105,7 @@
             this.MaximizeBox = false;
             this.Name = "FormSexe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormSexe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

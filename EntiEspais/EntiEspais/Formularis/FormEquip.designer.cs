@@ -319,8 +319,10 @@
             this.Controls.Add(this.labelNomEquip);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FormEquip";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquip";
             this.Load += new System.EventHandler(this.FormEquip_Load);
             this.ResumeLayout(false);

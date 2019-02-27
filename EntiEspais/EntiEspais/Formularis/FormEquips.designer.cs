@@ -33,6 +33,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewEquips = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tediscapacitatDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.identitatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcompeticioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoriaedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoriaequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idsexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idesportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cATEGORIAEDATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cATEGORIAEQUIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOMPETICIONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEMANDAACTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNTITATSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSPORTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sEXEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
             this.buttonAfegirEquipo = new System.Windows.Forms.Button();
             this.buttonModificarEquipo = new System.Windows.Forms.Button();
             this.buttonEliminarEquipo = new System.Windows.Forms.Button();
@@ -91,29 +109,11 @@
             this.relacionatsAmbAndroidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fAQsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tediscapacitatDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.identitatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcompeticioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcategoriaedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcategoriaequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idsexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idesportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cATEGORIAEDATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cATEGORIAEQUIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cOMPETICIONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dEMANDAACTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNTITATSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eSPORTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sEXEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquips)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewEquips
@@ -180,6 +180,139 @@
             this.dataGridViewEquips.TabIndex = 0;
             this.dataGridViewEquips.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEquips_UserDeletingRow);
             this.dataGridViewEquips.DoubleClick += new System.EventHandler(this.dataGridViewEquips_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tediscapacitatDataGridViewCheckBoxColumn
+            // 
+            this.tediscapacitatDataGridViewCheckBoxColumn.DataPropertyName = "te_discapacitat";
+            this.tediscapacitatDataGridViewCheckBoxColumn.HeaderText = "te_discapacitat";
+            this.tediscapacitatDataGridViewCheckBoxColumn.Name = "tediscapacitatDataGridViewCheckBoxColumn";
+            this.tediscapacitatDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // identitatDataGridViewTextBoxColumn
+            // 
+            this.identitatDataGridViewTextBoxColumn.DataPropertyName = "id_entitat";
+            this.identitatDataGridViewTextBoxColumn.HeaderText = "id_entitat";
+            this.identitatDataGridViewTextBoxColumn.Name = "identitatDataGridViewTextBoxColumn";
+            this.identitatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // temporadaDataGridViewTextBoxColumn
+            // 
+            this.temporadaDataGridViewTextBoxColumn.DataPropertyName = "temporada";
+            this.temporadaDataGridViewTextBoxColumn.HeaderText = "temporada";
+            this.temporadaDataGridViewTextBoxColumn.Name = "temporadaDataGridViewTextBoxColumn";
+            this.temporadaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idcompeticioDataGridViewTextBoxColumn
+            // 
+            this.idcompeticioDataGridViewTextBoxColumn.DataPropertyName = "id_competicio";
+            this.idcompeticioDataGridViewTextBoxColumn.HeaderText = "id_competicio";
+            this.idcompeticioDataGridViewTextBoxColumn.Name = "idcompeticioDataGridViewTextBoxColumn";
+            this.idcompeticioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idcategoriaedatDataGridViewTextBoxColumn
+            // 
+            this.idcategoriaedatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idcategoriaedatDataGridViewTextBoxColumn.DataPropertyName = "id_categoria_edat";
+            this.idcategoriaedatDataGridViewTextBoxColumn.HeaderText = "id_categoria_edat";
+            this.idcategoriaedatDataGridViewTextBoxColumn.Name = "idcategoriaedatDataGridViewTextBoxColumn";
+            this.idcategoriaedatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idcategoriaequipDataGridViewTextBoxColumn
+            // 
+            this.idcategoriaequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idcategoriaequipDataGridViewTextBoxColumn.DataPropertyName = "id_categoria_equip";
+            this.idcategoriaequipDataGridViewTextBoxColumn.HeaderText = "id_categoria_equip";
+            this.idcategoriaequipDataGridViewTextBoxColumn.Name = "idcategoriaequipDataGridViewTextBoxColumn";
+            this.idcategoriaequipDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idsexeDataGridViewTextBoxColumn
+            // 
+            this.idsexeDataGridViewTextBoxColumn.DataPropertyName = "id_sexe";
+            this.idsexeDataGridViewTextBoxColumn.HeaderText = "id_sexe";
+            this.idsexeDataGridViewTextBoxColumn.Name = "idsexeDataGridViewTextBoxColumn";
+            this.idsexeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idesportDataGridViewTextBoxColumn
+            // 
+            this.idesportDataGridViewTextBoxColumn.DataPropertyName = "id_esport";
+            this.idesportDataGridViewTextBoxColumn.HeaderText = "id_esport";
+            this.idesportDataGridViewTextBoxColumn.Name = "idesportDataGridViewTextBoxColumn";
+            this.idesportDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cATEGORIAEDATDataGridViewTextBoxColumn
+            // 
+            this.cATEGORIAEDATDataGridViewTextBoxColumn.DataPropertyName = "CATEGORIA_EDAT";
+            this.cATEGORIAEDATDataGridViewTextBoxColumn.HeaderText = "CATEGORIA_EDAT";
+            this.cATEGORIAEDATDataGridViewTextBoxColumn.Name = "cATEGORIAEDATDataGridViewTextBoxColumn";
+            this.cATEGORIAEDATDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cATEGORIAEDATDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cATEGORIAEQUIPDataGridViewTextBoxColumn
+            // 
+            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.DataPropertyName = "CATEGORIA_EQUIP";
+            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.HeaderText = "CATEGORIA_EQUIP";
+            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.Name = "cATEGORIAEQUIPDataGridViewTextBoxColumn";
+            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cOMPETICIONSDataGridViewTextBoxColumn
+            // 
+            this.cOMPETICIONSDataGridViewTextBoxColumn.DataPropertyName = "COMPETICIONS";
+            this.cOMPETICIONSDataGridViewTextBoxColumn.HeaderText = "COMPETICIONS";
+            this.cOMPETICIONSDataGridViewTextBoxColumn.Name = "cOMPETICIONSDataGridViewTextBoxColumn";
+            this.cOMPETICIONSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cOMPETICIONSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dEMANDAACTDataGridViewTextBoxColumn
+            // 
+            this.dEMANDAACTDataGridViewTextBoxColumn.DataPropertyName = "DEMANDA_ACT";
+            this.dEMANDAACTDataGridViewTextBoxColumn.HeaderText = "DEMANDA_ACT";
+            this.dEMANDAACTDataGridViewTextBoxColumn.Name = "dEMANDAACTDataGridViewTextBoxColumn";
+            this.dEMANDAACTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dEMANDAACTDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // eNTITATSDataGridViewTextBoxColumn
+            // 
+            this.eNTITATSDataGridViewTextBoxColumn.DataPropertyName = "ENTITATS";
+            this.eNTITATSDataGridViewTextBoxColumn.HeaderText = "ENTITATS";
+            this.eNTITATSDataGridViewTextBoxColumn.Name = "eNTITATSDataGridViewTextBoxColumn";
+            this.eNTITATSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eNTITATSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // eSPORTSDataGridViewTextBoxColumn
+            // 
+            this.eSPORTSDataGridViewTextBoxColumn.DataPropertyName = "ESPORTS";
+            this.eSPORTSDataGridViewTextBoxColumn.HeaderText = "ESPORTS";
+            this.eSPORTSDataGridViewTextBoxColumn.Name = "eSPORTSDataGridViewTextBoxColumn";
+            this.eSPORTSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eSPORTSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sEXEDataGridViewTextBoxColumn
+            // 
+            this.sEXEDataGridViewTextBoxColumn.DataPropertyName = "SEXE";
+            this.sEXEDataGridViewTextBoxColumn.HeaderText = "SEXE";
+            this.sEXEDataGridViewTextBoxColumn.Name = "sEXEDataGridViewTextBoxColumn";
+            this.sEXEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sEXEDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceEquips
+            // 
+            this.bindingSourceEquips.DataSource = typeof(EntiEspais.EQUIPS);
             // 
             // buttonAfegirEquipo
             // 
@@ -735,139 +868,6 @@
             this.Reloj.Enabled = true;
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick_1);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tediscapacitatDataGridViewCheckBoxColumn
-            // 
-            this.tediscapacitatDataGridViewCheckBoxColumn.DataPropertyName = "te_discapacitat";
-            this.tediscapacitatDataGridViewCheckBoxColumn.HeaderText = "te_discapacitat";
-            this.tediscapacitatDataGridViewCheckBoxColumn.Name = "tediscapacitatDataGridViewCheckBoxColumn";
-            this.tediscapacitatDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // identitatDataGridViewTextBoxColumn
-            // 
-            this.identitatDataGridViewTextBoxColumn.DataPropertyName = "id_entitat";
-            this.identitatDataGridViewTextBoxColumn.HeaderText = "id_entitat";
-            this.identitatDataGridViewTextBoxColumn.Name = "identitatDataGridViewTextBoxColumn";
-            this.identitatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // temporadaDataGridViewTextBoxColumn
-            // 
-            this.temporadaDataGridViewTextBoxColumn.DataPropertyName = "temporada";
-            this.temporadaDataGridViewTextBoxColumn.HeaderText = "temporada";
-            this.temporadaDataGridViewTextBoxColumn.Name = "temporadaDataGridViewTextBoxColumn";
-            this.temporadaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idcompeticioDataGridViewTextBoxColumn
-            // 
-            this.idcompeticioDataGridViewTextBoxColumn.DataPropertyName = "id_competicio";
-            this.idcompeticioDataGridViewTextBoxColumn.HeaderText = "id_competicio";
-            this.idcompeticioDataGridViewTextBoxColumn.Name = "idcompeticioDataGridViewTextBoxColumn";
-            this.idcompeticioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idcategoriaedatDataGridViewTextBoxColumn
-            // 
-            this.idcategoriaedatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idcategoriaedatDataGridViewTextBoxColumn.DataPropertyName = "id_categoria_edat";
-            this.idcategoriaedatDataGridViewTextBoxColumn.HeaderText = "id_categoria_edat";
-            this.idcategoriaedatDataGridViewTextBoxColumn.Name = "idcategoriaedatDataGridViewTextBoxColumn";
-            this.idcategoriaedatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idcategoriaequipDataGridViewTextBoxColumn
-            // 
-            this.idcategoriaequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idcategoriaequipDataGridViewTextBoxColumn.DataPropertyName = "id_categoria_equip";
-            this.idcategoriaequipDataGridViewTextBoxColumn.HeaderText = "id_categoria_equip";
-            this.idcategoriaequipDataGridViewTextBoxColumn.Name = "idcategoriaequipDataGridViewTextBoxColumn";
-            this.idcategoriaequipDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idsexeDataGridViewTextBoxColumn
-            // 
-            this.idsexeDataGridViewTextBoxColumn.DataPropertyName = "id_sexe";
-            this.idsexeDataGridViewTextBoxColumn.HeaderText = "id_sexe";
-            this.idsexeDataGridViewTextBoxColumn.Name = "idsexeDataGridViewTextBoxColumn";
-            this.idsexeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idesportDataGridViewTextBoxColumn
-            // 
-            this.idesportDataGridViewTextBoxColumn.DataPropertyName = "id_esport";
-            this.idesportDataGridViewTextBoxColumn.HeaderText = "id_esport";
-            this.idesportDataGridViewTextBoxColumn.Name = "idesportDataGridViewTextBoxColumn";
-            this.idesportDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cATEGORIAEDATDataGridViewTextBoxColumn
-            // 
-            this.cATEGORIAEDATDataGridViewTextBoxColumn.DataPropertyName = "CATEGORIA_EDAT";
-            this.cATEGORIAEDATDataGridViewTextBoxColumn.HeaderText = "CATEGORIA_EDAT";
-            this.cATEGORIAEDATDataGridViewTextBoxColumn.Name = "cATEGORIAEDATDataGridViewTextBoxColumn";
-            this.cATEGORIAEDATDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cATEGORIAEDATDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cATEGORIAEQUIPDataGridViewTextBoxColumn
-            // 
-            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.DataPropertyName = "CATEGORIA_EQUIP";
-            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.HeaderText = "CATEGORIA_EQUIP";
-            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.Name = "cATEGORIAEQUIPDataGridViewTextBoxColumn";
-            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cATEGORIAEQUIPDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cOMPETICIONSDataGridViewTextBoxColumn
-            // 
-            this.cOMPETICIONSDataGridViewTextBoxColumn.DataPropertyName = "COMPETICIONS";
-            this.cOMPETICIONSDataGridViewTextBoxColumn.HeaderText = "COMPETICIONS";
-            this.cOMPETICIONSDataGridViewTextBoxColumn.Name = "cOMPETICIONSDataGridViewTextBoxColumn";
-            this.cOMPETICIONSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cOMPETICIONSDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dEMANDAACTDataGridViewTextBoxColumn
-            // 
-            this.dEMANDAACTDataGridViewTextBoxColumn.DataPropertyName = "DEMANDA_ACT";
-            this.dEMANDAACTDataGridViewTextBoxColumn.HeaderText = "DEMANDA_ACT";
-            this.dEMANDAACTDataGridViewTextBoxColumn.Name = "dEMANDAACTDataGridViewTextBoxColumn";
-            this.dEMANDAACTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dEMANDAACTDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // eNTITATSDataGridViewTextBoxColumn
-            // 
-            this.eNTITATSDataGridViewTextBoxColumn.DataPropertyName = "ENTITATS";
-            this.eNTITATSDataGridViewTextBoxColumn.HeaderText = "ENTITATS";
-            this.eNTITATSDataGridViewTextBoxColumn.Name = "eNTITATSDataGridViewTextBoxColumn";
-            this.eNTITATSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eNTITATSDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // eSPORTSDataGridViewTextBoxColumn
-            // 
-            this.eSPORTSDataGridViewTextBoxColumn.DataPropertyName = "ESPORTS";
-            this.eSPORTSDataGridViewTextBoxColumn.HeaderText = "ESPORTS";
-            this.eSPORTSDataGridViewTextBoxColumn.Name = "eSPORTSDataGridViewTextBoxColumn";
-            this.eSPORTSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eSPORTSDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sEXEDataGridViewTextBoxColumn
-            // 
-            this.sEXEDataGridViewTextBoxColumn.DataPropertyName = "SEXE";
-            this.sEXEDataGridViewTextBoxColumn.HeaderText = "SEXE";
-            this.sEXEDataGridViewTextBoxColumn.Name = "sEXEDataGridViewTextBoxColumn";
-            this.sEXEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sEXEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bindingSourceEquips
-            // 
-            this.bindingSourceEquips.DataSource = typeof(EntiEspais.EQUIPS);
-            // 
             // FormEquips
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,12 +891,12 @@
             this.Activated += new System.EventHandler(this.FormEquips_Activated);
             this.Load += new System.EventHandler(this.FormEquips_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquips)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

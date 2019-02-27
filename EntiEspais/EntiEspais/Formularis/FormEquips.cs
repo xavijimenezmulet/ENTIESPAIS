@@ -28,7 +28,6 @@ namespace EntiEspais.Formularis
             Reloj.Start();
 
             RefrescarEquips();
-
         }
 
         private void buttonAfegirEquipo_Click(object sender, EventArgs e)

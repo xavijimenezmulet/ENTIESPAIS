@@ -16,7 +16,6 @@ namespace EntiEspais.Formularis
         {
             InitializeComponent();
             this.Text = titulo;
-            
         }
 
         public FormEquip(string titulo, EQUIPS equip)
@@ -24,7 +23,6 @@ namespace EntiEspais.Formularis
             InitializeComponent();
             this.Text = titulo;
             equip2 = equip;
-            
         }
 
         //Tanca el formulari una vegada fem clic al botó cancel·lar.

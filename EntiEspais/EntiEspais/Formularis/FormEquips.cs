@@ -88,12 +88,6 @@ namespace EntiEspais.Formularis
                     MessageBox.Show(mensaje, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     e.Cancel = true;
                 }
-                /*
-                else {
-                    RefrescarEquips();
-                }
-
-                */
             }
             else
             {

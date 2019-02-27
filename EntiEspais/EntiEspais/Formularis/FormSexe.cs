@@ -12,8 +12,17 @@ namespace EntiEspais.Formularis
 {
     public partial class FormSexe : Form
     {
+        public SEXE s;
         public FormSexe()
         {
+            this.Text = "NOU SEXE";
+            s = new SEXE();
+            InitializeComponent();
+        }
+        public FormSexe(SEXE sexe)
+        {
+            this.Text = "MODIFICAR SEXE";
+            s = sexe;
             InitializeComponent();
         }
 

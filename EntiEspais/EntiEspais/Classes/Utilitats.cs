@@ -61,6 +61,20 @@ namespace EntiEspais.Classes
         }
 
         /**
+         * ENS ENCRIPTA LA CONTRASSENYA BÀSICA D'UN ADMINISTRADOR
+         **/
+        public static String encriptarContrassenyaAdmins()
+        {
+            
+            BlowFish b = new BlowFish("04B915BA43FEB5B6");
+            String c = b.Encrypt_CBC("administrador");
+            
+
+            return c;
+
+        }
+
+        /**
          * ENS INTRODUEXI DE FORMA AUTOMATICA ELS INTERVALS DE HORES
          **/
         public static void InsertHores()

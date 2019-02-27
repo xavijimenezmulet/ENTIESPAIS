@@ -12,8 +12,18 @@ namespace EntiEspais.Formularis
 {
     public partial class FormTelefonInstalacio : Form
     {
+        public TELEFONS_INSTALACIONS tInstalacio;
         public FormTelefonInstalacio()
         {
+            this.Text = "NOU TELÈFON INSTAL·LACIÓ";
+            tInstalacio = new TELEFONS_INSTALACIONS();
+            InitializeComponent();
+        }
+
+        public FormTelefonInstalacio(TELEFONS_INSTALACIONS tInstalacio)
+        {
+            this.Text = "MODIFICAR TELÈFON INSTAL·LACIÓ";
+            this.tInstalacio = tInstalacio;
             InitializeComponent();
         }
 

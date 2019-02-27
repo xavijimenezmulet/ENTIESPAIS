@@ -1,22 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EntiEspais.ORM
 {
     public static class EsportsORM
     {
         /**
-         * ENS RETORNA LA SELECT AMB TOTS ELS ESPORTS.
-         **/
+        * ENS RETORNA LA SELECT AMB TOTS ELS ESPORTS 
+        **/
         public static List<ESPORTS> SelectAllEsports()
         {
             List<ESPORTS> _esports =
-                 (from esp in GeneralORM.bd.ESPORTS
-                  orderby esp.nom
-                  select esp).ToList();
+                 (from a in GeneralORM.bd.ESPORTS
+                  orderby a.nom
+                  select a).ToList();
 
             return _esports;
+
         }
 
         /**
@@ -63,6 +66,5 @@ namespace EntiEspais.ORM
             return missatgeError;
 
         }
-
     }
 }

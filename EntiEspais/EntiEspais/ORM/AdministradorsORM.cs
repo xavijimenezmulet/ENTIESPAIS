@@ -58,7 +58,7 @@ namespace EntiEspais.ORM
         /**
          * ENS ACTUALITZA UN HOTEL ADMINISTADOR DE LA BASE DE DADES 
          **/
-        public static String UpdateHotel(ADMINISTRADORS administrador)
+        public static String UpdateAdministrador(ADMINISTRADORS administrador)
         {
             String missatgeError = "";
             ADMINISTRADORS a = GeneralORM.bd.ADMINISTRADORS.Find(administrador.id);

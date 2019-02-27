@@ -92,10 +92,15 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
+            this.bindingSourceFaqsAndroid = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preguntaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripciónDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaqsAndroid)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFaqsAndroid)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonModificar
@@ -110,6 +115,7 @@
             this.buttonModificar.TabIndex = 24;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonEliminar
             // 
@@ -123,6 +129,7 @@
             this.buttonEliminar.TabIndex = 23;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonAfegir
             // 
@@ -140,9 +147,10 @@
             // 
             // dataGridViewFaqsAndroid
             // 
-            this.dataGridViewFaqsAndroid.AllowUserToDeleteRows = false;
+            this.dataGridViewFaqsAndroid.AllowUserToAddRows = false;
             this.dataGridViewFaqsAndroid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewFaqsAndroid.AutoGenerateColumns = false;
             this.dataGridViewFaqsAndroid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewFaqsAndroid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -154,6 +162,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewFaqsAndroid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewFaqsAndroid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFaqsAndroid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.preguntaDataGridViewTextBoxColumn,
+            this.descripciónDataGridViewTextBoxColumn});
+            this.dataGridViewFaqsAndroid.DataSource = this.bindingSourceFaqsAndroid;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +193,8 @@
             this.dataGridViewFaqsAndroid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewFaqsAndroid.Size = new System.Drawing.Size(698, 438);
             this.dataGridViewFaqsAndroid.TabIndex = 21;
+            this.dataGridViewFaqsAndroid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewFaqsAndroid_UserDeletingRow);
+            this.dataGridViewFaqsAndroid.DoubleClick += new System.EventHandler(this.dataGridViewFaqsAndroid_DoubleClick);
             // 
             // toolStrip1
             // 
@@ -694,6 +709,37 @@
             // 
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
             // 
+            // bindingSourceFaqsAndroid
+            // 
+            this.bindingSourceFaqsAndroid.DataSource = typeof(EntiEspais.FAQS);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.FillWeight = 1F;
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preguntaDataGridViewTextBoxColumn
+            // 
+            this.preguntaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.preguntaDataGridViewTextBoxColumn.DataPropertyName = "pregunta";
+            this.preguntaDataGridViewTextBoxColumn.FillWeight = 3F;
+            this.preguntaDataGridViewTextBoxColumn.HeaderText = "pregunta";
+            this.preguntaDataGridViewTextBoxColumn.Name = "preguntaDataGridViewTextBoxColumn";
+            this.preguntaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripciónDataGridViewTextBoxColumn
+            // 
+            this.descripciónDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripciónDataGridViewTextBoxColumn.DataPropertyName = "descripción";
+            this.descripciónDataGridViewTextBoxColumn.FillWeight = 6F;
+            this.descripciónDataGridViewTextBoxColumn.HeaderText = "descripción";
+            this.descripciónDataGridViewTextBoxColumn.Name = "descripciónDataGridViewTextBoxColumn";
+            this.descripciónDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FormFaqsAndroid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -716,6 +762,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAQ\'S ANDROID";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.FormFaqsAndroid_Activated);
             this.Load += new System.EventHandler(this.FormFaqsAndroid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaqsAndroid)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -723,6 +770,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFaqsAndroid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,5 +837,9 @@
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Timer Reloj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preguntaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSourceFaqsAndroid;
     }
 }

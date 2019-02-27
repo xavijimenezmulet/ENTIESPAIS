@@ -202,6 +202,12 @@
     <Compile Include="Formularis\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormModificadorContrassenya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormModificadorContrassenya.Designer.cs">
+      <DependentUpon>FormModificadorContrassenya.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,14 +284,16 @@
       <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
     </Compile>
     <Compile Include="ORM\AdministradorsORM.cs" />
-    <Compile Include="ORM\CategoriaDelEquipORM.cs" />
     <Compile Include="ORM\CategoriaPerEdatORM.cs" />
+    <Compile Include="ORM\CategoriaPerEquipORM.cs" />
     <Compile Include="ORM\CompeticionsORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
-    <Compile Include="ORM\EquipsORM.cs" />
     <Compile Include="ORM\EsportsORM.cs" />
+    <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
-    <Compile Include="ORM\SexeORM.cs" />
+    <Compile Include="ORM\SexesORM.cs" />
+    <Compile Include="ORM\TelefonsEntitatsORM.cs" />
+    <Compile Include="ORM\TelefonsInstalacionsORM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -350,6 +358,9 @@
     <EmbeddedResource Include="Formularis\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormModificadorContrassenya.resx">
+      <DependentUpon>FormModificadorContrassenya.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,9 +399,15 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ADMINISTRADORS.datasource" />
+    <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
+    <None Include="Properties\DataSources\CATEGORIA_EQUIP.datasource" />
+    <None Include="Properties\DataSources\COMPETICIONS.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
+    <None Include="Properties\DataSources\ESPORTS.datasource" />
+    <None Include="Properties\DataSources\FAQS.datasource" />
     <None Include="Properties\DataSources\EQUIPS.datasource" />
     <None Include="Properties\DataSources\INSTALACIONS.datasource" />
+    <None Include="Properties\DataSources\SEXE.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

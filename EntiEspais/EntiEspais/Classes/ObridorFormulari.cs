@@ -47,6 +47,13 @@ namespace EntiEspais.Classes
             fAdministradors.ShowDialog();
         }
 
+        //ens obre un formulari per cambiar la contrassenya
+        public static void obrirFormModificadorContrassenya(ADMINISTRADORS administrador)
+        {
+            FormModificadorContrassenya fModificador = new FormModificadorContrassenya(administrador);
+            fModificador.ShowDialog();
+        }
+
         //ens obre un formulari esports
         public static void obrirFormEsports()
         {
@@ -58,6 +65,13 @@ namespace EntiEspais.Classes
         public static void obrirFormEsport()
         {
             FormEsport fEsport = new FormEsport();
+            fEsport.ShowDialog();
+        }
+
+        //ens obre un formulari esport per modificar
+        public static void obrirFormEsport(ESPORTS esport)
+        {
+            FormEsport fEsport = new FormEsport(esport);
             fEsport.ShowDialog();
         }
 
@@ -75,6 +89,13 @@ namespace EntiEspais.Classes
             fSexe.ShowDialog();
         }
 
+        //ens obre un formulari sexe per modificar
+        public static void obrirFormSexe(SEXE sexe)
+        {
+            FormSexe fSexe = new FormSexe(sexe);
+            fSexe.ShowDialog();
+        }
+
         //ens obre un formulari Categoria Edats
         public static void obrirFormCategoriaEdats()
         {
@@ -86,6 +107,14 @@ namespace EntiEspais.Classes
         public static void obrirFormCategoriaEdat()
         {
             FormCategoriaEdat fCategoriaEdat = new FormCategoriaEdat();
+            fCategoriaEdat.ShowDialog();
+        }
+
+
+        //ens obre un formulari Categoria Edat per modificar
+        public static void obrirFormCategoriaEdat(CATEGORIA_EDAT categoria)
+        {
+            FormCategoriaEdat fCategoriaEdat = new FormCategoriaEdat(categoria);
             fCategoriaEdat.ShowDialog();
         }
 
@@ -103,6 +132,13 @@ namespace EntiEspais.Classes
             fCategoriaEquip.ShowDialog();
         }
 
+        //ens obre un formulari Categoria Equip per modificar
+        public static void obrirFormCategoriaEquip(CATEGORIA_EQUIP categoria)
+        {
+            FormCategoriaEquip fCategoriaEquip = new FormCategoriaEquip(categoria);
+            fCategoriaEquip.ShowDialog();
+        }
+
         //ens obre un formulari Competicions
         public static void obrirFormCompeticions()
         {
@@ -114,6 +150,13 @@ namespace EntiEspais.Classes
         public static void obrirFormCompeticio()
         {
             FormCompeticio fCompeticio = new FormCompeticio();
+            fCompeticio.ShowDialog();
+        }
+
+        //ens obre un formulari Competicio per modificar
+        public static void obrirFormCompeticio(COMPETICIONS competicio)
+        {
+            FormCompeticio fCompeticio = new FormCompeticio(competicio);
             fCompeticio.ShowDialog();
         }
 
@@ -131,6 +174,13 @@ namespace EntiEspais.Classes
             fTelefonEntitat.ShowDialog();
         }
 
+        //ens obre un formulari Telefon Entitat per modificar
+        public static void obrirFormTelefonEntitat(TELEFONS_ENTITATS tEntitat)
+        {
+            FormTelefonEntitat fTelefonEntitat = new FormTelefonEntitat(tEntitat);
+            fTelefonEntitat.ShowDialog();
+        }
+
         //ens obre un formulari Telefons Instalacions
         public static void obrirFormTelefonsInstalacions()
         {
@@ -145,6 +195,13 @@ namespace EntiEspais.Classes
             fTelefonInstalacio.ShowDialog();
         }
 
+        //ens obre un formulari Telefon Instalacio per modificar
+        public static void obrirFormTelefonInstalacio(TELEFONS_INSTALACIONS tInstalacio)
+        {
+            FormTelefonInstalacio fTelefonInstalacio = new FormTelefonInstalacio(tInstalacio);
+            fTelefonInstalacio.ShowDialog();
+        }
+
         //ens obre un formulari Faqs Android
         public static void obrirFormFaqsAndroid()
         {
@@ -156,6 +213,13 @@ namespace EntiEspais.Classes
         public static void obrirFormFaqAndroid()
         {
             FormFaqAndroid fFaqAndroid = new FormFaqAndroid();
+            fFaqAndroid.ShowDialog();
+        }
+
+        //ens obre un formulari Faq Android per modificar
+        public static void obrirFormFaqAndroid(FAQS faq)
+        {
+            FormFaqAndroid fFaqAndroid = new FormFaqAndroid(faq);
             fFaqAndroid.ShowDialog();
         }
 

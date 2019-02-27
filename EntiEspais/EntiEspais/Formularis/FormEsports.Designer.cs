@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,15 +37,21 @@
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.bindingSourceEsports = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEsports)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewEsports
             // 
-            this.dataGridViewEsports.AllowUserToDeleteRows = false;
+            this.dataGridViewEsports.AllowUserToAddRows = false;
             this.dataGridViewEsports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewEsports.AutoGenerateColumns = false;
             this.dataGridViewEsports.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewEsports.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -56,6 +63,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewEsports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewEsports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEsports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nomDataGridViewTextBoxColumn,
+            this.eQUIPSDataGridViewTextBoxColumn});
+            this.dataGridViewEsports.DataSource = this.bindingSourceEsports;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,6 +94,8 @@
             this.dataGridViewEsports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEsports.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewEsports.TabIndex = 11;
+            this.dataGridViewEsports.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEsports_UserDeletingRow);
+            this.dataGridViewEsports.DoubleClick += new System.EventHandler(this.dataGridViewEsports_DoubleClick);
             // 
             // buttonAfegir
             // 
@@ -109,6 +123,7 @@
             this.buttonModificar.TabIndex = 20;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonEliminar
             // 
@@ -122,6 +137,35 @@
             this.buttonEliminar.TabIndex = 21;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // bindingSourceEsports
+            // 
+            this.bindingSourceEsports.DataSource = typeof(EntiEspais.ESPORTS);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eQUIPSDataGridViewTextBoxColumn
+            // 
+            this.eQUIPSDataGridViewTextBoxColumn.DataPropertyName = "EQUIPS";
+            this.eQUIPSDataGridViewTextBoxColumn.HeaderText = "EQUIPS";
+            this.eQUIPSDataGridViewTextBoxColumn.Name = "eQUIPSDataGridViewTextBoxColumn";
+            this.eQUIPSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eQUIPSDataGridViewTextBoxColumn.Visible = false;
             // 
             // FormEsports
             // 
@@ -141,7 +185,10 @@
             this.Name = "FormEsports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESPORTS";
+            this.Activated += new System.EventHandler(this.FormEsports_Activated);
+            this.Load += new System.EventHandler(this.FormEsports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEsports)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +199,9 @@
         private System.Windows.Forms.Button buttonAfegir;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eQUIPSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSourceEsports;
     }
 }

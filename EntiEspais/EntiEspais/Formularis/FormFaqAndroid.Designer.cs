@@ -109,6 +109,7 @@
             this.buttonAceptar.TabIndex = 21;
             this.buttonAceptar.Text = "Acceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // FormFaqAndroid
             // 
@@ -123,11 +124,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.textBoxPregunta);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormFaqAndroid";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormFaqAndroid_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

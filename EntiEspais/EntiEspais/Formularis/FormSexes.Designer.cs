@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,7 +37,12 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewSexes = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceSexes = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSexes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSexes)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminar
@@ -51,6 +57,7 @@
             this.buttonEliminar.TabIndex = 25;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
@@ -64,6 +71,7 @@
             this.buttonModificar.TabIndex = 24;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAfegir
             // 
@@ -81,10 +89,11 @@
             // 
             // dataGridViewSexes
             // 
-            this.dataGridViewSexes.AllowUserToDeleteRows = false;
+            this.dataGridViewSexes.AllowUserToAddRows = false;
             this.dataGridViewSexes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewSexes.AutoGenerateColumns = false;
             this.dataGridViewSexes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewSexes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -96,6 +105,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewSexes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSexes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSexes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.tipusDataGridViewTextBoxColumn,
+            this.eQUIPSDataGridViewTextBoxColumn});
+            this.dataGridViewSexes.DataSource = this.bindingSourceSexes;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +136,36 @@
             this.dataGridViewSexes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSexes.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewSexes.TabIndex = 22;
+            this.dataGridViewSexes.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewSexes_UserDeletingRow);
+            this.dataGridViewSexes.DoubleClick += new System.EventHandler(this.dataGridViewSexes_DoubleClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipusDataGridViewTextBoxColumn
+            // 
+            this.tipusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "tipus";
+            this.tipusDataGridViewTextBoxColumn.HeaderText = "tipus";
+            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            this.tipusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eQUIPSDataGridViewTextBoxColumn
+            // 
+            this.eQUIPSDataGridViewTextBoxColumn.DataPropertyName = "EQUIPS";
+            this.eQUIPSDataGridViewTextBoxColumn.HeaderText = "EQUIPS";
+            this.eQUIPSDataGridViewTextBoxColumn.Name = "eQUIPSDataGridViewTextBoxColumn";
+            this.eQUIPSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eQUIPSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceSexes
+            // 
+            this.bindingSourceSexes.DataSource = typeof(EntiEspais.SEXE);
             // 
             // FormSexes
             // 
@@ -141,7 +185,10 @@
             this.Name = "FormSexes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SEXES";
+            this.Activated += new System.EventHandler(this.FormSexes_Activated);
+            this.Load += new System.EventHandler(this.FormSexes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSexes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSexes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +199,9 @@
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonAfegir;
         private System.Windows.Forms.DataGridView dataGridViewSexes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eQUIPSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSourceSexes;
     }
 }

@@ -20,5 +20,50 @@ namespace EntiEspais.ORM
 
             return _sexes;
         }
+
+        /**
+         * ENS ACTUALITZA UN SEXE DE LA BASE DE DADES 
+         **/
+        public static String UpdateSexe(SEXE sexe)
+        {
+            String missatgeError = "";
+            SEXE a = GeneralORM.bd.SEXE.Find(sexe.id);
+
+            a.tipus = sexe.tipus;
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
+        }
+
+        /**
+         * ENS INSERTA A LA BASE DE DADES UN SEXE NOU
+         **/
+        public static String InsertSexe(SEXE sexe)
+        {
+            String missatgeError = "";
+
+            GeneralORM.bd.SEXE.Add(sexe);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+        }
+
+        /**
+         * ENS BORRA UN SEXE DE LA BASE DE DADES QUE LI PASSEM PER PARAMETRE
+         **/
+        public static String DeleteBySexe(SEXE sexe)
+        {
+            String missatgeError = "";
+
+            GeneralORM.bd.SEXE.Remove(sexe);
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+
+        }
     }
 }

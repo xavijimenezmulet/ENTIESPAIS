@@ -38,11 +38,7 @@ namespace EntiEspais.Formularis
 
         private void FormFaqsAndroid_Activated(object sender, EventArgs e)
         {
-            if (verdadero)
-            {
-                bindingSourceFaqsAndroid.DataSource = FaqsAndroidORM.SelectAllFaqs();
-                verdadero = false;
-            }
+            bindingSourceFaqsAndroid.DataSource = FaqsAndroidORM.SelectAllFaqs();
         }
 
         private Boolean eliminar()

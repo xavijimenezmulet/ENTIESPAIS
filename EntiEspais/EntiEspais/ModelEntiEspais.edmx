@@ -130,7 +130,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="pregunta" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="pregunta" Type="varchar(max)" Nullable="false" />
           <Property Name="descripción" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="HORARI_ACTIVITAT">
@@ -743,7 +743,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="pregunta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pregunta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="HORARI_ACTIVITAT">

@@ -26,7 +26,7 @@ namespace EntiEspais.Formularis
         private void FormEquips_Load(object sender, EventArgs e)
         {
             Reloj.Start();
-
+            pictureBox7.Select();
             RefrescarEquips();
         }
 
@@ -98,5 +98,11 @@ namespace EntiEspais.Formularis
         {
             this.Close();
         }
+
+        private void iniciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormPrincipal();
+        }
+
     }
 }

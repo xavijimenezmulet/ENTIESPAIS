@@ -168,6 +168,7 @@ namespace EntiEspais.Formularis
             comboBoxEsport.DisplayMember = "nom";
 
         }
+
         private void FormEquip_Load(object sender, EventArgs e)
         {
             RellenarComboBox();

@@ -71,6 +71,11 @@ namespace EntiEspais.Formularis
                 MessageBox.Show(" Email buit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
+            else if (!Utilitats.isAnEmail(textBoxEmail.Text))
+            {
+                MessageBox.Show("Email mal escrit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxEmail.Select();
+            }
             else if( this.Text.Equals( "NOU ADMINISTRADOR" ) )
             {
                 String missatge = "";

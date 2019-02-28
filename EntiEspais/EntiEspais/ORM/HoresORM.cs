@@ -23,6 +23,20 @@ namespace EntiEspais.ORM
         }
 
         /**
+       * ENS RETORNA LA SELECT AMB TOTS LES HORES DE LA SEMANA SENSE REPETIR LES HORES
+       **/
+        public static List<HORES> SelectIntervalHores()
+        {
+            List<HORES> _hores =
+                 (from a in GeneralORM.bd.HORES
+                  orderby a.inici
+                  select  a).Distinct().ToList();
+
+            return _hores;
+
+        }
+
+        /**
          * ENS ACTUALITZA UNA HORA DE LA BASE DE DADES 
          **/
         public static String UpdateHora(HORES hora)

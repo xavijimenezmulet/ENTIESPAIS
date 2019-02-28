@@ -30,8 +30,8 @@ namespace EntiEspais.Formularis
 
         private void FormHora_Load(object sender, EventArgs e)
         {
-            bindingSourceInici.DataSource = HoresORM.SelectAllHores();
-            bindingSourceFinal.DataSource = HoresORM.SelectAllHores();
+            bindingSourceInici.DataSource = HoresORM.SelectIntervalHores();
+            bindingSourceFinal.DataSource = HoresORM.SelectIntervalHores();
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)

@@ -40,10 +40,14 @@ namespace EntiEspais.Formularis
 
         private void FormTelefonEntitat_Load(object sender, EventArgs e)
         {
+            bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual("2018-2019");
             if (this.Text.Equals("MODIFICAR TELÈFON ENTITAT"))
             {
                 textBoxNom.Text = this.tEntitat.numero.ToString();
+                comboBoxEntitat.SelectedValue = tEntitat.id_entitat;
+               
             }
+            
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)

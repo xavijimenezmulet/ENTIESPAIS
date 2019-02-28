@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelefonEntitat));
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxEntitat = new System.Windows.Forms.ComboBox();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -68,9 +73,9 @@
             // textBoxNom
             // 
             this.textBoxNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxNom.Location = new System.Drawing.Point(56, 36);
+            this.textBoxNom.Location = new System.Drawing.Point(66, 50);
             this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(216, 20);
+            this.textBoxNom.Size = new System.Drawing.Size(206, 20);
             this.textBoxNom.TabIndex = 27;
             // 
             // label1
@@ -80,12 +85,41 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(16, 41);
+            this.label1.Location = new System.Drawing.Point(16, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 15);
             this.label1.TabIndex = 26;
             this.label1.Text = "Tel.";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(16, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Entitat";
+            // 
+            // comboBoxEntitat
+            // 
+            this.comboBoxEntitat.DataSource = this.bindingSourceEntitats;
+            this.comboBoxEntitat.DisplayMember = "nom";
+            this.comboBoxEntitat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEntitat.FormattingEnabled = true;
+            this.comboBoxEntitat.Location = new System.Drawing.Point(66, 22);
+            this.comboBoxEntitat.Name = "comboBoxEntitat";
+            this.comboBoxEntitat.Size = new System.Drawing.Size(206, 21);
+            this.comboBoxEntitat.TabIndex = 31;
+            this.comboBoxEntitat.ValueMember = "id";
+            // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(EntiEspais.ENTITATS);
             // 
             // FormTelefonEntitat
             // 
@@ -94,6 +128,8 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 161);
+            this.Controls.Add(this.comboBoxEntitat);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBoxNom);
@@ -105,6 +141,7 @@
             this.Name = "FormTelefonEntitat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormTelefonEntitat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +153,8 @@
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxEntitat;
+        private System.Windows.Forms.BindingSource bindingSourceEntitats;
     }
 }

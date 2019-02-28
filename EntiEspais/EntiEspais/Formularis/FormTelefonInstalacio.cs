@@ -34,9 +34,11 @@ namespace EntiEspais.Formularis
 
         private void FormTelefonInstalacio_Load(object sender, EventArgs e)
         {
+            //bindingSourceInstalacio.DataSource = InstalacionsORM
             if (this.Text.Equals("MODIFICAR TELÈFON"))
             {
                 textBoxNom.Text = this.tInstalacio.telefon.ToString();
+                comboBoxInstalacio.SelectedValue = tInstalacio.id;
             }
         }
     }

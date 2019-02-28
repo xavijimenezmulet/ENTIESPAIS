@@ -33,5 +33,61 @@ namespace EntiEspais.Formularis
             bindingSourceInici.DataSource = HoresORM.SelectAllHores();
             bindingSourceFinal.DataSource = HoresORM.SelectAllHores();
         }
+
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            HORES inici = (HORES)comboBoxInici.SelectedItem;
+            HORES final= (HORES)comboBoxFinal.SelectedItem;
+
+            if (inici.inici == final.inici)
+            {
+                MessageBox.Show("Dos intervals no poden ser iguals!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                comboBoxFinal.Select();
+            }
+            else if (inici.inici > final.inici)
+            {
+                MessageBox.Show("El interval inici no pot ser més petit que el final!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                comboBoxInici.Select();
+            }
+            else if (this.Text.Equals("NOU INTERVAL D'HORES"))
+            {
+                String missatge = "";
+
+                this.intervalHores.inici = inici.inici;
+                this.intervalHores.fi = final.inici;
+
+                missatge = HoresORM.InsertHora(this.intervalHores);
+
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Introduït perfectament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+
+            }
+            else if (this.Text.Equals("MODIFICAR INTERVAL D'HORES"))
+            {
+                String missatge = "";
+
+                this.intervalHores.inici = inici.inici;
+                this.intervalHores.fi = final.inici;
+
+                missatge = HoresORM.UpdateHora(this.intervalHores);
+
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Introduït perfectament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Close();
+            }
+        }
     }
 }

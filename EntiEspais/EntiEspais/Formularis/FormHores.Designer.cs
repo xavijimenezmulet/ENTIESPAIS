@@ -60,6 +60,7 @@
             this.buttonEliminar.TabIndex = 29;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
@@ -73,6 +74,7 @@
             this.buttonModificar.TabIndex = 28;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAfegir
             // 
@@ -140,6 +142,8 @@
             this.dataGridViewHores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHores.Size = new System.Drawing.Size(333, 214);
             this.dataGridViewHores.TabIndex = 26;
+            this.dataGridViewHores.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewHores_UserDeletingRow);
+            this.dataGridViewHores.DoubleClick += new System.EventHandler(this.dataGridViewHores_DoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -211,6 +215,8 @@
             this.Name = "FormHores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INTERVAL D\'HORES";
+            this.Activated += new System.EventHandler(this.FormHores_Activated);
+            this.Load += new System.EventHandler(this.FormHores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHores)).EndInit();
             this.ResumeLayout(false);

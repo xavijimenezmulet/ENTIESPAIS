@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelefonInstalacio));
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxInstalacio = new System.Windows.Forms.ComboBox();
+            this.bindingSourceInstalacio = new System.Windows.Forms.BindingSource(this.components);
+            this.labelInstalacio = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -67,9 +72,9 @@
             // textBoxNom
             // 
             this.textBoxNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxNom.Location = new System.Drawing.Point(56, 36);
+            this.textBoxNom.Location = new System.Drawing.Point(87, 50);
             this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(216, 20);
+            this.textBoxNom.Size = new System.Drawing.Size(185, 20);
             this.textBoxNom.TabIndex = 31;
             // 
             // label1
@@ -79,11 +84,40 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(16, 41);
+            this.label1.Location = new System.Drawing.Point(16, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 15);
             this.label1.TabIndex = 30;
             this.label1.Text = "Tel.";
+            // 
+            // comboBoxInstalacio
+            // 
+            this.comboBoxInstalacio.DataSource = this.bindingSourceInstalacio;
+            this.comboBoxInstalacio.DisplayMember = "nom";
+            this.comboBoxInstalacio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxInstalacio.FormattingEnabled = true;
+            this.comboBoxInstalacio.Location = new System.Drawing.Point(87, 23);
+            this.comboBoxInstalacio.Name = "comboBoxInstalacio";
+            this.comboBoxInstalacio.Size = new System.Drawing.Size(185, 21);
+            this.comboBoxInstalacio.TabIndex = 35;
+            this.comboBoxInstalacio.ValueMember = "id";
+            // 
+            // bindingSourceInstalacio
+            // 
+            this.bindingSourceInstalacio.DataSource = typeof(EntiEspais.INSTALACIONS);
+            // 
+            // labelInstalacio
+            // 
+            this.labelInstalacio.AutoSize = true;
+            this.labelInstalacio.BackColor = System.Drawing.Color.Transparent;
+            this.labelInstalacio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.labelInstalacio.ForeColor = System.Drawing.Color.White;
+            this.labelInstalacio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelInstalacio.Location = new System.Drawing.Point(16, 30);
+            this.labelInstalacio.Name = "labelInstalacio";
+            this.labelInstalacio.Size = new System.Drawing.Size(65, 15);
+            this.labelInstalacio.TabIndex = 34;
+            this.labelInstalacio.Text = "Instal·lació";
             // 
             // FormTelefonInstalacio
             // 
@@ -92,6 +126,8 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(284, 161);
+            this.Controls.Add(this.comboBoxInstalacio);
+            this.Controls.Add(this.labelInstalacio);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.textBoxNom);
@@ -103,6 +139,7 @@
             this.Name = "FormTelefonInstalacio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormTelefonInstalacio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +151,8 @@
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxInstalacio;
+        private System.Windows.Forms.BindingSource bindingSourceInstalacio;
+        private System.Windows.Forms.Label labelInstalacio;
     }
 }

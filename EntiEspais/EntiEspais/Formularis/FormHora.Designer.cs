@@ -69,6 +69,7 @@
             this.buttonAceptar.TabIndex = 28;
             this.buttonAceptar.Text = "Acceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // label1
             // 
@@ -79,9 +80,9 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(14, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 15);
+            this.label1.Size = new System.Drawing.Size(30, 15);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Nom";
+            this.label1.Text = "Inici";
             // 
             // label2
             // 
@@ -92,14 +93,15 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(14, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 15);
+            this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Nom";
+            this.label2.Text = "Final";
             // 
             // comboBoxFinal
             // 
             this.comboBoxFinal.DataSource = this.bindingSourceFinal;
             this.comboBoxFinal.DisplayMember = "inici";
+            this.comboBoxFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFinal.FormattingEnabled = true;
             this.comboBoxFinal.Location = new System.Drawing.Point(54, 57);
             this.comboBoxFinal.Name = "comboBoxFinal";
@@ -115,6 +117,7 @@
             // 
             this.comboBoxInici.DataSource = this.bindingSourceInici;
             this.comboBoxInici.DisplayMember = "inici";
+            this.comboBoxInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInici.FormattingEnabled = true;
             this.comboBoxInici.Location = new System.Drawing.Point(54, 23);
             this.comboBoxInici.Name = "comboBoxInici";

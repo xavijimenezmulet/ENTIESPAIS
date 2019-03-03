@@ -36,6 +36,16 @@ namespace EntiEspais.Formularis
 
         private void FormDemanda_Load(object sender, EventArgs e)
         {
+            bindingSourceHoras.DataSource = HoresORM.SelectAllHores();
+            //bindingSourceInstalacions.DataSource = Insta
+            List<DIA_SEMANA> dies = new List<DIA_SEMANA>();
+            foreach (DIA_SEMANA dia in demanda.DIA_SEMANA)
+            {
+                dies.Add(dia);
+            }
+            listBoxCalDies.DataSource = dies;
+            listBoxCalDies.DisplayMember = "nom";
+            listBoxCalDies.ValueMember = "id";
             textBoxId.Text = demanda.id.ToString();
             textBoxNom.Text = demanda.nom;
             textBoxDuracio.Text = demanda.duracio.ToString();

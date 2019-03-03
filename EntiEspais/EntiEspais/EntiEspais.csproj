@@ -112,6 +112,18 @@
     <Compile Include="FAQS.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormActivitat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormActivitat.Designer.cs">
+      <DependentUpon>FormActivitat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormActivitats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormActivitats.Designer.cs">
+      <DependentUpon>FormActivitats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,18 @@
     <Compile Include="Formularis\FormCompeticions.Designer.cs">
       <DependentUpon>FormCompeticions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormDemanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormDemanda.Designer.cs">
+      <DependentUpon>FormDemanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormDemandes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormDemandes.Designer.cs">
+      <DependentUpon>FormDemandes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormDiaSemana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +195,18 @@
     </Compile>
     <Compile Include="Formularis\FormDiesSemana.Designer.cs">
       <DependentUpon>FormDiesSemana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEntitat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEntitat.Designer.cs">
+      <DependentUpon>FormEntitat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEntitats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEntitats.Designer.cs">
+      <DependentUpon>FormEntitats.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularis\FormEquip.cs">
       <SubType>Form</SubType>
@@ -337,6 +373,15 @@
     <Compile Include="TELEFONS_INSTALACIONS.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formularis\FormActivitat.af-NA.resx">
+      <DependentUpon>FormActivitat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormActivitat.resx">
+      <DependentUpon>FormActivitat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormActivitats.resx">
+      <DependentUpon>FormActivitats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormAdministrador.af-NA.resx">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,11 +409,29 @@
     <EmbeddedResource Include="Formularis\FormCompeticions.resx">
       <DependentUpon>FormCompeticions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormDemanda.af-NA.resx">
+      <DependentUpon>FormDemanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormDemanda.resx">
+      <DependentUpon>FormDemanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormDemandes.resx">
+      <DependentUpon>FormDemandes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormDiaSemana.resx">
       <DependentUpon>FormDiaSemana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormDiesSemana.resx">
       <DependentUpon>FormDiesSemana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEntitat.af-NA.resx">
+      <DependentUpon>FormEntitat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEntitat.resx">
+      <DependentUpon>FormEntitat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEntitats.resx">
+      <DependentUpon>FormEntitats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormEquip.resx">
       <DependentUpon>FormEquip.cs</DependentUpon>

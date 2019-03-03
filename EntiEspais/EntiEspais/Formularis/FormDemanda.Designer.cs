@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDemanda));
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.labelId = new System.Windows.Forms.Label();
@@ -53,7 +54,9 @@
             this.listBoxDies = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxInst = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDias = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDias)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxId
@@ -216,6 +219,10 @@
             resources.ApplyResources(this.comboBoxInst, "comboBoxInst");
             this.comboBoxInst.Name = "comboBoxInst";
             // 
+            // bindingSourceDias
+            // 
+            this.bindingSourceDias.DataSource = typeof(EntiEspais.DIA_SEMANA);
+            // 
             // FormDemanda
             // 
             resources.ApplyResources(this, "$this");
@@ -251,6 +258,7 @@
             this.Load += new System.EventHandler(this.FormDemanda_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +290,6 @@
         private System.Windows.Forms.ListBox listBoxDies;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxInst;
+        private System.Windows.Forms.BindingSource bindingSourceDias;
     }
 }

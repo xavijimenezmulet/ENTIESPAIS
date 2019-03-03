@@ -198,8 +198,8 @@
             // 
             // listBoxDies
             // 
-            this.listBoxDies.FormattingEnabled = true;
             resources.ApplyResources(this.listBoxDies, "listBoxDies");
+            this.listBoxDies.FormattingEnabled = true;
             this.listBoxDies.Name = "listBoxDies";
             this.listBoxDies.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             // 

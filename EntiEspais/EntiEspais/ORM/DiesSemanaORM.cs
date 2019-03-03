@@ -15,7 +15,7 @@ namespace EntiEspais.ORM
         {
             List<DIA_SEMANA> _diesSemana =
                  (from a in GeneralORM.bd.DIA_SEMANA
-                  orderby a.nom
+                  orderby a.id
                   select a).ToList();
 
             return _diesSemana;

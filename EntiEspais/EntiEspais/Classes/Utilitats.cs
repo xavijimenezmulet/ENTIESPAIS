@@ -1,6 +1,8 @@
 ﻿using BlowFishCS;
 using EntiEspais.ORM;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 /**
  * CLASSE UTILTIATS (ENS SERVIRÀ PER UTILITZAR MÈTODES DE LA CLASSE PER REUTILITZAR CODI
@@ -155,5 +157,38 @@ namespace EntiEspais.Classes
             return temp;
         }
 
+        public static List<DIA_SEMANA> diesDemanda(DEMANDA_ACT demanda)
+        {
+            List<DIA_SEMANA> diaAct = demanda.DIA_SEMANA.ToList();
+
+            return diaAct;
+        }
+        /**
+        *METODE PER BUSCAR L'ESPAI MES ÒPTIM PER UNA DEMANDA D'ACTIVITAT
+        **/
+        /*
+        public static ESPAIS buscarEspai(DEMANDA_ACT demanda)
+        {
+            List<DIA_SEMANA> diaAct = demanda.DIA_SEMANA.ToList();
+            //diaAct.;
+            
+            ESPAIS espai;
+            List<int> dies = new List<int>();
+            //List<DIA_SEMANA> dies = new List<DIA_SEMANA>();
+            //dies.AddRange(demanda.DIA_SEMANA);
+            for (int i = 0; i < demanda.DIA_SEMANA.Count; i++)
+            {
+                dies.Add(demanda.DIA_SEMANA.);
+            }
+            
+            //Cridar metode SelectInstalacions i guardar a la llista
+            List<INSTALACIONS> instalacions = new List<INSTALACIONS>();
+            for (int i = 0; i < instalacions.Count; i++)
+            {
+                if(instalacions[i].HORARI_INSTALACIO.)
+            }
+    
+            return espai;
+        }*/
     }
 }

@@ -347,6 +347,7 @@
     <Compile Include="ORM\CategoriaPerEdatORM.cs" />
     <Compile Include="ORM\CategoriaPerEquipORM.cs" />
     <Compile Include="ORM\CompeticionsORM.cs" />
+    <Compile Include="ORM\DemandaActORM.cs" />
     <Compile Include="ORM\DiesSemanaORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\EquipsORM.cs" />

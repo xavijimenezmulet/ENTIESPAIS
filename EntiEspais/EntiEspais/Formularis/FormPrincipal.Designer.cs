@@ -218,6 +218,7 @@
             this.llistaEntitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.llistaEntitatsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.llistaEntitatsToolStripMenuItem.Text = "Llista Entitats";
+            this.llistaEntitatsToolStripMenuItem.Click += new System.EventHandler(this.llistaEntitatsToolStripMenuItem_Click);
             // 
             // afegirEntitatToolStripMenuItem
             // 
@@ -227,6 +228,7 @@
             | System.Windows.Forms.Keys.E)));
             this.afegirEntitatToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.afegirEntitatToolStripMenuItem.Text = "Afegir Entitat";
+            this.afegirEntitatToolStripMenuItem.Click += new System.EventHandler(this.afegirEntitatToolStripMenuItem_Click);
             // 
             // equipsToolStripMenuItem
             // 
@@ -330,6 +332,7 @@
             this.llistatActivitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.llistatActivitatsToolStripMenuItem.Text = "Llistat Activitats";
+            this.llistatActivitatsToolStripMenuItem.Click += new System.EventHandler(this.llistatActivitatsToolStripMenuItem_Click);
             // 
             // afegirActivitatToolStripMenuItem
             // 
@@ -339,6 +342,7 @@
             | System.Windows.Forms.Keys.A)));
             this.afegirActivitatToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.afegirActivitatToolStripMenuItem.Text = "Llistat Demanda Activitats";
+            this.afegirActivitatToolStripMenuItem.Click += new System.EventHandler(this.afegirActivitatToolStripMenuItem_Click);
             // 
             // altresToolStripMenuItem
             // 

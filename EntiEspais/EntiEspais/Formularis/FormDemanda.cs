@@ -54,12 +54,13 @@ namespace EntiEspais.Formularis
             HORES hores = HoresORM.SelectHoresByid(demanda.HORES.id).First();
             textBoxHinici.Text = hores.inici.ToString();
             textBoxHfi.Text = hores.fi.ToString();
-            listBoxDies.DataSource = demanda.DIA_SEMANA;
+            listBoxDies.DataSource = DiesSemanaORM.SelectAllDiesSemana();
             listBoxDies.DisplayMember = "nom";
             listBoxDies.ValueMember = "id";
-            
-            
-
+            foreach (DIA_SEMANA dia in demanda.DIA_SEMANA)
+            {
+                listBoxDies.SelectedItems.Add(dia);
+            }
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)

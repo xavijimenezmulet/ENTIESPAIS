@@ -81,5 +81,17 @@ namespace EntiEspais.ORM
             return missatgeError;
 
         }
+        /**
+         * ENS RETORNA LA SELECT AMB L'HORA DONAT UN ID
+         **/
+        public static List<HORES> SelectHoresByid(int id)
+        {
+            List<HORES> _hores =
+                 (from e in GeneralORM.bd.HORES
+                  where e.id.Equals(id)
+                  select e).ToList();
+
+            return _hores;
+        }
     }
 }

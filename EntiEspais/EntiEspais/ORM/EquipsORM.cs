@@ -66,6 +66,19 @@ namespace EntiEspais.ORM
             return mensaje;
         }
         //------------------------------------------//
+        /**
+         * ENS RETORNA LA SELECT AMB EL ID D'UN EQUIP
+         **/
+        public static List<EQUIPS> SelectAllEquipByid(int id)
+        {
 
+            List<EQUIPS> _equips =
+                 (from e in GeneralORM.bd.EQUIPS
+                  orderby e.nom
+                  where e.id.Equals(id)
+                  select e).ToList();
+
+            return _equips;
+        }
     }
 }

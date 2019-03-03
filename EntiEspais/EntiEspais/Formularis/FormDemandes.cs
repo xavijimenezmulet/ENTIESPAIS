@@ -99,7 +99,7 @@ namespace EntiEspais.Formularis
 
         private void afegirEquipToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormEquip();
+            ObridorFormulari.obrirFormEquipPerAfegir();
         }
 
         private void afegirEntitatToolStripMenuItem_Click(object sender, EventArgs e)

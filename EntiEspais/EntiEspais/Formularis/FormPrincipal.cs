@@ -128,7 +128,7 @@ namespace EntiEspais
 
         private void toolStripButtonEntitats_Click(object sender, EventArgs e)
         {
-
+            ObridorFormulari.obrirFormEntitats();
         }
 
         private void categoriaEdatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -184,6 +184,26 @@ namespace EntiEspais
         private void horesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormHores();
+        }
+
+        private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitats();
+        }
+
+        private void afegirEntitatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitat();
+        }
+
+        private void llistatActivitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormActivitats();
+        }
+
+        private void afegirActivitatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormDemandes();
         }
     }
 }

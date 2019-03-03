@@ -285,5 +285,29 @@ namespace EntiEspais.Classes
             FormHora fHora = new FormHora(hora);
             fHora.ShowDialog();
         }
+        //ens obre un formulari Entitats
+        public static void obrirFormEntitats()
+        {
+            FormEntitats fEntitats = new FormEntitats();
+            fEntitats.ShowDialog();
+        }
+        //ens obre un formulari Entitats
+        public static void obrirFormEntitat()
+        {
+            FormEntitat fEntitat = new FormEntitat();
+            fEntitat.ShowDialog();
+        }
+        //ens obre un formulari Activitats
+        public static void obrirFormActivitats()
+        {
+            FormActivitats fActivitats = new FormActivitats();
+            fActivitats.ShowDialog();
+        }
+        //ens obre un formulari Demandes
+        public static void obrirFormDemandes()
+        {
+            FormDemandes fDemandes = new FormDemandes();
+            fDemandes.ShowDialog();
+        }
     }
 }

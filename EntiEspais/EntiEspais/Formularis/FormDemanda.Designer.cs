@@ -54,6 +54,7 @@
             this.listBoxDies = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxInst = new System.Windows.Forms.ComboBox();
+            this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
             this.listBoxCalDies = new System.Windows.Forms.ListBox();
             this.dataGridViewHorari = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,12 +62,11 @@
             this.fiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceHoras = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceDias = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHoras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxId
@@ -230,6 +230,11 @@
             this.comboBoxInst.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxInst, "comboBoxInst");
             this.comboBoxInst.Name = "comboBoxInst";
+            this.comboBoxInst.SelectedIndexChanged += new System.EventHandler(this.comboBoxInst_SelectedIndexChanged);
+            // 
+            // bindingSourceInstalacions
+            // 
+            this.bindingSourceInstalacions.DataSource = typeof(EntiEspais.INSTALACIONS);
             // 
             // listBoxCalDies
             // 
@@ -280,10 +285,6 @@
             // 
             this.bindingSourceDias.DataSource = typeof(EntiEspais.DIA_SEMANA);
             // 
-            // bindingSourceInstalacions
-            // 
-            this.bindingSourceInstalacions.DataSource = typeof(EntiEspais.INSTALACIONS);
-            // 
             // FormDemanda
             // 
             resources.ApplyResources(this, "$this");
@@ -321,10 +322,10 @@
             this.Load += new System.EventHandler(this.FormDemanda_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHoras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

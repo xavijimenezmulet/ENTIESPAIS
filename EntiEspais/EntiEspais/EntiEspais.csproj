@@ -351,10 +351,12 @@
     <Compile Include="ORM\DiesSemanaORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
     <Compile Include="ORM\EquipsORM.cs" />
+    <Compile Include="ORM\EspaisORM.cs" />
     <Compile Include="ORM\EsportsORM.cs" />
     <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
     <Compile Include="ORM\HoresORM.cs" />
+    <Compile Include="ORM\InstalacionsORM.cs" />
     <Compile Include="ORM\SexesORM.cs" />
     <Compile Include="ORM\TelefonsEntitatsORM.cs" />
     <Compile Include="ORM\TelefonsInstalacionsORM.cs" />

@@ -871,7 +871,7 @@
     <value>641, 35</value>
   </data>
   <data name="dataGridViewHorari.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 403</value>
+    <value>357, 403</value>
   </data>
   <data name="dataGridViewHorari.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5030,6 +5030,12 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
+  <data name="&gt;&gt;bindingSourceInstalacions.Name" xml:space="preserve">
+    <value>bindingSourceInstalacions</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceInstalacions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;idDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>idDataGridViewTextBoxColumn</value>
   </data>
@@ -5058,12 +5064,6 @@
     <value>bindingSourceDias</value>
   </data>
   <data name="&gt;&gt;bindingSourceDias.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceInstalacions.Name" xml:space="preserve">
-    <value>bindingSourceInstalacions</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceInstalacions.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

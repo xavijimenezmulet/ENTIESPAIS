@@ -37,7 +37,10 @@ namespace EntiEspais.Formularis
         private void FormDemanda_Load(object sender, EventArgs e)
         {
             bindingSourceHoras.DataSource = HoresORM.SelectAllHores();
-            //bindingSourceInstalacions.DataSource = Insta
+            bindingSourceInstalacions.DataSource = InstalacionsORM.selectInstalacions();
+            listBoxEspai.DataSource = EspaisORM.selectEspaisInstalacio((INSTALACIONS)comboBoxInst.SelectedItem);
+            listBoxEspai.DisplayMember = "nom";
+            listBoxEspai.ValueMember = "id";
             List<DIA_SEMANA> dies = new List<DIA_SEMANA>();
             foreach (DIA_SEMANA dia in demanda.DIA_SEMANA)
             {
@@ -49,7 +52,6 @@ namespace EntiEspais.Formularis
             textBoxId.Text = demanda.id.ToString();
             textBoxNom.Text = demanda.nom;
             textBoxDuracio.Text = demanda.duracio.ToString();
-            //textBoxEspais.Text = demanda.num_espais.ToString();
             if(demanda.es_asignada == true)
             {
                 radioButtonSi.Checked = true;
@@ -76,6 +78,11 @@ namespace EntiEspais.Formularis
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxInst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxEspai.DataSource = EspaisORM.selectEspaisInstalacio((INSTALACIONS)comboBoxInst.SelectedItem);
         }
     }
 }

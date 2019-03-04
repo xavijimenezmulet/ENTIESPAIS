@@ -36,19 +36,11 @@ namespace EntiEspais.Formularis
 
         private void FormDemanda_Load(object sender, EventArgs e)
         {
-            bindingSourceHoras.DataSource = HoresORM.SelectAllHores();
+            
             bindingSourceInstalacions.DataSource = InstalacionsORM.selectInstalacions();
             listBoxEspai.DataSource = EspaisORM.selectEspaisInstalacio((INSTALACIONS)comboBoxInst.SelectedItem);
             listBoxEspai.DisplayMember = "nom";
             listBoxEspai.ValueMember = "id";
-            List<DIA_SEMANA> dies = new List<DIA_SEMANA>();
-            foreach (DIA_SEMANA dia in demanda.DIA_SEMANA)
-            {
-                dies.Add(dia);
-            }
-            listBoxCalDies.DataSource = dies;
-            listBoxCalDies.DisplayMember = "nom";
-            listBoxCalDies.ValueMember = "id";
             textBoxId.Text = demanda.id.ToString();
             textBoxNom.Text = demanda.nom;
             textBoxDuracio.Text = demanda.duracio.ToString();
@@ -73,6 +65,62 @@ namespace EntiEspais.Formularis
             {
                 listBoxDies.SelectedItems.Add(dia);
             }
+
+            //-------------CALENDARI----------------------
+            List<HORES> horari = HoresORM.SelectAllHores();
+            string[,] rows = new string[97, 9];
+            for (int i = 0; i < 97; i++)
+            {
+                rows[i, 0] = horari[i].inici.ToString();
+                rows[i, 1] = horari[i].fi.ToString();
+
+            }
+
+            List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
+            for (int k = 0; k < demandesAssignades.Count; k++)
+            {
+                ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
+                if (demandesAssignades[k].id_espai == espai.id)
+                {
+                    EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
+                    foreach (DIA_SEMANA dia in demandesAssignades[k].DIA_SEMANA)
+                    {
+                        List<int> intervals = Utilitats.comparaHores(demandesAssignades[k].id_interval_hores);
+                        for (int m = 0; m < intervals.Count; m++)
+                        {
+                            rows[intervals[m], dia.id + 1] = equipDemanda.nom;
+                        }
+                    }
+                }
+            }
+            //---------OMPLIR CALENDARI--------------------
+
+            List<EQUIPS> equips = EquipsORM.SelectAllEquips();
+            for (int i = 0; i < rows.GetLength(0); i++)
+            {
+                string[] row = new string[rows.GetLength(1)];
+
+                for (int j = 0; j < rows.GetLength(1); j++)
+                {
+                    row[j] = rows[i, j];
+                }
+
+                dataGridViewHorari.Rows.Add(row);
+                foreach (DataGridViewRow fila in dataGridViewHorari.Rows)
+                {
+                    foreach (DataGridViewCell cela in fila.Cells)
+                        if (cela.Value != null)
+                        {
+                            for (int j = 0; j < equips.Count; j++)
+                            {
+                                if (cela.Value.ToString() == equips[j].nom)
+                                {
+                                    cela.Style.BackColor = System.Drawing.Color.Red;
+                                }
+                            }
+                        }
+                }
+            }
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)
@@ -83,6 +131,64 @@ namespace EntiEspais.Formularis
         private void comboBoxInst_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBoxEspai.DataSource = EspaisORM.selectEspaisInstalacio((INSTALACIONS)comboBoxInst.SelectedItem);
+        }
+
+        private void listBoxEspai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridViewHorari.Rows.Clear();
+            //-------------CALENDARI----------------------
+            List<HORES> horari = HoresORM.SelectAllHores();
+            List<EQUIPS> equips = EquipsORM.SelectAllEquips();
+            string[,] rows = new string[97, 9];
+            for (int i = 0; i < 97; i++)
+            {
+                rows[i, 0] = horari[i].inici.ToString();
+                rows[i, 1] = horari[i].fi.ToString();
+
+            }
+            List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
+            for (int k = 0; k < demandesAssignades.Count; k++)
+            {
+                ESPAIS espai = (ESPAIS) listBoxEspai.SelectedItem;
+                if (demandesAssignades[k].id_espai == espai.id)
+                {
+                    EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
+                    foreach (DIA_SEMANA dia in demandesAssignades[k].DIA_SEMANA)
+                    {
+                        List<int> intervals = Utilitats.comparaHores(demandesAssignades[k].id_interval_hores);
+                        for (int m = 0; m < intervals.Count; m++)
+                        {
+                            rows[intervals[m], dia.id + 1] = equipDemanda.nom;
+                        }
+                    }
+                }
+            }
+
+            //---------OMPLIR CALENDARI--------------------
+            for (int i = 0; i < rows.GetLength(0); i++)
+            {
+                string[] row = new string[rows.GetLength(1)];
+
+                for (int j = 0; j < rows.GetLength(1); j++)
+                {
+                    row[j] = rows[i, j];
+                }
+                dataGridViewHorari.Rows.Add(row);
+                foreach (DataGridViewRow fila in dataGridViewHorari.Rows)
+                {
+                    foreach (DataGridViewCell cela in fila.Cells)
+                        if (cela.Value != null)
+                        {
+                            for (int j = 0; j < equips.Count; j++)
+                            {
+                                if (cela.Value.ToString() == equips[j].nom)
+                                {
+                                    cela.Style.BackColor = System.Drawing.Color.Red;
+                                }
+                            }
+                        }
+                }
+            }
         }
     }
 }

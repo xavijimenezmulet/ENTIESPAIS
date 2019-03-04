@@ -93,5 +93,29 @@ namespace EntiEspais.ORM
 
             return _hores;
         }
+        /**
+         * ENS RETORNA LA SELECT AMB L'HORA DONAT UNA HORA INICI
+         **/
+        public static List<HORES> SelectHoresByHinici(TimeSpan hInici)
+        {
+            List<HORES> _hores =
+                 (from e in GeneralORM.bd.HORES
+                  where e.inici.Equals(hInici)
+                  select e).ToList();
+
+            return _hores;
+        }
+        /**
+         * ENS RETORNA LA SELECT AMB L'HORA DONAT UNA HORA FINAL
+         **/
+        public static List<HORES> SelectHoresByHfinal(TimeSpan hFi)
+        {
+            List<HORES> _hores =
+                 (from e in GeneralORM.bd.HORES
+                  where e.fi.Equals(hFi)
+                  select e).ToList();
+
+            return _hores;
+        }
     }
 }

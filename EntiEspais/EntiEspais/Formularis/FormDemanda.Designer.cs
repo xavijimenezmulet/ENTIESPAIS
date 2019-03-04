@@ -55,11 +55,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxInst = new System.Windows.Forms.ComboBox();
             this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
-            this.listBoxCalDies = new System.Windows.Forms.ListBox();
             this.dataGridViewHorari = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iniciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInici = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dilluns = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dimarts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dimecres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dijous = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Divendres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dissabte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diumenge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceHoras = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceDias = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
@@ -201,6 +206,7 @@
             this.listBoxEspai.FormattingEnabled = true;
             resources.ApplyResources(this.listBoxEspai, "listBoxEspai");
             this.listBoxEspai.Name = "listBoxEspai";
+            this.listBoxEspai.SelectedIndexChanged += new System.EventHandler(this.listBoxEspai_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -236,46 +242,77 @@
             // 
             this.bindingSourceInstalacions.DataSource = typeof(EntiEspais.INSTALACIONS);
             // 
-            // listBoxCalDies
-            // 
-            this.listBoxCalDies.FormattingEnabled = true;
-            resources.ApplyResources(this.listBoxCalDies, "listBoxCalDies");
-            this.listBoxCalDies.Name = "listBoxCalDies";
-            // 
             // dataGridViewHorari
             // 
             this.dataGridViewHorari.AllowUserToDeleteRows = false;
-            this.dataGridViewHorari.AutoGenerateColumns = false;
             this.dataGridViewHorari.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHorari.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.iniciDataGridViewTextBoxColumn,
-            this.fiDataGridViewTextBoxColumn});
-            this.dataGridViewHorari.DataSource = this.bindingSourceHoras;
+            this.HoraInici,
+            this.HoraFinal,
+            this.Dilluns,
+            this.Dimarts,
+            this.Dimecres,
+            this.Dijous,
+            this.Divendres,
+            this.Dissabte,
+            this.Diumenge});
             resources.ApplyResources(this.dataGridViewHorari, "dataGridViewHorari");
             this.dataGridViewHorari.Name = "dataGridViewHorari";
             this.dataGridViewHorari.ReadOnly = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // HoraInici
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            resources.ApplyResources(this.idDataGridViewTextBoxColumn, "idDataGridViewTextBoxColumn");
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            resources.ApplyResources(this.HoraInici, "HoraInici");
+            this.HoraInici.Name = "HoraInici";
+            this.HoraInici.ReadOnly = true;
             // 
-            // iniciDataGridViewTextBoxColumn
+            // HoraFinal
             // 
-            this.iniciDataGridViewTextBoxColumn.DataPropertyName = "inici";
-            resources.ApplyResources(this.iniciDataGridViewTextBoxColumn, "iniciDataGridViewTextBoxColumn");
-            this.iniciDataGridViewTextBoxColumn.Name = "iniciDataGridViewTextBoxColumn";
-            this.iniciDataGridViewTextBoxColumn.ReadOnly = true;
+            resources.ApplyResources(this.HoraFinal, "HoraFinal");
+            this.HoraFinal.Name = "HoraFinal";
+            this.HoraFinal.ReadOnly = true;
             // 
-            // fiDataGridViewTextBoxColumn
+            // Dilluns
             // 
-            this.fiDataGridViewTextBoxColumn.DataPropertyName = "fi";
-            resources.ApplyResources(this.fiDataGridViewTextBoxColumn, "fiDataGridViewTextBoxColumn");
-            this.fiDataGridViewTextBoxColumn.Name = "fiDataGridViewTextBoxColumn";
-            this.fiDataGridViewTextBoxColumn.ReadOnly = true;
+            resources.ApplyResources(this.Dilluns, "Dilluns");
+            this.Dilluns.Name = "Dilluns";
+            this.Dilluns.ReadOnly = true;
+            // 
+            // Dimarts
+            // 
+            resources.ApplyResources(this.Dimarts, "Dimarts");
+            this.Dimarts.Name = "Dimarts";
+            this.Dimarts.ReadOnly = true;
+            // 
+            // Dimecres
+            // 
+            resources.ApplyResources(this.Dimecres, "Dimecres");
+            this.Dimecres.Name = "Dimecres";
+            this.Dimecres.ReadOnly = true;
+            // 
+            // Dijous
+            // 
+            resources.ApplyResources(this.Dijous, "Dijous");
+            this.Dijous.Name = "Dijous";
+            this.Dijous.ReadOnly = true;
+            // 
+            // Divendres
+            // 
+            resources.ApplyResources(this.Divendres, "Divendres");
+            this.Divendres.Name = "Divendres";
+            this.Divendres.ReadOnly = true;
+            // 
+            // Dissabte
+            // 
+            resources.ApplyResources(this.Dissabte, "Dissabte");
+            this.Dissabte.Name = "Dissabte";
+            this.Dissabte.ReadOnly = true;
+            // 
+            // Diumenge
+            // 
+            resources.ApplyResources(this.Diumenge, "Diumenge");
+            this.Diumenge.Name = "Diumenge";
+            this.Diumenge.ReadOnly = true;
             // 
             // bindingSourceHoras
             // 
@@ -291,7 +328,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.Controls.Add(this.dataGridViewHorari);
-            this.Controls.Add(this.listBoxCalDies);
             this.Controls.Add(this.comboBoxInst);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxDies);
@@ -358,12 +394,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxInst;
         private System.Windows.Forms.BindingSource bindingSourceDias;
-        private System.Windows.Forms.ListBox listBoxCalDies;
         private System.Windows.Forms.DataGridView dataGridViewHorari;
         private System.Windows.Forms.BindingSource bindingSourceHoras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iniciDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fiDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceInstalacions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInici;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dilluns;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dimarts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dimecres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dijous;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Divendres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dissabte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diumenge;
     }
 }

@@ -91,7 +91,6 @@
             this.buttonAcceptar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonAssignar = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.bindingSourceDemandes = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -736,14 +735,6 @@
             this.buttonAssignar.UseVisualStyleBackColor = false;
             this.buttonAssignar.Click += new System.EventHandler(this.buttonAssignar_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(943, 232);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 21;
-            // 
             // bindingSourceDemandes
             // 
             this.bindingSourceDemandes.DataSource = typeof(EntiEspais.DEMANDA_ACT);
@@ -757,6 +748,7 @@
             // 
             // nomDataGridViewTextBoxColumn
             // 
+            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
             this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
@@ -764,6 +756,7 @@
             // 
             // duracioDataGridViewTextBoxColumn
             // 
+            this.duracioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.duracioDataGridViewTextBoxColumn.DataPropertyName = "duracio";
             this.duracioDataGridViewTextBoxColumn.HeaderText = "duracio";
             this.duracioDataGridViewTextBoxColumn.Name = "duracioDataGridViewTextBoxColumn";
@@ -771,6 +764,7 @@
             // 
             // numespaisDataGridViewTextBoxColumn
             // 
+            this.numespaisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numespaisDataGridViewTextBoxColumn.DataPropertyName = "num_espais";
             this.numespaisDataGridViewTextBoxColumn.HeaderText = "num_espais";
             this.numespaisDataGridViewTextBoxColumn.Name = "numespaisDataGridViewTextBoxColumn";
@@ -778,6 +772,7 @@
             // 
             // numdiesDataGridViewTextBoxColumn
             // 
+            this.numdiesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numdiesDataGridViewTextBoxColumn.DataPropertyName = "num_dies";
             this.numdiesDataGridViewTextBoxColumn.HeaderText = "num_dies";
             this.numdiesDataGridViewTextBoxColumn.Name = "numdiesDataGridViewTextBoxColumn";
@@ -785,6 +780,7 @@
             // 
             // esasignadaDataGridViewCheckBoxColumn
             // 
+            this.esasignadaDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.esasignadaDataGridViewCheckBoxColumn.DataPropertyName = "es_asignada";
             this.esasignadaDataGridViewCheckBoxColumn.HeaderText = "es_asignada";
             this.esasignadaDataGridViewCheckBoxColumn.Name = "esasignadaDataGridViewCheckBoxColumn";
@@ -792,6 +788,7 @@
             // 
             // idequipDataGridViewTextBoxColumn
             // 
+            this.idequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.idequipDataGridViewTextBoxColumn.DataPropertyName = "id_equip";
             this.idequipDataGridViewTextBoxColumn.HeaderText = "id_equip";
             this.idequipDataGridViewTextBoxColumn.Name = "idequipDataGridViewTextBoxColumn";
@@ -804,7 +801,6 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1087, 654);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonAssignar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonAcceptar);
@@ -895,7 +891,6 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonAssignar;
         private System.Windows.Forms.BindingSource bindingSourceDemandes;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracioDataGridViewTextBoxColumn;

@@ -164,6 +164,26 @@ namespace EntiEspais.Classes
             return diaAct;
         }
         /**
+         *METODE PER COMPARAR INTERVALS D'HORES 
+         **/
+         public static List<int> comparaHores(int idIntervalHores)
+        {
+            List<int> hores = new List<int>();
+            HORES interval = HoresORM.SelectHoresByid(idIntervalHores).First();
+            TimeSpan hInici= interval.inici;
+            TimeSpan hFi = interval.fi;
+            int idInici = HoresORM.SelectHoresByHinici(hInici).First().id;
+            int idFi = HoresORM.SelectHoresByHinici(hFi).First().id;
+            for(int i = idInici; i <= idFi; i++)
+            {
+                hores.Add(i-15);
+            }
+            return hores;
+        }
+
+
+
+        /**
         *METODE PER BUSCAR L'ESPAI MES ÒPTIM PER UNA DEMANDA D'ACTIVITAT
         **/
         /*

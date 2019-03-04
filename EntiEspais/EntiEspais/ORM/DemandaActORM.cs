@@ -20,5 +20,18 @@ namespace EntiEspais.ORM
 
             return _demandasAct;
         }
+        /**
+         * ENS RETORNA LA SELECT AMB TOTES LES DEMANDAS D'ACTIVITATS JA ASSIGNADES
+         **/
+        public static List<DEMANDA_ACT> SelectAllDemandaActAssignades()
+        {
+            List<DEMANDA_ACT> _demandasAct =
+                 (from d in GeneralORM.bd.DEMANDA_ACT
+                  orderby d.id
+                  where d.es_asignada == true
+                  select d).ToList();
+
+            return _demandasAct;
+        }
     }
 }

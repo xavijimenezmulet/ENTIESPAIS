@@ -11,6 +11,7 @@ namespace EntiEspais.Classes
 {
     public static class Utilitats
     {
+        public static int intervalsHores = 96;
         /**
          * ENS SERVEIX PER FICAR LA HORA A LA LABEL DEL MENU
          **/
@@ -166,21 +167,36 @@ namespace EntiEspais.Classes
         /**
          *METODE PER COMPARAR INTERVALS D'HORES 
          **/
-         public static List<int> comparaHores(int idIntervalHores)
+        public static List<int> comparaHores(int idIntervalHores)
         {
             List<int> hores = new List<int>();
             HORES interval = HoresORM.SelectHoresByid(idIntervalHores).First();
             TimeSpan hInici= interval.inici;
             TimeSpan hFi = interval.fi;
             int idInici = HoresORM.SelectHoresByHinici(hInici).First().id;
-            int idFi = HoresORM.SelectHoresByHinici(hFi).First().id;
+            int idFi = HoresORM.SelectHoresByHfinal(hFi).First().id;
             for(int i = idInici; i <= idFi; i++)
             {
                 hores.Add(i-15);
             }
             return hores;
         }
+        /**
+        *METODE PER COMPARAR INTERVALS D'HORES EXCLUIDES
+        **/
+        public static List<int> comparaHoresExcluides(int idIntervalHores)
+        {
+            List<int> hores = comparaHores(idIntervalHores);
 
+            List<int> horesExcluides = new List<int>();
+
+            for(int i = 0; i < intervalsHores; i++)
+            {
+                horesExcluides.Add(i);
+            }
+            horesExcluides.RemoveRange(hores[0], hores.Count);
+            return horesExcluides;
+        }
 
 
         /**

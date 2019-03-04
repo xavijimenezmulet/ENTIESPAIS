@@ -117,5 +117,18 @@ namespace EntiEspais.ORM
 
             return _hores;
         }
+        /**
+       * ENS RETORNA LA SELECT AMB ELS INTERVALS BASICS
+       **/
+        public static List<HORES> SelectHoresPrimaries(int id)
+        {
+            List<HORES> _hores =
+                 (from e in GeneralORM.bd.HORES
+                  where e.id < id
+                  orderby e.id
+                  select e).ToList();
+
+            return _hores;
+        }
     }
 }

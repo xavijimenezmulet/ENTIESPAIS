@@ -65,11 +65,11 @@ namespace EntiEspais.Formularis
             {
                 listBoxDies.SelectedItems.Add(dia);
             }
-
+            dataGridViewHorari.Rows.Clear();
             //-------------CALENDARI----------------------
-            List<HORES> horari = HoresORM.SelectAllHores();
-            string[,] rows = new string[97, 9];
-            for (int i = 0; i < 97; i++)
+            List<HORES> horari = HoresORM.SelectHoresPrimaries(111);
+            string[,] rows = new string[Utilitats.intervalsHores, 9];
+            for (int i = 0; i < Utilitats.intervalsHores; i++)
             {
                 rows[i, 0] = horari[i].inici.ToString();
                 rows[i, 1] = horari[i].fi.ToString();
@@ -94,8 +94,14 @@ namespace EntiEspais.Formularis
                 }
             }
             //---------OMPLIR CALENDARI--------------------
-
+            dataGridViewHorari.Rows.Clear();
             List<EQUIPS> equips = EquipsORM.SelectAllEquips();
+            INSTALACIONS instalacio = (INSTALACIONS)comboBoxInst.SelectedItem;
+            List<HORARI_INSTALACIO> horariInst = new List<HORARI_INSTALACIO>();
+            horariInst.AddRange(instalacio.HORARI_INSTALACIO);
+            
+            
+            
             for (int i = 0; i < rows.GetLength(0); i++)
             {
                 string[] row = new string[rows.GetLength(1)];
@@ -109,6 +115,7 @@ namespace EntiEspais.Formularis
                 foreach (DataGridViewRow fila in dataGridViewHorari.Rows)
                 {
                     foreach (DataGridViewCell cela in fila.Cells)
+                    {
                         if (cela.Value != null)
                         {
                             for (int j = 0; j < equips.Count; j++)
@@ -119,14 +126,40 @@ namespace EntiEspais.Formularis
                                 }
                             }
                         }
+                    }
                 }
             }
+            //------------PINTAR EN GRIS HORES FORA D'HORARI INSTALACIO----------------
+           
+            List<int> diesObert = new List<int>();
+            foreach (HORARI_INSTALACIO h in horariInst)
+            {
+                diesObert.Add(h.id_dia);
+            }
+            int contador = 0;
+            for (int i = 1; i < 8; i++)
+            {
+                if (diesObert.Contains(i))
+                {
+                    List<int> intervals = Utilitats.comparaHoresExcluides(horariInst[contador].id_hores);
+                    for (int j = 0; j < intervals.Count; j++)
+                    {
+                        dataGridViewHorari.Rows[intervals[j]].Cells[horariInst[contador].id_dia + 1].Style.BackColor = System.Drawing.Color.LightGray;
+                    }
+                    contador++;
+                }
+                else
+                {
+                    for (int j = 0; j < Utilitats.intervalsHores; j++)
+                    {
+                        dataGridViewHorari.Rows[j].Cells[i + 1].Style.BackColor = System.Drawing.Color.LightGray;
+                    }
+                }
+            }
+
         }
 
-        private void buttonAceptar_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void comboBoxInst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -137,10 +170,10 @@ namespace EntiEspais.Formularis
         {
             dataGridViewHorari.Rows.Clear();
             //-------------CALENDARI----------------------
-            List<HORES> horari = HoresORM.SelectAllHores();
+            List<HORES> horari = HoresORM.SelectHoresPrimaries(111);
             List<EQUIPS> equips = EquipsORM.SelectAllEquips();
-            string[,] rows = new string[97, 9];
-            for (int i = 0; i < 97; i++)
+            string[,] rows = new string[Utilitats.intervalsHores, 9];
+            for (int i = 0; i < Utilitats.intervalsHores; i++)
             {
                 rows[i, 0] = horari[i].inici.ToString();
                 rows[i, 1] = horari[i].fi.ToString();
@@ -165,6 +198,12 @@ namespace EntiEspais.Formularis
             }
 
             //---------OMPLIR CALENDARI--------------------
+            
+            INSTALACIONS instalacio = (INSTALACIONS)comboBoxInst.SelectedItem;
+            List<HORARI_INSTALACIO> horariInst = new List<HORARI_INSTALACIO>();
+            horariInst.AddRange(instalacio.HORARI_INSTALACIO);
+            
+            
             for (int i = 0; i < rows.GetLength(0); i++)
             {
                 string[] row = new string[rows.GetLength(1)];
@@ -177,6 +216,7 @@ namespace EntiEspais.Formularis
                 foreach (DataGridViewRow fila in dataGridViewHorari.Rows)
                 {
                     foreach (DataGridViewCell cela in fila.Cells)
+                    {
                         if (cela.Value != null)
                         {
                             for (int j = 0; j < equips.Count; j++)
@@ -187,8 +227,40 @@ namespace EntiEspais.Formularis
                                 }
                             }
                         }
+                    }
                 }
             }
+            //------------PINTAR EN GRIS HORES FORA D'HORARI INSTALACIO----------------
+
+            List<int> diesObert = new List<int>();
+            foreach (HORARI_INSTALACIO h in horariInst)
+            {
+                diesObert.Add(h.id_dia);
+            }
+            int contador = 0;
+            for (int i = 1; i < 8; i++)
+            {
+                if (diesObert.Contains(i))
+                {
+                    List<int> intervals = Utilitats.comparaHoresExcluides(horariInst[contador].id_hores);
+                    for (int j = 0; j < intervals.Count; j++)
+                    {
+                        dataGridViewHorari.Rows[intervals[j]].Cells[horariInst[contador].id_dia + 1].Style.BackColor = System.Drawing.Color.LightGray;
+                    }
+                    contador++;
+                }
+                else
+                {
+                    for (int j = 0; j < Utilitats.intervalsHores; j++)
+                    {
+                        dataGridViewHorari.Rows[j].Cells[i + 1].Style.BackColor = System.Drawing.Color.LightGray;
+                    }
+                }
+            }
+        }
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -205,5 +205,10 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormDemandes();
         }
+
+        private void toolStripButtonActivitats_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormActivitats();
+        }
     }
 }

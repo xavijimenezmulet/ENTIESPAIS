@@ -16,12 +16,12 @@ namespace EntiEspais
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /*SplashInicio inicio = new SplashInicio();*/
-            //if (inicio.ShowDialog() == DialogResult.OK)
-            //{
+            SplashInicio inicio = new SplashInicio();
+            if (inicio.ShowDialog() == DialogResult.OK)
+            {
 
                 Application.Run( new FormLogin() );
-            //}
+            }
         }
     }
 }

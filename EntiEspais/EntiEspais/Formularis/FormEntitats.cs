@@ -197,5 +197,11 @@ namespace EntiEspais.Formularis
             ObridorFormulari.obrirFormDemandes();
             this.Close();
         }
+
+        private void toolStripButtonActivitats_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormActivitats();
+            this.Close();
+        }
     }
 }

@@ -621,6 +621,7 @@
             this.toolStripButtonActivitats.Name = "toolStripButtonActivitats";
             this.toolStripButtonActivitats.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonActivitats.Text = "ACTIVITATS";
+            this.toolStripButtonActivitats.Click += new System.EventHandler(this.toolStripButtonActivitats_Click);
             // 
             // toolStripButtonUsuaris
             // 

@@ -277,6 +277,7 @@
             this.llistatInstallacionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.llistatInstallacionsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.llistatInstallacionsToolStripMenuItem.Text = "Llistat Instal·lacions";
+            this.llistatInstallacionsToolStripMenuItem.Click += new System.EventHandler(this.llistatInstallacionsToolStripMenuItem_Click_1);
             // 
             // afegirInstallacióToolStripMenuItem
             // 
@@ -286,6 +287,7 @@
             | System.Windows.Forms.Keys.I)));
             this.afegirInstallacióToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.afegirInstallacióToolStripMenuItem.Text = "Afegir Instal·lació";
+            this.afegirInstallacióToolStripMenuItem.Click += new System.EventHandler(this.afegirInstallacióToolStripMenuItem_Click_1);
             // 
             // espaisToolStripMenuItem
             // 
@@ -305,6 +307,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click_1);
             // 
             // afegirEspaiToolStripMenuItem
             // 
@@ -314,6 +317,7 @@
             | System.Windows.Forms.Keys.P)));
             this.afegirEspaiToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.afegirEspaiToolStripMenuItem.Text = "Afegir Espai";
+            this.afegirEspaiToolStripMenuItem.Click += new System.EventHandler(this.afegirEspaiToolStripMenuItem_Click_1);
             // 
             // activitatsToolStripMenuItem
             // 
@@ -603,6 +607,7 @@
             this.toolStripButtonInstalacions.Name = "toolStripButtonInstalacions";
             this.toolStripButtonInstalacions.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonInstalacions.Text = "INSTAL·LACIONS";
+            this.toolStripButtonInstalacions.Click += new System.EventHandler(this.toolStripButtonInstalacions_Click);
             // 
             // toolStripButtonEspais
             // 
@@ -612,6 +617,7 @@
             this.toolStripButtonEspais.Name = "toolStripButtonEspais";
             this.toolStripButtonEspais.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonEspais.Text = "ESPAIS";
+            this.toolStripButtonEspais.Click += new System.EventHandler(this.toolStripButtonEspais_Click);
             // 
             // toolStripButtonActivitats
             // 

@@ -230,5 +230,35 @@ namespace EntiEspais
         {
             ObridorFormulari.FormEspaisTodosAlta();
         }
+
+        private void llistatInstallacionsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacions();
+        }
+
+        private void afegirInstallacióToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacioAlta();
+        }
+
+        private void llistatEspaisToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEspaisTots();
+        }
+
+        private void afegirEspaiToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ObridorFormulari.FormEspaisTodosAlta();
+        }
+
+        private void toolStripButtonInstalacions_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacions();
+        }
+
+        private void toolStripButtonEspais_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEspaisTots();
+        }
     }
 }

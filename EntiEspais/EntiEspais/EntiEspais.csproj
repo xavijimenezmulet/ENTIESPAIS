@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Classes\blowfish.cs" />
     <Compile Include="Classes\ObridorFormulari.cs" />
+    <Compile Include="Classes\Requests.cs" />
     <Compile Include="Classes\Utilitats.cs" />
     <Compile Include="COMPETICIONS.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
@@ -135,6 +136,36 @@
     </Compile>
     <Compile Include="Formularis\FormAdministradors.Designer.cs">
       <DependentUpon>FormAdministradors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEspaiAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEspaiAlta.Designer.cs">
+      <DependentUpon>FormEspaiAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEspais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEspais.Designer.cs">
+      <DependentUpon>FormEspais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEspaisTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEspaisTodos.Designer.cs">
+      <DependentUpon>FormEspaisTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormEspaisTodosAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormEspaisTodosAlta.Designer.cs">
+      <DependentUpon>FormEspaisTodosAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularis\FormInstalacioAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormInstalacioAlta.Designer.cs">
+      <DependentUpon>FormInstalacioAlta.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularis\FormCategoriaEdat.cs">
       <SubType>Form</SubType>
@@ -256,6 +287,12 @@
     <Compile Include="Formularis\FormHores.Designer.cs">
       <DependentUpon>FormHores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularis\FormInstalacions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularis\FormInstalacions.Designer.cs">
+      <DependentUpon>FormInstalacions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularis\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,8 +387,8 @@
     <Compile Include="ORM\DemandaActORM.cs" />
     <Compile Include="ORM\DiesSemanaORM.cs" />
     <Compile Include="ORM\EntitatsORM.cs" />
-    <Compile Include="ORM\EquipsORM.cs" />
     <Compile Include="ORM\EspaisORM.cs" />
+    <Compile Include="ORM\EquipsORM.cs" />
     <Compile Include="ORM\EsportsORM.cs" />
     <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
@@ -442,6 +479,18 @@
     <EmbeddedResource Include="Formularis\FormEquips.resx">
       <DependentUpon>FormEquips.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEspaiAlta.resx">
+      <DependentUpon>FormEspaiAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEspais.resx">
+      <DependentUpon>FormEspais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEspaisTodos.resx">
+      <DependentUpon>FormEspaisTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormEspaisTodosAlta.resx">
+      <DependentUpon>FormEspaisTodosAlta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormEsport.resx">
       <DependentUpon>FormEsport.cs</DependentUpon>
     </EmbeddedResource>
@@ -459,6 +508,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormHores.resx">
       <DependentUpon>FormHores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormInstalacioAlta.resx">
+      <DependentUpon>FormInstalacioAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularis\FormInstalacions.resx">
+      <DependentUpon>FormInstalacions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -513,6 +568,7 @@
     <None Include="Properties\DataSources\FAQS.datasource" />
     <None Include="Properties\DataSources\EQUIPS.datasource" />
     <None Include="Properties\DataSources\HORES.datasource" />
+    <None Include="Properties\DataSources\ESPAIS.datasource" />
     <None Include="Properties\DataSources\INSTALACIONS.datasource" />
     <None Include="Properties\DataSources\SEXE.datasource" />
     <None Include="Properties\DataSources\TELEFONS_ENTITATS.datasource" />

@@ -210,5 +210,25 @@ namespace EntiEspais
         {
             ObridorFormulari.obrirFormActivitats();
         }
+
+        private void afegirInstallacióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacioAlta();
+        }
+
+        private void llistatInstallacionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacions();
+        }
+
+        private void llistatEspaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEspaisTots();
+        }
+
+        private void afegirEspaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.FormEspaisTodosAlta();
+        }
     }
 }

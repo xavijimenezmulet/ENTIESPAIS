@@ -12,6 +12,8 @@ namespace EntiEspais.Classes
 {
     public static class ObridorFormulari
     {
+        #region FORMULARIOS XAVI
+
         // ens obre un formulari login
         public static void obrirFormLogin()
         {
@@ -216,6 +218,76 @@ namespace EntiEspais.Classes
             fFaqAndroid.ShowDialog();
         }
 
+        #endregion
+
+        #region FORMULARIOS DAVID
+
+        //ens obre un formulari amb les Instalacions
+        public static void obrirFormInstalacions()
+        {
+            FormInstalacions formInstalacions = new FormInstalacions();
+            formInstalacions.ShowDialog();
+        }
+
+        //ens obre un formulari per donar d'alta una instalació
+        public static void obrirFormInstalacioAlta()
+        {
+            FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta();
+            formInstalacioAlta.ShowDialog();
+        }
+
+        //ens obre un formulari per modificar una instalació
+        public static void obrirFormInstalacioModificar(INSTALACIONS _instalacio)
+        {
+            FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta(_instalacio);
+            formInstalacioAlta.Text = "MODIFICAR INSTALACIÓ";
+            formInstalacioAlta.ShowDialog();
+        }
+
+        //ens obre un formulari amb els espais de la instalació
+        public static void obrirFormEspais(INSTALACIONS _instalacio)
+        {
+            FormEspais formEspais = new FormEspais(_instalacio);
+            formEspais.ShowDialog();
+        }
+
+        //ens obre un formulari per donar d'alta un espai
+        public static void obrirFormEspaisAlta(int id_instalacio)
+        {
+            FormEspaiAlta formEspaiAlta = new FormEspaiAlta(id_instalacio);
+            formEspaiAlta.ShowDialog();
+        }
+
+        //ens obre un formulari per modificar un espai
+        public static void obrirFormEspaisModificar(ESPAIS _espais)
+        {
+            FormEspaiAlta formEspaiAlta = new FormEspaiAlta(_espais);
+            formEspaiAlta.Text = "MODIFICAR ESPAI";
+            formEspaiAlta.ShowDialog();
+        }
+
+        //ens obre un formulari amb tots els espais
+        public static void obrirFormEspaisTots()
+        {
+            FormEspaisTodos formEspaisTodos = new FormEspaisTodos();
+            formEspaisTodos.ShowDialog();
+        }
+
+        //ens obre un formulari per afegir un espai
+        public static void FormEspaisTodosAlta()
+        {
+            FormEspaisTodosAlta formEspaisTodosAlta = new FormEspaisTodosAlta();
+            formEspaisTodosAlta.ShowDialog();
+        }
+
+        //ens obre un formulari per modificar un espai
+        public static void FormEspaisTodosModificar(ESPAIS _espai)
+        {
+            FormEspaisTodosAlta formEspaisTodosAlta = new FormEspaisTodosAlta(_espai);
+            formEspaisTodosAlta.ShowDialog();
+        }
+
+        #endregion
         //ens obre un formulari Faq Android per modificar
         public static void obrirFormFaqAndroid(FAQS faq)
         {

@@ -63,6 +63,11 @@ namespace EntiEspais.Formularis
 
                 this.tEntitat.numero = textBoxNom.Text.ToString();
 
+                ENTITATS ent = new ENTITATS();
+                ent = (ENTITATS) comboBoxEntitat.SelectedItem;
+                tEntitat.id_entitat = ent.id;
+                tEntitat.temporada_entitat = ent.temporada;
+
                 missatge = TelefonsEntitatsORM.InsertTelefon(this.tEntitat);
 
                 if (missatge != "")

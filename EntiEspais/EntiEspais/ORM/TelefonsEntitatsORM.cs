@@ -46,7 +46,7 @@ namespace EntiEspais.ORM
         public static String InsertTelefon(TELEFONS_ENTITATS telefon)
         {
             String missatgeError = "";
-
+            
             GeneralORM.bd.TELEFONS_ENTITATS.Add(telefon);
 
             missatgeError = GeneralORM.SaveChanges();
@@ -66,6 +66,20 @@ namespace EntiEspais.ORM
             missatgeError = GeneralORM.SaveChanges();
 
             return missatgeError;
+
+        }
+        /**
+        * ENS RETORNA LA SELECT AMB ELS TELEFONS D'UNA ENTITAT
+        **/
+        public static List<TELEFONS_ENTITATS> SelectTelefonsEntitat(ENTITATS entitat)
+        {
+            List<TELEFONS_ENTITATS> _telefons =
+                 (from a in GeneralORM.bd.TELEFONS_ENTITATS
+                  orderby a.id
+                  where a.id_entitat.Equals(entitat.id) && a.temporada_entitat.Equals(entitat.temporada)
+                  select a).ToList();
+
+            return _telefons;
 
         }
     }

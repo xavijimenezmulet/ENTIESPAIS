@@ -35,8 +35,8 @@ namespace EntiEspais.Formularis
         }
 
         private void FormEntitat_Load(object sender, EventArgs e)
-        {            
-            if(entitat != null)
+        {
+            if (entitat != null)
             {
                 textBoxId.Text = entitat.id.ToString();
                 textBoxTemp.Text = entitat.temporada;
@@ -49,6 +49,17 @@ namespace EntiEspais.Formularis
                 textBoxAlt.Text = entitat.altitud.ToString();
                 textBoxLat.Text = entitat.latitud.ToString();
                 textBoxVid.Text = entitat.ruta_video;
+                listBoxTlf.DataSource = TelefonsEntitatsORM.SelectAllTelefons();
+                listBoxTlf.ValueMember = "id";
+                listBoxTlf.DisplayMember = "numero";
+                listBoxTlf.SelectedItems.Clear();
+                foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
+                {
+                    listBoxTlf.SelectedItems.Add(tlf);
+                }
+                listBoxEquips.DataSource = EquipsORM.SelectEquipsEntitat(entitat);
+                listBoxEquips.ValueMember = "id";
+                listBoxEquips.DisplayMember = "nom";
             }
         }
 
@@ -64,7 +75,7 @@ namespace EntiEspais.Formularis
                 DialogResult mensaje = MessageBox.Show("Contrasenya obligatoria!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxContra.Focus();
             }
-            else if(textBoxDir.Text == "")
+            else if (textBoxDir.Text == "")
             {
                 DialogResult mensaje = MessageBox.Show("Direcció obligatoria!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxDir.Focus();
@@ -128,6 +139,51 @@ namespace EntiEspais.Formularis
                     this.Close();
                 }
             }
+        }
+
+        private void buttonAddTlf_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormTelefonsEntitats();
+        }
+
+        private void FormEntitat_Activated(object sender, EventArgs e)
+        {
+            if (entitat != null)
+            {
+                textBoxId.Text = entitat.id.ToString();
+                textBoxTemp.Text = entitat.temporada;
+                textBoxNom.Text = entitat.nom;
+                textBoxContra.Text = entitat.contrasenya;
+                textBoxDir.Text = entitat.adresa;
+                textBoxNif.Text = entitat.nif;
+                textBoxEmail.Text = entitat.email;
+                textBoxImg.Text = entitat.ruta_imagen;
+                textBoxAlt.Text = entitat.altitud.ToString();
+                textBoxLat.Text = entitat.latitud.ToString();
+                textBoxVid.Text = entitat.ruta_video;
+                listBoxTlf.DataSource = TelefonsEntitatsORM.SelectAllTelefons();
+                listBoxTlf.ValueMember = "id";
+                listBoxTlf.DisplayMember = "numero";
+                listBoxTlf.SelectedItems.Clear();
+                foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
+                {
+                    listBoxTlf.SelectedItems.Add(tlf);
+                }
+                listBoxEquips.DataSource = EquipsORM.SelectEquipsEntitat(entitat);
+                listBoxEquips.ValueMember = "id";
+                listBoxEquips.DisplayMember = "nom";
+            }
+        }
+
+        private void buttonAfegirEquip_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEquipPerAfegir();
+        }
+
+        private void buttonSelectEquip_Click(object sender, EventArgs e)
+        {
+            EQUIPS equip = (EQUIPS) listBoxEquips.SelectedItem;
+            ObridorFormulari.obrirFormEquipPerModificar(equip);
         }
     }
 }

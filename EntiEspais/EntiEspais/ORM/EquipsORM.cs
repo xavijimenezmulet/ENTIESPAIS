@@ -16,6 +16,17 @@ namespace EntiEspais.ORM
 
             return _equips;
         }
+        //Ens retorna una llista amb els equips d'una entitat.
+        public static List<EQUIPS> SelectEquipsEntitat(ENTITATS entitat)
+        {
+            List<EQUIPS> _equips =
+                (from eq in GeneralORM.bd.EQUIPS
+                 where eq.id_entitat.Equals(entitat.id) && eq.temporada.Equals(entitat.temporada)
+                 select eq
+                ).ToList();
+
+            return _equips;
+        }
         //------------------------------------------//
 
         //Insertar un equip a la base de dades.

@@ -54,6 +54,13 @@
             this.textBoxLat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBoxImagen = new System.Windows.Forms.PictureBox();
+            this.listBoxEquips = new System.Windows.Forms.ListBox();
+            this.listBoxTlf = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonAddTlf = new System.Windows.Forms.Button();
+            this.buttonAfegirEquip = new System.Windows.Forms.Button();
+            this.buttonSelectEquip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,11 +220,72 @@
             this.pictureBoxImagen.Name = "pictureBoxImagen";
             this.pictureBoxImagen.TabStop = false;
             // 
+            // listBoxEquips
+            // 
+            this.listBoxEquips.FormattingEnabled = true;
+            resources.ApplyResources(this.listBoxEquips, "listBoxEquips");
+            this.listBoxEquips.Name = "listBoxEquips";
+            // 
+            // listBoxTlf
+            // 
+            this.listBoxTlf.FormattingEnabled = true;
+            resources.ApplyResources(this.listBoxTlf, "listBoxTlf");
+            this.listBoxTlf.Name = "listBoxTlf";
+            this.listBoxTlf.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Name = "label5";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Name = "label7";
+            // 
+            // buttonAddTlf
+            // 
+            resources.ApplyResources(this.buttonAddTlf, "buttonAddTlf");
+            this.buttonAddTlf.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAddTlf.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAddTlf.Name = "buttonAddTlf";
+            this.buttonAddTlf.UseVisualStyleBackColor = false;
+            this.buttonAddTlf.Click += new System.EventHandler(this.buttonAddTlf_Click);
+            // 
+            // buttonAfegirEquip
+            // 
+            resources.ApplyResources(this.buttonAfegirEquip, "buttonAfegirEquip");
+            this.buttonAfegirEquip.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAfegirEquip.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAfegirEquip.Name = "buttonAfegirEquip";
+            this.buttonAfegirEquip.UseVisualStyleBackColor = false;
+            this.buttonAfegirEquip.Click += new System.EventHandler(this.buttonAfegirEquip_Click);
+            // 
+            // buttonSelectEquip
+            // 
+            resources.ApplyResources(this.buttonSelectEquip, "buttonSelectEquip");
+            this.buttonSelectEquip.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSelectEquip.ForeColor = System.Drawing.Color.Snow;
+            this.buttonSelectEquip.Name = "buttonSelectEquip";
+            this.buttonSelectEquip.UseVisualStyleBackColor = false;
+            this.buttonSelectEquip.Click += new System.EventHandler(this.buttonSelectEquip_Click);
+            // 
             // FormEntitat
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
+            this.Controls.Add(this.buttonSelectEquip);
+            this.Controls.Add(this.buttonAfegirEquip);
+            this.Controls.Add(this.buttonAddTlf);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.listBoxTlf);
+            this.Controls.Add(this.listBoxEquips);
             this.Controls.Add(this.pictureBoxImagen);
             this.Controls.Add(this.textBoxLat);
             this.Controls.Add(this.label4);
@@ -248,6 +316,7 @@
             this.MaximizeBox = false;
             this.Name = "FormEntitat";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Activated += new System.EventHandler(this.FormEntitat_Activated);
             this.Load += new System.EventHandler(this.FormEntitat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).EndInit();
             this.ResumeLayout(false);
@@ -282,5 +351,12 @@
         private System.Windows.Forms.TextBox textBoxLat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBoxImagen;
+        private System.Windows.Forms.ListBox listBoxEquips;
+        private System.Windows.Forms.ListBox listBoxTlf;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonAddTlf;
+        private System.Windows.Forms.Button buttonAfegirEquip;
+        private System.Windows.Forms.Button buttonSelectEquip;
     }
 }

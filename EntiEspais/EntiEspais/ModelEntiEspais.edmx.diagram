@@ -11,16 +11,16 @@
         <EntityTypeShape EntityType="ENTI_ESPAISModel.CATEGORIA_EQUIP" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.COMPETICIONS" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.DEMANDA_ACT" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ENTI_ESPAISModel.DIA_SEMANA" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ENTI_ESPAISModel.DIA_SEMANA" Width="1.5" PointX="7.75" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.ENTITATS" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.EQUIPS" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.ESPAIS" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.ESPORTS" Width="1.5" PointX="0.75" PointY="17.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.FAQS" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.HORARI_ACTIVITAT" Width="1.5" PointX="9.75" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ENTI_ESPAISModel.HORARI_INSTALACIO" Width="1.5" PointX="9.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ENTI_ESPAISModel.HORES" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ENTI_ESPAISModel.INSTALACIONS" Width="1.5" PointX="0.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ENTI_ESPAISModel.HORARI_INSTALACIO" Width="1.5" PointX="8.875" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ENTI_ESPAISModel.HORES" Width="1.5" PointX="10.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ENTI_ESPAISModel.INSTALACIONS" Width="1.5" PointX="6.5" PointY="24.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.SEXE" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.TELEFONS_ENTITATS" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.TELEFONS_INSTALACIONS" Width="1.5" PointX="3" PointY="26.5" IsExpanded="true" />

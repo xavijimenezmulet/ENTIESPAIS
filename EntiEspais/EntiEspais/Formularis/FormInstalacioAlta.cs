@@ -73,6 +73,8 @@ namespace EntiEspais.Formularis
                 {
                     MessageBox.Show("AGREGAT");
                 }
+
+                //String mensaje = ORM.HorariInstalacio.insertHorariInstalacio(1, )
             }
             //Modificar
             else

@@ -172,5 +172,11 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormModificadorContrassenya((ADMINISTRADORS)dataGridViewAdministradors.SelectedRows[0].DataBoundItem);
         }
+
+        private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitats();
+            this.Close();
+        }
     }
 }

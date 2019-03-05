@@ -125,6 +125,12 @@ namespace EntiEspais.Formularis
             ObridorFormulari.obrirFormEquips();
             this.Close();
         }
+
+        private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitats();
+            this.Close();
+        }
         //METODE AFEGIR ENTITAT
         private void buttonAfegir_Click(object sender, EventArgs e)
         {
@@ -186,6 +192,12 @@ namespace EntiEspais.Formularis
         {
             //auxTemp = comboBoxTemp.SelectedValue.ToString();
             //bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(auxTemp);
+        }
+
+        private void afegirActivitatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormActivitat();
+            this.Close();
         }
     }
 }

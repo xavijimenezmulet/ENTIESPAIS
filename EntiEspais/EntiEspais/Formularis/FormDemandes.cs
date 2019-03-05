@@ -179,6 +179,7 @@ namespace EntiEspais.Formularis
         private void llistatActivitatsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormActivitats();
+            this.Close();
         }
 
         private void buttonAcceptar_Click(object sender, EventArgs e)
@@ -197,6 +198,12 @@ namespace EntiEspais.Formularis
             DEMANDA_ACT demanda = (DEMANDA_ACT)dataGridViewEntitats.SelectedRows[0].DataBoundItem;
             FormDemanda fDemanda = new FormDemanda(demanda);
             fDemanda.ShowDialog();
+        }
+
+        private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitats();
+            this.Close();
         }
     }
 }

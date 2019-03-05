@@ -85,13 +85,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
-            this.labelHora = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.buttonAcceptar = new System.Windows.Forms.Button();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonAssignar = new System.Windows.Forms.Button();
-            this.bindingSourceDemandes = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,11 +92,18 @@
             this.numdiesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.esasignadaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDemandes = new System.Windows.Forms.BindingSource(this.components);
+            this.labelHora = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Reloj = new System.Windows.Forms.Timer(this.components);
+            this.buttonAcceptar = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonAssignar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -176,6 +176,7 @@
             this.llistaEntitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.llistaEntitatsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.llistaEntitatsToolStripMenuItem.Text = "Llista Entitats";
+            this.llistaEntitatsToolStripMenuItem.Click += new System.EventHandler(this.llistaEntitatsToolStripMenuItem_Click);
             // 
             // afegirEntitatToolStripMenuItem
             // 
@@ -664,6 +665,65 @@
             this.dataGridViewEntitats.Size = new System.Drawing.Size(897, 354);
             this.dataGridViewEntitats.TabIndex = 10;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // duracioDataGridViewTextBoxColumn
+            // 
+            this.duracioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.duracioDataGridViewTextBoxColumn.DataPropertyName = "duracio";
+            this.duracioDataGridViewTextBoxColumn.HeaderText = "duracio";
+            this.duracioDataGridViewTextBoxColumn.Name = "duracioDataGridViewTextBoxColumn";
+            this.duracioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numespaisDataGridViewTextBoxColumn
+            // 
+            this.numespaisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numespaisDataGridViewTextBoxColumn.DataPropertyName = "num_espais";
+            this.numespaisDataGridViewTextBoxColumn.HeaderText = "num_espais";
+            this.numespaisDataGridViewTextBoxColumn.Name = "numespaisDataGridViewTextBoxColumn";
+            this.numespaisDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numdiesDataGridViewTextBoxColumn
+            // 
+            this.numdiesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numdiesDataGridViewTextBoxColumn.DataPropertyName = "num_dies";
+            this.numdiesDataGridViewTextBoxColumn.HeaderText = "num_dies";
+            this.numdiesDataGridViewTextBoxColumn.Name = "numdiesDataGridViewTextBoxColumn";
+            this.numdiesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // esasignadaDataGridViewCheckBoxColumn
+            // 
+            this.esasignadaDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.esasignadaDataGridViewCheckBoxColumn.DataPropertyName = "es_asignada";
+            this.esasignadaDataGridViewCheckBoxColumn.HeaderText = "es_asignada";
+            this.esasignadaDataGridViewCheckBoxColumn.Name = "esasignadaDataGridViewCheckBoxColumn";
+            this.esasignadaDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // idequipDataGridViewTextBoxColumn
+            // 
+            this.idequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idequipDataGridViewTextBoxColumn.DataPropertyName = "id_equip";
+            this.idequipDataGridViewTextBoxColumn.HeaderText = "id_equip";
+            this.idequipDataGridViewTextBoxColumn.Name = "idequipDataGridViewTextBoxColumn";
+            this.idequipDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceDemandes
+            // 
+            this.bindingSourceDemandes.DataSource = typeof(EntiEspais.DEMANDA_ACT);
+            // 
             // labelHora
             // 
             this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -735,65 +795,6 @@
             this.buttonAssignar.UseVisualStyleBackColor = false;
             this.buttonAssignar.Click += new System.EventHandler(this.buttonAssignar_Click);
             // 
-            // bindingSourceDemandes
-            // 
-            this.bindingSourceDemandes.DataSource = typeof(EntiEspais.DEMANDA_ACT);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // duracioDataGridViewTextBoxColumn
-            // 
-            this.duracioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.duracioDataGridViewTextBoxColumn.DataPropertyName = "duracio";
-            this.duracioDataGridViewTextBoxColumn.HeaderText = "duracio";
-            this.duracioDataGridViewTextBoxColumn.Name = "duracioDataGridViewTextBoxColumn";
-            this.duracioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numespaisDataGridViewTextBoxColumn
-            // 
-            this.numespaisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numespaisDataGridViewTextBoxColumn.DataPropertyName = "num_espais";
-            this.numespaisDataGridViewTextBoxColumn.HeaderText = "num_espais";
-            this.numespaisDataGridViewTextBoxColumn.Name = "numespaisDataGridViewTextBoxColumn";
-            this.numespaisDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numdiesDataGridViewTextBoxColumn
-            // 
-            this.numdiesDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numdiesDataGridViewTextBoxColumn.DataPropertyName = "num_dies";
-            this.numdiesDataGridViewTextBoxColumn.HeaderText = "num_dies";
-            this.numdiesDataGridViewTextBoxColumn.Name = "numdiesDataGridViewTextBoxColumn";
-            this.numdiesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // esasignadaDataGridViewCheckBoxColumn
-            // 
-            this.esasignadaDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.esasignadaDataGridViewCheckBoxColumn.DataPropertyName = "es_asignada";
-            this.esasignadaDataGridViewCheckBoxColumn.HeaderText = "es_asignada";
-            this.esasignadaDataGridViewCheckBoxColumn.Name = "esasignadaDataGridViewCheckBoxColumn";
-            this.esasignadaDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // idequipDataGridViewTextBoxColumn
-            // 
-            this.idequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idequipDataGridViewTextBoxColumn.DataPropertyName = "id_equip";
-            this.idequipDataGridViewTextBoxColumn.HeaderText = "id_equip";
-            this.idequipDataGridViewTextBoxColumn.Name = "idequipDataGridViewTextBoxColumn";
-            this.idequipDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // FormDemandes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,8 +823,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

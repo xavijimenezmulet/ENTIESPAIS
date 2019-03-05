@@ -104,5 +104,16 @@ namespace EntiEspais.Formularis
             ObridorFormulari.obrirFormPrincipal();
         }
 
+        private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitats();
+            this.Close();
+        }
+
+        private void afegirEntitatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEntitat();
+            this.Close();
+        }
     }
 }

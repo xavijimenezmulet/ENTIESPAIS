@@ -51,6 +51,27 @@ namespace EntiEspais.Formularis
                 textBoxRutaImatge.Text = _instalacio.ruta_imagen;
                 textBoxAltitud.Text = _instalacio.altitut.ToString();
                 textBoxLatitud.Text = _instalacio.latitut.ToString();
+
+
+
+            }
+            else
+            {
+                bindingSourceDillunsInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDillunsFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+                bindingSourceDimartsInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDimartsFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+                bindingSourceDimecresInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDimecresFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+                bindingSourceDijousInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDijousFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+                bindingSourceDivendresInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDivendresFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+                bindingSourceDissabteInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDissabteFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+                bindingSourceDiumengeInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+                bindingSourceDiumengeFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+
             }
 
             gestionMapa();
@@ -74,7 +95,6 @@ namespace EntiEspais.Formularis
                     MessageBox.Show("AGREGAT");
                 }
 
-                //String mensaje = ORM.HorariInstalacio.insertHorariInstalacio(1, )
             }
             //Modificar
             else
@@ -91,6 +111,13 @@ namespace EntiEspais.Formularis
                     MessageBox.Show("MODIFICAT");
                 }
             }
+
+            //Añadir intervalo horas
+            anadirIntervaloHoras();
+
+            //Añadir HORARIO_INSTALACION
+            HORARI_INSTALACIO hlunes = new HORARI_INSTALACIO();
+            //String mensaje = ORM.HorariInstalacio.insertHorariInstalacio();
 
             this.Close();
         }
@@ -199,6 +226,84 @@ namespace EntiEspais.Formularis
 
             //Mover marker a la posición
             markerGoogle.Position = new PointLatLng(lat, lng);
+        }
+
+        //Añadir nuevo intervalo de horas
+        private void anadirIntervaloHoras()
+        {
+            //Lunes
+            if (comboBoxDillunsInici.SelectedValue != comboBoxDillunsFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDillunsInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDillunsFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+
+            //Martes
+            if (comboBoxDimartsInici.SelectedValue != comboBoxDimartsFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDimartsInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDimartsFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+
+            //Miercoles
+            if (comboBoxDimecresInici.SelectedValue != comboBoxDimecresFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDimecresInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDimecresFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+
+            //Jueves
+            if (comboBoxDijousInici.SelectedValue != comboBoxDijousFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDijousInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDijousFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+
+            //Viernes
+            if (comboBoxDivendresInici.SelectedValue != comboBoxDivendresFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDivendresInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDivendresFinal.Text);
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+
+            //Sábado
+            if (comboBoxDissabteInici.SelectedValue != comboBoxDissabteFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDissabteInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDissabteFinal.Text);
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+
+            //Domingo
+            if (comboBoxDiumengeInici.SelectedValue != comboBoxDiumengeFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDiumengeInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDiumengeFinal.Text);
+                String msg = ORM.HoresORM.InsertHora(hora);
+            }
+        }
+
+        //Desactivar Lunes
+        private void buttonDeleteDilluns_Click(object sender, EventArgs e)
+        {
+            comboBoxDillunsInici.Enabled = false;
+            comboBoxDillunsFinal.Enabled = false;
         }
     }
 }

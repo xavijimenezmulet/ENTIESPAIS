@@ -36,6 +36,18 @@ namespace EntiEspais.ORM
 
         }
 
+        //Ens retorna la select amb totes les hores finals sense repetir
+        public static List<HORES> SelectIntervalHoresFi()
+        {
+            List<HORES> _hores =
+                 (from a in GeneralORM.bd.HORES
+                  orderby a.fi
+                  select a).Distinct().ToList();
+
+            return _hores;
+
+        }
+
         /**
          * ENS ACTUALITZA UNA HORA DE LA BASE DE DADES 
          **/

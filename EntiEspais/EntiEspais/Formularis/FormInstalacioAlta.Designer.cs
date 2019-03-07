@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,41 +57,64 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBoxDillunsInici = new System.Windows.Forms.TextBox();
-            this.textBoxDillunsFinal = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBoxDimartsFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDimartsInici = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxDimecresFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDimecresInici = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBoxDijousFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDijousInici = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxDivendresFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDivendresInici = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBoxDissabteFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDissabteInici = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBoxDiumengeFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDiumengeInici = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.comboBoxDillunsInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDillunsInici = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDillunsFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDillunsFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDimartsFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimartsFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDimartsInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimartsInici = new System.Windows.Forms.BindingSource(this.components);
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBoxDimecresFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimecresFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDimecresInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimecresInici = new System.Windows.Forms.BindingSource(this.components);
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBoxDijousFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDijousFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDijousInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDijousInici = new System.Windows.Forms.BindingSource(this.components);
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBoxDivendresFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDivendresInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDivendresInici = new System.Windows.Forms.BindingSource(this.components);
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBoxDissabteFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDissabteFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDissabteInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDissabteInici = new System.Windows.Forms.BindingSource(this.components);
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBoxDiumengeFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDiumengeFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDiumengeInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDiumengeInici = new System.Windows.Forms.BindingSource(this.components);
+            this.label29 = new System.Windows.Forms.Label();
+            this.bindingSourceDivendresFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonDeleteDilluns = new System.Windows.Forms.Button();
+            this.buttonDeleteDimarts = new System.Windows.Forms.Button();
+            this.buttonDeleteDimecres = new System.Windows.Forms.Button();
+            this.buttonDeleteDivendres = new System.Windows.Forms.Button();
+            this.buttonDeleteDijous = new System.Windows.Forms.Button();
+            this.buttonDeleteDiumenge = new System.Windows.Forms.Button();
+            this.buttonDeleteDissabte = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -440,35 +464,6 @@
             this.label15.TabIndex = 55;
             this.label15.Text = "Diumenge";
             // 
-            // textBoxDillunsInici
-            // 
-            this.textBoxDillunsInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDillunsInici.Location = new System.Drawing.Point(687, 60);
-            this.textBoxDillunsInici.Name = "textBoxDillunsInici";
-            this.textBoxDillunsInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDillunsInici.TabIndex = 56;
-            // 
-            // textBoxDillunsFinal
-            // 
-            this.textBoxDillunsFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDillunsFinal.Location = new System.Drawing.Point(827, 60);
-            this.textBoxDillunsFinal.Name = "textBoxDillunsFinal";
-            this.textBoxDillunsFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDillunsFinal.TabIndex = 57;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(834, 474);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(12, 15);
-            this.label16.TabIndex = 58;
-            this.label16.Text = "-";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -476,184 +471,11 @@
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(808, 102);
+            this.label17.Location = new System.Drawing.Point(814, 65);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(12, 15);
             this.label17.TabIndex = 61;
             this.label17.Text = "-";
-            // 
-            // textBoxDimartsFinal
-            // 
-            this.textBoxDimartsFinal.Enabled = false;
-            this.textBoxDimartsFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDimartsFinal.Location = new System.Drawing.Point(827, 100);
-            this.textBoxDimartsFinal.Name = "textBoxDimartsFinal";
-            this.textBoxDimartsFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDimartsFinal.TabIndex = 60;
-            // 
-            // textBoxDimartsInici
-            // 
-            this.textBoxDimartsInici.Enabled = false;
-            this.textBoxDimartsInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDimartsInici.Location = new System.Drawing.Point(687, 100);
-            this.textBoxDimartsInici.Name = "textBoxDimartsInici";
-            this.textBoxDimartsInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDimartsInici.TabIndex = 59;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(808, 140);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(12, 15);
-            this.label18.TabIndex = 64;
-            this.label18.Text = "-";
-            // 
-            // textBoxDimecresFinal
-            // 
-            this.textBoxDimecresFinal.Enabled = false;
-            this.textBoxDimecresFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDimecresFinal.Location = new System.Drawing.Point(827, 138);
-            this.textBoxDimecresFinal.Name = "textBoxDimecresFinal";
-            this.textBoxDimecresFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDimecresFinal.TabIndex = 63;
-            // 
-            // textBoxDimecresInici
-            // 
-            this.textBoxDimecresInici.Enabled = false;
-            this.textBoxDimecresInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDimecresInici.Location = new System.Drawing.Point(687, 138);
-            this.textBoxDimecresInici.Name = "textBoxDimecresInici";
-            this.textBoxDimecresInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDimecresInici.TabIndex = 62;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label19.Location = new System.Drawing.Point(808, 179);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(12, 15);
-            this.label19.TabIndex = 67;
-            this.label19.Text = "-";
-            // 
-            // textBoxDijousFinal
-            // 
-            this.textBoxDijousFinal.Enabled = false;
-            this.textBoxDijousFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDijousFinal.Location = new System.Drawing.Point(827, 177);
-            this.textBoxDijousFinal.Name = "textBoxDijousFinal";
-            this.textBoxDijousFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDijousFinal.TabIndex = 66;
-            // 
-            // textBoxDijousInici
-            // 
-            this.textBoxDijousInici.Enabled = false;
-            this.textBoxDijousInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDijousInici.Location = new System.Drawing.Point(687, 177);
-            this.textBoxDijousInici.Name = "textBoxDijousInici";
-            this.textBoxDijousInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDijousInici.TabIndex = 65;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label20.Location = new System.Drawing.Point(808, 216);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(12, 15);
-            this.label20.TabIndex = 70;
-            this.label20.Text = "-";
-            // 
-            // textBoxDivendresFinal
-            // 
-            this.textBoxDivendresFinal.Enabled = false;
-            this.textBoxDivendresFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDivendresFinal.Location = new System.Drawing.Point(827, 214);
-            this.textBoxDivendresFinal.Name = "textBoxDivendresFinal";
-            this.textBoxDivendresFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDivendresFinal.TabIndex = 69;
-            // 
-            // textBoxDivendresInici
-            // 
-            this.textBoxDivendresInici.Enabled = false;
-            this.textBoxDivendresInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDivendresInici.Location = new System.Drawing.Point(687, 214);
-            this.textBoxDivendresInici.Name = "textBoxDivendresInici";
-            this.textBoxDivendresInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDivendresInici.TabIndex = 68;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label21.Location = new System.Drawing.Point(808, 252);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(12, 15);
-            this.label21.TabIndex = 73;
-            this.label21.Text = "-";
-            // 
-            // textBoxDissabteFinal
-            // 
-            this.textBoxDissabteFinal.Enabled = false;
-            this.textBoxDissabteFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDissabteFinal.Location = new System.Drawing.Point(827, 250);
-            this.textBoxDissabteFinal.Name = "textBoxDissabteFinal";
-            this.textBoxDissabteFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDissabteFinal.TabIndex = 72;
-            // 
-            // textBoxDissabteInici
-            // 
-            this.textBoxDissabteInici.Enabled = false;
-            this.textBoxDissabteInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDissabteInici.Location = new System.Drawing.Point(687, 250);
-            this.textBoxDissabteInici.Name = "textBoxDissabteInici";
-            this.textBoxDissabteInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDissabteInici.TabIndex = 71;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label22.Location = new System.Drawing.Point(808, 290);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(12, 15);
-            this.label22.TabIndex = 76;
-            this.label22.Text = "-";
-            // 
-            // textBoxDiumengeFinal
-            // 
-            this.textBoxDiumengeFinal.Enabled = false;
-            this.textBoxDiumengeFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDiumengeFinal.Location = new System.Drawing.Point(827, 288);
-            this.textBoxDiumengeFinal.Name = "textBoxDiumengeFinal";
-            this.textBoxDiumengeFinal.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDiumengeFinal.TabIndex = 75;
-            // 
-            // textBoxDiumengeInici
-            // 
-            this.textBoxDiumengeInici.Enabled = false;
-            this.textBoxDiumengeInici.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.textBoxDiumengeInici.Location = new System.Drawing.Point(687, 288);
-            this.textBoxDiumengeInici.Name = "textBoxDiumengeInici";
-            this.textBoxDiumengeInici.Size = new System.Drawing.Size(115, 20);
-            this.textBoxDiumengeInici.TabIndex = 74;
             // 
             // label23
             // 
@@ -668,46 +490,6 @@
             this.label23.TabIndex = 77;
             this.label23.Text = "HORARIOS";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(706, 469);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown1.TabIndex = 78;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label24.Location = new System.Drawing.Point(747, 474);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(16, 15);
-            this.label24.TabIndex = 79;
-            this.label24.Text = "H";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label25.Location = new System.Drawing.Point(810, 474);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(18, 15);
-            this.label25.TabIndex = 81;
-            this.label25.Text = "m";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(769, 469);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown2.TabIndex = 80;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -721,45 +503,385 @@
             this.label26.TabIndex = 85;
             this.label26.Text = "m";
             // 
-            // numericUpDown3
+            // comboBoxDillunsInici
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(916, 469);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown3.TabIndex = 84;
+            this.comboBoxDillunsInici.DataSource = this.bindingSourceDillunsInici;
+            this.comboBoxDillunsInici.DisplayMember = "inici";
+            this.comboBoxDillunsInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDillunsInici.FormattingEnabled = true;
+            this.comboBoxDillunsInici.Location = new System.Drawing.Point(687, 60);
+            this.comboBoxDillunsInici.Name = "comboBoxDillunsInici";
+            this.comboBoxDillunsInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDillunsInici.TabIndex = 87;
+            this.comboBoxDillunsInici.ValueMember = "id";
             // 
-            // label27
+            // bindingSourceDillunsInici
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label27.Location = new System.Drawing.Point(894, 474);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(16, 15);
-            this.label27.TabIndex = 83;
-            this.label27.Text = "H";
+            this.bindingSourceDillunsInici.DataSource = typeof(EntiEspais.HORES);
             // 
-            // numericUpDown4
+            // comboBoxDillunsFinal
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(853, 469);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown4.TabIndex = 82;
+            this.comboBoxDillunsFinal.DataSource = this.bindingSourceDillunsFinal;
+            this.comboBoxDillunsFinal.DisplayMember = "fi";
+            this.comboBoxDillunsFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDillunsFinal.FormattingEnabled = true;
+            this.comboBoxDillunsFinal.Location = new System.Drawing.Point(832, 60);
+            this.comboBoxDillunsFinal.Name = "comboBoxDillunsFinal";
+            this.comboBoxDillunsFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDillunsFinal.TabIndex = 88;
+            this.comboBoxDillunsFinal.ValueMember = "id";
             // 
-            // label28
+            // bindingSourceDillunsFinal
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label28.Location = new System.Drawing.Point(648, 474);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(44, 15);
-            this.label28.TabIndex = 86;
-            this.label28.Text = "Dilluns";
+            this.bindingSourceDillunsFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // comboBoxDimartsFinal
+            // 
+            this.comboBoxDimartsFinal.DataSource = this.bindingSourceDimartsFinal;
+            this.comboBoxDimartsFinal.DisplayMember = "fi";
+            this.comboBoxDimartsFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDimartsFinal.FormattingEnabled = true;
+            this.comboBoxDimartsFinal.Location = new System.Drawing.Point(832, 100);
+            this.comboBoxDimartsFinal.Name = "comboBoxDimartsFinal";
+            this.comboBoxDimartsFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDimartsFinal.TabIndex = 91;
+            this.comboBoxDimartsFinal.ValueMember = "id";
+            // 
+            // bindingSourceDimartsFinal
+            // 
+            this.bindingSourceDimartsFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // comboBoxDimartsInici
+            // 
+            this.comboBoxDimartsInici.DataSource = this.bindingSourceDimartsInici;
+            this.comboBoxDimartsInici.DisplayMember = "inici";
+            this.comboBoxDimartsInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDimartsInici.FormattingEnabled = true;
+            this.comboBoxDimartsInici.Location = new System.Drawing.Point(687, 100);
+            this.comboBoxDimartsInici.Name = "comboBoxDimartsInici";
+            this.comboBoxDimartsInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDimartsInici.TabIndex = 90;
+            this.comboBoxDimartsInici.ValueMember = "id";
+            // 
+            // bindingSourceDimartsInici
+            // 
+            this.bindingSourceDimartsInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label18.Location = new System.Drawing.Point(814, 105);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(12, 15);
+            this.label18.TabIndex = 89;
+            this.label18.Text = "-";
+            // 
+            // comboBoxDimecresFinal
+            // 
+            this.comboBoxDimecresFinal.DataSource = this.bindingSourceDimecresFinal;
+            this.comboBoxDimecresFinal.DisplayMember = "fi";
+            this.comboBoxDimecresFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDimecresFinal.FormattingEnabled = true;
+            this.comboBoxDimecresFinal.Location = new System.Drawing.Point(832, 138);
+            this.comboBoxDimecresFinal.Name = "comboBoxDimecresFinal";
+            this.comboBoxDimecresFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDimecresFinal.TabIndex = 94;
+            this.comboBoxDimecresFinal.ValueMember = "id";
+            // 
+            // bindingSourceDimecresFinal
+            // 
+            this.bindingSourceDimecresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // comboBoxDimecresInici
+            // 
+            this.comboBoxDimecresInici.DataSource = this.bindingSourceDimecresInici;
+            this.comboBoxDimecresInici.DisplayMember = "inici";
+            this.comboBoxDimecresInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDimecresInici.FormattingEnabled = true;
+            this.comboBoxDimecresInici.Location = new System.Drawing.Point(687, 138);
+            this.comboBoxDimecresInici.Name = "comboBoxDimecresInici";
+            this.comboBoxDimecresInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDimecresInici.TabIndex = 93;
+            this.comboBoxDimecresInici.ValueMember = "id";
+            // 
+            // bindingSourceDimecresInici
+            // 
+            this.bindingSourceDimecresInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label19.Location = new System.Drawing.Point(814, 143);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(12, 15);
+            this.label19.TabIndex = 92;
+            this.label19.Text = "-";
+            // 
+            // comboBoxDijousFinal
+            // 
+            this.comboBoxDijousFinal.DataSource = this.bindingSourceDijousFinal;
+            this.comboBoxDijousFinal.DisplayMember = "fi";
+            this.comboBoxDijousFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDijousFinal.FormattingEnabled = true;
+            this.comboBoxDijousFinal.Location = new System.Drawing.Point(832, 180);
+            this.comboBoxDijousFinal.Name = "comboBoxDijousFinal";
+            this.comboBoxDijousFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDijousFinal.TabIndex = 97;
+            this.comboBoxDijousFinal.ValueMember = "id";
+            // 
+            // bindingSourceDijousFinal
+            // 
+            this.bindingSourceDijousFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // comboBoxDijousInici
+            // 
+            this.comboBoxDijousInici.DataSource = this.bindingSourceDijousInici;
+            this.comboBoxDijousInici.DisplayMember = "inici";
+            this.comboBoxDijousInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDijousInici.FormattingEnabled = true;
+            this.comboBoxDijousInici.Location = new System.Drawing.Point(687, 180);
+            this.comboBoxDijousInici.Name = "comboBoxDijousInici";
+            this.comboBoxDijousInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDijousInici.TabIndex = 96;
+            this.comboBoxDijousInici.ValueMember = "id";
+            // 
+            // bindingSourceDijousInici
+            // 
+            this.bindingSourceDijousInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label20.Location = new System.Drawing.Point(814, 185);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(12, 15);
+            this.label20.TabIndex = 95;
+            this.label20.Text = "-";
+            // 
+            // comboBoxDivendresFinal
+            // 
+            this.comboBoxDivendresFinal.DataSource = this.bindingSourceDijousFinal;
+            this.comboBoxDivendresFinal.DisplayMember = "fi";
+            this.comboBoxDivendresFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDivendresFinal.FormattingEnabled = true;
+            this.comboBoxDivendresFinal.Location = new System.Drawing.Point(832, 214);
+            this.comboBoxDivendresFinal.Name = "comboBoxDivendresFinal";
+            this.comboBoxDivendresFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDivendresFinal.TabIndex = 100;
+            this.comboBoxDivendresFinal.ValueMember = "id";
+            // 
+            // comboBoxDivendresInici
+            // 
+            this.comboBoxDivendresInici.DataSource = this.bindingSourceDivendresInici;
+            this.comboBoxDivendresInici.DisplayMember = "inici";
+            this.comboBoxDivendresInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDivendresInici.FormattingEnabled = true;
+            this.comboBoxDivendresInici.Location = new System.Drawing.Point(687, 214);
+            this.comboBoxDivendresInici.Name = "comboBoxDivendresInici";
+            this.comboBoxDivendresInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDivendresInici.TabIndex = 99;
+            this.comboBoxDivendresInici.ValueMember = "id";
+            // 
+            // bindingSourceDivendresInici
+            // 
+            this.bindingSourceDivendresInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label21.Location = new System.Drawing.Point(814, 219);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(12, 15);
+            this.label21.TabIndex = 98;
+            this.label21.Text = "-";
+            // 
+            // comboBoxDissabteFinal
+            // 
+            this.comboBoxDissabteFinal.DataSource = this.bindingSourceDissabteFinal;
+            this.comboBoxDissabteFinal.DisplayMember = "fi";
+            this.comboBoxDissabteFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDissabteFinal.FormattingEnabled = true;
+            this.comboBoxDissabteFinal.Location = new System.Drawing.Point(832, 253);
+            this.comboBoxDissabteFinal.Name = "comboBoxDissabteFinal";
+            this.comboBoxDissabteFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDissabteFinal.TabIndex = 103;
+            this.comboBoxDissabteFinal.ValueMember = "id";
+            // 
+            // bindingSourceDissabteFinal
+            // 
+            this.bindingSourceDissabteFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // comboBoxDissabteInici
+            // 
+            this.comboBoxDissabteInici.DataSource = this.bindingSourceDissabteInici;
+            this.comboBoxDissabteInici.DisplayMember = "inici";
+            this.comboBoxDissabteInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDissabteInici.FormattingEnabled = true;
+            this.comboBoxDissabteInici.Location = new System.Drawing.Point(687, 253);
+            this.comboBoxDissabteInici.Name = "comboBoxDissabteInici";
+            this.comboBoxDissabteInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDissabteInici.TabIndex = 102;
+            this.comboBoxDissabteInici.ValueMember = "id";
+            // 
+            // bindingSourceDissabteInici
+            // 
+            this.bindingSourceDissabteInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label22.Location = new System.Drawing.Point(814, 258);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(12, 15);
+            this.label22.TabIndex = 101;
+            this.label22.Text = "-";
+            // 
+            // comboBoxDiumengeFinal
+            // 
+            this.comboBoxDiumengeFinal.DataSource = this.bindingSourceDiumengeFinal;
+            this.comboBoxDiumengeFinal.DisplayMember = "fi";
+            this.comboBoxDiumengeFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDiumengeFinal.FormattingEnabled = true;
+            this.comboBoxDiumengeFinal.Location = new System.Drawing.Point(832, 288);
+            this.comboBoxDiumengeFinal.Name = "comboBoxDiumengeFinal";
+            this.comboBoxDiumengeFinal.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDiumengeFinal.TabIndex = 106;
+            this.comboBoxDiumengeFinal.ValueMember = "id";
+            // 
+            // bindingSourceDiumengeFinal
+            // 
+            this.bindingSourceDiumengeFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // comboBoxDiumengeInici
+            // 
+            this.comboBoxDiumengeInici.DataSource = this.bindingSourceDiumengeInici;
+            this.comboBoxDiumengeInici.DisplayMember = "inici";
+            this.comboBoxDiumengeInici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDiumengeInici.FormattingEnabled = true;
+            this.comboBoxDiumengeInici.Location = new System.Drawing.Point(687, 288);
+            this.comboBoxDiumengeInici.Name = "comboBoxDiumengeInici";
+            this.comboBoxDiumengeInici.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDiumengeInici.TabIndex = 105;
+            this.comboBoxDiumengeInici.ValueMember = "id";
+            // 
+            // bindingSourceDiumengeInici
+            // 
+            this.bindingSourceDiumengeInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label29.Location = new System.Drawing.Point(814, 293);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(12, 15);
+            this.label29.TabIndex = 104;
+            this.label29.Text = "-";
+            // 
+            // bindingSourceDivendresFinal
+            // 
+            this.bindingSourceDivendresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // buttonDeleteDilluns
+            // 
+            this.buttonDeleteDilluns.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDilluns.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDilluns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDilluns.Location = new System.Drawing.Point(966, 61);
+            this.buttonDeleteDilluns.Name = "buttonDeleteDilluns";
+            this.buttonDeleteDilluns.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDilluns.TabIndex = 107;
+            this.buttonDeleteDilluns.UseVisualStyleBackColor = true;
+            this.buttonDeleteDilluns.Click += new System.EventHandler(this.buttonDeleteDilluns_Click);
+            // 
+            // buttonDeleteDimarts
+            // 
+            this.buttonDeleteDimarts.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDimarts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDimarts.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDimarts.Location = new System.Drawing.Point(966, 100);
+            this.buttonDeleteDimarts.Name = "buttonDeleteDimarts";
+            this.buttonDeleteDimarts.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDimarts.TabIndex = 108;
+            this.buttonDeleteDimarts.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteDimecres
+            // 
+            this.buttonDeleteDimecres.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDimecres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDimecres.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDimecres.Location = new System.Drawing.Point(966, 138);
+            this.buttonDeleteDimecres.Name = "buttonDeleteDimecres";
+            this.buttonDeleteDimecres.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDimecres.TabIndex = 109;
+            this.buttonDeleteDimecres.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteDivendres
+            // 
+            this.buttonDeleteDivendres.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDivendres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDivendres.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDivendres.Location = new System.Drawing.Point(966, 212);
+            this.buttonDeleteDivendres.Name = "buttonDeleteDivendres";
+            this.buttonDeleteDivendres.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDivendres.TabIndex = 111;
+            this.buttonDeleteDivendres.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteDijous
+            // 
+            this.buttonDeleteDijous.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDijous.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDijous.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDijous.Location = new System.Drawing.Point(966, 174);
+            this.buttonDeleteDijous.Name = "buttonDeleteDijous";
+            this.buttonDeleteDijous.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDijous.TabIndex = 110;
+            this.buttonDeleteDijous.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteDiumenge
+            // 
+            this.buttonDeleteDiumenge.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDiumenge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDiumenge.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDiumenge.Location = new System.Drawing.Point(966, 288);
+            this.buttonDeleteDiumenge.Name = "buttonDeleteDiumenge";
+            this.buttonDeleteDiumenge.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDiumenge.TabIndex = 113;
+            this.buttonDeleteDiumenge.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteDissabte
+            // 
+            this.buttonDeleteDissabte.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.buttonDeleteDissabte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDeleteDissabte.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonDeleteDissabte.Location = new System.Drawing.Point(966, 251);
+            this.buttonDeleteDissabte.Name = "buttonDeleteDissabte";
+            this.buttonDeleteDissabte.Size = new System.Drawing.Size(25, 23);
+            this.buttonDeleteDissabte.TabIndex = 112;
+            this.buttonDeleteDissabte.UseVisualStyleBackColor = true;
             // 
             // FormInstalacioAlta
             // 
@@ -768,37 +890,36 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1033, 516);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.buttonDeleteDiumenge);
+            this.Controls.Add(this.buttonDeleteDissabte);
+            this.Controls.Add(this.buttonDeleteDivendres);
+            this.Controls.Add(this.buttonDeleteDijous);
+            this.Controls.Add(this.buttonDeleteDimecres);
+            this.Controls.Add(this.buttonDeleteDimarts);
+            this.Controls.Add(this.buttonDeleteDilluns);
+            this.Controls.Add(this.comboBoxDiumengeFinal);
+            this.Controls.Add(this.comboBoxDiumengeInici);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.comboBoxDissabteFinal);
+            this.Controls.Add(this.comboBoxDissabteInici);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBoxDiumengeFinal);
-            this.Controls.Add(this.textBoxDiumengeInici);
+            this.Controls.Add(this.comboBoxDivendresFinal);
+            this.Controls.Add(this.comboBoxDivendresInici);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBoxDissabteFinal);
-            this.Controls.Add(this.textBoxDissabteInici);
+            this.Controls.Add(this.comboBoxDijousFinal);
+            this.Controls.Add(this.comboBoxDijousInici);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBoxDivendresFinal);
-            this.Controls.Add(this.textBoxDivendresInici);
+            this.Controls.Add(this.comboBoxDimecresFinal);
+            this.Controls.Add(this.comboBoxDimecresInici);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBoxDijousFinal);
-            this.Controls.Add(this.textBoxDijousInici);
+            this.Controls.Add(this.comboBoxDimartsFinal);
+            this.Controls.Add(this.comboBoxDimartsInici);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBoxDimecresFinal);
-            this.Controls.Add(this.textBoxDimecresInici);
+            this.Controls.Add(this.comboBoxDillunsFinal);
+            this.Controls.Add(this.comboBoxDillunsInici);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBoxDimartsFinal);
-            this.Controls.Add(this.textBoxDimartsInici);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBoxDillunsFinal);
-            this.Controls.Add(this.textBoxDillunsInici);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -831,10 +952,20 @@
             this.Name = "FormInstalacioAlta";
             this.Text = "ALTA INSTALACIÓ";
             this.Load += new System.EventHandler(this.FormInstalacioAlta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -870,36 +1001,49 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBoxDillunsInici;
-        private System.Windows.Forms.TextBox textBoxDillunsFinal;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBoxDimartsFinal;
-        private System.Windows.Forms.TextBox textBoxDimartsInici;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBoxDimecresFinal;
-        private System.Windows.Forms.TextBox textBoxDimecresInici;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBoxDijousFinal;
-        private System.Windows.Forms.TextBox textBoxDijousInici;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBoxDivendresFinal;
-        private System.Windows.Forms.TextBox textBoxDivendresInici;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBoxDissabteFinal;
-        private System.Windows.Forms.TextBox textBoxDissabteInici;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBoxDiumengeFinal;
-        private System.Windows.Forms.TextBox textBoxDiumengeInici;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBoxDillunsInici;
+        private System.Windows.Forms.BindingSource bindingSourceDillunsInici;
+        private System.Windows.Forms.ComboBox comboBoxDillunsFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDillunsFinal;
+        private System.Windows.Forms.ComboBox comboBoxDimartsFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDimartsFinal;
+        private System.Windows.Forms.ComboBox comboBoxDimartsInici;
+        private System.Windows.Forms.BindingSource bindingSourceDimartsInici;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBoxDimecresFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDimecresFinal;
+        private System.Windows.Forms.ComboBox comboBoxDimecresInici;
+        private System.Windows.Forms.BindingSource bindingSourceDimecresInici;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox comboBoxDijousFinal;
+        private System.Windows.Forms.ComboBox comboBoxDijousInici;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBoxDivendresFinal;
+        private System.Windows.Forms.ComboBox comboBoxDivendresInici;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBoxDissabteFinal;
+        private System.Windows.Forms.ComboBox comboBoxDissabteInici;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBoxDiumengeFinal;
+        private System.Windows.Forms.ComboBox comboBoxDiumengeInici;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.BindingSource bindingSourceDijousInici;
+        private System.Windows.Forms.BindingSource bindingSourceDijousFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDivendresInici;
+        private System.Windows.Forms.BindingSource bindingSourceDivendresFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDissabteInici;
+        private System.Windows.Forms.BindingSource bindingSourceDissabteFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDiumengeInici;
+        private System.Windows.Forms.BindingSource bindingSourceDiumengeFinal;
+        private System.Windows.Forms.Button buttonDeleteDilluns;
+        private System.Windows.Forms.Button buttonDeleteDimarts;
+        private System.Windows.Forms.Button buttonDeleteDimecres;
+        private System.Windows.Forms.Button buttonDeleteDivendres;
+        private System.Windows.Forms.Button buttonDeleteDijous;
+        private System.Windows.Forms.Button buttonDeleteDiumenge;
+        private System.Windows.Forms.Button buttonDeleteDissabte;
     }
 }

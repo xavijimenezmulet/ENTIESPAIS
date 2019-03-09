@@ -827,6 +827,7 @@
             this.buttonDeleteDimarts.Size = new System.Drawing.Size(25, 23);
             this.buttonDeleteDimarts.TabIndex = 108;
             this.buttonDeleteDimarts.UseVisualStyleBackColor = true;
+            this.buttonDeleteDimarts.Click += new System.EventHandler(this.buttonDeleteDimarts_Click);
             // 
             // buttonDeleteDimecres
             // 
@@ -838,6 +839,7 @@
             this.buttonDeleteDimecres.Size = new System.Drawing.Size(25, 23);
             this.buttonDeleteDimecres.TabIndex = 109;
             this.buttonDeleteDimecres.UseVisualStyleBackColor = true;
+            this.buttonDeleteDimecres.Click += new System.EventHandler(this.buttonDeleteDimecres_Click);
             // 
             // buttonDeleteDivendres
             // 
@@ -849,6 +851,7 @@
             this.buttonDeleteDivendres.Size = new System.Drawing.Size(25, 23);
             this.buttonDeleteDivendres.TabIndex = 111;
             this.buttonDeleteDivendres.UseVisualStyleBackColor = true;
+            this.buttonDeleteDivendres.Click += new System.EventHandler(this.buttonDeleteDivendres_Click);
             // 
             // buttonDeleteDijous
             // 
@@ -860,6 +863,7 @@
             this.buttonDeleteDijous.Size = new System.Drawing.Size(25, 23);
             this.buttonDeleteDijous.TabIndex = 110;
             this.buttonDeleteDijous.UseVisualStyleBackColor = true;
+            this.buttonDeleteDijous.Click += new System.EventHandler(this.buttonDeleteDijous_Click);
             // 
             // buttonDeleteDiumenge
             // 
@@ -871,6 +875,7 @@
             this.buttonDeleteDiumenge.Size = new System.Drawing.Size(25, 23);
             this.buttonDeleteDiumenge.TabIndex = 113;
             this.buttonDeleteDiumenge.UseVisualStyleBackColor = true;
+            this.buttonDeleteDiumenge.Click += new System.EventHandler(this.buttonDeleteDiumenge_Click);
             // 
             // buttonDeleteDissabte
             // 
@@ -882,6 +887,7 @@
             this.buttonDeleteDissabte.Size = new System.Drawing.Size(25, 23);
             this.buttonDeleteDissabte.TabIndex = 112;
             this.buttonDeleteDissabte.UseVisualStyleBackColor = true;
+            this.buttonDeleteDissabte.Click += new System.EventHandler(this.buttonDeleteDissabte_Click);
             // 
             // FormInstalacioAlta
             // 

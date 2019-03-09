@@ -51,9 +51,6 @@ namespace EntiEspais.Formularis
                 textBoxRutaImatge.Text = _instalacio.ruta_imagen;
                 textBoxAltitud.Text = _instalacio.altitut.ToString();
                 textBoxLatitud.Text = _instalacio.latitut.ToString();
-
-
-
             }
             else
             {
@@ -80,46 +77,333 @@ namespace EntiEspais.Formularis
         //Añadir una instalación o modificarla
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            //Añadir
-            if (!modificar)
-            {
-                String mensaje = ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
-                     comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+            //Comprobar que la hora final no sea menor que la hora inicial
+            bool error = comprobarIntervaloHoras();
 
-                if (mensaje != "")
+            if(!error)
+            {
+                //Añadir intervalo horas en caso que no existan
+                List<int> idHoras = anadirIntervaloHoras();
+
+                //Añadir
+                if (!modificar)
                 {
-                    MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    String mensaje = ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
+                         comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+
+                    if (mensaje != "")
+                    {
+                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("AGREGAT");
+                    }
+
+                    ////Añadir HORARIO_INSTALACION lunes
+                    //String lunes = ORM.HorariInstalacio.insertHorariInstalacio(1, idHoras[0], );
+
+                    ////Añadir HORARIO_INSTALACION martes
+                    //String martes = ORM.HorariInstalacio.insertHorariInstalacio(2, idHoras[1], );
+
+                    ////Añadir HORARIO_INSTALACION miercoles
+                    //String miercoles = ORM.HorariInstalacio.insertHorariInstalacio(3, idHoras[2], );
+
+                    ////Añadir HORARIO_INSTALACION jueves
+                    //String jueves = ORM.HorariInstalacio.insertHorariInstalacio(4, idHoras[3], );
+
+                    ////Añadir HORARIO_INSTALACION viernes
+                    //String viernes = ORM.HorariInstalacio.insertHorariInstalacio(5, idHoras[4], );
+
+                    ////Añadir HORARIO_INSTALACION sabado
+                    //String sabado = ORM.HorariInstalacio.insertHorariInstalacio(6, idHoras[5], );
+
+                    ////Añadir HORARIO_INSTALACION domingo
+                    //String domingo = ORM.HorariInstalacio.insertHorariInstalacio(7, idHoras[6], );
+
                 }
+                //Modificar
                 else
                 {
-                    MessageBox.Show("AGREGAT");
-                }
+                    String mensaje = ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
+                         comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
 
+                    if (mensaje != "")
+                    {
+                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("MODIFICAT");
+                    }
+
+                    //Modificar HORARIO_INSTALACION lunes
+                    String lunes = ORM.HorariInstalacio.modificarHorariInstalacio(1, idHoras[0], _instalacio.id);
+
+                    //Modificar HORARIO_INSTALACION martes
+                    String martes = ORM.HorariInstalacio.modificarHorariInstalacio(2, idHoras[1], _instalacio.id);
+
+                    //Modificar HORARIO_INSTALACION miercoles
+                    String miercoles = ORM.HorariInstalacio.modificarHorariInstalacio(3, idHoras[2], _instalacio.id);
+
+                    //Modificar HORARIO_INSTALACION jueves
+                    String jueves = ORM.HorariInstalacio.modificarHorariInstalacio(4, idHoras[3], _instalacio.id);
+
+                    //Modificar HORARIO_INSTALACION viernes
+                    String viernes = ORM.HorariInstalacio.modificarHorariInstalacio(5, idHoras[4], _instalacio.id);
+
+                    //Modificar HORARIO_INSTALACION sabado
+                    String sabado = ORM.HorariInstalacio.modificarHorariInstalacio(6, idHoras[5], _instalacio.id);
+
+                    //Modificar HORARIO_INSTALACION domingo
+                    String domingo = ORM.HorariInstalacio.modificarHorariInstalacio(7, idHoras[6], _instalacio.id);
+
+                    this.Close();
+                }
             }
-            //Modificar
             else
             {
-                String mensaje = ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
-                     comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+                MessageBox.Show("Comprueba el intervalo de horas introducidas", "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-                if (mensaje != "")
-                {
-                    MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("MODIFICAT");
-                }
+        //Comprobar intervalo horas
+        private bool comprobarIntervaloHoras()
+        {
+            bool error = false;
+
+            //Lunes
+            if (TimeSpan.Parse(comboBoxDillunsInici.Text) > TimeSpan.Parse(comboBoxDillunsFinal.Text))
+            {
+                error = true;
             }
 
-            //Añadir intervalo horas
-            List<int> pepe = anadirIntervaloHoras();
+            //Martes
+            if (TimeSpan.Parse(comboBoxDimartsInici.Text) > TimeSpan.Parse(comboBoxDimartsFinal.Text))
+            {
+                error = true;
+            }
 
-            //Añadir HORARIO_INSTALACION
-            HORARI_INSTALACIO hlunes = new HORARI_INSTALACIO();
+            //Miercoles
+            if (TimeSpan.Parse(comboBoxDimecresInici.Text) > TimeSpan.Parse(comboBoxDimecresFinal.Text))
+            {
+                error = true;
+            }
 
-            this.Close();
+            //Jueves
+            if (TimeSpan.Parse(comboBoxDijousInici.Text) > TimeSpan.Parse(comboBoxDijousFinal.Text))
+            {
+                error = true;
+            }
+
+            //Viernes
+            if (TimeSpan.Parse(comboBoxDivendresInici.Text) > TimeSpan.Parse(comboBoxDivendresFinal.Text))
+            {
+                error = true;
+            }
+
+            //Sábado
+            if (TimeSpan.Parse(comboBoxDissabteInici.Text) > TimeSpan.Parse(comboBoxDissabteFinal.Text))
+            {
+                error = true;
+            }
+
+            //Domingo
+            if (TimeSpan.Parse(comboBoxDiumengeInici.Text) > TimeSpan.Parse(comboBoxDiumengeFinal.Text))
+            {
+                error = true;
+            }
+
+            return error;
         }
+
+        //Añadir nuevo intervalo de horas
+        private List<int> anadirIntervaloHoras()
+        {
+            List<int> ids = new List<int>();
+
+            //Lunes
+            if (comboBoxDillunsInici.SelectedValue != comboBoxDillunsFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDillunsInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDillunsFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDillunsInici.SelectedValue);
+            }
+
+            //Martes
+            if (comboBoxDimartsInici.SelectedValue != comboBoxDimartsFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDimartsInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDimartsFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDimartsInici.SelectedValue);
+            }
+
+            //Miercoles
+            if (comboBoxDimecresInici.SelectedValue != comboBoxDimecresFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDimecresInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDimecresFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDimecresInici.SelectedValue);
+            }
+
+            //Jueves
+            if (comboBoxDijousInici.SelectedValue != comboBoxDijousFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDijousInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDijousFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDijousInici.SelectedValue);
+            }
+
+            //Viernes
+            if (comboBoxDivendresInici.SelectedValue != comboBoxDivendresFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDivendresInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDivendresFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDivendresInici.SelectedValue);
+            }
+
+            //Sábado
+            if (comboBoxDissabteInici.SelectedValue != comboBoxDissabteFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDissabteInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDissabteFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDissabteInici.SelectedValue);
+            }
+
+            //Domingo
+            if (comboBoxDiumengeInici.SelectedValue != comboBoxDiumengeFinal.SelectedValue)
+            {
+                HORES hora = new HORES();
+                hora.inici = TimeSpan.Parse(comboBoxDiumengeInici.Text);
+                hora.fi = TimeSpan.Parse(comboBoxDiumengeFinal.Text);
+
+                String msg = ORM.HoresORM.InsertHora(hora);
+                ids.Add(hora.id);
+            }
+            else
+            {
+                ids.Add((int)comboBoxDiumengeInici.SelectedValue);
+            }
+
+            return ids;
+        }
+
+        #region DESACTIVAR
+
+        //Desactivar Lunes
+        private void buttonDeleteDilluns_Click(object sender, EventArgs e)
+        {
+            comboBoxDillunsInici.Enabled = !comboBoxDillunsInici.Enabled;
+            comboBoxDillunsInici.SelectedValue = 14;
+
+            comboBoxDillunsFinal.Enabled = !comboBoxDillunsFinal.Enabled;
+            comboBoxDillunsFinal.SelectedValue = 14;
+
+        }
+
+        //Desactivar Martes
+        private void buttonDeleteDimarts_Click(object sender, EventArgs e)
+        {
+            comboBoxDimartsInici.Enabled = !comboBoxDimartsInici.Enabled;
+            comboBoxDimartsInici.SelectedValue = 14;
+
+            comboBoxDimartsFinal.Enabled = !comboBoxDimartsFinal.Enabled;
+            comboBoxDimartsFinal.SelectedValue = 14;
+        }
+
+        //Desactivar Miercoles
+        private void buttonDeleteDimecres_Click(object sender, EventArgs e)
+        {
+            comboBoxDimecresInici.Enabled = !comboBoxDimecresInici.Enabled;
+            comboBoxDimecresInici.SelectedValue = 14;
+
+            comboBoxDimecresFinal.Enabled = !comboBoxDimecresFinal.Enabled;
+            comboBoxDimecresFinal.SelectedValue = 14;
+        }
+
+        //Desactivar Jueves
+        private void buttonDeleteDijous_Click(object sender, EventArgs e)
+        {
+            comboBoxDijousInici.Enabled = !comboBoxDijousInici.Enabled;
+            comboBoxDijousInici.SelectedValue = 14;
+
+            comboBoxDijousFinal.Enabled = !comboBoxDijousFinal.Enabled;
+            comboBoxDijousFinal.SelectedValue = 14;
+        }
+
+        //Desactivar Viernes
+        private void buttonDeleteDivendres_Click(object sender, EventArgs e)
+        {
+            comboBoxDivendresInici.Enabled = !comboBoxDivendresInici.Enabled;
+            comboBoxDivendresInici.SelectedValue = 14;
+
+            comboBoxDivendresFinal.Enabled = !comboBoxDivendresFinal.Enabled;
+            comboBoxDivendresFinal.SelectedValue = 14;
+        }
+
+        //Desactivar Sabado
+        private void buttonDeleteDissabte_Click(object sender, EventArgs e)
+        {
+            comboBoxDissabteInici.Enabled = !comboBoxDissabteInici.Enabled;
+            comboBoxDissabteInici.SelectedValue = 14;
+
+            comboBoxDissabteFinal.Enabled = !comboBoxDissabteFinal.Enabled;
+            comboBoxDissabteFinal.SelectedValue = 14;
+        }
+
+        //Desactivar Domingo
+        private void buttonDeleteDiumenge_Click(object sender, EventArgs e)
+        {
+            comboBoxDiumengeInici.Enabled = !comboBoxDiumengeInici.Enabled;
+            comboBoxDiumengeInici.SelectedValue = 14;
+
+            comboBoxDiumengeFinal.Enabled = !comboBoxDiumengeFinal.Enabled;
+            comboBoxDiumengeFinal.SelectedValue = 14;
+        }
+
+        #endregion
 
         //Botón cancelar
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -225,84 +509,6 @@ namespace EntiEspais.Formularis
 
             //Mover marker a la posición
             markerGoogle.Position = new PointLatLng(lat, lng);
-        }
-
-        //Añadir nuevo intervalo de horas
-        private void anadirIntervaloHoras()
-        {
-            //Lunes
-            if (comboBoxDillunsInici.SelectedValue != comboBoxDillunsFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDillunsInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDillunsFinal.Text);
-
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-
-            //Martes
-            if (comboBoxDimartsInici.SelectedValue != comboBoxDimartsFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDimartsInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDimartsFinal.Text);
-
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-
-            //Miercoles
-            if (comboBoxDimecresInici.SelectedValue != comboBoxDimecresFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDimecresInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDimecresFinal.Text);
-
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-
-            //Jueves
-            if (comboBoxDijousInici.SelectedValue != comboBoxDijousFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDijousInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDijousFinal.Text);
-
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-
-            //Viernes
-            if (comboBoxDivendresInici.SelectedValue != comboBoxDivendresFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDivendresInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDivendresFinal.Text);
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-
-            //Sábado
-            if (comboBoxDissabteInici.SelectedValue != comboBoxDissabteFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDissabteInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDissabteFinal.Text);
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-
-            //Domingo
-            if (comboBoxDiumengeInici.SelectedValue != comboBoxDiumengeFinal.SelectedValue)
-            {
-                HORES hora = new HORES();
-                hora.inici = TimeSpan.Parse(comboBoxDiumengeInici.Text);
-                hora.fi = TimeSpan.Parse(comboBoxDiumengeFinal.Text);
-                String msg = ORM.HoresORM.InsertHora(hora);
-            }
-        }
-
-        //Desactivar Lunes
-        private void buttonDeleteDilluns_Click(object sender, EventArgs e)
-        {
-            comboBoxDillunsInici.Enabled = false;
-            comboBoxDillunsFinal.Enabled = false;
         }
     }
 }

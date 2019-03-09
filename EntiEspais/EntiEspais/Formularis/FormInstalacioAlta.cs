@@ -117,7 +117,6 @@ namespace EntiEspais.Formularis
 
             //Añadir HORARIO_INSTALACION
             HORARI_INSTALACIO hlunes = new HORARI_INSTALACIO();
-            String mensaje = ORM.HorariInstalacio.insertHorariInstalacio(pepe[0], );
 
             this.Close();
         }
@@ -239,7 +238,6 @@ namespace EntiEspais.Formularis
                 hora.fi = TimeSpan.Parse(comboBoxDillunsFinal.Text);
 
                 String msg = ORM.HoresORM.InsertHora(hora);
-                hora.id;
             }
 
             //Martes

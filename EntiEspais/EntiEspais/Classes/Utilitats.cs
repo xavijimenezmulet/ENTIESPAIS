@@ -165,6 +165,38 @@ namespace EntiEspais.Classes
             return diaAct;
         }
         /**
+         *METODE PER OMPLIR DIES I HORES AL CALENDARI 
+         **/
+         public static string[,] horesYdies(ESPAIS espai)
+        {
+            List<HORES> horari = HoresORM.SelectHoresPrimaries(111);
+            string[,] rows = new string[Utilitats.intervalsHores, 9];
+            for (int i = 0; i < Utilitats.intervalsHores; i++)
+            {
+                rows[i, 0] = horari[i].inici.ToString();
+                rows[i, 1] = horari[i].fi.ToString();
+
+            }
+            List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
+            for (int k = 0; k < demandesAssignades.Count; k++)
+            {
+                if (demandesAssignades[k].id_espai == espai.id)
+                {
+                    EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
+                    foreach (DIA_SEMANA dia in demandesAssignades[k].DIA_SEMANA)
+                    {
+                        List<int> intervals = Utilitats.comparaHores(demandesAssignades[k].id_interval_hores);
+                        for (int m = 0; m < intervals.Count; m++)
+                        {
+                            rows[intervals[m], dia.id + 1] = equipDemanda.nom;
+                        }
+                    }
+                }
+            }
+            return rows;
+        }
+        
+        /**
          *METODE PER COMPARAR INTERVALS D'HORES 
          **/
         public static List<int> comparaHores(int idIntervalHores)

@@ -67,19 +67,15 @@ namespace EntiEspais.Formularis
             }
             dataGridViewHorari.Rows.Clear();
             //-------------CALENDARI----------------------
-            List<HORES> horari = HoresORM.SelectHoresPrimaries(111);
-            string[,] rows = new string[Utilitats.intervalsHores, 9];
-            for (int i = 0; i < Utilitats.intervalsHores; i++)
-            {
-                rows[i, 0] = horari[i].inici.ToString();
-                rows[i, 1] = horari[i].fi.ToString();
 
-            }
+            ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
+            string[,] rows = Utilitats.horesYdies(espai);
 
-            List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
+            
+            /*List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
             for (int k = 0; k < demandesAssignades.Count; k++)
             {
-                ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
+                //ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
                 if (demandesAssignades[k].id_espai == espai.id)
                 {
                     EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
@@ -92,7 +88,10 @@ namespace EntiEspais.Formularis
                         }
                     }
                 }
-            }
+            }*/
+
+
+
             //---------OMPLIR CALENDARI--------------------
             dataGridViewHorari.Rows.Clear();
             List<EQUIPS> equips = EquipsORM.SelectAllEquips();
@@ -170,15 +169,8 @@ namespace EntiEspais.Formularis
         {
             dataGridViewHorari.Rows.Clear();
             //-------------CALENDARI----------------------
-            List<HORES> horari = HoresORM.SelectHoresPrimaries(111);
-            List<EQUIPS> equips = EquipsORM.SelectAllEquips();
-            string[,] rows = new string[Utilitats.intervalsHores, 9];
-            for (int i = 0; i < Utilitats.intervalsHores; i++)
-            {
-                rows[i, 0] = horari[i].inici.ToString();
-                rows[i, 1] = horari[i].fi.ToString();
+            string[,] rows = Utilitats.horesYdies();
 
-            }
             List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
             for (int k = 0; k < demandesAssignades.Count; k++)
             {

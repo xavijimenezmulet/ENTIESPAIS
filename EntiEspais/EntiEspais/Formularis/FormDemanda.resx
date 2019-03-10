@@ -157,7 +157,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 35</value>
+    <value>31, 35</value>
   </data>
   <data name="labelId.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 15</value>
@@ -190,7 +190,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelTemp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 67</value>
+    <value>31, 67</value>
   </data>
   <data name="labelTemp.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 15</value>
@@ -316,7 +316,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelDuracio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 98</value>
+    <value>31, 98</value>
   </data>
   <data name="labelDuracio.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
@@ -376,7 +376,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 128</value>
+    <value>31, 128</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 15</value>
@@ -496,7 +496,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 155</value>
+    <value>31, 155</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 15</value>
@@ -556,7 +556,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 184</value>
+    <value>31, 184</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 15</value>
@@ -676,16 +676,16 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 350</value>
+    <value>32, 350</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 15</value>
+    <value>104, 15</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>Espai Assignat</value>
+    <value>Selecciona l'espai</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -730,7 +730,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 213</value>
+    <value>34, 213</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -787,7 +787,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 313</value>
+    <value>34, 316</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 15</value>

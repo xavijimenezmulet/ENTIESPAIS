@@ -380,6 +380,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ORM\ActivitatsORM.cs" />
     <Compile Include="ORM\AdministradorsORM.cs" />
     <Compile Include="ORM\CategoriaPerEdatORM.cs" />
     <Compile Include="ORM\CategoriaPerEquipORM.cs" />

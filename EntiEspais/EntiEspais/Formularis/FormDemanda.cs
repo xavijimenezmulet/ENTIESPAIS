@@ -16,6 +16,8 @@ namespace EntiEspais.Formularis
     public partial class FormDemanda : Form
     {
         DEMANDA_ACT demanda = null;
+        string[,] rows;
+
         public FormDemanda()
         {
             this.Text = "DEMANDA";
@@ -69,28 +71,9 @@ namespace EntiEspais.Formularis
             //-------------CALENDARI----------------------
 
             ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
-            string[,] rows = Utilitats.horesYdies(espai);
+            rows = Utilitats.omplirMatriuCalendari(espai);
 
-            
-            /*List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
-            for (int k = 0; k < demandesAssignades.Count; k++)
-            {
-                //ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
-                if (demandesAssignades[k].id_espai == espai.id)
-                {
-                    EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
-                    foreach (DIA_SEMANA dia in demandesAssignades[k].DIA_SEMANA)
-                    {
-                        List<int> intervals = Utilitats.comparaHores(demandesAssignades[k].id_interval_hores);
-                        for (int m = 0; m < intervals.Count; m++)
-                        {
-                            rows[intervals[m], dia.id + 1] = equipDemanda.nom;
-                        }
-                    }
-                }
-            }*/
-
-
+           
 
             //---------OMPLIR CALENDARI--------------------
             dataGridViewHorari.Rows.Clear();
@@ -155,10 +138,9 @@ namespace EntiEspais.Formularis
                     }
                 }
             }
-
+            int posicioInicial = Utilitats.trobarCela(rows, textBoxHinici.Text);
+            dataGridViewHorari.CurrentCell = dataGridViewHorari.Rows[posicioInicial].Cells[0];
         }
-
-       
 
         private void comboBoxInst_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -169,29 +151,13 @@ namespace EntiEspais.Formularis
         {
             dataGridViewHorari.Rows.Clear();
             //-------------CALENDARI----------------------
-            string[,] rows = Utilitats.horesYdies();
-
-            List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
-            for (int k = 0; k < demandesAssignades.Count; k++)
-            {
-                ESPAIS espai = (ESPAIS) listBoxEspai.SelectedItem;
-                if (demandesAssignades[k].id_espai == espai.id)
-                {
-                    EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
-                    foreach (DIA_SEMANA dia in demandesAssignades[k].DIA_SEMANA)
-                    {
-                        List<int> intervals = Utilitats.comparaHores(demandesAssignades[k].id_interval_hores);
-                        for (int m = 0; m < intervals.Count; m++)
-                        {
-                            rows[intervals[m], dia.id + 1] = equipDemanda.nom;
-                        }
-                    }
-                }
-            }
+            ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;
+            rows = Utilitats.omplirMatriuCalendari(espai);
 
             //---------OMPLIR CALENDARI--------------------
-            
+
             INSTALACIONS instalacio = (INSTALACIONS)comboBoxInst.SelectedItem;
+            List<EQUIPS> equips = EquipsORM.SelectAllEquips();
             List<HORARI_INSTALACIO> horariInst = new List<HORARI_INSTALACIO>();
             horariInst.AddRange(instalacio.HORARI_INSTALACIO);
             
@@ -249,10 +215,46 @@ namespace EntiEspais.Formularis
                     }
                 }
             }
+            int posicioInicial = Utilitats.trobarCela(rows, textBoxHinici.Text);
+            dataGridViewHorari.CurrentCell = dataGridViewHorari.Rows[posicioInicial].Cells[0];
         }
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
+            ESPAIS esp = (ESPAIS)listBoxEspai.SelectedItem;
+            bool ocupat = Utilitats.comprobarHoresEspai(demanda, rows);
+            if(ocupat == true)
+            {
+                DialogResult mensaje = MessageBox.Show("Espai ocupat!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                demanda.es_asignada = true;
+                string missatge = ORM.DemandaActORM.UpdateAssignarDemanda(demanda);
 
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Demanda assignada correctament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ACTIVITATS activitat = new ACTIVITATS();
+                    activitat.id_demanda_act = demanda.id;
+                    //activitat.id_admin = Utilitats.currentAdmin();
+                    activitat.nom = demanda.nom;
+                    activitat.id_espai = esp.id;
+                    string missatgeAct = ORM.ActivitatsORM.InsertActivitat(activitat);
+                    if (missatge != "")
+                    {
+                        MessageBox.Show(missatge, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Activitat creada correctament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Close();
+                }
+            }
         }
     }
 }

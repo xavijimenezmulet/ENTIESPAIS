@@ -104,7 +104,19 @@ namespace EntiEspais.ORM
 
         }
 
+        /**
+         * ENS RETORNA LA SELECT AMB L'ADMINISTRADOR 
+         **/
+        public static List<ADMINISTRADORS> SelectAdministradorByEmail(string email)
+        {
+            List<ADMINISTRADORS> _admins =
+                 (from a in GeneralORM.bd.ADMINISTRADORS
+                  orderby a.nom
+                  where a.email.Equals(email)
+                  select a).ToList();
 
+            return _admins;
 
+        }
     }
 }

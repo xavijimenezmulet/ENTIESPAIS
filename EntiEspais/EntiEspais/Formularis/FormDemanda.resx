@@ -250,7 +250,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAssignar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 479</value>
+    <value>511, 479</value>
   </data>
   <data name="buttonAssignar.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 23</value>
@@ -283,7 +283,7 @@
     <value>NoControl</value>
   </data>
   <data name="buttonCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>694, 479</value>
+    <value>775, 479</value>
   </data>
   <data name="buttonCancelar.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 23</value>

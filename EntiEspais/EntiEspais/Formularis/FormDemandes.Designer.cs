@@ -85,6 +85,12 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
+            this.labelHora = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Reloj = new System.Windows.Forms.Timer(this.components);
+            this.buttonAcceptar = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonAssignar = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,17 +99,11 @@
             this.esasignadaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceDemandes = new System.Windows.Forms.BindingSource(this.components);
-            this.labelHora = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.buttonAcceptar = new System.Windows.Forms.Button();
-            this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonAssignar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -665,6 +665,77 @@
             this.dataGridViewEntitats.Size = new System.Drawing.Size(897, 354);
             this.dataGridViewEntitats.TabIndex = 10;
             // 
+            // labelHora
+            // 
+            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelHora.AutoSize = true;
+            this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHora.Location = new System.Drawing.Point(856, 30);
+            this.labelHora.Name = "labelHora";
+            this.labelHora.Size = new System.Drawing.Size(40, 15);
+            this.labelHora.TabIndex = 17;
+            this.labelHora.Text = "label2";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
+            this.pictureBox7.Location = new System.Drawing.Point(838, 27);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // Reloj
+            // 
+            this.Reloj.Enabled = true;
+            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
+            // 
+            // buttonAcceptar
+            // 
+            this.buttonAcceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAcceptar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAcceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAcceptar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAcceptar.Location = new System.Drawing.Point(915, 153);
+            this.buttonAcceptar.Name = "buttonAcceptar";
+            this.buttonAcceptar.Size = new System.Drawing.Size(160, 23);
+            this.buttonAcceptar.TabIndex = 18;
+            this.buttonAcceptar.Text = "Acceptar";
+            this.buttonAcceptar.UseVisualStyleBackColor = false;
+            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonEliminar.Location = new System.Drawing.Point(915, 324);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
+            this.buttonEliminar.TabIndex = 19;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // buttonAssignar
+            // 
+            this.buttonAssignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAssignar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAssignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAssignar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAssignar.Location = new System.Drawing.Point(915, 239);
+            this.buttonAssignar.Name = "buttonAssignar";
+            this.buttonAssignar.Size = new System.Drawing.Size(160, 23);
+            this.buttonAssignar.TabIndex = 20;
+            this.buttonAssignar.Text = "Assignar";
+            this.buttonAssignar.UseVisualStyleBackColor = false;
+            this.buttonAssignar.Click += new System.EventHandler(this.buttonAssignar_Click);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -724,77 +795,6 @@
             // 
             this.bindingSourceDemandes.DataSource = typeof(EntiEspais.DEMANDA_ACT);
             // 
-            // labelHora
-            // 
-            this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHora.AutoSize = true;
-            this.labelHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.labelHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.Location = new System.Drawing.Point(856, 30);
-            this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(40, 15);
-            this.labelHora.TabIndex = 17;
-            this.labelHora.Text = "label2";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pictureBox7.Image = global::EntiEspais.Properties.Resources._037_clock;
-            this.pictureBox7.Location = new System.Drawing.Point(838, 27);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(18, 19);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
-            // 
-            // Reloj
-            // 
-            this.Reloj.Enabled = true;
-            this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
-            // 
-            // buttonAcceptar
-            // 
-            this.buttonAcceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAcceptar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAcceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAcceptar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAcceptar.Location = new System.Drawing.Point(915, 111);
-            this.buttonAcceptar.Name = "buttonAcceptar";
-            this.buttonAcceptar.Size = new System.Drawing.Size(160, 23);
-            this.buttonAcceptar.TabIndex = 18;
-            this.buttonAcceptar.Text = "Acceptar";
-            this.buttonAcceptar.UseVisualStyleBackColor = false;
-            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonEliminar.Location = new System.Drawing.Point(915, 179);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
-            this.buttonEliminar.TabIndex = 19;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = false;
-            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
-            // 
-            // buttonAssignar
-            // 
-            this.buttonAssignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAssignar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAssignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAssignar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAssignar.Location = new System.Drawing.Point(915, 150);
-            this.buttonAssignar.Name = "buttonAssignar";
-            this.buttonAssignar.Size = new System.Drawing.Size(160, 23);
-            this.buttonAssignar.TabIndex = 20;
-            this.buttonAssignar.Text = "Assignar";
-            this.buttonAssignar.UseVisualStyleBackColor = false;
-            this.buttonAssignar.Click += new System.EventHandler(this.buttonAssignar_Click);
-            // 
             // FormDemandes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -823,8 +823,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

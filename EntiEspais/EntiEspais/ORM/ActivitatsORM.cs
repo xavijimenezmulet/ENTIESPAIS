@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +34,26 @@ namespace EntiEspais.ORM
 
             mensaje = GeneralORM.SaveChanges();
 
+            return mensaje;
+        }
+
+        /**
+        * BORREM UNA ACTIVITAT
+        **/
+        public static String DeleteActivitat(ACTIVITATS activitat)
+        {
+            string mensaje = "";
+
+            GeneralORM.bd.ACTIVITATS.Remove(activitat);
+            try
+            {
+                mensaje = GeneralORM.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
+                mensaje = GeneralORM.MissatgesError(sqlEx);
+            }
             return mensaje;
         }
     }

@@ -51,7 +51,7 @@
             this.afegirEspaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.llistatActivitatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.afegirActivitatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DemandesActivitatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.llistatUsuarisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afegirUsuariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,21 +84,20 @@
             this.toolStripButtonAltres = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
-            this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewActivitats = new System.Windows.Forms.DataGridView();
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.buttonAfegir = new System.Windows.Forms.Button();
+            this.buttonVeure = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
-            this.buttonModificar = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -272,7 +271,7 @@
             // 
             this.activitatsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.llistatActivitatsToolStripMenuItem,
-            this.afegirActivitatToolStripMenuItem});
+            this.DemandesActivitatToolStripMenuItem});
             this.activitatsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.activitatsToolStripMenuItem.Name = "activitatsToolStripMenuItem";
             this.activitatsToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
@@ -286,15 +285,15 @@
             this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.llistatActivitatsToolStripMenuItem.Text = "Llistat Activitats";
             // 
-            // afegirActivitatToolStripMenuItem
+            // DemandesActivitatToolStripMenuItem
             // 
-            this.afegirActivitatToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._048_notification;
-            this.afegirActivitatToolStripMenuItem.Name = "afegirActivitatToolStripMenuItem";
-            this.afegirActivitatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            this.DemandesActivitatToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._048_notification;
+            this.DemandesActivitatToolStripMenuItem.Name = "DemandesActivitatToolStripMenuItem";
+            this.DemandesActivitatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.A)));
-            this.afegirActivitatToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
-            this.afegirActivitatToolStripMenuItem.Text = "Llistat Demanda Activitats";
-            this.afegirActivitatToolStripMenuItem.Click += new System.EventHandler(this.afegirActivitatToolStripMenuItem_Click);
+            this.DemandesActivitatToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
+            this.DemandesActivitatToolStripMenuItem.Text = "Llistat Demanda Activitats";
+            this.DemandesActivitatToolStripMenuItem.Click += new System.EventHandler(this.afegirActivitatToolStripMenuItem_Click);
             // 
             // altresToolStripMenuItem
             // 
@@ -606,15 +605,15 @@
             this.toolStripButtonSortir.Text = "SORTIR";
             this.toolStripButtonSortir.Click += new System.EventHandler(this.toolStripButtonSortir_Click_1);
             // 
-            // dataGridViewEntitats
+            // dataGridViewActivitats
             // 
-            this.dataGridViewEntitats.AllowUserToDeleteRows = false;
-            this.dataGridViewEntitats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewActivitats.AllowUserToDeleteRows = false;
+            this.dataGridViewActivitats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewEntitats.AutoGenerateColumns = false;
-            this.dataGridViewEntitats.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.dataGridViewEntitats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridViewActivitats.AutoGenerateColumns = false;
+            this.dataGridViewActivitats.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.dataGridViewActivitats.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LimeGreen;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -622,12 +621,12 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEntitats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewEntitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEntitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewActivitats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewActivitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewActivitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomDataGridViewTextBoxColumn});
-            this.dataGridViewEntitats.DataSource = this.bindingSourceActivitats;
+            this.dataGridViewActivitats.DataSource = this.bindingSourceActivitats;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -635,13 +634,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEntitats.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEntitats.EnableHeadersVisualStyles = false;
-            this.dataGridViewEntitats.GridColor = System.Drawing.Color.White;
-            this.dataGridViewEntitats.Location = new System.Drawing.Point(12, 82);
-            this.dataGridViewEntitats.MultiSelect = false;
-            this.dataGridViewEntitats.Name = "dataGridViewEntitats";
-            this.dataGridViewEntitats.ReadOnly = true;
+            this.dataGridViewActivitats.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewActivitats.EnableHeadersVisualStyles = false;
+            this.dataGridViewActivitats.GridColor = System.Drawing.Color.White;
+            this.dataGridViewActivitats.Location = new System.Drawing.Point(12, 82);
+            this.dataGridViewActivitats.MultiSelect = false;
+            this.dataGridViewActivitats.Name = "dataGridViewActivitats";
+            this.dataGridViewActivitats.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -649,29 +648,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEntitats.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewEntitats.RowHeadersVisible = false;
-            this.dataGridViewEntitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEntitats.Size = new System.Drawing.Size(897, 354);
-            this.dataGridViewEntitats.TabIndex = 10;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bindingSourceActivitats
-            // 
-            this.bindingSourceActivitats.DataSource = typeof(EntiEspais.ACTIVITATS);
+            this.dataGridViewActivitats.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewActivitats.RowHeadersVisible = false;
+            this.dataGridViewActivitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewActivitats.Size = new System.Drawing.Size(897, 354);
+            this.dataGridViewActivitats.TabIndex = 10;
             // 
             // labelHora
             // 
@@ -702,19 +683,19 @@
             this.Reloj.Enabled = true;
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
             // 
-            // buttonAfegir
+            // buttonVeure
             // 
-            this.buttonAfegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAfegir.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAfegir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAfegir.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAfegir.Location = new System.Drawing.Point(915, 207);
-            this.buttonAfegir.Name = "buttonAfegir";
-            this.buttonAfegir.Size = new System.Drawing.Size(160, 23);
-            this.buttonAfegir.TabIndex = 18;
-            this.buttonAfegir.Text = "Afegir";
-            this.buttonAfegir.UseVisualStyleBackColor = false;
-            this.buttonAfegir.Click += new System.EventHandler(this.buttonAfegir_Click);
+            this.buttonVeure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonVeure.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonVeure.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVeure.ForeColor = System.Drawing.Color.Snow;
+            this.buttonVeure.Location = new System.Drawing.Point(915, 181);
+            this.buttonVeure.Name = "buttonVeure";
+            this.buttonVeure.Size = new System.Drawing.Size(160, 23);
+            this.buttonVeure.TabIndex = 18;
+            this.buttonVeure.Text = "Veure";
+            this.buttonVeure.UseVisualStyleBackColor = false;
+            this.buttonVeure.Click += new System.EventHandler(this.buttonVeure_Click);
             // 
             // buttonEliminar
             // 
@@ -722,7 +703,7 @@
             this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonEliminar.Location = new System.Drawing.Point(915, 362);
+            this.buttonEliminar.Location = new System.Drawing.Point(915, 268);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
             this.buttonEliminar.TabIndex = 19;
@@ -730,19 +711,23 @@
             this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
-            // buttonModificar
+            // idDataGridViewTextBoxColumn
             // 
-            this.buttonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonModificar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonModificar.Location = new System.Drawing.Point(915, 285);
-            this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(160, 23);
-            this.buttonModificar.TabIndex = 20;
-            this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = false;
-            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceActivitats
+            // 
+            this.bindingSourceActivitats.DataSource = typeof(EntiEspais.ACTIVITATS);
             // 
             // FormActivitats
             // 
@@ -751,12 +736,11 @@
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1087, 654);
-            this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.buttonEliminar);
-            this.Controls.Add(this.buttonAfegir);
+            this.Controls.Add(this.buttonVeure);
             this.Controls.Add(this.labelHora);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.dataGridViewEntitats);
+            this.Controls.Add(this.dataGridViewActivitats);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -771,9 +755,9 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,7 +784,7 @@
         private System.Windows.Forms.ToolStripMenuItem afegirEspaiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activitatsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem llistatActivitatsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem afegirActivitatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DemandesActivitatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem llistatUsuarisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem afegirUsuariToolStripMenuItem;
@@ -833,13 +817,12 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonAltres;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButtonSortir;
-        private System.Windows.Forms.DataGridView dataGridViewEntitats;
+        private System.Windows.Forms.DataGridView dataGridViewActivitats;
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Timer Reloj;
-        private System.Windows.Forms.Button buttonAfegir;
+        private System.Windows.Forms.Button buttonVeure;
         private System.Windows.Forms.Button buttonEliminar;
-        private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.BindingSource bindingSourceActivitats;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;

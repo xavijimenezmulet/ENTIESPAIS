@@ -12,6 +12,7 @@ namespace EntiEspais.Classes
     public static class Utilitats
     {
         public static int intervalsHores = 96;
+        public static ADMINISTRADORS adminActual;
         /**
          * ENS SERVEIX PER FICAR LA HORA A LA LABEL DEL MENU
          **/

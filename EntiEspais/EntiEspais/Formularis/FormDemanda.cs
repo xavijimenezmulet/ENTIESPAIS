@@ -240,7 +240,7 @@ namespace EntiEspais.Formularis
                     MessageBox.Show("Demanda assignada correctament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ACTIVITATS activitat = new ACTIVITATS();
                     activitat.id_demanda_act = demanda.id;
-                    //activitat.id_admin = Utilitats.currentAdmin();
+                    activitat.id_admin = Utilitats.adminActual.id;
                     activitat.nom = demanda.nom;
                     activitat.id_espai = esp.id;
                     string missatgeAct = ORM.ActivitatsORM.InsertActivitat(activitat);

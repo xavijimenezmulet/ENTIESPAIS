@@ -376,9 +376,9 @@ namespace EntiEspais.Classes
             fActivitats.ShowDialog();
         }
         //ens obre un formulari afegir Activitat
-        public static void obrirFormActivitat()
+        public static void obrirFormActivitat(ACTIVITATS activitat)
         {
-            FormActivitat fActivitat = new FormActivitat();
+            FormActivitat fActivitat = new FormActivitat(activitat);
             fActivitat.ShowDialog();
         }
         //ens obre un formulari Demandes

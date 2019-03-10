@@ -25,7 +25,7 @@ namespace EntiEspais.Formularis
         public FormActivitat(ACTIVITATS activitat)
         {
             this.activitat = activitat;
-            this.Text = "MODIFICAR ACTIVITAT";
+            this.Text = "VEURE ACTIVITAT";
             InitializeComponent();
         }
 

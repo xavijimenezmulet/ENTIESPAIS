@@ -30,7 +30,7 @@ namespace EntiEspais.Formularis
             Reloj.Start();
             pictureBox7.Select();
             //omplirComboTemp();
-            //bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(Utilitats.tempActual());
+            bindingSourceActivitats.DataSource = ActivitatsORM.SelectAllActivitats();
         }
 
         private void afegirUsuariToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,31 +134,24 @@ namespace EntiEspais.Formularis
         //METODE AFEGIR ENTITAT
         private void buttonAfegir_Click(object sender, EventArgs e)
         {
-            //ObridorFormulari.obrirFormEntitat();
+            ObridorFormulari.obrirFormActivitat();
         }
-        //METODE MODIFICAR ENTITAT
-        private void buttonModificar_Click(object sender, EventArgs e)
-        {
-            //ENTITATS entitat = (ENTITATS)dataGridViewEntitats.SelectedRows[0].DataBoundItem;
-            //FormEntitat fEntitat = new FormEntitat(entitat);
-            //fEntitat.ShowDialog();
-        }
+        
         //METODE ELIMINAR ENTITAT
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-/*
             String mensaje = "";
             DialogResult res = MessageBox.Show("¿Segur que vols eliminar?", "ATENCIO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (res == DialogResult.Yes)
             {
-                mensaje = EntitatsORM.DeleteEntitat((ENTITATS)dataGridViewEntitats.SelectedRows[0].DataBoundItem);
+                mensaje = ActivitatsORM.DeleteActivitat((ACTIVITATS)dataGridViewActivitats.SelectedRows[0].DataBoundItem);
                 if (!mensaje.Equals(""))
                 {
                     MessageBox.Show(mensaje, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //e.Cancel = true;
                 }
-            }*/
+            }
            /* else
             {
                 e.Cancel = true;
@@ -168,7 +161,7 @@ namespace EntiEspais.Formularis
 
         private void FormActivitats_Activated(object sender, EventArgs e)
         {
-           // bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(auxTemp);
+            bindingSourceActivitats.DataSource = ActivitatsORM.SelectAllActivitats();
         }
 /*
         public void omplirComboTemp()
@@ -196,8 +189,14 @@ namespace EntiEspais.Formularis
 
         private void afegirActivitatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormActivitat();
+            ObridorFormulari.obrirFormDemandes();
             this.Close();
+        }
+
+        private void buttonVeure_Click(object sender, EventArgs e)
+        {
+            ACTIVITATS activitat = (ACTIVITATS)dataGridViewActivitats.SelectedRows[0].DataBoundItem;
+            ObridorFormulari.obrirFormActivitat(activitat);
         }
     }
 }

@@ -28,6 +28,12 @@ namespace EntiEspais.Formularis
             Reloj.Start();
             pictureBox7.Select();
             RefrescarEquips();
+            bindingSourceEquipsEntitat.DataSource = ORM.EntitatsORM.SelectAllEntities();
+            bindingSourceEquipsCompeticio.DataSource = ORM.CompeticionsORM.SelectAllCompeticions();
+            //categoria1
+            //categoria2
+            //sexe
+            //esport
         }
 
         private void buttonAfegirEquipo_Click(object sender, EventArgs e)

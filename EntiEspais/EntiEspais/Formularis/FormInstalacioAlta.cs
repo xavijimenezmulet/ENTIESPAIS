@@ -79,8 +79,9 @@ namespace EntiEspais.Formularis
         {
             //Comprobar que la hora final no sea menor que la hora inicial
             bool error = comprobarIntervaloHoras();
+            int id_instalacion = 0;
 
-            if(!error)
+            if (!error)
             {
                 //Añadir intervalo horas en caso que no existan
                 List<int> idHoras = anadirIntervaloHoras();
@@ -88,8 +89,9 @@ namespace EntiEspais.Formularis
                 //Añadir
                 if (!modificar)
                 {
+
                     String mensaje = ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
-                         comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+                         comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text), ref id_instalacion);
 
                     if (mensaje != "")
                     {
@@ -100,26 +102,26 @@ namespace EntiEspais.Formularis
                         MessageBox.Show("AGREGAT");
                     }
 
-                    ////Añadir HORARIO_INSTALACION lunes
-                    //String lunes = ORM.HorariInstalacio.insertHorariInstalacio(1, idHoras[0], );
+                    //Añadir HORARIO_INSTALACION lunes
+                    String lunes = ORM.HorariInstalacio.insertHorariInstalacio(1, idHoras[0], id_instalacion);
 
-                    ////Añadir HORARIO_INSTALACION martes
-                    //String martes = ORM.HorariInstalacio.insertHorariInstalacio(2, idHoras[1], );
+                    //Añadir HORARIO_INSTALACION martes
+                    String martes = ORM.HorariInstalacio.insertHorariInstalacio(2, idHoras[1], id_instalacion);
 
-                    ////Añadir HORARIO_INSTALACION miercoles
-                    //String miercoles = ORM.HorariInstalacio.insertHorariInstalacio(3, idHoras[2], );
+                    //Añadir HORARIO_INSTALACION miercoles
+                    String miercoles = ORM.HorariInstalacio.insertHorariInstalacio(3, idHoras[2], id_instalacion);
 
-                    ////Añadir HORARIO_INSTALACION jueves
-                    //String jueves = ORM.HorariInstalacio.insertHorariInstalacio(4, idHoras[3], );
+                    //Añadir HORARIO_INSTALACION jueves
+                    String jueves = ORM.HorariInstalacio.insertHorariInstalacio(4, idHoras[3], id_instalacion);
 
-                    ////Añadir HORARIO_INSTALACION viernes
-                    //String viernes = ORM.HorariInstalacio.insertHorariInstalacio(5, idHoras[4], );
+                    //Añadir HORARIO_INSTALACION viernes
+                    String viernes = ORM.HorariInstalacio.insertHorariInstalacio(5, idHoras[4], id_instalacion);
 
-                    ////Añadir HORARIO_INSTALACION sabado
-                    //String sabado = ORM.HorariInstalacio.insertHorariInstalacio(6, idHoras[5], );
+                    //Añadir HORARIO_INSTALACION sabado
+                    String sabado = ORM.HorariInstalacio.insertHorariInstalacio(6, idHoras[5], id_instalacion);
 
-                    ////Añadir HORARIO_INSTALACION domingo
-                    //String domingo = ORM.HorariInstalacio.insertHorariInstalacio(7, idHoras[6], );
+                    //Añadir HORARIO_INSTALACION domingo
+                    String domingo = ORM.HorariInstalacio.insertHorariInstalacio(7, idHoras[6], id_instalacion);
 
                 }
                 //Modificar

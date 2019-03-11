@@ -21,7 +21,7 @@ namespace EntiEspais.ORM
         }
 
         //Alta instalació
-        public static String altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
+        public static String altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud, ref int id_instalacion)
         {
             String mensaje = "";
             INSTALACIONS _instalacio = new INSTALACIONS();
@@ -39,6 +39,7 @@ namespace EntiEspais.ORM
 
             mensaje = ORM.GeneralORM.SaveChanges();
 
+            id_instalacion = _instalacio.id;
             return mensaje;
         }
 

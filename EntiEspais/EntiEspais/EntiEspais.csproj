@@ -563,6 +563,7 @@
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_EQUIP.datasource" />
     <None Include="Properties\DataSources\COMPETICIONS.datasource" />
+    <None Include="Properties\DataSources\DEMANDA_ACT.datasource" />
     <None Include="Properties\DataSources\DIA_SEMANA.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\ESPORTS.datasource" />

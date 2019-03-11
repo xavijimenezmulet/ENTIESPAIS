@@ -132,9 +132,9 @@ namespace EntiEspais.Formularis
             this.Close();
         }
         //METODE AFEGIR ENTITAT
-        private void buttonAfegir_Click(object sender, EventArgs e)
+        private void buttonAfegir_Click(object sender, EventArgs e, ACTIVITATS activitat)
         {
-            ObridorFormulari.obrirFormActivitat();
+            ObridorFormulari.obrirFormActivitat(activitat);
         }
         
         //METODE ELIMINAR ENTITAT

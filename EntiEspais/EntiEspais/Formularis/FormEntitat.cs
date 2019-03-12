@@ -36,6 +36,10 @@ namespace EntiEspais.Formularis
 
         private void FormEntitat_Load(object sender, EventArgs e)
         {
+            listBoxTlf.DataSource = TelefonsEntitatsORM.SelectAllTelefons();
+            listBoxTlf.ValueMember = "id";
+            listBoxTlf.DisplayMember = "numero";
+            listBoxTlf.SelectedItems.Clear();
             if (entitat != null)
             {
                 textBoxId.Text = entitat.id.ToString();
@@ -49,10 +53,6 @@ namespace EntiEspais.Formularis
                 textBoxAlt.Text = entitat.altitud.ToString();
                 textBoxLat.Text = entitat.latitud.ToString();
                 textBoxVid.Text = entitat.ruta_video;
-                listBoxTlf.DataSource = TelefonsEntitatsORM.SelectAllTelefons();
-                listBoxTlf.ValueMember = "id";
-                listBoxTlf.DisplayMember = "numero";
-                listBoxTlf.SelectedItems.Clear();
                 foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
                 {
                     listBoxTlf.SelectedItems.Add(tlf);

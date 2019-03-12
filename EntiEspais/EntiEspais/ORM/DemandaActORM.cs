@@ -55,5 +55,18 @@ namespace EntiEspais.ORM
 
             return missatgeError;
         }
+        /**
+         * ENS RETORNA LA SELECT AMB LA DEMANDA D'ACTIVITAT PER ID
+         **/
+        public static List<DEMANDA_ACT> SelectDemandaActById(int id)
+        {
+            List<DEMANDA_ACT> _demandasAct =
+                 (from d in GeneralORM.bd.DEMANDA_ACT
+                  orderby d.id
+                  where d.id.Equals(id)
+                  select d).ToList();
+
+            return _demandasAct;
+        }
     }
 }

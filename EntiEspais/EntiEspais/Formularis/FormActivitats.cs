@@ -163,29 +163,6 @@ namespace EntiEspais.Formularis
         {
             bindingSourceActivitats.DataSource = ActivitatsORM.SelectAllActivitats();
         }
-/*
-        public void omplirComboTemp()
-        {
-            List<ENTITATS> entitats = new List<ENTITATS>();
-            entitats.AddRange(EntitatsORM.SelectAllEntities());
-            List<string> temporadas = new List<string>();
-            for (int i = 0; i < entitats.Count; i++)
-            {
-                if (!temporadas.Contains(entitats[i].temporada))
-                {
-                    temporadas.Add(entitats[i].temporada);
-                }
-            }
-            comboBoxTemp.DataSource = temporadas;
-            String tempActual = Utilitats.tempActual();
-            comboBoxTemp.SelectedItem = tempActual;
-        }
-*/
-        private void comboBoxTemp_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //auxTemp = comboBoxTemp.SelectedValue.ToString();
-            //bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(auxTemp);
-        }
 
         private void afegirActivitatToolStripMenuItem_Click(object sender, EventArgs e)
         {

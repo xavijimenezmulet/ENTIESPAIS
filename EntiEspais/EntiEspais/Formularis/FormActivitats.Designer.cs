@@ -85,22 +85,21 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewActivitats = new System.Windows.Forms.DataGridView();
-            this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
             this.buttonVeure = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.bindingSourceDemandes = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_demanda_act = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -628,8 +627,7 @@
             this.dataGridViewActivitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewActivitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.nomDataGridViewTextBoxColumn,
-            this.id_demanda_act});
+            this.nomDataGridViewTextBoxColumn});
             this.dataGridViewActivitats.DataSource = this.bindingSourceActivitats;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -657,10 +655,6 @@
             this.dataGridViewActivitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActivitats.Size = new System.Drawing.Size(897, 354);
             this.dataGridViewActivitats.TabIndex = 10;
-            // 
-            // bindingSourceActivitats
-            // 
-            this.bindingSourceActivitats.DataSource = typeof(EntiEspais.ACTIVITATS);
             // 
             // labelHora
             // 
@@ -723,6 +717,10 @@
             // 
             this.bindingSourceDemandes.DataSource = typeof(EntiEspais.DEMANDA_ACT);
             // 
+            // bindingSourceActivitats
+            // 
+            this.bindingSourceActivitats.DataSource = typeof(EntiEspais.ACTIVITATS);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -736,18 +734,6 @@
             this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
             this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // id_demanda_act
-            // 
-            this.id_demanda_act.DataPropertyName = "id_demanda_act";
-            this.id_demanda_act.DataSource = this.bindingSourceDemandes;
-            this.id_demanda_act.DisplayMember = "EQUIPS";
-            this.id_demanda_act.HeaderText = "id_demanda_act";
-            this.id_demanda_act.Name = "id_demanda_act";
-            this.id_demanda_act.ReadOnly = true;
-            this.id_demanda_act.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_demanda_act.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.id_demanda_act.ValueMember = "id_equip";
             // 
             // FormActivitats
             // 
@@ -776,9 +762,9 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -848,6 +834,5 @@
         private System.Windows.Forms.BindingSource bindingSourceDemandes;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn id_demanda_act;
     }
 }

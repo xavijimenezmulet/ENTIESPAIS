@@ -6,15 +6,25 @@ namespace EntiEspais.Formularis
 {
     public partial class FormEquips : Form
     {
+        static bool algo2;
         public FormEquips()
         {
+            algo2 = false;
             InitializeComponent();
+            algo2 = true;
         }
 
         //Omple la GridView amb tots els equips que hi hagi a la base de dades.
         private void RefrescarEquips()
         {
             bindingSourceEquips.DataSource = ORM.EquipsORM.SelectAllEquips();
+
+            bindingSourceEquipsEntitat.DataSource = ORM.EntitatsORM.SelectAllEntities();
+            bindingSourceEquipsCompeticio.DataSource = ORM.CompeticionsORM.SelectAllCompeticions();
+            bindingSourceCategoriaEdatEquips.DataSource = ORM.CategoriaPerEdatORM.SelectAllCategoriesPerEdat();
+            bindingSourceCategoriaEquips.DataSource = ORM.CategoriaPerEquipORM.SelectAllCategoriesPerEquip();
+            bindingSourceSexeEquips.DataSource = ORM.SexesORM.SelectAllSexes();
+            bindingSourceEquipsEsport.DataSource = ORM.EsportsORM.SelectAllEsports();
         }
 
         //Cada tick del rellotge posa l'hora en una label.
@@ -28,12 +38,7 @@ namespace EntiEspais.Formularis
             Reloj.Start();
             pictureBox7.Select();
             RefrescarEquips();
-            bindingSourceEquipsEntitat.DataSource = ORM.EntitatsORM.SelectAllEntities();
-            bindingSourceEquipsCompeticio.DataSource = ORM.CompeticionsORM.SelectAllCompeticions();
-            //categoria1
-            //categoria2
-            //sexe
-            //esport
+
         }
 
         private void buttonAfegirEquipo_Click(object sender, EventArgs e)
@@ -49,6 +54,7 @@ namespace EntiEspais.Formularis
         private void buttonModificarEquipo_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormEquipPerModificar((EQUIPS)dataGridViewEquips.SelectedRows[0].DataBoundItem);
+            //identitatDataGridViewTextBoxColumn
         }
 
         private void buttonEliminarEquipo_Click(object sender, EventArgs e)
@@ -120,6 +126,33 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormEntitat();
             this.Close();
+        }
+
+        private void dataGridViewEquips_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            //MessageBox.Show("Modificació feta.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void algo(object sender, DataGridViewCellEventArgs e)
+        {
+            //Falta comprobar que el nombre del equipo no sea vacío.
+
+            if (algo2)
+            {
+                if (dataGridViewEquips.SelectedRows[0].Cells[1].Value == null)
+                {
+                    if (dataGridViewEquips.SelectedRows[0].Cells[1].Value.ToString().Length == 0)
+                    {
+                        MessageBox.Show("CAMPOS VACIOS.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    ORM.EquipsORM.UpdateEquip((EQUIPS)dataGridViewEquips.CurrentRow.DataBoundItem); //funciona
+                    MessageBox.Show("Equip modificat.", "CANVI", MessageBoxButtons.OK, MessageBoxIcon.Information); //funciona
+                }
+            }
+
         }
     }
 }

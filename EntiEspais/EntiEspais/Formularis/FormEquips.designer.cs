@@ -99,10 +99,14 @@
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcompeticioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bindingSourceEquipsCompeticio = new System.Windows.Forms.BindingSource(this.components);
-            this.idcategoriaedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idcategoriaequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idsexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idesportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcategoriaedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceCategoriaEdatEquips = new System.Windows.Forms.BindingSource(this.components);
+            this.idcategoriaequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceCategoriaEquips = new System.Windows.Forms.BindingSource(this.components);
+            this.idsexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceSexeEquips = new System.Windows.Forms.BindingSource(this.components);
+            this.idesportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceEquipsEsport = new System.Windows.Forms.BindingSource(this.components);
             this.cATEGORIAEDATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cATEGORIAEQUIPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cOMPETICIONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,6 +121,10 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquipsEntitat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquipsCompeticio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCategoriaEdatEquips)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCategoriaEquips)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSexeEquips)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquipsEsport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,6 +189,8 @@
             this.dataGridViewEquips.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEquips.Size = new System.Drawing.Size(897, 354);
             this.dataGridViewEquips.TabIndex = 0;
+            this.dataGridViewEquips.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEquips_CellEndEdit);
+            this.dataGridViewEquips.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.algo);
             this.dataGridViewEquips.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEquips_UserDeletingRow);
             this.dataGridViewEquips.DoubleClick += new System.EventHandler(this.dataGridViewEquips_DoubleClick);
             // 
@@ -743,25 +753,26 @@
             // 
             // idDataGridViewTextBoxColumn
             // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 41;
             // 
             // nomDataGridViewTextBoxColumn
             // 
-            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
             this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomDataGridViewTextBoxColumn.Width = 56;
             // 
             // tediscapacitatDataGridViewCheckBoxColumn
             // 
             this.tediscapacitatDataGridViewCheckBoxColumn.DataPropertyName = "te_discapacitat";
             this.tediscapacitatDataGridViewCheckBoxColumn.HeaderText = "te_discapacitat";
             this.tediscapacitatDataGridViewCheckBoxColumn.Name = "tediscapacitatDataGridViewCheckBoxColumn";
-            this.tediscapacitatDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // identitatDataGridViewTextBoxColumn
             // 
@@ -771,7 +782,6 @@
             this.identitatDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.identitatDataGridViewTextBoxColumn.HeaderText = "id_entitat";
             this.identitatDataGridViewTextBoxColumn.Name = "identitatDataGridViewTextBoxColumn";
-            this.identitatDataGridViewTextBoxColumn.ReadOnly = true;
             this.identitatDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.identitatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.identitatDataGridViewTextBoxColumn.ValueMember = "id";
@@ -795,7 +805,6 @@
             this.idcompeticioDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.idcompeticioDataGridViewTextBoxColumn.HeaderText = "id_competicio";
             this.idcompeticioDataGridViewTextBoxColumn.Name = "idcompeticioDataGridViewTextBoxColumn";
-            this.idcompeticioDataGridViewTextBoxColumn.ReadOnly = true;
             this.idcompeticioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idcompeticioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idcompeticioDataGridViewTextBoxColumn.ValueMember = "id";
@@ -806,37 +815,71 @@
             // 
             // idcategoriaedatDataGridViewTextBoxColumn
             // 
-            this.idcategoriaedatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idcategoriaedatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idcategoriaedatDataGridViewTextBoxColumn.DataPropertyName = "id_categoria_edat";
+            this.idcategoriaedatDataGridViewTextBoxColumn.DataSource = this.bindingSourceCategoriaEdatEquips;
+            this.idcategoriaedatDataGridViewTextBoxColumn.DisplayMember = "nom";
+            this.idcategoriaedatDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.idcategoriaedatDataGridViewTextBoxColumn.HeaderText = "id_categoria_edat";
             this.idcategoriaedatDataGridViewTextBoxColumn.Name = "idcategoriaedatDataGridViewTextBoxColumn";
-            this.idcategoriaedatDataGridViewTextBoxColumn.ReadOnly = true;
             this.idcategoriaedatDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idcategoriaedatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idcategoriaedatDataGridViewTextBoxColumn.ValueMember = "id";
+            this.idcategoriaedatDataGridViewTextBoxColumn.Width = 128;
+            // 
+            // bindingSourceCategoriaEdatEquips
+            // 
+            this.bindingSourceCategoriaEdatEquips.DataSource = typeof(EntiEspais.CATEGORIA_EDAT);
             // 
             // idcategoriaequipDataGridViewTextBoxColumn
             // 
-            this.idcategoriaequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idcategoriaequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.idcategoriaequipDataGridViewTextBoxColumn.DataPropertyName = "id_categoria_equip";
+            this.idcategoriaequipDataGridViewTextBoxColumn.DataSource = this.bindingSourceCategoriaEquips;
+            this.idcategoriaequipDataGridViewTextBoxColumn.DisplayMember = "nom";
+            this.idcategoriaequipDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.idcategoriaequipDataGridViewTextBoxColumn.HeaderText = "id_categoria_equip";
             this.idcategoriaequipDataGridViewTextBoxColumn.Name = "idcategoriaequipDataGridViewTextBoxColumn";
-            this.idcategoriaequipDataGridViewTextBoxColumn.ReadOnly = true;
             this.idcategoriaequipDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idcategoriaequipDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idcategoriaequipDataGridViewTextBoxColumn.ValueMember = "id";
+            this.idcategoriaequipDataGridViewTextBoxColumn.Width = 134;
+            // 
+            // bindingSourceCategoriaEquips
+            // 
+            this.bindingSourceCategoriaEquips.DataSource = typeof(EntiEspais.CATEGORIA_EQUIP);
             // 
             // idsexeDataGridViewTextBoxColumn
             // 
             this.idsexeDataGridViewTextBoxColumn.DataPropertyName = "id_sexe";
+            this.idsexeDataGridViewTextBoxColumn.DataSource = this.bindingSourceSexeEquips;
+            this.idsexeDataGridViewTextBoxColumn.DisplayMember = "tipus";
+            this.idsexeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.idsexeDataGridViewTextBoxColumn.HeaderText = "id_sexe";
             this.idsexeDataGridViewTextBoxColumn.Name = "idsexeDataGridViewTextBoxColumn";
-            this.idsexeDataGridViewTextBoxColumn.ReadOnly = true;
             this.idsexeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idsexeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idsexeDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // bindingSourceSexeEquips
+            // 
+            this.bindingSourceSexeEquips.DataSource = typeof(EntiEspais.SEXE);
             // 
             // idesportDataGridViewTextBoxColumn
             // 
             this.idesportDataGridViewTextBoxColumn.DataPropertyName = "id_esport";
+            this.idesportDataGridViewTextBoxColumn.DataSource = this.bindingSourceEquipsEsport;
+            this.idesportDataGridViewTextBoxColumn.DisplayMember = "nom";
+            this.idesportDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.idesportDataGridViewTextBoxColumn.HeaderText = "id_esport";
             this.idesportDataGridViewTextBoxColumn.Name = "idesportDataGridViewTextBoxColumn";
-            this.idesportDataGridViewTextBoxColumn.ReadOnly = true;
             this.idesportDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idesportDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.idesportDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // bindingSourceEquipsEsport
+            // 
+            this.bindingSourceEquipsEsport.DataSource = typeof(EntiEspais.ESPORTS);
             // 
             // cATEGORIAEDATDataGridViewTextBoxColumn
             // 
@@ -928,6 +971,10 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquipsEntitat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquipsCompeticio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCategoriaEdatEquips)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCategoriaEquips)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSexeEquips)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquipsEsport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -997,17 +1044,21 @@
         private System.Windows.Forms.Timer Reloj;
         private System.Windows.Forms.BindingSource bindingSourceEquips;
         private System.Windows.Forms.BindingSource bindingSourceEquipsEntitat;
+        private System.Windows.Forms.BindingSource bindingSourceEquipsCompeticio;
+        private System.Windows.Forms.BindingSource bindingSourceCategoriaEdatEquips;
+        private System.Windows.Forms.BindingSource bindingSourceCategoriaEquips;
+        private System.Windows.Forms.BindingSource bindingSourceSexeEquips;
+        private System.Windows.Forms.BindingSource bindingSourceEquipsEsport;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn tediscapacitatDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn identitatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn temporadaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn idcompeticioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bindingSourceEquipsCompeticio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaedatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcategoriaequipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idsexeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idesportDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idcategoriaedatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idcategoriaequipDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idsexeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn idesportDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cATEGORIAEDATDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cATEGORIAEQUIPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cOMPETICIONSDataGridViewTextBoxColumn;

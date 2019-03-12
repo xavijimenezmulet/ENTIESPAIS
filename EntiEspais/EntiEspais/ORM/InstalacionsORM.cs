@@ -47,6 +47,10 @@ namespace EntiEspais.ORM
         public static String eliminarInstalacio(INSTALACIONS _instalacio)
         {
             String mensaje = "";
+
+            _instalacio.HORARI_INSTALACIO.Clear();
+            mensaje = ORM.GeneralORM.SaveChanges();
+            
             ORM.GeneralORM.bd.INSTALACIONS.Remove(_instalacio);
 
             mensaje = ORM.GeneralORM.SaveChanges();

@@ -26,6 +26,8 @@ namespace EntiEspais.Formularis
         double latInicial = 41.389129;
         double lonInicial = 2.173028;
 
+        int idHoraInicio;
+
         public FormInstalacioAlta()
         {
             InitializeComponent();
@@ -41,6 +43,9 @@ namespace EntiEspais.Formularis
         //Load para cargar datos en caso de que sea para modificar
         private void FormInstalacioAlta_Load(object sender, EventArgs e)
         {
+            //Traer id
+            idHoraInicio = ORM.HoresORM.selectIdHores();
+
             if (modificar)
             {
                 textBoxNom.Text = _instalacio.nom;
@@ -51,6 +56,14 @@ namespace EntiEspais.Formularis
                 textBoxRutaImatge.Text = _instalacio.ruta_imagen;
                 textBoxAltitud.Text = _instalacio.altitut.ToString();
                 textBoxLatitud.Text = _instalacio.latitut.ToString();
+
+                List<HORARI_INSTALACIO> _ins = _instalacio.HORARI_INSTALACIO.ToList();
+                foreach (HORARI_INSTALACIO i in _ins)
+                {
+                    HORES h = i.HORES;
+
+                }
+                
             }
             else
             {
@@ -338,10 +351,10 @@ namespace EntiEspais.Formularis
         private void buttonDeleteDilluns_Click(object sender, EventArgs e)
         {
             comboBoxDillunsInici.Enabled = !comboBoxDillunsInici.Enabled;
-            comboBoxDillunsInici.SelectedValue = 14;
+            comboBoxDillunsInici.SelectedValue = idHoraInicio;
 
             comboBoxDillunsFinal.Enabled = !comboBoxDillunsFinal.Enabled;
-            comboBoxDillunsFinal.SelectedValue = 14;
+            comboBoxDillunsFinal.SelectedValue = idHoraInicio;
 
         }
 
@@ -349,60 +362,60 @@ namespace EntiEspais.Formularis
         private void buttonDeleteDimarts_Click(object sender, EventArgs e)
         {
             comboBoxDimartsInici.Enabled = !comboBoxDimartsInici.Enabled;
-            comboBoxDimartsInici.SelectedValue = 14;
+            comboBoxDimartsInici.SelectedValue = idHoraInicio;
 
             comboBoxDimartsFinal.Enabled = !comboBoxDimartsFinal.Enabled;
-            comboBoxDimartsFinal.SelectedValue = 14;
+            comboBoxDimartsFinal.SelectedValue = idHoraInicio;
         }
 
         //Desactivar Miercoles
         private void buttonDeleteDimecres_Click(object sender, EventArgs e)
         {
             comboBoxDimecresInici.Enabled = !comboBoxDimecresInici.Enabled;
-            comboBoxDimecresInici.SelectedValue = 14;
+            comboBoxDimecresInici.SelectedValue = idHoraInicio;
 
             comboBoxDimecresFinal.Enabled = !comboBoxDimecresFinal.Enabled;
-            comboBoxDimecresFinal.SelectedValue = 14;
+            comboBoxDimecresFinal.SelectedValue = idHoraInicio;
         }
 
         //Desactivar Jueves
         private void buttonDeleteDijous_Click(object sender, EventArgs e)
         {
             comboBoxDijousInici.Enabled = !comboBoxDijousInici.Enabled;
-            comboBoxDijousInici.SelectedValue = 14;
+            comboBoxDijousInici.SelectedValue = idHoraInicio;
 
             comboBoxDijousFinal.Enabled = !comboBoxDijousFinal.Enabled;
-            comboBoxDijousFinal.SelectedValue = 14;
+            comboBoxDijousFinal.SelectedValue = idHoraInicio;
         }
 
         //Desactivar Viernes
         private void buttonDeleteDivendres_Click(object sender, EventArgs e)
         {
             comboBoxDivendresInici.Enabled = !comboBoxDivendresInici.Enabled;
-            comboBoxDivendresInici.SelectedValue = 14;
+            comboBoxDivendresInici.SelectedValue = idHoraInicio;
 
             comboBoxDivendresFinal.Enabled = !comboBoxDivendresFinal.Enabled;
-            comboBoxDivendresFinal.SelectedValue = 14;
+            comboBoxDivendresFinal.SelectedValue = idHoraInicio;
         }
 
         //Desactivar Sabado
         private void buttonDeleteDissabte_Click(object sender, EventArgs e)
         {
             comboBoxDissabteInici.Enabled = !comboBoxDissabteInici.Enabled;
-            comboBoxDissabteInici.SelectedValue = 14;
+            comboBoxDissabteInici.SelectedValue = idHoraInicio;
 
             comboBoxDissabteFinal.Enabled = !comboBoxDissabteFinal.Enabled;
-            comboBoxDissabteFinal.SelectedValue = 14;
+            comboBoxDissabteFinal.SelectedValue = idHoraInicio;
         }
 
         //Desactivar Domingo
         private void buttonDeleteDiumenge_Click(object sender, EventArgs e)
         {
             comboBoxDiumengeInici.Enabled = !comboBoxDiumengeInici.Enabled;
-            comboBoxDiumengeInici.SelectedValue = 14;
+            comboBoxDiumengeInici.SelectedValue = idHoraInicio;
 
             comboBoxDiumengeFinal.Enabled = !comboBoxDiumengeFinal.Enabled;
-            comboBoxDiumengeFinal.SelectedValue = 14;
+            comboBoxDiumengeFinal.SelectedValue = idHoraInicio;
         }
 
         #endregion

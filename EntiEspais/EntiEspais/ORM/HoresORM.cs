@@ -142,5 +142,18 @@ namespace EntiEspais.ORM
 
             return _hores;
         }
+
+        //Ens retorna l'id de quan la hora es 00:00:00
+        public static int selectIdHores()
+        {
+            TimeSpan horaInicio = TimeSpan.Parse("00:00:00");
+            TimeSpan horaFinal = TimeSpan.Parse("00:00:00");
+
+            int id = (from e in GeneralORM.bd.HORES
+                      where e.inici == horaInicio && e.fi == horaFinal
+                      select e.id).First();
+
+            return id;
+        }
     }
 }

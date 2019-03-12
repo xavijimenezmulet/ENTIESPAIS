@@ -672,7 +672,7 @@
             // 
             // comboBoxDivendresFinal
             // 
-            this.comboBoxDivendresFinal.DataSource = this.bindingSourceDijousFinal;
+            this.comboBoxDivendresFinal.DataSource = this.bindingSourceDivendresFinal;
             this.comboBoxDivendresFinal.DisplayMember = "fi";
             this.comboBoxDivendresFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDivendresFinal.FormattingEnabled = true;

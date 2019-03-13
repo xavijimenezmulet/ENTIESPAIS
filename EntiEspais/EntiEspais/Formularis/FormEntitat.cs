@@ -177,7 +177,8 @@ namespace EntiEspais.Formularis
 
         private void buttonAfegirEquip_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormEquipPerAfegir();
+            FormEquip fEquip = new FormEquip("Afegir equip", entitat);
+            fEquip.ShowDialog();
         }
 
         private void buttonSelectEquip_Click(object sender, EventArgs e)

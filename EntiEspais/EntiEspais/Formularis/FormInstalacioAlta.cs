@@ -28,6 +28,9 @@ namespace EntiEspais.Formularis
 
         int idHoraInicio;
 
+        List<TimeSpan> hInici;
+        List<TimeSpan> hFinal;
+
         public FormInstalacioAlta()
         {
             InitializeComponent();
@@ -46,6 +49,22 @@ namespace EntiEspais.Formularis
             //Traer id
             idHoraInicio = ORM.HoresORM.selectIdHores();
 
+            //Cargar BindingSources
+            bindingSourceDillunsInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDillunsFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+            bindingSourceDimartsInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDimartsFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+            bindingSourceDimecresInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDimecresFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+            bindingSourceDijousInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDijousFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+            bindingSourceDivendresInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDivendresFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+            bindingSourceDissabteInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDissabteFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+            bindingSourceDiumengeInici.DataSource = ORM.HoresORM.SelectIntervalHores();
+            bindingSourceDiumengeFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
+
             if (modificar)
             {
                 textBoxNom.Text = _instalacio.nom;
@@ -58,30 +77,16 @@ namespace EntiEspais.Formularis
                 textBoxLatitud.Text = _instalacio.latitut.ToString();
 
                 List<HORARI_INSTALACIO> _ins = _instalacio.HORARI_INSTALACIO.ToList();
+                hInici = new List<TimeSpan>();
+                hFinal = new List<TimeSpan>();
                 foreach (HORARI_INSTALACIO i in _ins)
                 {
                     HORES h = i.HORES;
-
+                    hInici.Add(h.inici);
+                    hFinal.Add(h.fi);
                 }
-                
-            }
-            else
-            {
-                bindingSourceDillunsInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDillunsFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
-                bindingSourceDimartsInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDimartsFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
-                bindingSourceDimecresInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDimecresFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
-                bindingSourceDijousInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDijousFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
-                bindingSourceDivendresInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDivendresFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
-                bindingSourceDissabteInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDissabteFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
-                bindingSourceDiumengeInici.DataSource = ORM.HoresORM.SelectIntervalHores();
-                bindingSourceDiumengeFinal.DataSource = ORM.HoresORM.SelectIntervalHoresFi();
 
+                rellenarCombosHorarios();
             }
 
             gestionMapa();
@@ -98,82 +103,89 @@ namespace EntiEspais.Formularis
             {
                 //Añadir intervalo horas en caso que no existan
                 List<int> idHoras = anadirIntervaloHoras();
-
-                //Añadir
-                if (!modificar)
+                if (!Classes.Utilitats.isAnEmail(textBoxEmail.Text))
                 {
-
-                    String mensaje = ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
-                         comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text), ref id_instalacion);
-
-                    if (mensaje != "")
-                    {
-                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("AGREGAT");
-                    }
-
-                    //Añadir HORARIO_INSTALACION lunes
-                    String lunes = ORM.HorariInstalacio.insertHorariInstalacio(1, idHoras[0], id_instalacion);
-
-                    //Añadir HORARIO_INSTALACION martes
-                    String martes = ORM.HorariInstalacio.insertHorariInstalacio(2, idHoras[1], id_instalacion);
-
-                    //Añadir HORARIO_INSTALACION miercoles
-                    String miercoles = ORM.HorariInstalacio.insertHorariInstalacio(3, idHoras[2], id_instalacion);
-
-                    //Añadir HORARIO_INSTALACION jueves
-                    String jueves = ORM.HorariInstalacio.insertHorariInstalacio(4, idHoras[3], id_instalacion);
-
-                    //Añadir HORARIO_INSTALACION viernes
-                    String viernes = ORM.HorariInstalacio.insertHorariInstalacio(5, idHoras[4], id_instalacion);
-
-                    //Añadir HORARIO_INSTALACION sabado
-                    String sabado = ORM.HorariInstalacio.insertHorariInstalacio(6, idHoras[5], id_instalacion);
-
-                    //Añadir HORARIO_INSTALACION domingo
-                    String domingo = ORM.HorariInstalacio.insertHorariInstalacio(7, idHoras[6], id_instalacion);
-
+                    MessageBox.Show("Email mal escrit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    textBoxEmail.Select();
                 }
-                //Modificar
                 else
                 {
-                    String mensaje = ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
-                         comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
-
-                    if (mensaje != "")
+                    //Añadir
+                    if (!modificar)
                     {
-                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        String mensaje = ORM.InstalacionsORM.altaInstalacio(textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
+                             comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text), ref id_instalacion);
+
+                        if (mensaje != "")
+                        {
+                            MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("AGREGAT");
+                        }
+
+                        //Añadir HORARIO_INSTALACION lunes
+                        String lunes = ORM.HorariInstalacio.insertHorariInstalacio(1, idHoras[0], id_instalacion);
+
+                        //Añadir HORARIO_INSTALACION martes
+                        String martes = ORM.HorariInstalacio.insertHorariInstalacio(2, idHoras[1], id_instalacion);
+
+                        //Añadir HORARIO_INSTALACION miercoles
+                        String miercoles = ORM.HorariInstalacio.insertHorariInstalacio(3, idHoras[2], id_instalacion);
+
+                        //Añadir HORARIO_INSTALACION jueves
+                        String jueves = ORM.HorariInstalacio.insertHorariInstalacio(4, idHoras[3], id_instalacion);
+
+                        //Añadir HORARIO_INSTALACION viernes
+                        String viernes = ORM.HorariInstalacio.insertHorariInstalacio(5, idHoras[4], id_instalacion);
+
+                        //Añadir HORARIO_INSTALACION sabado
+                        String sabado = ORM.HorariInstalacio.insertHorariInstalacio(6, idHoras[5], id_instalacion);
+
+                        //Añadir HORARIO_INSTALACION domingo
+                        String domingo = ORM.HorariInstalacio.insertHorariInstalacio(7, idHoras[6], id_instalacion);
+
                     }
+                    //Modificar
                     else
                     {
-                        MessageBox.Show("MODIFICAT");
+                        String mensaje = ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
+                             comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
+
+                        if (mensaje != "")
+                        {
+                            MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("MODIFICAT");
+                        }
+
+                        //Modificar HORARIO_INSTALACION lunes
+                        String lunes = ORM.HorariInstalacio.modificarHorariInstalacio(1, idHoras[0], _instalacio.id);
+
+                        //Modificar HORARIO_INSTALACION martes
+                        String martes = ORM.HorariInstalacio.modificarHorariInstalacio(2, idHoras[1], _instalacio.id);
+
+                        //Modificar HORARIO_INSTALACION miercoles
+                        String miercoles = ORM.HorariInstalacio.modificarHorariInstalacio(3, idHoras[2], _instalacio.id);
+
+                        //Modificar HORARIO_INSTALACION jueves
+                        String jueves = ORM.HorariInstalacio.modificarHorariInstalacio(4, idHoras[3], _instalacio.id);
+
+                        //Modificar HORARIO_INSTALACION viernes
+                        String viernes = ORM.HorariInstalacio.modificarHorariInstalacio(5, idHoras[4], _instalacio.id);
+
+                        //Modificar HORARIO_INSTALACION sabado
+                        String sabado = ORM.HorariInstalacio.modificarHorariInstalacio(6, idHoras[5], _instalacio.id);
+
+                        //Modificar HORARIO_INSTALACION domingo
+                        String domingo = ORM.HorariInstalacio.modificarHorariInstalacio(7, idHoras[6], _instalacio.id);
+
+                        this.Close();
                     }
-
-                    //Modificar HORARIO_INSTALACION lunes
-                    String lunes = ORM.HorariInstalacio.modificarHorariInstalacio(1, idHoras[0], _instalacio.id);
-
-                    //Modificar HORARIO_INSTALACION martes
-                    String martes = ORM.HorariInstalacio.modificarHorariInstalacio(2, idHoras[1], _instalacio.id);
-
-                    //Modificar HORARIO_INSTALACION miercoles
-                    String miercoles = ORM.HorariInstalacio.modificarHorariInstalacio(3, idHoras[2], _instalacio.id);
-
-                    //Modificar HORARIO_INSTALACION jueves
-                    String jueves = ORM.HorariInstalacio.modificarHorariInstalacio(4, idHoras[3], _instalacio.id);
-
-                    //Modificar HORARIO_INSTALACION viernes
-                    String viernes = ORM.HorariInstalacio.modificarHorariInstalacio(5, idHoras[4], _instalacio.id);
-
-                    //Modificar HORARIO_INSTALACION sabado
-                    String sabado = ORM.HorariInstalacio.modificarHorariInstalacio(6, idHoras[5], _instalacio.id);
-
-                    //Modificar HORARIO_INSTALACION domingo
-                    String domingo = ORM.HorariInstalacio.modificarHorariInstalacio(7, idHoras[6], _instalacio.id);
-
-                    this.Close();
                 }
             }
             else
@@ -420,6 +432,38 @@ namespace EntiEspais.Formularis
 
         #endregion
 
+        //Rellenar combos Horas para modificar
+        private void rellenarCombosHorarios()
+        {
+            //Lunes
+            comboBoxDillunsInici.Text = hInici[0].ToString();
+            comboBoxDillunsFinal.Text = hFinal[0].ToString();
+
+            //Martes
+            comboBoxDimartsInici.Text = hInici[1].ToString();
+            comboBoxDimartsFinal.Text = hFinal[1].ToString();
+
+            //Miercoles
+            comboBoxDimecresInici.Text = hInici[2].ToString();
+            comboBoxDimecresFinal.Text = hFinal[2].ToString();
+
+            //Jueves
+            comboBoxDijousInici.Text = hInici[3].ToString();
+            comboBoxDijousFinal.Text = hFinal[3].ToString();
+
+            //Viernes
+            comboBoxDivendresInici.Text = hInici[4].ToString();
+            comboBoxDivendresFinal.Text = hFinal[4].ToString();
+
+            //Sábado
+            comboBoxDissabteInici.Text = hInici[5].ToString();
+            comboBoxDissabteFinal.Text = hFinal[5].ToString();
+
+            //Domingo
+            comboBoxDiumengeInici.Text = hInici[6].ToString();
+            comboBoxDiumengeFinal.Text = hFinal[6].ToString();
+        }
+
         //Botón cancelar
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
@@ -503,7 +547,7 @@ namespace EntiEspais.Formularis
             //Mover marker a la posición
             markerGoogle.Position = new PointLatLng(lat, lon);
 
-            var dir = gcontrol.GetPositionByKeywords("hello",out point);
+            var dir = gcontrol.GetPositionByKeywords("hello", out point);
 
         }
 

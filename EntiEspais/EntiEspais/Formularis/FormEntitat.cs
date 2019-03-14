@@ -36,10 +36,6 @@ namespace EntiEspais.Formularis
 
         private void FormEntitat_Load(object sender, EventArgs e)
         {
-            listBoxTlf.DataSource = TelefonsEntitatsORM.SelectAllTelefons();
-            listBoxTlf.ValueMember = "id";
-            listBoxTlf.DisplayMember = "numero";
-            listBoxTlf.SelectedItems.Clear();
             if (entitat != null)
             {
                 textBoxId.Text = entitat.id.ToString();
@@ -53,13 +49,18 @@ namespace EntiEspais.Formularis
                 textBoxAlt.Text = entitat.altitud.ToString();
                 textBoxLat.Text = entitat.latitud.ToString();
                 textBoxVid.Text = entitat.ruta_video;
-                foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
+                /*foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
                 {
                     listBoxTlf.SelectedItems.Add(tlf);
-                }
+                }*/
                 listBoxEquips.DataSource = EquipsORM.SelectEquipsEntitat(entitat);
                 listBoxEquips.ValueMember = "id";
                 listBoxEquips.DisplayMember = "nom";
+                listBoxEquips.SelectedItems.Clear();
+                listBoxTlf.DataSource = entitat.TELEFONS_ENTITATS.ToList();
+                listBoxTlf.ValueMember = "id";
+                listBoxTlf.DisplayMember = "numero";
+                listBoxTlf.SelectedItems.Clear();
             }
         }
 
@@ -143,7 +144,16 @@ namespace EntiEspais.Formularis
 
         private void buttonAddTlf_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormTelefonsEntitats();
+            TELEFONS_ENTITATS tlf = (TELEFONS_ENTITATS)listBoxTlf.SelectedItem;
+            if (tlf == null)
+            {
+                DialogResult mensaje = MessageBox.Show("Selecciona un telefon!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                FormTelefonEntitat fTelefonEntitat = new FormTelefonEntitat(tlf);
+                fTelefonEntitat.ShowDialog();
+            }
         }
 
         private void FormEntitat_Activated(object sender, EventArgs e)
@@ -161,17 +171,18 @@ namespace EntiEspais.Formularis
                 textBoxAlt.Text = entitat.altitud.ToString();
                 textBoxLat.Text = entitat.latitud.ToString();
                 textBoxVid.Text = entitat.ruta_video;
-                listBoxTlf.DataSource = TelefonsEntitatsORM.SelectAllTelefons();
+                listBoxTlf.DataSource = entitat.TELEFONS_ENTITATS.ToList();
                 listBoxTlf.ValueMember = "id";
                 listBoxTlf.DisplayMember = "numero";
                 listBoxTlf.SelectedItems.Clear();
-                foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
+                /*foreach (TELEFONS_ENTITATS tlf in entitat.TELEFONS_ENTITATS)
                 {
                     listBoxTlf.SelectedItems.Add(tlf);
-                }
+                }*/
                 listBoxEquips.DataSource = EquipsORM.SelectEquipsEntitat(entitat);
                 listBoxEquips.ValueMember = "id";
                 listBoxEquips.DisplayMember = "nom";
+                listBoxEquips.SelectedItems.Clear();
             }
         }
 
@@ -185,6 +196,40 @@ namespace EntiEspais.Formularis
         {
             EQUIPS equip = (EQUIPS) listBoxEquips.SelectedItem;
             ObridorFormulari.obrirFormEquipPerModificar(equip);
+        }
+
+        private void buttonDelTlf_Click(object sender, EventArgs e)
+        {
+            TELEFONS_ENTITATS tlf = (TELEFONS_ENTITATS)listBoxTlf.SelectedItem;
+            if (tlf == null)
+            {
+                DialogResult mensaje = MessageBox.Show("Selecciona un telefon!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                String mensaje = "";
+                DialogResult res = MessageBox.Show("¿Segur que vols eliminar?", "ATENCIO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
+                {
+
+                    mensaje = TelefonsEntitatsORM.DeleteByTelefon(tlf);
+                    if (!mensaje.Equals(""))
+                    {
+                        MessageBox.Show(mensaje, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //e.Cancel = true;
+                    }
+                }
+            }
+
+            listBoxTlf.DataSource = entitat.TELEFONS_ENTITATS.ToList();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            //TELEFONS_ENTITATS tlf = (TELEFONS_ENTITATS)listBoxTlf.SelectedItem;
+            FormTelefonEntitat fTelefonEntitat = new FormTelefonEntitat(entitat);
+            fTelefonEntitat.ShowDialog();
         }
     }
 }

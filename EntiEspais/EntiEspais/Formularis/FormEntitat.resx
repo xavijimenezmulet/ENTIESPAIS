@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxId.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="labelId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -174,7 +174,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelId.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="labelTemp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -204,7 +204,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelTemp.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>31</value>
   </data>
   <data name="textBoxTemp.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -231,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxTemp.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="labelNom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelNom.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="textBoxNom.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -285,7 +285,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxNom.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="labelContra.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -315,7 +315,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelContra.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="textBoxContra.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -339,7 +339,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxContra.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="labelAdresa.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -369,7 +369,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelAdresa.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="textBoxDir.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -393,7 +393,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxDir.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonAceptar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -403,7 +403,7 @@
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
   <data name="buttonAceptar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 377</value>
+    <value>210, 449</value>
   </data>
   <data name="buttonAceptar.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 23</value>
@@ -424,7 +424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonAceptar.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="buttonCancelar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -433,7 +433,7 @@
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
   <data name="buttonCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>433, 377</value>
+    <value>451, 449</value>
   </data>
   <data name="buttonCancelar.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 23</value>
@@ -454,7 +454,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonCancelar.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="textBoxNif.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -478,7 +478,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxNif.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="labelNif.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -511,7 +511,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelNif.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="textBoxEmail.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -535,7 +535,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxEmail.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -568,7 +568,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="textBoxImg.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -592,7 +592,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxImg.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -625,7 +625,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="textBoxVid.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -649,7 +649,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxVid.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -682,7 +682,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="textBoxAlt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -706,7 +706,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxAlt.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -739,7 +739,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="textBoxLat.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -763,7 +763,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxLat.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -796,7 +796,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="pictureBoxImagen.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 38</value>
@@ -817,7 +817,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxImagen.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="listBoxEquips.Location" type="System.Drawing.Point, System.Drawing">
     <value>599, 62</value>
@@ -838,13 +838,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listBoxEquips.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="listBoxTlf.Location" type="System.Drawing.Point, System.Drawing">
     <value>343, 296</value>
   </data>
   <data name="listBoxTlf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 56</value>
+    <value>240, 108</value>
   </data>
   <data name="listBoxTlf.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -859,7 +859,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listBoxTlf.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -892,7 +892,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -925,7 +925,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="buttonAddTlf.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -937,16 +937,16 @@
     <value>NoControl</value>
   </data>
   <data name="buttonAddTlf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 329</value>
+    <value>239, 352</value>
   </data>
   <data name="buttonAddTlf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 23</value>
+    <value>102, 23</value>
   </data>
   <data name="buttonAddTlf.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
   <data name="buttonAddTlf.Text" xml:space="preserve">
-    <value>+ Telefon</value>
+    <value>Modificar Telefon</value>
   </data>
   <data name="&gt;&gt;buttonAddTlf.Name" xml:space="preserve">
     <value>buttonAddTlf</value>
@@ -958,7 +958,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonAddTlf.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="buttonAfegirEquip.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -991,7 +991,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonAfegirEquip.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="buttonSelectEquip.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1024,6 +1024,72 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonSelectEquip.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonDelTlf.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonDelTlf.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="buttonDelTlf.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonDelTlf.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 383</value>
+  </data>
+  <data name="buttonDelTlf.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 23</value>
+  </data>
+  <data name="buttonDelTlf.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="buttonDelTlf.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="&gt;&gt;buttonDelTlf.Name" xml:space="preserve">
+    <value>buttonDelTlf</value>
+  </data>
+  <data name="&gt;&gt;buttonDelTlf.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDelTlf.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonDelTlf.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonAdd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7pt</value>
+  </data>
+  <data name="buttonAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 321</value>
+  </data>
+  <data name="buttonAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 23</value>
+  </data>
+  <data name="buttonAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="buttonAdd.Text" xml:space="preserve">
+    <value>Afegir Telefon</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.Name" xml:space="preserve">
+    <value>buttonAdd</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonAdd.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1036,7 +1102,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>805, 577</value>
+    <value>845, 712</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

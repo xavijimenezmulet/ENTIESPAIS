@@ -6,12 +6,14 @@ namespace EntiEspais.Formularis
 {
     public partial class FormEquips : Form
     {
-        static bool algo2;
+        bool cargado;
+        String nom_equip;
+
         public FormEquips()
         {
-            algo2 = false;
+            cargado = false;
             InitializeComponent();
-            algo2 = true;
+            cargado = true;
         }
 
         //Omple la GridView amb tots els equips que hi hagi a la base de dades.
@@ -38,7 +40,6 @@ namespace EntiEspais.Formularis
             Reloj.Start();
             pictureBox7.Select();
             RefrescarEquips();
-
         }
 
         private void buttonAfegirEquipo_Click(object sender, EventArgs e)
@@ -54,7 +55,6 @@ namespace EntiEspais.Formularis
         private void buttonModificarEquipo_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormEquipPerModificar((EQUIPS)dataGridViewEquips.SelectedRows[0].DataBoundItem);
-            //identitatDataGridViewTextBoxColumn
         }
 
         private void buttonEliminarEquipo_Click(object sender, EventArgs e)
@@ -128,31 +128,33 @@ namespace EntiEspais.Formularis
             this.Close();
         }
 
-        private void dataGridViewEquips_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            //MessageBox.Show("Modificació feta.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void algo(object sender, DataGridViewCellEventArgs e)
-        {
-            //Falta comprobar que el nombre del equipo no sea vacío.
-
-            if (algo2)
+            
+            if (cargado)
             {
-                if (dataGridViewEquips.SelectedRows[0].Cells[1].Value == null)
+                
+                if (dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value == null)
                 {
-                    if (dataGridViewEquips.SelectedRows[0].Cells[1].Value.ToString().Length == 0)
-                    {
-                        MessageBox.Show("CAMPOS VACIOS.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("No pot ser un camp nul.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value = nom_equip;   
                 }
+                
                 else
                 {
-                    ORM.EquipsORM.UpdateEquip((EQUIPS)dataGridViewEquips.CurrentRow.DataBoundItem); //funciona
-                    MessageBox.Show("Equip modificat.", "CANVI", MessageBoxButtons.OK, MessageBoxIcon.Information); //funciona
+                    ORM.EquipsORM.UpdateEquip((EQUIPS)dataGridViewEquips.CurrentRow.DataBoundItem);
+                    MessageBox.Show("Equip modificat.", "CANVI", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                
             }
+            
+        }
 
+        private void dataGridViewEquips_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) { 
+            nom_equip = dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
         }
     }
 }

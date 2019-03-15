@@ -219,7 +219,7 @@
     <value>270, 20</value>
   </data>
   <data name="textBoxNom.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;textBoxNom.Name" xml:space="preserve">
     <value>textBoxNom</value>
@@ -276,7 +276,7 @@
     <value>270, 20</value>
   </data>
   <data name="TextBoxEquip.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;TextBoxEquip.Name" xml:space="preserve">
     <value>TextBoxEquip</value>
@@ -364,7 +364,7 @@
     <value>118, 20</value>
   </data>
   <data name="textBoxHinici.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;textBoxHinici.Name" xml:space="preserve">
     <value>textBoxHinici</value>
@@ -418,13 +418,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxEspai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 262</value>
+    <value>279, 289</value>
   </data>
   <data name="textBoxEspai.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 20</value>
   </data>
   <data name="textBoxEspai.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;textBoxEspai.Name" xml:space="preserve">
     <value>textBoxEspai</value>
@@ -448,7 +448,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelEspai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 267</value>
+    <value>185, 292</value>
   </data>
   <data name="labelEspai.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 15</value>
@@ -484,7 +484,7 @@
     <value>270, 20</value>
   </data>
   <data name="textBoxAdmin.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;textBoxAdmin.Name" xml:space="preserve">
     <value>textBoxAdmin</value>
@@ -541,7 +541,7 @@
     <value>270, 56</value>
   </data>
   <data name="listBoxDies.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;listBoxDies.Name" xml:space="preserve">
     <value>listBoxDies</value>
@@ -568,7 +568,7 @@
     <value>128, 20</value>
   </data>
   <data name="textBoxHfi.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;textBoxHfi.Name" xml:space="preserve">
     <value>textBoxHfi</value>
@@ -622,13 +622,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxInst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 294</value>
+    <value>279, 256</value>
   </data>
   <data name="textBoxInst.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 20</value>
   </data>
   <data name="textBoxInst.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;textBoxInst.Name" xml:space="preserve">
     <value>textBoxInst</value>
@@ -652,7 +652,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelInst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 294</value>
+    <value>185, 259</value>
   </data>
   <data name="labelInst.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 15</value>

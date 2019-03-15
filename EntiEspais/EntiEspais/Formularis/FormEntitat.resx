@@ -826,7 +826,7 @@
     <value>180, 251</value>
   </data>
   <data name="listBoxEquips.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;listBoxEquips.Name" xml:space="preserve">
     <value>listBoxEquips</value>
@@ -847,7 +847,7 @@
     <value>240, 108</value>
   </data>
   <data name="listBoxTlf.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;listBoxTlf.Name" xml:space="preserve">
     <value>listBoxTlf</value>
@@ -943,7 +943,7 @@
     <value>102, 23</value>
   </data>
   <data name="buttonAddTlf.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
+    <value>16</value>
   </data>
   <data name="buttonAddTlf.Text" xml:space="preserve">
     <value>Modificar Telefon</value>
@@ -976,7 +976,7 @@
     <value>72, 23</value>
   </data>
   <data name="buttonAfegirEquip.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+    <value>18</value>
   </data>
   <data name="buttonAfegirEquip.Text" xml:space="preserve">
     <value>Afegir</value>
@@ -1009,7 +1009,7 @@
     <value>72, 23</value>
   </data>
   <data name="buttonSelectEquip.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>19</value>
   </data>
   <data name="buttonSelectEquip.Text" xml:space="preserve">
     <value>Seleccionar</value>
@@ -1042,7 +1042,7 @@
     <value>101, 23</value>
   </data>
   <data name="buttonDelTlf.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
+    <value>17</value>
   </data>
   <data name="buttonDelTlf.Text" xml:space="preserve">
     <value>Eliminar</value>
@@ -1075,7 +1075,7 @@
     <value>102, 23</value>
   </data>
   <data name="buttonAdd.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
+    <value>15</value>
   </data>
   <data name="buttonAdd.Text" xml:space="preserve">
     <value>Afegir Telefon</value>

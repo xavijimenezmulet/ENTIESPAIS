@@ -195,7 +195,14 @@ namespace EntiEspais.Formularis
         private void buttonSelectEquip_Click(object sender, EventArgs e)
         {
             EQUIPS equip = (EQUIPS) listBoxEquips.SelectedItem;
-            ObridorFormulari.obrirFormEquipPerModificar(equip);
+            if (equip == null)
+            {
+                DialogResult mensaje = MessageBox.Show("Selecciona un equip!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                ObridorFormulari.obrirFormEquipPerModificar(equip);
+            }
         }
 
         private void buttonDelTlf_Click(object sender, EventArgs e)

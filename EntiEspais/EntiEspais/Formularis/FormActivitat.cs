@@ -36,22 +36,32 @@ namespace EntiEspais.Formularis
 
         private void FormActivitat_Load(object sender, EventArgs e)
         {   
-/*         
-            if(entitat != null)
+         
+            if(activitat != null)
             {
-                textBoxId.Text = entitat.id.ToString();
-                textBoxTemp.Text = entitat.temporada;
-                textBoxNom.Text = entitat.nom;
-                textBoxContra.Text = entitat.contrasenya;
-                textBoxDir.Text = entitat.adresa;
-                textBoxNif.Text = entitat.nif;
-                textBoxEmail.Text = entitat.email;
-                textBoxImg.Text = entitat.ruta_imagen;
-                textBoxAlt.Text = entitat.altitud.ToString();
-                textBoxLat.Text = entitat.latitud.ToString();
-                textBoxVid.Text = entitat.ruta_video;
+                DEMANDA_ACT demanda = DemandaActORM.SelectDemandaActById(activitat.id_demanda_act).First();
+                EQUIPS equip = EquipsORM.SelectAllEquipByid(demanda.id_equip).First();
+                HORES hora = HoresORM.SelectHoresByid(demanda.id_interval_hores).First();
+                ESPAIS espai = EspaisORM.selectEspaisById(demanda.id_espai).First();
+                INSTALACIONS inst = InstalacionsORM.selectInstalacioById(espai.id_instalacio).First();
+                ADMINISTRADORS admin = AdministradorsORM.SelectAdministradorById(activitat.id_admin).First();
+                textBoxId.Text = activitat.id.ToString();
+                textBoxNom.Text = activitat.nom;
+                TextBoxEquip.Text = equip.nom;
+                listBoxDies.DataSource = DiesSemanaORM.SelectAllDiesSemana();
+                listBoxDies.ValueMember = "id";
+                listBoxDies.DisplayMember = "nom";//o dia
+                listBoxDies.SelectedItems.Clear();
+                foreach (DIA_SEMANA dia in demanda.DIA_SEMANA)
+                {
+                    listBoxDies.SelectedItems.Add(dia);
+                }
+                textBoxHinici.Text = hora.inici.ToString();
+                textBoxHfi.Text = hora.fi.ToString();
+                textBoxEspai.Text = espai.nom;
+                textBoxInst.Text = inst.nom;
+                textBoxAdmin.Text = admin.email;
             }
-*/
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)

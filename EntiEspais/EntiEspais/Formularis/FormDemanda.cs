@@ -68,6 +68,10 @@ namespace EntiEspais.Formularis
                 listBoxDies.SelectedItems.Add(dia);
             }
             dataGridViewHorari.Rows.Clear();
+            if(demanda.es_asignada == true)
+            {
+                buttonAssignar.Enabled = false;
+            }
             //-------------CALENDARI----------------------
 
             ESPAIS espai = (ESPAIS)listBoxEspai.SelectedItem;

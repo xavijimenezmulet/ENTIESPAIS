@@ -48,6 +48,8 @@
             this.labelGuion = new System.Windows.Forms.Label();
             this.textBoxInst = new System.Windows.Forms.TextBox();
             this.labelInst = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxEntitat = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxId
@@ -169,11 +171,25 @@
             this.labelInst.ForeColor = System.Drawing.Color.White;
             this.labelInst.Name = "labelInst";
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            // 
+            // textBoxEntitat
+            // 
+            resources.ApplyResources(this.textBoxEntitat, "textBoxEntitat");
+            this.textBoxEntitat.Name = "textBoxEntitat";
+            // 
             // FormActivitat
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
+            this.Controls.Add(this.textBoxEntitat);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxInst);
             this.Controls.Add(this.labelInst);
             this.Controls.Add(this.textBoxHfi);
@@ -225,5 +241,7 @@
         private System.Windows.Forms.Label labelGuion;
         private System.Windows.Forms.TextBox textBoxInst;
         private System.Windows.Forms.Label labelInst;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxEntitat;
     }
 }

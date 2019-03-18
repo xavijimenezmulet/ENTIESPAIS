@@ -45,6 +45,7 @@ namespace EntiEspais.Formularis
                 ESPAIS espai = EspaisORM.selectEspaisById(demanda.id_espai).First();
                 INSTALACIONS inst = InstalacionsORM.selectInstalacioById(espai.id_instalacio).First();
                 ADMINISTRADORS admin = AdministradorsORM.SelectAdministradorById(activitat.id_admin).First();
+                ENTITATS entitat = EntitatsORM.SelectEntitiesByIdiTemp(equip.id_entitat, equip.temporada).First();
                 textBoxId.Text = activitat.id.ToString();
                 textBoxNom.Text = activitat.nom;
                 TextBoxEquip.Text = equip.nom;
@@ -62,87 +63,6 @@ namespace EntiEspais.Formularis
                 textBoxInst.Text = inst.nom;
                 textBoxAdmin.Text = admin.email;
             }
-        }
-
-        private void buttonAceptar_Click(object sender, EventArgs e)
-        {
-/*
-            if (textBoxNom.Text == "")
-            {
-                DialogResult mensaje = MessageBox.Show("Nom obligatori!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxNom.Focus();
-            }
-            else if (textBoxContra.Text == "")
-            {
-                DialogResult mensaje = MessageBox.Show("Contrasenya obligatoria!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxContra.Focus();
-            }
-            else if(textBoxDir.Text == "")
-            {
-                DialogResult mensaje = MessageBox.Show("Direcció obligatoria!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxDir.Focus();
-            }
-            else if (textBoxNif.Text == "")
-            {
-                DialogResult mensaje = MessageBox.Show("NIF obligatori!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxNif.Focus();
-            }
-            else if (textBoxEmail.Text == "")
-            {
-                DialogResult mensaje = MessageBox.Show("Email obligatoria!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxEmail.Focus();
-            }
-            else if (textBoxAlt.Text == "")
-            {
-                //provisional, posar mapa
-                DialogResult mensaje = MessageBox.Show("Coordenades obligatories!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxAlt.Focus();
-            }
-            else if (textBoxLat.Text == "")
-            {
-                //provisional, posar mapa
-                DialogResult mensaje = MessageBox.Show("Coordenades obligatories!", "ATENCIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxLat.Focus();
-            }
-            else
-            {
-                if (entitat != null)
-                {
-                    EntitatsORM.UpdateEntitat(int.Parse(textBoxId.Text),
-                    Utilitats.tempActual(),
-                    textBoxNom.Text,
-                    textBoxContra.Text,
-                    textBoxDir.Text,
-                    textBoxNif.Text,
-                    textBoxEmail.Text,
-                    textBoxImg.Text,
-                    textBoxVid.Text,
-                    float.Parse(textBoxAlt.Text, CultureInfo.InvariantCulture.NumberFormat),
-                    float.Parse(textBoxLat.Text, CultureInfo.InvariantCulture.NumberFormat));
-
-                    DialogResult mensaje = MessageBox.Show("Entitat modificada correctament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    EntitatsORM.InsertEntitat(/*int.Parse(textBoxId.Text),*/
-/*
-                    Utilitats.tempActual(),
-                    textBoxNom.Text,
-                    textBoxContra.Text,
-                    textBoxDir.Text,
-                    textBoxNif.Text,
-                    textBoxEmail.Text,
-                    textBoxImg.Text,
-                    textBoxVid.Text,
-                    float.Parse(textBoxAlt.Text, CultureInfo.InvariantCulture.NumberFormat),
-                    float.Parse(textBoxLat.Text, CultureInfo.InvariantCulture.NumberFormat));
-
-                    DialogResult mensaje = MessageBox.Show("Entitat afegida correctament!", "INFORMACIÓ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-            }
-*/
         }
     }
 }

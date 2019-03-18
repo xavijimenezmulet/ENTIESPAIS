@@ -31,6 +31,7 @@ namespace EntiEspais.Formularis
             pictureBox7.Select();
             //omplirComboTemp();
             bindingSourceActivitats.DataSource = ActivitatsORM.SelectAllActivitats();
+            
         }
 
         private void afegirUsuariToolStripMenuItem_Click(object sender, EventArgs e)
@@ -170,6 +171,68 @@ namespace EntiEspais.Formularis
         {
             ACTIVITATS activitat = (ACTIVITATS)dataGridViewActivitats.SelectedRows[0].DataBoundItem;
             ObridorFormulari.obrirFormActivitat(activitat);
+        }
+
+        private void dataGridViewActivitats_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            int fila;
+            int idAct;
+            ACTIVITATS a;
+            DEMANDA_ACT d;
+            EQUIPS equip;
+            ESPAIS esp;
+            INSTALACIONS inst;
+            ENTITATS ent;
+            if (e.ColumnIndex == 2)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    equip = EquipsORM.SelectAllEquipByid(d.id_equip).First();
+                    e.Value = equip.nom;
+                }
+            }
+            else if (e.ColumnIndex == 4)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    esp = EspaisORM.selectEspaisById(d.id_espai).First();
+                    e.Value = esp.nom;
+                }
+            }
+            else if (e.ColumnIndex == 3)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    esp = EspaisORM.selectEspaisById(d.id_espai).First();
+                    inst = InstalacionsORM.selectInstalacioById(esp.id_instalacio).First();
+                    e.Value = inst.nom;
+                }
+            }
+            else if (e.ColumnIndex == 5)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    equip = EquipsORM.SelectAllEquipByid(d.id_equip).First();
+                    ent = EntitatsORM.SelectEntitiesByIdiTemp(equip.id_entitat, equip.temporada).First();
+                    e.Value = ent.nom;
+                }
+            }
         }
     }
 }

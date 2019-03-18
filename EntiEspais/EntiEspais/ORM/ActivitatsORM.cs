@@ -56,5 +56,18 @@ namespace EntiEspais.ORM
             }
             return mensaje;
         }
+        /**
+        * ENS RETORNA LA SELECT AMB TOTES LES ACTIVITATS
+        **/
+        public static List<ACTIVITATS> SelectActivitatsById(int id)
+        {
+            List<ACTIVITATS> _acts =
+                 (from a in GeneralORM.bd.ACTIVITATS
+                  orderby a.id
+                  where a.id.Equals(id)
+                  select a).ToList();
+
+            return _acts;
+        }
     }
 }

@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxId.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="labelId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -174,7 +174,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelId.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="labelNom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -183,7 +183,7 @@
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="labelNom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 69</value>
+    <value>185, 67</value>
   </data>
   <data name="labelNom.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 15</value>
@@ -204,7 +204,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelNom.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="textBoxNom.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -231,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxNom.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="labelEquip.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -240,7 +240,7 @@
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="labelEquip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 105</value>
+    <value>185, 103</value>
   </data>
   <data name="labelEquip.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 15</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelEquip.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="TextBoxEquip.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -288,7 +288,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextBoxEquip.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="labelDies.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -297,7 +297,7 @@
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="labelDies.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 145</value>
+    <value>185, 166</value>
   </data>
   <data name="labelDies.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 15</value>
@@ -318,7 +318,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelDies.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonEnrere.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -328,7 +328,7 @@
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
   <data name="buttonEnrere.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 372</value>
+    <value>321, 389</value>
   </data>
   <data name="buttonEnrere.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 23</value>
@@ -349,7 +349,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonEnrere.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="textBoxHinici.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -358,13 +358,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxHinici.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 221</value>
+    <value>279, 238</value>
   </data>
   <data name="textBoxHinici.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 20</value>
   </data>
   <data name="textBoxHinici.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;textBoxHinici.Name" xml:space="preserve">
     <value>textBoxHinici</value>
@@ -376,7 +376,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxHinici.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="labelHorari.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -388,7 +388,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelHorari.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 226</value>
+    <value>185, 243</value>
   </data>
   <data name="labelHorari.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 15</value>
@@ -409,7 +409,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelHorari.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="textBoxEspai.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -418,13 +418,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxEspai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 289</value>
+    <value>279, 306</value>
   </data>
   <data name="textBoxEspai.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 20</value>
   </data>
   <data name="textBoxEspai.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;textBoxEspai.Name" xml:space="preserve">
     <value>textBoxEspai</value>
@@ -436,7 +436,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxEspai.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="labelEspai.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -448,7 +448,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelEspai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 292</value>
+    <value>185, 309</value>
   </data>
   <data name="labelEspai.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 15</value>
@@ -469,7 +469,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelEspai.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="textBoxAdmin.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -478,13 +478,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxAdmin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 323</value>
+    <value>279, 340</value>
   </data>
   <data name="textBoxAdmin.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 20</value>
   </data>
   <data name="textBoxAdmin.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;textBoxAdmin.Name" xml:space="preserve">
     <value>textBoxAdmin</value>
@@ -496,7 +496,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxAdmin.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -508,7 +508,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 325</value>
+    <value>184, 342</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 15</value>
@@ -529,19 +529,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="listBoxDies.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="listBoxDies.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 145</value>
+    <value>279, 166</value>
   </data>
   <data name="listBoxDies.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 56</value>
   </data>
   <data name="listBoxDies.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;listBoxDies.Name" xml:space="preserve">
     <value>listBoxDies</value>
@@ -553,7 +553,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listBoxDies.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="textBoxHfi.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -562,13 +562,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxHfi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>421, 221</value>
+    <value>421, 238</value>
   </data>
   <data name="textBoxHfi.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 20</value>
   </data>
   <data name="textBoxHfi.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;textBoxHfi.Name" xml:space="preserve">
     <value>textBoxHfi</value>
@@ -580,7 +580,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxHfi.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="labelGuion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -592,7 +592,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelGuion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 223</value>
+    <value>403, 240</value>
   </data>
   <data name="labelGuion.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 15</value>
@@ -613,7 +613,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelGuion.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="textBoxInst.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -622,13 +622,13 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="textBoxInst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 256</value>
+    <value>279, 273</value>
   </data>
   <data name="textBoxInst.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 20</value>
   </data>
   <data name="textBoxInst.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;textBoxInst.Name" xml:space="preserve">
     <value>textBoxInst</value>
@@ -640,7 +640,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxInst.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="labelInst.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -652,7 +652,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelInst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>185, 259</value>
+    <value>185, 276</value>
   </data>
   <data name="labelInst.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 15</value>
@@ -673,7 +673,67 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelInst.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 135</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 15</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Entitat</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="textBoxEntitat.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxEntitat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="textBoxEntitat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 133</value>
+  </data>
+  <data name="textBoxEntitat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 20</value>
+  </data>
+  <data name="textBoxEntitat.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxEntitat.Name" xml:space="preserve">
+    <value>textBoxEntitat</value>
+  </data>
+  <data name="&gt;&gt;textBoxEntitat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxEntitat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxEntitat.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

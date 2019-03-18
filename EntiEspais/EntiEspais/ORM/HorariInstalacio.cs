@@ -34,14 +34,18 @@ namespace EntiEspais.ORM
         }
 
         //Update alta horario de instalacion
-        public static String modificarHorariInstalacio(int id_dia, int id_hora, int id_instalacio)
+        public static String modificarHorariInstalacio(int id_dia, int id_hora_antigua, int id_hora, int id_instalacio)
         {
             String mensaje = "";
-            HORARI_INSTALACIO _horari = ORM.GeneralORM.bd.HORARI_INSTALACIO.Find(id_instalacio);
+            HORARI_INSTALACIO _horari = ORM.GeneralORM.bd.HORARI_INSTALACIO.Find(id_dia, id_hora_antigua, id_instalacio);
+            ORM.GeneralORM.bd.HORARI_INSTALACIO.Remove(_horari);
 
-            _horari.id_dia = id_dia;
-            _horari.id_hores = id_hora;
+            HORARI_INSTALACIO _horarialta = new HORARI_INSTALACIO();
+            _horarialta.id_dia = id_dia;
+            _horarialta.id_hores = id_hora;
+            _horarialta.id_instalacio = id_instalacio;
 
+            GeneralORM.bd.HORARI_INSTALACIO.Add(_horarialta);
             mensaje = GeneralORM.SaveChanges();
 
             return mensaje;

@@ -30,6 +30,7 @@ namespace EntiEspais.Formularis
 
         List<TimeSpan> hInici;
         List<TimeSpan> hFinal;
+        List<int> ids = new List<int>();
 
         public FormInstalacioAlta()
         {
@@ -84,6 +85,7 @@ namespace EntiEspais.Formularis
                     HORES h = i.HORES;
                     hInici.Add(h.inici);
                     hFinal.Add(h.fi);
+                    ids.Add(h.id);
                 }
 
                 rellenarCombosHorarios();
@@ -147,10 +149,12 @@ namespace EntiEspais.Formularis
                         //Añadir HORARIO_INSTALACION domingo
                         String domingo = ORM.HorariInstalacio.insertHorariInstalacio(7, idHoras[6], id_instalacion);
 
+                        this.Close();
                     }
                     //Modificar
                     else
                     {
+
                         String mensaje = ORM.InstalacionsORM.modificarinstalacio(_instalacio.id, textBoxNom.Text, textBoxContrasenya.Text, textBoxAdresa.Text,
                              comboBoxTipus.Text, textBoxEmail.Text, textBoxRutaImatge.Text, float.Parse(textBoxAltitud.Text), float.Parse(textBoxLatitud.Text));
 
@@ -164,25 +168,25 @@ namespace EntiEspais.Formularis
                         }
 
                         //Modificar HORARIO_INSTALACION lunes
-                        String lunes = ORM.HorariInstalacio.modificarHorariInstalacio(1, idHoras[0], _instalacio.id);
+                        String lunes = ORM.HorariInstalacio.modificarHorariInstalacio(1, ids[0], idHoras[0], _instalacio.id);
 
                         //Modificar HORARIO_INSTALACION martes
-                        String martes = ORM.HorariInstalacio.modificarHorariInstalacio(2, idHoras[1], _instalacio.id);
+                        String martes = ORM.HorariInstalacio.modificarHorariInstalacio(2, ids[1], idHoras[1], _instalacio.id);
 
                         //Modificar HORARIO_INSTALACION miercoles
-                        String miercoles = ORM.HorariInstalacio.modificarHorariInstalacio(3, idHoras[2], _instalacio.id);
+                        String miercoles = ORM.HorariInstalacio.modificarHorariInstalacio(3, ids[2], idHoras[2], _instalacio.id);
 
                         //Modificar HORARIO_INSTALACION jueves
-                        String jueves = ORM.HorariInstalacio.modificarHorariInstalacio(4, idHoras[3], _instalacio.id);
+                        String jueves = ORM.HorariInstalacio.modificarHorariInstalacio(4, ids[3], idHoras[3], _instalacio.id);
 
                         //Modificar HORARIO_INSTALACION viernes
-                        String viernes = ORM.HorariInstalacio.modificarHorariInstalacio(5, idHoras[4], _instalacio.id);
+                        String viernes = ORM.HorariInstalacio.modificarHorariInstalacio(5, ids[4], idHoras[4], _instalacio.id);
 
                         //Modificar HORARIO_INSTALACION sabado
-                        String sabado = ORM.HorariInstalacio.modificarHorariInstalacio(6, idHoras[5], _instalacio.id);
+                        String sabado = ORM.HorariInstalacio.modificarHorariInstalacio(6, ids[5], idHoras[5], _instalacio.id);
 
                         //Modificar HORARIO_INSTALACION domingo
-                        String domingo = ORM.HorariInstalacio.modificarHorariInstalacio(7, idHoras[6], _instalacio.id);
+                        String domingo = ORM.HorariInstalacio.modificarHorariInstalacio(7, ids[6], idHoras[6], _instalacio.id);
 
                         this.Close();
                     }

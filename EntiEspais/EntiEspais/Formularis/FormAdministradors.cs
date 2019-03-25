@@ -53,7 +53,7 @@ namespace EntiEspais.Formularis
 
         private void toolStripButtonMain_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormPrincipal();
+            this.Close();
         }
 
         private void toolStripButtonUsuaris_Click(object sender, EventArgs e)
@@ -176,6 +176,35 @@ namespace EntiEspais.Formularis
         private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ObridorFormulari.obrirFormEntitats();
+            this.Close();
+        }
+
+        private void llistaEquipsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEquips();
+            this.Close();
+        }
+
+        private void llistatInstallacionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacions();
+            this.Close();
+        }
+
+        private void llistatEspaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEspais();
+            this.Close();
+        }
+
+        private void llistatActivitatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormActivitats();
+            this.Close();
+        }
+
+        private void iniciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

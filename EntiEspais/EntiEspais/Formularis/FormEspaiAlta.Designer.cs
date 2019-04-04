@@ -151,6 +151,7 @@
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "FormEspaiAlta";
             this.Text = "ALTA ESPAI";
             this.Load += new System.EventHandler(this.FormEspaiAlta_Load);

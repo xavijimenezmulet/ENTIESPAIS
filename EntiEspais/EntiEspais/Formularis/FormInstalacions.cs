@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntiEspais.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,20 +60,20 @@ namespace EntiEspais.Formularis
                     {
                         MessageBox.Show("ESBORRAT");
                     }
-                    
+
                 }
                 else
                 {
                     MessageBox.Show("ACCIÓ CANCELADA");
                 }
             }
-                
+
         }
 
         //Botón modificar
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-            if(dataGridViewInstalacions.RowCount == 0)
+            if (dataGridViewInstalacions.RowCount == 0)
             {
                 MessageBox.Show("SELECCIONA UN ELEMENT");
             }
@@ -93,6 +94,51 @@ namespace EntiEspais.Formularis
         private void refrescarGrid()
         {
             bindingSourceInstalacio.DataSource = ORM.InstalacionsORM.selectInstalacions();
+        }
+
+        //Modificar al doble click
+        private void dataGridViewInstalacions_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewInstalacions.RowCount == 0)
+            {
+                MessageBox.Show("SELECCIONA UN ELEMENT");
+            }
+            else
+            {
+                Classes.ObridorFormulari.obrirFormInstalacioModificar((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+            }
+        }
+
+        //Eliminar al supr
+        private void dataGridViewInstalacions_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (dataGridViewInstalacions.RowCount == 0)
+            {
+                MessageBox.Show("SELECCIONA UN ELEMENT");
+            }
+            else
+            {
+                DialogResult dr = MessageBox.Show("Desitja esborrar aquesta instalació?", "ATENCIÓ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (dr == DialogResult.Yes)
+                {
+                    String mensaje = ORM.InstalacionsORM.eliminarInstalacio((INSTALACIONS)dataGridViewInstalacions.SelectedRows[0].DataBoundItem);
+
+                    if (mensaje != "")
+                    {
+                        MessageBox.Show(mensaje, "ACCIÓ CANCELADA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ESBORRAT");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("ACCIÓ CANCELADA");
+                }
+            }
         }
     }
 }

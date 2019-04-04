@@ -36,12 +36,12 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewEspais = new System.Windows.Forms.DataGridView();
-            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +91,6 @@
             // dataGridViewEspais
             // 
             this.dataGridViewEspais.AllowUserToAddRows = false;
-            this.dataGridViewEspais.AllowUserToDeleteRows = false;
             this.dataGridViewEspais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -140,10 +139,8 @@
             this.dataGridViewEspais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEspais.Size = new System.Drawing.Size(510, 228);
             this.dataGridViewEspais.TabIndex = 34;
-            // 
-            // bindingSourceEspais
-            // 
-            this.bindingSourceEspais.DataSource = typeof(EntiEspais.ESPAIS);
+            this.dataGridViewEspais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEspais_CellDoubleClick);
+            this.dataGridViewEspais.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEspais_UserDeletingRow);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -180,6 +177,10 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // bindingSourceEspais
+            // 
+            this.bindingSourceEspais.DataSource = typeof(EntiEspais.ESPAIS);
+            // 
             // FormEspais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,8 +193,11 @@
             this.Controls.Add(this.buttonAfegir);
             this.Controls.Add(this.dataGridViewEspais);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "FormEspais";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESPAIS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.FormEspais_Activated);
             this.Load += new System.EventHandler(this.FormEspais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).EndInit();

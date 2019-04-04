@@ -80,6 +80,7 @@
             this.bindingSourceDijousInici = new System.Windows.Forms.BindingSource(this.components);
             this.label20 = new System.Windows.Forms.Label();
             this.comboBoxDivendresFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDivendresFinal = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDivendresInici = new System.Windows.Forms.ComboBox();
             this.bindingSourceDivendresInici = new System.Windows.Forms.BindingSource(this.components);
             this.label21 = new System.Windows.Forms.Label();
@@ -93,7 +94,6 @@
             this.comboBoxDiumengeInici = new System.Windows.Forms.ComboBox();
             this.bindingSourceDiumengeInici = new System.Windows.Forms.BindingSource(this.components);
             this.label29 = new System.Windows.Forms.Label();
-            this.bindingSourceDivendresFinal = new System.Windows.Forms.BindingSource(this.components);
             this.buttonDeleteDilluns = new System.Windows.Forms.Button();
             this.buttonDeleteDimarts = new System.Windows.Forms.Button();
             this.buttonDeleteDimecres = new System.Windows.Forms.Button();
@@ -109,12 +109,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -682,6 +682,10 @@
             this.comboBoxDivendresFinal.TabIndex = 100;
             this.comboBoxDivendresFinal.ValueMember = "id";
             // 
+            // bindingSourceDivendresFinal
+            // 
+            this.bindingSourceDivendresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDivendresInici
             // 
             this.comboBoxDivendresInici.DataSource = this.bindingSourceDivendresInici;
@@ -800,10 +804,6 @@
             this.label29.Size = new System.Drawing.Size(12, 15);
             this.label29.TabIndex = 104;
             this.label29.Text = "-";
-            // 
-            // bindingSourceDivendresFinal
-            // 
-            this.bindingSourceDivendresFinal.DataSource = typeof(EntiEspais.HORES);
             // 
             // buttonDeleteDilluns
             // 
@@ -955,6 +955,7 @@
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "FormInstalacioAlta";
             this.Text = "ALTA INSTALACIÓ";
             this.Load += new System.EventHandler(this.FormInstalacioAlta_Load);
@@ -966,12 +967,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

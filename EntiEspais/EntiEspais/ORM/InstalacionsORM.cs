@@ -49,6 +49,7 @@ namespace EntiEspais.ORM
             String mensaje = "";
 
             _instalacio.HORARI_INSTALACIO.Clear();
+            _instalacio.TELEFONS_INSTALACIONS.Clear();
             mensaje = ORM.GeneralORM.SaveChanges();
             
             ORM.GeneralORM.bd.INSTALACIONS.Remove(_instalacio);

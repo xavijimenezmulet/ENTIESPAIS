@@ -12,6 +12,7 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using EntiEspais.Classes;
 
 namespace EntiEspais.Formularis
 {

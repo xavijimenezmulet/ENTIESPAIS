@@ -111,6 +111,10 @@ namespace EntiEspais.Formularis
                     MessageBox.Show("Email mal escrit!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     textBoxEmail.Select();
                 }
+                else if (textBoxNom.Text == "" || textBoxContrasenya.Text == "" || textBoxAdresa.Text == "" || textBoxRutaImatge.Text == "")
+                {
+                    MessageBox.Show("Datos vacios", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
                 else
                 {
                     //Añadir

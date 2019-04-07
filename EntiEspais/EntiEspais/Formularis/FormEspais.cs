@@ -133,6 +133,7 @@ namespace EntiEspais.Formularis
                 else
                 {
                     MessageBox.Show("ACCIÓ CANCELADA");
+                    e.Cancel = true;
                 }
             }
         }

@@ -38,8 +38,8 @@
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxInstalacio = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +152,10 @@
             this.comboBoxInstalacio.TabIndex = 73;
             this.comboBoxInstalacio.ValueMember = "id";
             // 
+            // bindingSourceInstalacions
+            // 
+            this.bindingSourceInstalacions.DataSource = typeof(EntiEspais.INSTALACIONS);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -164,10 +168,6 @@
             this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 72;
             this.label3.Text = "INSTALACIÓ";
-            // 
-            // bindingSourceInstalacions
-            // 
-            this.bindingSourceInstalacions.DataSource = typeof(EntiEspais.INSTALACIONS);
             // 
             // FormEspaisTodosAlta
             // 
@@ -185,7 +185,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "FormEspaisTodosAlta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEspaisTodosAlta";
             this.Load += new System.EventHandler(this.FormEspaisTodosAlta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();

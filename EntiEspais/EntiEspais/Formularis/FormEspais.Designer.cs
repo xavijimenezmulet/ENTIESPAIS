@@ -197,7 +197,6 @@
             this.Name = "FormEspais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESPAIS";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.FormEspais_Activated);
             this.Load += new System.EventHandler(this.FormEspais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).EndInit();

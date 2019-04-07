@@ -29,13 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewInstalacions = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rutaimagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.altitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.latitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceInstalacio = new System.Windows.Forms.BindingSource(this.components);
             this.buttonEspais = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonMain = new System.Windows.Forms.ToolStripButton();
@@ -89,20 +99,10 @@
             this.horesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relacionatsAmbAndroidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fAQsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contrasenyaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rutaimagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.altitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.latitutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceInstalacio = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminar
@@ -156,14 +156,14 @@
             this.dataGridViewInstalacions.AutoGenerateColumns = false;
             this.dataGridViewInstalacions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewInstalacions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInstalacions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstalacions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewInstalacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewInstalacions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -176,34 +176,101 @@
             this.altitutDataGridViewTextBoxColumn,
             this.latitutDataGridViewTextBoxColumn});
             this.dataGridViewInstalacions.DataSource = this.bindingSourceInstalacio;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInstalacions.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewInstalacions.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewInstalacions.EnableHeadersVisualStyles = false;
             this.dataGridViewInstalacions.GridColor = System.Drawing.Color.White;
             this.dataGridViewInstalacions.Location = new System.Drawing.Point(12, 86);
             this.dataGridViewInstalacions.MultiSelect = false;
             this.dataGridViewInstalacions.Name = "dataGridViewInstalacions";
             this.dataGridViewInstalacions.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInstalacions.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstalacions.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewInstalacions.RowHeadersVisible = false;
             this.dataGridViewInstalacions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewInstalacions.Size = new System.Drawing.Size(905, 308);
             this.dataGridViewInstalacions.TabIndex = 30;
             this.dataGridViewInstalacions.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInstalacions_CellDoubleClick);
             this.dataGridViewInstalacions.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewInstalacions_UserDeletingRow);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contrasenyaDataGridViewTextBoxColumn
+            // 
+            this.contrasenyaDataGridViewTextBoxColumn.DataPropertyName = "contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn.HeaderText = "contrasenya";
+            this.contrasenyaDataGridViewTextBoxColumn.Name = "contrasenyaDataGridViewTextBoxColumn";
+            this.contrasenyaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adresaDataGridViewTextBoxColumn
+            // 
+            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "adresa";
+            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipusDataGridViewTextBoxColumn
+            // 
+            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "tipus";
+            this.tipusDataGridViewTextBoxColumn.HeaderText = "tipus";
+            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
+            this.tipusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rutaimagenDataGridViewTextBoxColumn
+            // 
+            this.rutaimagenDataGridViewTextBoxColumn.DataPropertyName = "ruta_imagen";
+            this.rutaimagenDataGridViewTextBoxColumn.HeaderText = "ruta_imagen";
+            this.rutaimagenDataGridViewTextBoxColumn.Name = "rutaimagenDataGridViewTextBoxColumn";
+            this.rutaimagenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // altitutDataGridViewTextBoxColumn
+            // 
+            this.altitutDataGridViewTextBoxColumn.DataPropertyName = "altitut";
+            this.altitutDataGridViewTextBoxColumn.HeaderText = "altitut";
+            this.altitutDataGridViewTextBoxColumn.Name = "altitutDataGridViewTextBoxColumn";
+            this.altitutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // latitutDataGridViewTextBoxColumn
+            // 
+            this.latitutDataGridViewTextBoxColumn.DataPropertyName = "latitut";
+            this.latitutDataGridViewTextBoxColumn.HeaderText = "latitut";
+            this.latitutDataGridViewTextBoxColumn.Name = "latitutDataGridViewTextBoxColumn";
+            this.latitutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceInstalacio
+            // 
+            this.bindingSourceInstalacio.DataSource = typeof(EntiEspais.INSTALACIONS);
             // 
             // buttonEspais
             // 
@@ -248,6 +315,7 @@
             this.toolStripButtonMain.Name = "toolStripButtonMain";
             this.toolStripButtonMain.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonMain.Text = "MENU PRINCIPAL";
+            this.toolStripButtonMain.Click += new System.EventHandler(this.toolStripButtonMain_Click);
             // 
             // toolStripSeparator1
             // 
@@ -262,6 +330,7 @@
             this.toolStripButtonEntitats.Name = "toolStripButtonEntitats";
             this.toolStripButtonEntitats.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonEntitats.Text = "ENTITATS";
+            this.toolStripButtonEntitats.Click += new System.EventHandler(this.toolStripButtonEntitats_Click);
             // 
             // toolStripButtonEquips
             // 
@@ -280,6 +349,7 @@
             this.toolStripButtonInstalacions.Name = "toolStripButtonInstalacions";
             this.toolStripButtonInstalacions.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonInstalacions.Text = "INSTAL·LACIONS";
+            this.toolStripButtonInstalacions.Click += new System.EventHandler(this.toolStripButtonInstalacions_Click);
             // 
             // toolStripButtonEspais
             // 
@@ -289,6 +359,7 @@
             this.toolStripButtonEspais.Name = "toolStripButtonEspais";
             this.toolStripButtonEspais.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonEspais.Text = "ESPAIS";
+            this.toolStripButtonEspais.Click += new System.EventHandler(this.toolStripButtonEspais_Click);
             // 
             // toolStripButtonActivitats
             // 
@@ -298,6 +369,7 @@
             this.toolStripButtonActivitats.Name = "toolStripButtonActivitats";
             this.toolStripButtonActivitats.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonActivitats.Text = "ACTIVITATS";
+            this.toolStripButtonActivitats.Click += new System.EventHandler(this.toolStripButtonActivitats_Click);
             // 
             // toolStripButtonUsuaris
             // 
@@ -307,6 +379,7 @@
             this.toolStripButtonUsuaris.Name = "toolStripButtonUsuaris";
             this.toolStripButtonUsuaris.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonUsuaris.Text = "USUARIS";
+            this.toolStripButtonUsuaris.Click += new System.EventHandler(this.toolStripButtonUsuaris_Click);
             // 
             // toolStripButtonAltres
             // 
@@ -316,6 +389,7 @@
             this.toolStripButtonAltres.Name = "toolStripButtonAltres";
             this.toolStripButtonAltres.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonAltres.Text = "FAQ\'S ANDROID";
+            this.toolStripButtonAltres.Click += new System.EventHandler(this.fAQsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -330,6 +404,7 @@
             this.toolStripButtonSortir.Name = "toolStripButtonSortir";
             this.toolStripButtonSortir.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonSortir.Text = "SORTIR";
+            this.toolStripButtonSortir.Click += new System.EventHandler(this.toolStripButtonSortir_Click);
             // 
             // menuStrip1
             // 
@@ -704,73 +779,6 @@
             this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.fAQsToolStripMenuItem.Text = "FAQ\'s";
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contrasenyaDataGridViewTextBoxColumn
-            // 
-            this.contrasenyaDataGridViewTextBoxColumn.DataPropertyName = "contrasenya";
-            this.contrasenyaDataGridViewTextBoxColumn.HeaderText = "contrasenya";
-            this.contrasenyaDataGridViewTextBoxColumn.Name = "contrasenyaDataGridViewTextBoxColumn";
-            this.contrasenyaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adresaDataGridViewTextBoxColumn
-            // 
-            this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
-            this.adresaDataGridViewTextBoxColumn.HeaderText = "adresa";
-            this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
-            this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipusDataGridViewTextBoxColumn
-            // 
-            this.tipusDataGridViewTextBoxColumn.DataPropertyName = "tipus";
-            this.tipusDataGridViewTextBoxColumn.HeaderText = "tipus";
-            this.tipusDataGridViewTextBoxColumn.Name = "tipusDataGridViewTextBoxColumn";
-            this.tipusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rutaimagenDataGridViewTextBoxColumn
-            // 
-            this.rutaimagenDataGridViewTextBoxColumn.DataPropertyName = "ruta_imagen";
-            this.rutaimagenDataGridViewTextBoxColumn.HeaderText = "ruta_imagen";
-            this.rutaimagenDataGridViewTextBoxColumn.Name = "rutaimagenDataGridViewTextBoxColumn";
-            this.rutaimagenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // altitutDataGridViewTextBoxColumn
-            // 
-            this.altitutDataGridViewTextBoxColumn.DataPropertyName = "altitut";
-            this.altitutDataGridViewTextBoxColumn.HeaderText = "altitut";
-            this.altitutDataGridViewTextBoxColumn.Name = "altitutDataGridViewTextBoxColumn";
-            this.altitutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // latitutDataGridViewTextBoxColumn
-            // 
-            this.latitutDataGridViewTextBoxColumn.DataPropertyName = "latitut";
-            this.latitutDataGridViewTextBoxColumn.HeaderText = "latitut";
-            this.latitutDataGridViewTextBoxColumn.Name = "latitutDataGridViewTextBoxColumn";
-            this.latitutDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bindingSourceInstalacio
-            // 
-            this.bindingSourceInstalacio.DataSource = typeof(EntiEspais.INSTALACIONS);
-            // 
             // FormInstalacions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -794,11 +802,11 @@
             this.Activated += new System.EventHandler(this.FormInstalacions_Activated);
             this.Load += new System.EventHandler(this.FormInstalacions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

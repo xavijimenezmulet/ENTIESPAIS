@@ -35,6 +35,12 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.dataGridViewEspais = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.esexteriorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idinstalacioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonMain = new System.Windows.Forms.ToolStripButton();
@@ -88,16 +94,10 @@
             this.horesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relacionatsAmbAndroidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fAQsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.esexteriorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idinstalacioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminar
@@ -131,7 +131,6 @@
             // dataGridViewEspais
             // 
             this.dataGridViewEspais.AllowUserToAddRows = false;
-            this.dataGridViewEspais.AllowUserToDeleteRows = false;
             this.dataGridViewEspais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -180,6 +179,47 @@
             this.dataGridViewEspais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEspais.Size = new System.Drawing.Size(507, 244);
             this.dataGridViewEspais.TabIndex = 38;
+            this.dataGridViewEspais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEspais_CellDoubleClick);
+            this.dataGridViewEspais.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEspais_UserDeletingRow);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preuDataGridViewTextBoxColumn
+            // 
+            this.preuDataGridViewTextBoxColumn.DataPropertyName = "preu";
+            this.preuDataGridViewTextBoxColumn.HeaderText = "preu";
+            this.preuDataGridViewTextBoxColumn.Name = "preuDataGridViewTextBoxColumn";
+            this.preuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // esexteriorDataGridViewCheckBoxColumn
+            // 
+            this.esexteriorDataGridViewCheckBoxColumn.DataPropertyName = "es_exterior";
+            this.esexteriorDataGridViewCheckBoxColumn.HeaderText = "es_exterior";
+            this.esexteriorDataGridViewCheckBoxColumn.Name = "esexteriorDataGridViewCheckBoxColumn";
+            this.esexteriorDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // idinstalacioDataGridViewTextBoxColumn
+            // 
+            this.idinstalacioDataGridViewTextBoxColumn.DataPropertyName = "id_instalacio";
+            this.idinstalacioDataGridViewTextBoxColumn.HeaderText = "id_instalacio";
+            this.idinstalacioDataGridViewTextBoxColumn.Name = "idinstalacioDataGridViewTextBoxColumn";
+            this.idinstalacioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceEspais
+            // 
+            this.bindingSourceEspais.DataSource = typeof(EntiEspais.ESPAIS);
             // 
             // buttonAfegir
             // 
@@ -680,45 +720,6 @@
             this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.fAQsToolStripMenuItem.Text = "FAQ\'s";
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // preuDataGridViewTextBoxColumn
-            // 
-            this.preuDataGridViewTextBoxColumn.DataPropertyName = "preu";
-            this.preuDataGridViewTextBoxColumn.HeaderText = "preu";
-            this.preuDataGridViewTextBoxColumn.Name = "preuDataGridViewTextBoxColumn";
-            this.preuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // esexteriorDataGridViewCheckBoxColumn
-            // 
-            this.esexteriorDataGridViewCheckBoxColumn.DataPropertyName = "es_exterior";
-            this.esexteriorDataGridViewCheckBoxColumn.HeaderText = "es_exterior";
-            this.esexteriorDataGridViewCheckBoxColumn.Name = "esexteriorDataGridViewCheckBoxColumn";
-            this.esexteriorDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // idinstalacioDataGridViewTextBoxColumn
-            // 
-            this.idinstalacioDataGridViewTextBoxColumn.DataPropertyName = "id_instalacio";
-            this.idinstalacioDataGridViewTextBoxColumn.HeaderText = "id_instalacio";
-            this.idinstalacioDataGridViewTextBoxColumn.Name = "idinstalacioDataGridViewTextBoxColumn";
-            this.idinstalacioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bindingSourceEspais
-            // 
-            this.bindingSourceEspais.DataSource = typeof(EntiEspais.ESPAIS);
-            // 
             // FormEspaisTodos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,6 +734,7 @@
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.dataGridViewEspais);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "FormEspaisTodos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESPAIS";
@@ -740,11 +742,11 @@
             this.Activated += new System.EventHandler(this.FormEspaisTodos_Activated);
             this.Load += new System.EventHandler(this.FormEspaisTodos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -957,6 +957,7 @@
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "FormInstalacioAlta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTA INSTALACIÓ";
             this.Load += new System.EventHandler(this.FormInstalacioAlta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).EndInit();

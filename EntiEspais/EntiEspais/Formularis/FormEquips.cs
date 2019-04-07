@@ -156,5 +156,13 @@ namespace EntiEspais.Formularis
             nom_equip = dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value.ToString();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Utilitats.exportGridToPDF(dataGridViewEquips, "hola");
+        }
+
+
+
     }
 }

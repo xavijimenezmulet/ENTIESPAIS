@@ -445,32 +445,32 @@ namespace EntiEspais.Formularis
         private void rellenarCombosHorarios()
         {
             //Lunes
-            comboBoxDillunsInici.Text = hInici[0].ToString();
-            comboBoxDillunsFinal.Text = hFinal[0].ToString();
+            comboBoxDillunsInici.SelectedItem = hInici[0];
+            comboBoxDillunsFinal.SelectedItem = hFinal[0];
 
             //Martes
-            comboBoxDimartsInici.Text = hInici[1].ToString();
-            comboBoxDimartsFinal.Text = hFinal[1].ToString();
+            comboBoxDimartsInici.SelectedItem = hInici[1].ToString();
+            comboBoxDimartsFinal.SelectedItem = hFinal[1].ToString();
 
             //Miercoles
-            comboBoxDimecresInici.Text = hInici[2].ToString();
-            comboBoxDimecresFinal.Text = hFinal[2].ToString();
+            comboBoxDimecresInici.SelectedItem = hInici[2].ToString();
+            comboBoxDimecresFinal.SelectedItem = hFinal[2].ToString();
 
             //Jueves
-            comboBoxDijousInici.Text = hInici[3].ToString();
-            comboBoxDijousFinal.Text = hFinal[3].ToString();
+            comboBoxDijousInici.SelectedItem = hInici[3].ToString();
+            comboBoxDijousFinal.SelectedItem = hFinal[3].ToString();
 
             //Viernes
-            comboBoxDivendresInici.Text = hInici[4].ToString();
-            comboBoxDivendresFinal.Text = hFinal[4].ToString();
+            comboBoxDivendresInici.SelectedItem = hInici[4].ToString();
+            comboBoxDivendresFinal.SelectedItem = hFinal[4].ToString();
 
             //Sábado
-            comboBoxDissabteInici.Text = hInici[5].ToString();
-            comboBoxDissabteFinal.Text = hFinal[5].ToString();
+            comboBoxDissabteInici.SelectedItem = hInici[5].ToString();
+            comboBoxDissabteFinal.SelectedItem = hFinal[5].ToString();
 
             //Domingo
-            comboBoxDiumengeInici.Text = hInici[6].ToString();
-            comboBoxDiumengeFinal.Text = hFinal[6].ToString();
+            comboBoxDiumengeInici.SelectedItem = hInici[6].ToString();
+            comboBoxDiumengeFinal.SelectedItem = hFinal[6].ToString();
         }
 
         //Botón cancelar
@@ -577,6 +577,11 @@ namespace EntiEspais.Formularis
 
             //Mover marker a la posición
             markerGoogle.Position = new PointLatLng(lat, lng);
+        }
+
+        private void bindingSourceDillunsFinal_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

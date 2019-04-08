@@ -47,7 +47,7 @@ namespace EntiEspais.ORM
         public static String eliminarInstalacio(INSTALACIONS _instalacio)
         {
             String mensaje = "";
-            
+
             ORM.GeneralORM.bd.INSTALACIONS.Remove(_instalacio);
 
             mensaje = ORM.GeneralORM.SaveChanges();

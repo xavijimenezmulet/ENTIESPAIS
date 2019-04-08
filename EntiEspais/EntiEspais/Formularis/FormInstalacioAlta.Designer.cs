@@ -534,7 +534,6 @@
             // bindingSourceDillunsFinal
             // 
             this.bindingSourceDillunsFinal.DataSource = typeof(EntiEspais.HORES);
-            this.bindingSourceDillunsFinal.CurrentChanged += new System.EventHandler(this.bindingSourceDillunsFinal_CurrentChanged);
             // 
             // comboBoxDimartsFinal
             // 

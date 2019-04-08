@@ -95,6 +95,12 @@ namespace EntiEspais.ORM
                 SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
                 missatgeError = MissatgesError(sqlEx);
             }
+            catch(InvalidOperationException io)
+            {
+                RejectChanges();
+                SqlException sqlEx = (SqlException)io.InnerException.InnerException;
+                missatgeError = MissatgesError(sqlEx);
+            }
 
             return missatgeError;
         }

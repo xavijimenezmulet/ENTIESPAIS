@@ -72,15 +72,5 @@ namespace EntiEspais.ORM
 
             return mensaje;
         }
-        //Select un espacio por id
-        public static List<ESPAIS> selectEspaisById(int id)
-        {
-            List<ESPAIS> _espais = (from e in GeneralORM.bd.ESPAIS
-                                    orderby e.id
-                                    where e.id.Equals(id)
-                                    select e).ToList();
-
-            return _espais;
-        }
     }
 }

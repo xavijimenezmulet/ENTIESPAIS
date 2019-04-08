@@ -73,26 +73,10 @@ namespace EntiEspais.ORM
         **/
         public static List<TELEFONS_ENTITATS> SelectTelefonsEntitat(ENTITATS entitat)
         {
-            int id = entitat.id;
-            string temporada = entitat.temporada;
             List<TELEFONS_ENTITATS> _telefons =
                  (from a in GeneralORM.bd.TELEFONS_ENTITATS
                   orderby a.id
-                  where a.id_entitat.Equals(id) && a.temporada_entitat.Equals(temporada)
-                  select a).ToList();
-
-            return _telefons;
-
-        }
-        /**
-        * ENS RETORNA LA SELECT AMB UN TELEFON PER ID
-        **/
-        public static List<TELEFONS_ENTITATS> SelectTelefonsById(int id)
-        {
-            List<TELEFONS_ENTITATS> _telefons =
-                 (from a in GeneralORM.bd.TELEFONS_ENTITATS
-                  orderby a.id
-                  where a.id.Equals(id)
+                  where a.id_entitat.Equals(entitat.id) && a.temporada_entitat.Equals(entitat.temporada)
                   select a).ToList();
 
             return _telefons;

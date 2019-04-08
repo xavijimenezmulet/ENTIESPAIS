@@ -380,7 +380,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEntiEspais.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ORM\ActivitatsORM.cs" />
     <Compile Include="ORM\AdministradorsORM.cs" />
     <Compile Include="ORM\CategoriaPerEdatORM.cs" />
     <Compile Include="ORM\CategoriaPerEquipORM.cs" />
@@ -393,6 +392,7 @@
     <Compile Include="ORM\EsportsORM.cs" />
     <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
+    <Compile Include="ORM\HorariInstalacio.cs" />
     <Compile Include="ORM\HoresORM.cs" />
     <Compile Include="ORM\InstalacionsORM.cs" />
     <Compile Include="ORM\SexesORM.cs" />
@@ -563,7 +563,6 @@
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_EQUIP.datasource" />
     <None Include="Properties\DataSources\COMPETICIONS.datasource" />
-    <None Include="Properties\DataSources\DEMANDA_ACT.datasource" />
     <None Include="Properties\DataSources\DIA_SEMANA.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\ESPORTS.datasource" />

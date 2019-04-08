@@ -93,19 +93,5 @@ namespace EntiEspais.ORM
 
             GeneralORM.bd.SaveChanges();
         }
-        /**
-        * ENS RETORNA LA SELECT AMB TOTES LES ENTITATS
-        **/
-        public static List<ENTITATS> SelectEntitiesByIdiTemp(int id, String temporada)
-        {
-            List<ENTITATS> _entitats =
-                 (from e in GeneralORM.bd.ENTITATS
-                  orderby e.nom
-                  where e.temporada.Equals(temporada) && e.id.Equals(id)
-                  select e).ToList();
-
-            return _entitats;
-
-        }
     }
 }

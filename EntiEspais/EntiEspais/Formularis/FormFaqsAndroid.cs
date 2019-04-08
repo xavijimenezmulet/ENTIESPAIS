@@ -95,57 +95,5 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormFaqAndroid((FAQS)dataGridViewFaqsAndroid.SelectedRows[0].DataBoundItem);
         }
-
-        private void iniciToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void llistaEntitatsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormEntitats();
-            this.Close();
-        }
-
-        private void llistaEquipsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormEquips();
-            this.Close();
-        }
-
-        private void llistatInstallacionsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormInstalacions();
-            this.Close();
-        }
-
-        private void llistatEspaisToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormEspais();
-            this.Close();
-        }
-
-        private void llistatActivitatsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormActivitats();
-            this.Close();
-        }
-
-        private void llistatUsuarisToolStripAdministradors_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormAdministradors();
-            this.Close();
-        }
-
-        private void toolStripButtonMain_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void toolStripButtonEntitats_Click(object sender, EventArgs e)
-        {
-            ObridorFormulari.obrirFormEntitats();
-            this.Close();
-        }
     }
 }

@@ -6,7 +6,7 @@ namespace EntiEspais.Formularis
     public partial class FormEquip : Form
     {
         EQUIPS equip2;
-        ENTITATS entitat;
+
         public FormEquip()
         {
             InitializeComponent();
@@ -24,12 +24,7 @@ namespace EntiEspais.Formularis
             this.Text = titulo;
             equip2 = equip;
         }
-        public FormEquip(string titulo, ENTITATS entitat)
-        {
-            InitializeComponent();
-            this.Text = titulo;
-            this.entitat = entitat;
-        }
+
         //Tanca el formulari una vegada fem clic al botó cancel·lar.
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
@@ -90,16 +85,9 @@ namespace EntiEspais.Formularis
                     {
                         equip3.te_discapacitat = true;
                     } else { equip3.te_discapacitat = false; }
-                    if (entitat != null)
-                    {
-                        equip3.id_entitat = entitat.id;
-                        equip3.temporada = entitat.temporada;
-                    }
-                    else
-                    {
-                        equip3.id_entitat = int.Parse(comboBoxEntitat.SelectedValue.ToString());
-                        equip3.temporada = Classes.Utilitats.tempActual();
-                    }
+
+                    equip3.id_entitat = int.Parse(comboBoxEntitat.SelectedValue.ToString());
+                    equip3.temporada = Classes.Utilitats.tempActual();
                     equip3.id_competicio = int.Parse(comboBoxCompeticio.SelectedValue.ToString());
                     equip3.id_categoria_edat = int.Parse(comboBoxCategoriaEdat.SelectedValue.ToString());
                     equip3.id_categoria_equip = int.Parse(comboBoxCategoriaEquip.SelectedValue.ToString());
@@ -159,10 +147,9 @@ namespace EntiEspais.Formularis
             comboBoxCompeticio.ValueMember = "id";
             comboBoxCompeticio.DisplayMember = "nom";
             //
-            //comboBoxEntitat.DataSource = ORM.EntitatsORM.SelectAllEntities();
-            //comboBoxEntitat.ValueMember = "id";
-            //comboBoxEntitat.DisplayMember = "nom";
-            bindingSourceEntitats.DataSource = ORM.EntitatsORM.SelectAllEntities();
+            comboBoxEntitat.DataSource = ORM.EntitatsORM.SelectAllEntities();
+            comboBoxEntitat.ValueMember = "id";
+            comboBoxEntitat.DisplayMember = "nom";
             //
             comboBoxCategoriaEdat.DataSource = ORM.CategoriaPerEdatORM.SelectAllCategoriesPerEdat();
             comboBoxCategoriaEdat.ValueMember = "id";
@@ -185,21 +172,11 @@ namespace EntiEspais.Formularis
         private void FormEquip_Load(object sender, EventArgs e)
         {
             RellenarComboBox();
-            comboBoxEntitat.SelectedIndex = -1;
-            comboBoxCompeticio.SelectedIndex = -1;
-            comboBoxCategoriaEdat.SelectedIndex = -1;
-            comboBoxCategoriaEquip.SelectedIndex = -1;
-            comboBoxSexe.SelectedIndex = -1;
-            comboBoxEsport.SelectedIndex = -1;
+
             if (this.Text == "Afegir equip")
             {
                 labelid.Visible = false;
                 textBoxid.Visible = false;
-                if (entitat != null)
-                {
-                    comboBoxEntitat.SelectedValue = entitat.id;
-                    comboBoxEntitat.Enabled = false;
-                }
             }
             else
             {

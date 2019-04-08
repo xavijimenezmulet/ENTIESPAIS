@@ -123,7 +123,6 @@ namespace EntiEspais.Formularis
             Reloj.Start();
             pictureBox7.Select();
             bindingSourceDemandes.DataSource = DemandaActORM.SelectAllDemandaAct();
-            bindingSourceEquips.DataSource = EquipsORM.SelectAllEquips();
         }
 
         //METODE ELIMINAR DEMANDA

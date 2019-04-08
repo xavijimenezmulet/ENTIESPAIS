@@ -22,6 +22,7 @@
         <EntityTypeShape EntityType="ENTI_ESPAISModel.HORES" Width="1.5" PointX="10.25" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.INSTALACIONS" Width="1.5" PointX="6.5" PointY="24.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.SEXE" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ENTI_ESPAISModel.TELEFONS_ENTITATS" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="ENTI_ESPAISModel.TELEFONS_INSTALACIONS" Width="1.5" PointX="3" PointY="26.5" IsExpanded="true" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_ACTIVITATS_ADMINISTRADORS" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_ACTIVITATS_DEMANDA_ACT" ManuallyRouted="false" />
@@ -36,6 +37,7 @@
         <AssociationConnector Association="ENTI_ESPAISModel.FK_HORARI_ACTIVITAT_DIA_SEMANA" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_HORARI_INSTALACIO_DIA_SEMANA" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_EQUIPS_ENTITAT" ManuallyRouted="false" />
+        <AssociationConnector Association="ENTI_ESPAISModel.FK_TELEFONS_ENTITATS_ENTITATS" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_EQUIPS_ESPORTS" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_EQUIPS_SEXE" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_ESPAIS_INSTALACIO" ManuallyRouted="false" />
@@ -44,8 +46,6 @@
         <AssociationConnector Association="ENTI_ESPAISModel.FK_HORARI_INSTALACIO_INSTALACIONS" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.FK_TELEFONS_INSTALACIONS_TELEFONS_INSTALACIONS" ManuallyRouted="false" />
         <AssociationConnector Association="ENTI_ESPAISModel.DIAS_DEMANDA" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ENTI_ESPAISModel.TELEFONS_ENTITATS" Width="1.5" PointX="4" PointY="10.375" />
-        <AssociationConnector Association="ENTI_ESPAISModel.FK_TELEFONS_ENTITATS_ENTITATS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

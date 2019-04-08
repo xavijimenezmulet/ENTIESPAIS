@@ -91,8 +91,7 @@
             this.numespaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numdiesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.esasignadaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.idequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
+            this.idequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceDemandes = new System.Windows.Forms.BindingSource(this.components);
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -103,7 +102,6 @@
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
@@ -718,19 +716,9 @@
             // 
             this.idequipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.idequipDataGridViewTextBoxColumn.DataPropertyName = "id_equip";
-            this.idequipDataGridViewTextBoxColumn.DataSource = this.bindingSourceEquips;
-            this.idequipDataGridViewTextBoxColumn.DisplayMember = "nom";
-            this.idequipDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.idequipDataGridViewTextBoxColumn.HeaderText = "id_equip";
             this.idequipDataGridViewTextBoxColumn.Name = "idequipDataGridViewTextBoxColumn";
             this.idequipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idequipDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.idequipDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.idequipDataGridViewTextBoxColumn.ValueMember = "id";
-            // 
-            // bindingSourceEquips
-            // 
-            this.bindingSourceEquips.DataSource = typeof(EntiEspais.EQUIPS);
             // 
             // bindingSourceDemandes
             // 
@@ -771,7 +759,7 @@
             this.buttonAcceptar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonAcceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAcceptar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAcceptar.Location = new System.Drawing.Point(915, 153);
+            this.buttonAcceptar.Location = new System.Drawing.Point(915, 111);
             this.buttonAcceptar.Name = "buttonAcceptar";
             this.buttonAcceptar.Size = new System.Drawing.Size(160, 23);
             this.buttonAcceptar.TabIndex = 18;
@@ -785,7 +773,7 @@
             this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonEliminar.Location = new System.Drawing.Point(915, 324);
+            this.buttonEliminar.Location = new System.Drawing.Point(915, 179);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
             this.buttonEliminar.TabIndex = 19;
@@ -799,11 +787,11 @@
             this.buttonAssignar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonAssignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAssignar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAssignar.Location = new System.Drawing.Point(915, 239);
+            this.buttonAssignar.Location = new System.Drawing.Point(915, 150);
             this.buttonAssignar.Name = "buttonAssignar";
             this.buttonAssignar.Size = new System.Drawing.Size(160, 23);
             this.buttonAssignar.TabIndex = 20;
-            this.buttonAssignar.Text = "Veure Demanda";
+            this.buttonAssignar.Text = "Assignar";
             this.buttonAssignar.UseVisualStyleBackColor = false;
             this.buttonAssignar.Click += new System.EventHandler(this.buttonAssignar_Click);
             // 
@@ -835,7 +823,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDemandes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
@@ -905,13 +892,12 @@
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonAssignar;
         private System.Windows.Forms.BindingSource bindingSourceDemandes;
-        private System.Windows.Forms.BindingSource bindingSourceEquips;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numespaisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numdiesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn esasignadaDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn idequipDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idequipDataGridViewTextBoxColumn;
     }
 }

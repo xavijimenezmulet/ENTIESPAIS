@@ -188,8 +188,8 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="numero" Type="varchar" MaxLength="9" Nullable="false" />
-          <Property Name="id_entitat" Type="int" />
-          <Property Name="temporada_entitat" Type="varchar" MaxLength="9" />
+          <Property Name="id_entitat" Type="int" Nullable="false" />
+          <Property Name="temporada_entitat" Type="varchar" MaxLength="9" Nullable="false" />
         </EntityType>
         <EntityType Name="TELEFONS_INSTALACIONS">
           <Key>
@@ -454,7 +454,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TELEFONS_ENTITATS_ENTITATS">
-          <End Role="ENTITATS" Type="Self.ENTITATS" Multiplicity="0..1" />
+          <End Role="ENTITATS" Type="Self.ENTITATS" Multiplicity="1" />
           <End Role="TELEFONS_ENTITATS" Type="Self.TELEFONS_ENTITATS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ENTITATS">
@@ -693,7 +693,7 @@
           <Property Name="altitud" Type="Double" Nullable="false" />
           <Property Name="latitud" Type="Double" Nullable="false" />
           <NavigationProperty Name="EQUIPS" Relationship="Self.FK_EQUIPS_ENTITAT" FromRole="ENTITATS" ToRole="EQUIPS" />
-          <NavigationProperty Name="TELEFONS_ENTITATS" Relationship="ENTI_ESPAISModel.FK_TELEFONS_ENTITATS_ENTITATS" FromRole="ENTITATS" ToRole="TELEFONS_ENTITATS" />
+          <NavigationProperty Name="TELEFONS_ENTITATS" Relationship="Self.FK_TELEFONS_ENTITATS_ENTITATS" FromRole="ENTITATS" ToRole="TELEFONS_ENTITATS" />
         </EntityType>
         <EntityType Name="EQUIPS">
           <Key>
@@ -807,6 +807,16 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tipus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="EQUIPS" Relationship="Self.FK_EQUIPS_SEXE" FromRole="SEXE" ToRole="EQUIPS" />
+        </EntityType>
+        <EntityType Name="TELEFONS_ENTITATS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="numero" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_entitat" Type="Int32" Nullable="false" />
+          <Property Name="temporada_entitat" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ENTITATS" Relationship="Self.FK_TELEFONS_ENTITATS_ENTITATS" FromRole="TELEFONS_ENTITATS" ToRole="ENTITATS" />
         </EntityType>
         <EntityType Name="TELEFONS_INSTALACIONS">
           <Key>
@@ -975,6 +985,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TELEFONS_ENTITATS_ENTITATS">
+          <End Role="ENTITATS" Type="Self.ENTITATS" Multiplicity="1" />
+          <End Role="TELEFONS_ENTITATS" Type="Self.TELEFONS_ENTITATS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ENTITATS">
+              <PropertyRef Name="id" />
+              <PropertyRef Name="temporada" />
+            </Principal>
+            <Dependent Role="TELEFONS_ENTITATS">
+              <PropertyRef Name="id_entitat" />
+              <PropertyRef Name="temporada_entitat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_EQUIPS_ESPORTS">
           <End Role="ESPORTS" Type="Self.ESPORTS" Multiplicity="1" />
           <End Role="EQUIPS" Type="Self.EQUIPS" Multiplicity="*" />
@@ -1081,6 +1105,7 @@
           <EntitySet Name="HORES" EntityType="Self.HORES" />
           <EntitySet Name="INSTALACIONS" EntityType="Self.INSTALACIONS" />
           <EntitySet Name="SEXE" EntityType="Self.SEXE" />
+          <EntitySet Name="TELEFONS_ENTITATS" EntityType="Self.TELEFONS_ENTITATS" />
           <EntitySet Name="TELEFONS_INSTALACIONS" EntityType="Self.TELEFONS_INSTALACIONS" />
           <AssociationSet Name="FK_ACTIVITATS_ADMINISTRADORS" Association="Self.FK_ACTIVITATS_ADMINISTRADORS">
             <End Role="ADMINISTRADORS" EntitySet="ADMINISTRADORS" />
@@ -1134,6 +1159,10 @@
             <End Role="ENTITATS" EntitySet="ENTITATS" />
             <End Role="EQUIPS" EntitySet="EQUIPS" />
           </AssociationSet>
+          <AssociationSet Name="FK_TELEFONS_ENTITATS_ENTITATS" Association="Self.FK_TELEFONS_ENTITATS_ENTITATS">
+            <End Role="ENTITATS" EntitySet="ENTITATS" />
+            <End Role="TELEFONS_ENTITATS" EntitySet="TELEFONS_ENTITATS" />
+          </AssociationSet>
           <AssociationSet Name="FK_EQUIPS_ESPORTS" Association="Self.FK_EQUIPS_ESPORTS">
             <End Role="ESPORTS" EntitySet="ESPORTS" />
             <End Role="EQUIPS" EntitySet="EQUIPS" />
@@ -1166,36 +1195,7 @@
             <End Role="DEMANDA_ACT" EntitySet="DEMANDA_ACT" />
             <End Role="DIA_SEMANA" EntitySet="DIA_SEMANA" />
           </AssociationSet>
-          <EntitySet Name="TELEFONS_ENTITATS" EntityType="ENTI_ESPAISModel.TELEFONS_ENTITATS" />
-          <AssociationSet Name="FK_TELEFONS_ENTITATS_ENTITATS" Association="ENTI_ESPAISModel.FK_TELEFONS_ENTITATS_ENTITATS">
-            <End Role="ENTITATS" EntitySet="ENTITATS" />
-            <End Role="TELEFONS_ENTITATS" EntitySet="TELEFONS_ENTITATS" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="TELEFONS_ENTITATS">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="numero" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
-          <Property Name="id_entitat" Type="Int32" />
-          <Property Name="temporada_entitat" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="ENTITATS" Relationship="ENTI_ESPAISModel.FK_TELEFONS_ENTITATS_ENTITATS" FromRole="TELEFONS_ENTITATS" ToRole="ENTITATS" />
-        </EntityType>
-        <Association Name="FK_TELEFONS_ENTITATS_ENTITATS">
-          <End Type="ENTI_ESPAISModel.ENTITATS" Role="ENTITATS" Multiplicity="0..1" />
-          <End Type="ENTI_ESPAISModel.TELEFONS_ENTITATS" Role="TELEFONS_ENTITATS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ENTITATS">
-              <PropertyRef Name="id" />
-              <PropertyRef Name="temporada" />
-            </Principal>
-            <Dependent Role="TELEFONS_ENTITATS">
-              <PropertyRef Name="id_entitat" />
-              <PropertyRef Name="temporada_entitat" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1383,6 +1383,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TELEFONS_ENTITATS">
+            <EntityTypeMapping TypeName="ENTI_ESPAISModel.TELEFONS_ENTITATS">
+              <MappingFragment StoreEntitySet="TELEFONS_ENTITATS">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="id_entitat" ColumnName="id_entitat" />
+                <ScalarProperty Name="temporada_entitat" ColumnName="temporada_entitat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TELEFONS_INSTALACIONS">
             <EntityTypeMapping TypeName="ENTI_ESPAISModel.TELEFONS_INSTALACIONS">
               <MappingFragment StoreEntitySet="TELEFONS_INSTALACIONS">
@@ -1400,16 +1410,6 @@
               <ScalarProperty Name="id" ColumnName="id_dia_semana" />
             </EndProperty>
           </AssociationSetMapping>
-          <EntitySetMapping Name="TELEFONS_ENTITATS">
-            <EntityTypeMapping TypeName="ENTI_ESPAISModel.TELEFONS_ENTITATS">
-              <MappingFragment StoreEntitySet="TELEFONS_ENTITATS">
-                <ScalarProperty Name="temporada_entitat" ColumnName="temporada_entitat" />
-                <ScalarProperty Name="id_entitat" ColumnName="id_entitat" />
-                <ScalarProperty Name="numero" ColumnName="numero" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

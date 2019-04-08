@@ -14,19 +14,11 @@ namespace EntiEspais.Formularis
     public partial class FormTelefonEntitat : Form
     {
         public TELEFONS_ENTITATS tEntitat;
-        public ENTITATS entitat;
         public FormTelefonEntitat()
         {
             this.Text = "NOU TELÈFON ENTITAT";
             tEntitat = new TELEFONS_ENTITATS();
             InitializeComponent();
-        }
-        public FormTelefonEntitat(ENTITATS entitat)
-        {
-            this.Text = "NOU TELÈFON ENTITAT";
-            tEntitat = new TELEFONS_ENTITATS();
-           InitializeComponent();
-            this.entitat = entitat;
         }
 
         public FormTelefonEntitat(TELEFONS_ENTITATS tEntitat)
@@ -53,14 +45,9 @@ namespace EntiEspais.Formularis
             {
                 textBoxNom.Text = this.tEntitat.numero.ToString();
                 comboBoxEntitat.SelectedValue = tEntitat.id_entitat;
-                comboBoxEntitat.Enabled = false;
                
             }
-            if(entitat != null)
-            {
-                comboBoxEntitat.SelectedValue = entitat.id;
-                comboBoxEntitat.Enabled = false;
-            }
+            
         }
 
         private void buttonAceptar_Click(object sender, EventArgs e)

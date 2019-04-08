@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
@@ -156,14 +156,14 @@
             this.dataGridViewInstalacions.AutoGenerateColumns = false;
             this.dataGridViewInstalacions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dataGridViewInstalacions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInstalacions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle61.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstalacions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
             this.dataGridViewInstalacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewInstalacions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -176,28 +176,28 @@
             this.altitutDataGridViewTextBoxColumn,
             this.latitutDataGridViewTextBoxColumn});
             this.dataGridViewInstalacions.DataSource = this.bindingSourceInstalacio;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInstalacions.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewInstalacions.DefaultCellStyle = dataGridViewCellStyle62;
             this.dataGridViewInstalacions.EnableHeadersVisualStyles = false;
             this.dataGridViewInstalacions.GridColor = System.Drawing.Color.White;
             this.dataGridViewInstalacions.Location = new System.Drawing.Point(12, 86);
             this.dataGridViewInstalacions.MultiSelect = false;
             this.dataGridViewInstalacions.Name = "dataGridViewInstalacions";
             this.dataGridViewInstalacions.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInstalacions.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle63.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInstalacions.RowHeadersDefaultCellStyle = dataGridViewCellStyle63;
             this.dataGridViewInstalacions.RowHeadersVisible = false;
             this.dataGridViewInstalacions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewInstalacions.Size = new System.Drawing.Size(905, 308);
@@ -389,7 +389,7 @@
             this.toolStripButtonAltres.Name = "toolStripButtonAltres";
             this.toolStripButtonAltres.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonAltres.Text = "FAQ\'S ANDROID";
-            this.toolStripButtonAltres.Click += new System.EventHandler(this.fAQsToolStripMenuItem_Click);
+            this.toolStripButtonAltres.Click += new System.EventHandler(this.toolStripButtonAltres_Click);
             // 
             // toolStripSeparator2
             // 
@@ -474,6 +474,7 @@
             this.llistaEntitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.llistaEntitatsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.llistaEntitatsToolStripMenuItem.Text = "Llista Entitats";
+            this.llistaEntitatsToolStripMenuItem.Click += new System.EventHandler(this.llistaEntitatsToolStripMenuItem_Click);
             // 
             // afegirEntitatToolStripMenuItem
             // 
@@ -483,6 +484,7 @@
             | System.Windows.Forms.Keys.E)));
             this.afegirEntitatToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.afegirEntitatToolStripMenuItem.Text = "Afegir Entitat";
+            this.afegirEntitatToolStripMenuItem.Click += new System.EventHandler(this.afegirEntitatToolStripMenuItem_Click);
             // 
             // equipsToolStripMenuItem
             // 
@@ -502,6 +504,7 @@
             this.llistaEquipsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.llistaEquipsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.llistaEquipsToolStripMenuItem.Text = "Llistat Equips";
+            this.llistaEquipsToolStripMenuItem.Click += new System.EventHandler(this.llistaEquipsToolStripMenuItem_Click);
             // 
             // afegirEquipToolStripMenuItem
             // 
@@ -511,6 +514,7 @@
             | System.Windows.Forms.Keys.T)));
             this.afegirEquipToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.afegirEquipToolStripMenuItem.Text = "Afegir Equip";
+            this.afegirEquipToolStripMenuItem.Click += new System.EventHandler(this.afegirEquipToolStripMenuItem_Click);
             // 
             // installacionsToolStripMenuItem
             // 
@@ -529,6 +533,7 @@
             this.llistatInstallacionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.llistatInstallacionsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.llistatInstallacionsToolStripMenuItem.Text = "Llistat Instal·lacions";
+            this.llistatInstallacionsToolStripMenuItem.Click += new System.EventHandler(this.llistatInstallacionsToolStripMenuItem_Click_1);
             // 
             // afegirInstallacióToolStripMenuItem
             // 
@@ -538,6 +543,7 @@
             | System.Windows.Forms.Keys.I)));
             this.afegirInstallacióToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.afegirInstallacióToolStripMenuItem.Text = "Afegir Instal·lació";
+            this.afegirInstallacióToolStripMenuItem.Click += new System.EventHandler(this.afegirInstallacióToolStripMenuItem_Click_1);
             // 
             // espaisToolStripMenuItem
             // 
@@ -557,6 +563,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click_1);
             // 
             // afegirEspaiToolStripMenuItem
             // 
@@ -566,6 +573,7 @@
             | System.Windows.Forms.Keys.P)));
             this.afegirEspaiToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.afegirEspaiToolStripMenuItem.Text = "Afegir Espai";
+            this.afegirEspaiToolStripMenuItem.Click += new System.EventHandler(this.afegirEspaiToolStripMenuItem_Click_1);
             // 
             // activitatsToolStripMenuItem
             // 
@@ -584,6 +592,7 @@
             this.llistatActivitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.llistatActivitatsToolStripMenuItem.Text = "Llistat Activitats";
+            this.llistatActivitatsToolStripMenuItem.Click += new System.EventHandler(this.llistatActivitatsToolStripMenuItem_Click);
             // 
             // afegirActivitatToolStripMenuItem
             // 
@@ -593,6 +602,7 @@
             | System.Windows.Forms.Keys.A)));
             this.afegirActivitatToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.afegirActivitatToolStripMenuItem.Text = "Llistat Demanda Activitats";
+            this.afegirActivitatToolStripMenuItem.Click += new System.EventHandler(this.afegirActivitatToolStripMenuItem_Click);
             // 
             // altresToolStripMenuItem
             // 
@@ -612,6 +622,7 @@
             this.llistatUsuarisToolStripAdministradors.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.llistatUsuarisToolStripAdministradors.Size = new System.Drawing.Size(215, 22);
             this.llistatUsuarisToolStripAdministradors.Text = "Llistat Usuaris";
+            this.llistatUsuarisToolStripAdministradors.Click += new System.EventHandler(this.llistatUsuarisToolStripAdministradors_Click);
             // 
             // afegirUsuariToolStripAdministrador
             // 
@@ -621,6 +632,7 @@
             | System.Windows.Forms.Keys.U)));
             this.afegirUsuariToolStripAdministrador.Size = new System.Drawing.Size(215, 22);
             this.afegirUsuariToolStripAdministrador.Text = "Afegir Usuari";
+            this.afegirUsuariToolStripAdministrador.Click += new System.EventHandler(this.afegirUsuariToolStripAdministrador_Click);
             // 
             // altresToolStripMenuItem1
             // 
@@ -653,6 +665,7 @@
             this.categoriaEdatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.categoriaEdatToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.categoriaEdatToolStripMenuItem.Text = "Categoria Edat";
+            this.categoriaEdatToolStripMenuItem.Click += new System.EventHandler(this.categoriaEdatToolStripMenuItem_Click);
             // 
             // categoriaEquipToolStripMenuItem
             // 
@@ -661,6 +674,7 @@
             this.categoriaEquipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.categoriaEquipToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.categoriaEquipToolStripMenuItem.Text = "Categoria Equip";
+            this.categoriaEquipToolStripMenuItem.Click += new System.EventHandler(this.categoriaEquipToolStripMenuItem_Click);
             // 
             // sexeToolStripMenuItem
             // 
@@ -669,6 +683,7 @@
             this.sexeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.sexeToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.sexeToolStripMenuItem.Text = "Sexe";
+            this.sexeToolStripMenuItem.Click += new System.EventHandler(this.sexeToolStripMenuItem_Click);
             // 
             // competicionsToolStripMenuItem
             // 
@@ -677,6 +692,7 @@
             this.competicionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.competicionsToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.competicionsToolStripMenuItem.Text = "Competicions";
+            this.competicionsToolStripMenuItem.Click += new System.EventHandler(this.competicionsToolStripMenuItem_Click);
             // 
             // teléfonsToolStripMenuItem
             // 
@@ -695,6 +711,7 @@
             this.telefonsEntitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
             this.telefonsEntitatsToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.telefonsEntitatsToolStripMenuItem.Text = "Telefons Entitats";
+            this.telefonsEntitatsToolStripMenuItem.Click += new System.EventHandler(this.telefonsEntitatsToolStripMenuItem_Click);
             // 
             // telefonsInstalacionsToolStripMenuItem
             // 
@@ -704,6 +721,7 @@
             | System.Windows.Forms.Keys.G)));
             this.telefonsInstalacionsToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.telefonsInstalacionsToolStripMenuItem.Text = "Telefons Instalacions";
+            this.telefonsInstalacionsToolStripMenuItem.Click += new System.EventHandler(this.telefonsInstalacionsToolStripMenuItem_Click);
             // 
             // relacionatsAmbDatesToolStripMenuItem
             // 
@@ -752,6 +770,7 @@
             this.diaSemanaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.diaSemanaToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
             this.diaSemanaToolStripMenuItem.Text = "Dia Semana";
+            this.diaSemanaToolStripMenuItem.Click += new System.EventHandler(this.diaSemanaToolStripMenuItem_Click);
             // 
             // horesToolStripMenuItem
             // 
@@ -776,8 +795,9 @@
             this.fAQsToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._012_idea;
             this.fAQsToolStripMenuItem.Name = "fAQsToolStripMenuItem";
             this.fAQsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.fAQsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fAQsToolStripMenuItem.Text = "FAQ\'s";
+            this.fAQsToolStripMenuItem.Click += new System.EventHandler(this.fAQsToolStripMenuItem_Click);
             // 
             // FormInstalacions
             // 

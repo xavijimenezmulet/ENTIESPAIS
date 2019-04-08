@@ -162,6 +162,12 @@ namespace EntiEspais.Formularis
             Utilitats.exportGridToPDF(dataGridViewEquips, "hola");
         }
 
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Cursor = Cursors.Hand;
+        }
+
+        
 
 
     }

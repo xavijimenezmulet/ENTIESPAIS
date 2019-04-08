@@ -92,23 +92,23 @@
             this.fAQsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bindingSourceEquipsEntitat = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEquipsCompeticio = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceCategoriaEdatEquips = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceCategoriaEquips = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceSexeEquips = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEquipsEsport = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tediscapacitatDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.identitatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceEquipsEntitat = new System.Windows.Forms.BindingSource(this.components);
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcompeticioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceEquipsCompeticio = new System.Windows.Forms.BindingSource(this.components);
             this.idcategoriaedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceCategoriaEdatEquips = new System.Windows.Forms.BindingSource(this.components);
             this.idcategoriaequipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceCategoriaEquips = new System.Windows.Forms.BindingSource(this.components);
             this.idsexeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceSexeEquips = new System.Windows.Forms.BindingSource(this.components);
             this.idesportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceEquipsEsport = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquips)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -744,40 +744,14 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::EntiEspais.Properties.Resources.pdf1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(973, 120);
+            this.pictureBox1.Location = new System.Drawing.Point(976, 135);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(41, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // bindingSourceEquipsEntitat
-            // 
-            this.bindingSourceEquipsEntitat.DataSource = typeof(EntiEspais.ENTITATS);
-            // 
-            // bindingSourceEquipsCompeticio
-            // 
-            this.bindingSourceEquipsCompeticio.DataSource = typeof(EntiEspais.COMPETICIONS);
-            // 
-            // bindingSourceCategoriaEdatEquips
-            // 
-            this.bindingSourceCategoriaEdatEquips.DataSource = typeof(EntiEspais.CATEGORIA_EDAT);
-            // 
-            // bindingSourceCategoriaEquips
-            // 
-            this.bindingSourceCategoriaEquips.DataSource = typeof(EntiEspais.CATEGORIA_EQUIP);
-            // 
-            // bindingSourceSexeEquips
-            // 
-            this.bindingSourceSexeEquips.DataSource = typeof(EntiEspais.SEXE);
-            // 
-            // bindingSourceEquipsEsport
-            // 
-            this.bindingSourceEquipsEsport.DataSource = typeof(EntiEspais.ESPORTS);
-            // 
-            // bindingSourceEquips
-            // 
-            this.bindingSourceEquips.DataSource = typeof(EntiEspais.EQUIPS);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -814,6 +788,10 @@
             this.identitatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.identitatDataGridViewTextBoxColumn.ValueMember = "id";
             // 
+            // bindingSourceEquipsEntitat
+            // 
+            this.bindingSourceEquipsEntitat.DataSource = typeof(EntiEspais.ENTITATS);
+            // 
             // temporadaDataGridViewTextBoxColumn
             // 
             this.temporadaDataGridViewTextBoxColumn.DataPropertyName = "temporada";
@@ -833,6 +811,10 @@
             this.idcompeticioDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idcompeticioDataGridViewTextBoxColumn.ValueMember = "id";
             // 
+            // bindingSourceEquipsCompeticio
+            // 
+            this.bindingSourceEquipsCompeticio.DataSource = typeof(EntiEspais.COMPETICIONS);
+            // 
             // idcategoriaedatDataGridViewTextBoxColumn
             // 
             this.idcategoriaedatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -846,6 +828,10 @@
             this.idcategoriaedatDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idcategoriaedatDataGridViewTextBoxColumn.ValueMember = "id";
             this.idcategoriaedatDataGridViewTextBoxColumn.Width = 128;
+            // 
+            // bindingSourceCategoriaEdatEquips
+            // 
+            this.bindingSourceCategoriaEdatEquips.DataSource = typeof(EntiEspais.CATEGORIA_EDAT);
             // 
             // idcategoriaequipDataGridViewTextBoxColumn
             // 
@@ -861,6 +847,10 @@
             this.idcategoriaequipDataGridViewTextBoxColumn.ValueMember = "id";
             this.idcategoriaequipDataGridViewTextBoxColumn.Width = 134;
             // 
+            // bindingSourceCategoriaEquips
+            // 
+            this.bindingSourceCategoriaEquips.DataSource = typeof(EntiEspais.CATEGORIA_EQUIP);
+            // 
             // idsexeDataGridViewTextBoxColumn
             // 
             this.idsexeDataGridViewTextBoxColumn.DataPropertyName = "id_sexe";
@@ -873,6 +863,10 @@
             this.idsexeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idsexeDataGridViewTextBoxColumn.ValueMember = "id";
             // 
+            // bindingSourceSexeEquips
+            // 
+            this.bindingSourceSexeEquips.DataSource = typeof(EntiEspais.SEXE);
+            // 
             // idesportDataGridViewTextBoxColumn
             // 
             this.idesportDataGridViewTextBoxColumn.DataPropertyName = "id_esport";
@@ -884,6 +878,14 @@
             this.idesportDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.idesportDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.idesportDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // bindingSourceEquipsEsport
+            // 
+            this.bindingSourceEquipsEsport.DataSource = typeof(EntiEspais.ESPORTS);
+            // 
+            // bindingSourceEquips
+            // 
+            this.bindingSourceEquips.DataSource = typeof(EntiEspais.EQUIPS);
             // 
             // FormEquips
             // 

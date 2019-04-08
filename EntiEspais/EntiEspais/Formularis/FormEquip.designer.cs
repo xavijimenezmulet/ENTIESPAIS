@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.labelNomEquip = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -50,6 +51,8 @@
             this.labelid = new System.Windows.Forms.Label();
             this.textBoxid = new System.Windows.Forms.TextBox();
             this.textBoxNomEquip = new System.Windows.Forms.TextBox();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -168,11 +171,14 @@
             // 
             // comboBoxEntitat
             // 
+            this.comboBoxEntitat.DataSource = this.bindingSourceEntitats;
+            this.comboBoxEntitat.DisplayMember = "nom";
             this.comboBoxEntitat.FormattingEnabled = true;
             this.comboBoxEntitat.Location = new System.Drawing.Point(115, 111);
             this.comboBoxEntitat.Name = "comboBoxEntitat";
             this.comboBoxEntitat.Size = new System.Drawing.Size(214, 21);
             this.comboBoxEntitat.TabIndex = 4;
+            this.comboBoxEntitat.ValueMember = "id";
             // 
             // labelCompeticio
             // 
@@ -289,6 +295,10 @@
             this.textBoxNomEquip.Size = new System.Drawing.Size(214, 20);
             this.textBoxNomEquip.TabIndex = 1;
             // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(EntiEspais.ENTITATS);
+            // 
             // FormEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +335,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEquip";
             this.Load += new System.EventHandler(this.FormEquip_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +365,6 @@
         private System.Windows.Forms.Label labelid;
         private System.Windows.Forms.TextBox textBoxid;
         private System.Windows.Forms.TextBox textBoxNomEquip;
+        private System.Windows.Forms.BindingSource bindingSourceEntitats;
     }
 }

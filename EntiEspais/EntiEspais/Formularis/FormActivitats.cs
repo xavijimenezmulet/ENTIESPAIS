@@ -30,7 +30,8 @@ namespace EntiEspais.Formularis
             Reloj.Start();
             pictureBox7.Select();
             //omplirComboTemp();
-            //bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(Utilitats.tempActual());
+            bindingSourceActivitats.DataSource = ActivitatsORM.SelectAllActivitats();
+            
         }
 
         private void afegirUsuariToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,34 +132,22 @@ namespace EntiEspais.Formularis
             ObridorFormulari.obrirFormEntitats();
             this.Close();
         }
-        //METODE AFEGIR ENTITAT
-        private void buttonAfegir_Click(object sender, EventArgs e)
-        {
-            //ObridorFormulari.obrirFormEntitat();
-        }
-        //METODE MODIFICAR ENTITAT
-        private void buttonModificar_Click(object sender, EventArgs e)
-        {
-            //ENTITATS entitat = (ENTITATS)dataGridViewEntitats.SelectedRows[0].DataBoundItem;
-            //FormEntitat fEntitat = new FormEntitat(entitat);
-            //fEntitat.ShowDialog();
-        }
-        //METODE ELIMINAR ENTITAT
+        
+        //METODE ELIMINAR ACTIVITAT
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-/*
             String mensaje = "";
             DialogResult res = MessageBox.Show("¿Segur que vols eliminar?", "ATENCIO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (res == DialogResult.Yes)
             {
-                mensaje = EntitatsORM.DeleteEntitat((ENTITATS)dataGridViewEntitats.SelectedRows[0].DataBoundItem);
+                mensaje = ActivitatsORM.DeleteActivitat((ACTIVITATS)dataGridViewActivitats.SelectedRows[0].DataBoundItem);
                 if (!mensaje.Equals(""))
                 {
                     MessageBox.Show(mensaje, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //e.Cancel = true;
                 }
-            }*/
+            }
            /* else
             {
                 e.Cancel = true;
@@ -168,36 +157,82 @@ namespace EntiEspais.Formularis
 
         private void FormActivitats_Activated(object sender, EventArgs e)
         {
-           // bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(auxTemp);
+            bindingSourceActivitats.DataSource = ActivitatsORM.SelectAllActivitats();
         }
-/*
-        public void omplirComboTemp()
-        {
-            List<ENTITATS> entitats = new List<ENTITATS>();
-            entitats.AddRange(EntitatsORM.SelectAllEntities());
-            List<string> temporadas = new List<string>();
-            for (int i = 0; i < entitats.Count; i++)
-            {
-                if (!temporadas.Contains(entitats[i].temporada))
-                {
-                    temporadas.Add(entitats[i].temporada);
-                }
-            }
-            comboBoxTemp.DataSource = temporadas;
-            String tempActual = Utilitats.tempActual();
-            comboBoxTemp.SelectedItem = tempActual;
-        }
-*/
-        private void comboBoxTemp_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //auxTemp = comboBoxTemp.SelectedValue.ToString();
-            //bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual(auxTemp);
-        }
-
         private void afegirActivitatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormActivitat();
+            ObridorFormulari.obrirFormDemandes();
             this.Close();
+        }
+
+        //METODE VEURE ACTIVITAT
+  
+        private void buttonVeure_Click(object sender, EventArgs e)
+        {
+            ACTIVITATS activitat = (ACTIVITATS)dataGridViewActivitats.SelectedRows[0].DataBoundItem;
+            ObridorFormulari.obrirFormActivitat(activitat);
+        }
+
+        private void dataGridViewActivitats_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            int fila;
+            int idAct;
+            ACTIVITATS a;
+            DEMANDA_ACT d;
+            EQUIPS equip;
+            ESPAIS esp;
+            INSTALACIONS inst;
+            ENTITATS ent;
+            if (e.ColumnIndex == 2)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    equip = EquipsORM.SelectAllEquipByid(d.id_equip).First();
+                    e.Value = equip.nom;
+                }
+            }
+            else if (e.ColumnIndex == 4)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    esp = EspaisORM.selectEspaisById(d.id_espai).First();
+                    e.Value = esp.nom;
+                }
+            }
+            else if (e.ColumnIndex == 3)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    esp = EspaisORM.selectEspaisById(d.id_espai).First();
+                    inst = InstalacionsORM.selectInstalacioById(esp.id_instalacio).First();
+                    e.Value = inst.nom;
+                }
+            }
+            else if (e.ColumnIndex == 5)
+            {
+                fila = e.RowIndex;
+                if (dataGridViewActivitats.Rows[fila].Cells[0].Value != null)
+                {
+                    idAct = (int)dataGridViewActivitats.Rows[fila].Cells[0].Value;
+                    a = ActivitatsORM.SelectActivitatsById(idAct).First();
+                    d = DemandaActORM.SelectDemandaActById(a.id_demanda_act).First();
+                    equip = EquipsORM.SelectAllEquipByid(d.id_equip).First();
+                    ent = EntitatsORM.SelectEntitiesByIdiTemp(equip.id_entitat, equip.temporada).First();
+                    e.Value = ent.nom;
+                }
+            }
         }
     }
 }

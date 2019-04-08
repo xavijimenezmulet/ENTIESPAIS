@@ -12,7 +12,6 @@ namespace EntiEspais.Classes
 {
     public static class ObridorFormulari
     {
-        #region FORMULARIOS XAVI
 
         // ens obre un formulari login
         public static void obrirFormLogin()
@@ -218,9 +217,6 @@ namespace EntiEspais.Classes
             fFaqAndroid.ShowDialog();
         }
 
-        #endregion
-
-        #region FORMULARIOS DAVID
 
         //ens obre un formulari amb les Instalacions
         public static void obrirFormInstalacions()
@@ -242,6 +238,13 @@ namespace EntiEspais.Classes
             FormInstalacioAlta formInstalacioAlta = new FormInstalacioAlta(_instalacio);
             formInstalacioAlta.Text = "MODIFICAR INSTALACIÓ";
             formInstalacioAlta.ShowDialog();
+        }
+
+        //ens obre un formulari amb els espais de la instalació
+        public static void obrirFormEspais()
+        {
+            FormEspais formEspais = new FormEspais();
+            formEspais.ShowDialog();
         }
 
         //ens obre un formulari amb els espais de la instalació
@@ -287,7 +290,6 @@ namespace EntiEspais.Classes
             formEspaisTodosAlta.ShowDialog();
         }
 
-        #endregion
         //ens obre un formulari Faq Android per modificar
         public static void obrirFormFaqAndroid(FAQS faq)
         {
@@ -376,9 +378,9 @@ namespace EntiEspais.Classes
             fActivitats.ShowDialog();
         }
         //ens obre un formulari afegir Activitat
-        public static void obrirFormActivitat()
+        public static void obrirFormActivitat(ACTIVITATS activitat)
         {
-            FormActivitat fActivitat = new FormActivitat();
+            FormActivitat fActivitat = new FormActivitat(activitat);
             fActivitat.ShowDialog();
         }
         //ens obre un formulari Demandes

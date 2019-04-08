@@ -143,20 +143,21 @@
             this.iniciToolStripMenuItem.Image = global::EntiEspais.Properties.Resources.LOGOPRINCIPAL_copia;
             this.iniciToolStripMenuItem.Name = "iniciToolStripMenuItem";
             this.iniciToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iniciToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.iniciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.iniciToolStripMenuItem.Text = "Inici";
+            this.iniciToolStripMenuItem.Click += new System.EventHandler(this.iniciToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._040_fired_;
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
             this.sortirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
             // 
             // entitatsToolStripMenuItem
@@ -205,6 +206,7 @@
             this.llistaEquipsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.llistaEquipsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.llistaEquipsToolStripMenuItem.Text = "Llistat Equips";
+            this.llistaEquipsToolStripMenuItem.Click += new System.EventHandler(this.llistaEquipsToolStripMenuItem_Click_1);
             // 
             // afegirEquipToolStripMenuItem
             // 
@@ -232,6 +234,7 @@
             this.llistatInstallacionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.llistatInstallacionsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.llistatInstallacionsToolStripMenuItem.Text = "Llistat Instal·lacions";
+            this.llistatInstallacionsToolStripMenuItem.Click += new System.EventHandler(this.llistatInstallacionsToolStripMenuItem_Click);
             // 
             // afegirInstallacióToolStripMenuItem
             // 
@@ -260,6 +263,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click);
             // 
             // afegirEspaiToolStripMenuItem
             // 
@@ -287,6 +291,7 @@
             this.llistatActivitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.llistatActivitatsToolStripMenuItem.Text = "Llistat Activitats";
+            this.llistatActivitatsToolStripMenuItem.Click += new System.EventHandler(this.llistatActivitatsToolStripMenuItem_Click);
             // 
             // afegirActivitatToolStripMenuItem
             // 

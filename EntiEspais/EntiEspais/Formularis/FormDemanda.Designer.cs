@@ -34,7 +34,7 @@
             this.labelId = new System.Windows.Forms.Label();
             this.labelTemp = new System.Windows.Forms.Label();
             this.textBoxNom = new System.Windows.Forms.TextBox();
-            this.buttonAceptar = new System.Windows.Forms.Button();
+            this.buttonAssignar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelDuracio = new System.Windows.Forms.Label();
             this.textBoxDuracio = new System.Windows.Forms.TextBox();
@@ -98,14 +98,14 @@
             resources.ApplyResources(this.textBoxNom, "textBoxNom");
             this.textBoxNom.Name = "textBoxNom";
             // 
-            // buttonAceptar
+            // buttonAssignar
             // 
-            resources.ApplyResources(this.buttonAceptar, "buttonAceptar");
-            this.buttonAceptar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAceptar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAceptar.Name = "buttonAceptar";
-            this.buttonAceptar.UseVisualStyleBackColor = false;
-            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
+            resources.ApplyResources(this.buttonAssignar, "buttonAssignar");
+            this.buttonAssignar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAssignar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAssignar.Name = "buttonAssignar";
+            this.buttonAssignar.UseVisualStyleBackColor = false;
+            this.buttonAssignar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonCancelar
             // 
@@ -345,7 +345,7 @@
             this.Controls.Add(this.textBoxDuracio);
             this.Controls.Add(this.labelDuracio);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonAceptar);
+            this.Controls.Add(this.buttonAssignar);
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.labelTemp);
             this.Controls.Add(this.labelId);
@@ -373,7 +373,7 @@
         private System.Windows.Forms.Label labelId;
         private System.Windows.Forms.Label labelTemp;
         private System.Windows.Forms.TextBox textBoxNom;
-        private System.Windows.Forms.Button buttonAceptar;
+        private System.Windows.Forms.Button buttonAssignar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Label labelDuracio;
         private System.Windows.Forms.TextBox textBoxDuracio;

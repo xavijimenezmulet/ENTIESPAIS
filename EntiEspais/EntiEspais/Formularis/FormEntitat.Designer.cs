@@ -61,6 +61,8 @@
             this.buttonAddTlf = new System.Windows.Forms.Button();
             this.buttonAfegirEquip = new System.Windows.Forms.Button();
             this.buttonSelectEquip = new System.Windows.Forms.Button();
+            this.buttonDelTlf = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,7 +233,6 @@
             this.listBoxTlf.FormattingEnabled = true;
             resources.ApplyResources(this.listBoxTlf, "listBoxTlf");
             this.listBoxTlf.Name = "listBoxTlf";
-            this.listBoxTlf.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             // 
             // label5
             // 
@@ -274,11 +275,31 @@
             this.buttonSelectEquip.UseVisualStyleBackColor = false;
             this.buttonSelectEquip.Click += new System.EventHandler(this.buttonSelectEquip_Click);
             // 
+            // buttonDelTlf
+            // 
+            resources.ApplyResources(this.buttonDelTlf, "buttonDelTlf");
+            this.buttonDelTlf.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonDelTlf.ForeColor = System.Drawing.Color.Snow;
+            this.buttonDelTlf.Name = "buttonDelTlf";
+            this.buttonDelTlf.UseVisualStyleBackColor = false;
+            this.buttonDelTlf.Click += new System.EventHandler(this.buttonDelTlf_Click);
+            // 
+            // buttonAdd
+            // 
+            resources.ApplyResources(this.buttonAdd, "buttonAdd");
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonAdd.ForeColor = System.Drawing.Color.Snow;
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
             // FormEntitat
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.buttonDelTlf);
             this.Controls.Add(this.buttonSelectEquip);
             this.Controls.Add(this.buttonAfegirEquip);
             this.Controls.Add(this.buttonAddTlf);
@@ -358,5 +379,7 @@
         private System.Windows.Forms.Button buttonAddTlf;
         private System.Windows.Forms.Button buttonAfegirEquip;
         private System.Windows.Forms.Button buttonSelectEquip;
+        private System.Windows.Forms.Button buttonDelTlf;
+        private System.Windows.Forms.Button buttonAdd;
     }
 }

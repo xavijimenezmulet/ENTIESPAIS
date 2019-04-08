@@ -74,5 +74,17 @@ namespace EntiEspais.ORM
 
             return mensaje;
         }
+        //Retorna el SELECT una instalacio per id
+        public static List<INSTALACIONS> selectInstalacioById(int id)
+        {
+            List<INSTALACIONS> _instalacions =
+                 (from e in GeneralORM.bd.INSTALACIONS
+                  orderby e.id
+                  where e.id.Equals(id)
+                  select e).ToList();
+
+            return _instalacions;
+
+        }
     }
 }

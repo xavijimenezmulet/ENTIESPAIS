@@ -343,6 +343,16 @@ namespace EntiEspais.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdf1 {
+            get {
+                object obj = ResourceManager.GetObject("pdf1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sexo {
             get {
                 object obj = ResourceManager.GetObject("sexo", resourceCulture);

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("EntiEspais")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Second project.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("CEP")]
 [assembly: AssemblyProduct("EntiEspais")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("cdb06212-33fd-4386-abb6-533c892f88bd")]
+[assembly: Guid("cdb06212-33fd-4386-fff8-533c811f88bd")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

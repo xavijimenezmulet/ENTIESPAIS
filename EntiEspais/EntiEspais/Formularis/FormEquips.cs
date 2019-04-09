@@ -6,15 +6,27 @@ namespace EntiEspais.Formularis
 {
     public partial class FormEquips : Form
     {
+        bool cargado;
+        String nom_equip;
+
         public FormEquips()
         {
+            cargado = false;
             InitializeComponent();
+            cargado = true;
         }
 
         //Omple la GridView amb tots els equips que hi hagi a la base de dades.
         private void RefrescarEquips()
         {
             bindingSourceEquips.DataSource = ORM.EquipsORM.SelectAllEquips();
+
+            bindingSourceEquipsEntitat.DataSource = ORM.EntitatsORM.SelectAllEntities();
+            bindingSourceEquipsCompeticio.DataSource = ORM.CompeticionsORM.SelectAllCompeticions();
+            bindingSourceCategoriaEdatEquips.DataSource = ORM.CategoriaPerEdatORM.SelectAllCategoriesPerEdat();
+            bindingSourceCategoriaEquips.DataSource = ORM.CategoriaPerEquipORM.SelectAllCategoriesPerEquip();
+            bindingSourceSexeEquips.DataSource = ORM.SexesORM.SelectAllSexes();
+            bindingSourceEquipsEsport.DataSource = ORM.EsportsORM.SelectAllEsports();
         }
 
         //Cada tick del rellotge posa l'hora en una label.
@@ -115,5 +127,48 @@ namespace EntiEspais.Formularis
             ObridorFormulari.obrirFormEntitat();
             this.Close();
         }
+
+        private void CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (cargado)
+            {
+                
+                if (dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value == null)
+                {
+                    MessageBox.Show("No pot ser un camp nul.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value = nom_equip;   
+                }
+                
+                else
+                {
+                    ORM.EquipsORM.UpdateEquip((EQUIPS)dataGridViewEquips.CurrentRow.DataBoundItem);
+                    MessageBox.Show("Equip modificat.", "CANVI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+            }
+            
+        }
+
+        private void dataGridViewEquips_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) { 
+            nom_equip = dataGridViewEquips.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Utilitats.exportGridToPDF(dataGridViewEquips, "hola");
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Cursor = Cursors.Hand;
+        }
+
+        
+
+
     }
 }

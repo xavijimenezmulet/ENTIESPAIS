@@ -97,7 +97,6 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.buttonAcceptar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonAssignar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -765,27 +764,13 @@
             this.Reloj.Enabled = true;
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
             // 
-            // buttonAcceptar
-            // 
-            this.buttonAcceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAcceptar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAcceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAcceptar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAcceptar.Location = new System.Drawing.Point(915, 153);
-            this.buttonAcceptar.Name = "buttonAcceptar";
-            this.buttonAcceptar.Size = new System.Drawing.Size(160, 23);
-            this.buttonAcceptar.TabIndex = 18;
-            this.buttonAcceptar.Text = "Acceptar";
-            this.buttonAcceptar.UseVisualStyleBackColor = false;
-            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
-            // 
             // buttonEliminar
             // 
             this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonEliminar.Location = new System.Drawing.Point(915, 324);
+            this.buttonEliminar.Location = new System.Drawing.Point(915, 300);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(160, 23);
             this.buttonEliminar.TabIndex = 19;
@@ -799,7 +784,7 @@
             this.buttonAssignar.BackColor = System.Drawing.SystemColors.ControlText;
             this.buttonAssignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAssignar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAssignar.Location = new System.Drawing.Point(915, 239);
+            this.buttonAssignar.Location = new System.Drawing.Point(915, 215);
             this.buttonAssignar.Name = "buttonAssignar";
             this.buttonAssignar.Size = new System.Drawing.Size(160, 23);
             this.buttonAssignar.TabIndex = 20;
@@ -816,7 +801,6 @@
             this.ClientSize = new System.Drawing.Size(1087, 654);
             this.Controls.Add(this.buttonAssignar);
             this.Controls.Add(this.buttonEliminar);
-            this.Controls.Add(this.buttonAcceptar);
             this.Controls.Add(this.labelHora);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.dataGridViewEntitats);
@@ -901,7 +885,6 @@
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Timer Reloj;
-        private System.Windows.Forms.Button buttonAcceptar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonAssignar;
         private System.Windows.Forms.BindingSource bindingSourceDemandes;

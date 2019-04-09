@@ -33,5 +33,40 @@ namespace EntiEspais.ORM
 
             return _demandasAct;
         }
+        /**
+          * MODIFIQUEM UNA DEMANDA
+          **/
+        public static String UpdateAssignarDemanda(DEMANDA_ACT demanda)
+        {
+            String missatgeError = "";
+            DEMANDA_ACT d = GeneralORM.bd.DEMANDA_ACT.Find(demanda.id);
+
+            d.id = demanda.id;
+            d.nom = demanda.nom;
+            d.num_dies = demanda.num_dies;
+            d.duracio = demanda.duracio;
+            d.num_dies = demanda.num_dies;
+            d.es_asignada = demanda.es_asignada;
+            d.id_equip = demanda.id_equip;
+            d.id_espai = demanda.id_espai;
+            d.id_interval_hores = demanda.id_interval_hores;
+
+            missatgeError = GeneralORM.SaveChanges();
+
+            return missatgeError;
+        }
+        /**
+         * ENS RETORNA LA SELECT AMB LA DEMANDA D'ACTIVITAT PER ID
+         **/
+        public static List<DEMANDA_ACT> SelectDemandaActById(int id)
+        {
+            List<DEMANDA_ACT> _demandasAct =
+                 (from d in GeneralORM.bd.DEMANDA_ACT
+                  orderby d.id
+                  where d.id.Equals(id)
+                  select d).ToList();
+
+            return _demandasAct;
+        }
     }
 }

@@ -31,28 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormActivitat));
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.labelId = new System.Windows.Forms.Label();
-            this.labelTemp = new System.Windows.Forms.Label();
-            this.textBoxTemp = new System.Windows.Forms.TextBox();
             this.labelNom = new System.Windows.Forms.Label();
             this.textBoxNom = new System.Windows.Forms.TextBox();
-            this.labelContra = new System.Windows.Forms.Label();
-            this.textBoxContra = new System.Windows.Forms.TextBox();
-            this.labelAdresa = new System.Windows.Forms.Label();
-            this.textBoxDir = new System.Windows.Forms.TextBox();
-            this.buttonAceptar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.textBoxNif = new System.Windows.Forms.TextBox();
-            this.labelNif = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxImg = new System.Windows.Forms.TextBox();
+            this.labelEquip = new System.Windows.Forms.Label();
+            this.TextBoxEquip = new System.Windows.Forms.TextBox();
+            this.labelDies = new System.Windows.Forms.Label();
+            this.buttonEnrere = new System.Windows.Forms.Button();
+            this.textBoxHinici = new System.Windows.Forms.TextBox();
+            this.labelHorari = new System.Windows.Forms.Label();
+            this.textBoxEspai = new System.Windows.Forms.TextBox();
+            this.labelEspai = new System.Windows.Forms.Label();
+            this.textBoxAdmin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxVid = new System.Windows.Forms.TextBox();
+            this.listBoxDies = new System.Windows.Forms.ListBox();
+            this.textBoxHfi = new System.Windows.Forms.TextBox();
+            this.labelGuion = new System.Windows.Forms.Label();
+            this.textBoxInst = new System.Windows.Forms.TextBox();
+            this.labelInst = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxAlt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxLat = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxEntitat = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxId
@@ -67,18 +64,6 @@
             this.labelId.ForeColor = System.Drawing.Color.White;
             this.labelId.Name = "labelId";
             // 
-            // labelTemp
-            // 
-            resources.ApplyResources(this.labelTemp, "labelTemp");
-            this.labelTemp.BackColor = System.Drawing.Color.Transparent;
-            this.labelTemp.ForeColor = System.Drawing.Color.White;
-            this.labelTemp.Name = "labelTemp";
-            // 
-            // textBoxTemp
-            // 
-            resources.ApplyResources(this.textBoxTemp, "textBoxTemp");
-            this.textBoxTemp.Name = "textBoxTemp";
-            // 
             // labelNom
             // 
             resources.ApplyResources(this.labelNom, "labelNom");
@@ -91,76 +76,62 @@
             resources.ApplyResources(this.textBoxNom, "textBoxNom");
             this.textBoxNom.Name = "textBoxNom";
             // 
-            // labelContra
+            // labelEquip
             // 
-            resources.ApplyResources(this.labelContra, "labelContra");
-            this.labelContra.BackColor = System.Drawing.Color.Transparent;
-            this.labelContra.ForeColor = System.Drawing.Color.White;
-            this.labelContra.Name = "labelContra";
+            resources.ApplyResources(this.labelEquip, "labelEquip");
+            this.labelEquip.BackColor = System.Drawing.Color.Transparent;
+            this.labelEquip.ForeColor = System.Drawing.Color.White;
+            this.labelEquip.Name = "labelEquip";
             // 
-            // textBoxContra
+            // TextBoxEquip
             // 
-            resources.ApplyResources(this.textBoxContra, "textBoxContra");
-            this.textBoxContra.Name = "textBoxContra";
+            resources.ApplyResources(this.TextBoxEquip, "TextBoxEquip");
+            this.TextBoxEquip.Name = "TextBoxEquip";
             // 
-            // labelAdresa
+            // labelDies
             // 
-            resources.ApplyResources(this.labelAdresa, "labelAdresa");
-            this.labelAdresa.BackColor = System.Drawing.Color.Transparent;
-            this.labelAdresa.ForeColor = System.Drawing.Color.White;
-            this.labelAdresa.Name = "labelAdresa";
+            resources.ApplyResources(this.labelDies, "labelDies");
+            this.labelDies.BackColor = System.Drawing.Color.Transparent;
+            this.labelDies.ForeColor = System.Drawing.Color.White;
+            this.labelDies.Name = "labelDies";
             // 
-            // textBoxDir
+            // buttonEnrere
             // 
-            resources.ApplyResources(this.textBoxDir, "textBoxDir");
-            this.textBoxDir.Name = "textBoxDir";
+            resources.ApplyResources(this.buttonEnrere, "buttonEnrere");
+            this.buttonEnrere.BackColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEnrere.ForeColor = System.Drawing.Color.Snow;
+            this.buttonEnrere.Name = "buttonEnrere";
+            this.buttonEnrere.UseVisualStyleBackColor = false;
+            this.buttonEnrere.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonAceptar
+            // textBoxHinici
             // 
-            resources.ApplyResources(this.buttonAceptar, "buttonAceptar");
-            this.buttonAceptar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonAceptar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonAceptar.Name = "buttonAceptar";
-            this.buttonAceptar.UseVisualStyleBackColor = false;
-            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
+            resources.ApplyResources(this.textBoxHinici, "textBoxHinici");
+            this.textBoxHinici.Name = "textBoxHinici";
             // 
-            // buttonCancelar
+            // labelHorari
             // 
-            resources.ApplyResources(this.buttonCancelar, "buttonCancelar");
-            this.buttonCancelar.BackColor = System.Drawing.SystemColors.ControlText;
-            this.buttonCancelar.ForeColor = System.Drawing.Color.Snow;
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.labelHorari, "labelHorari");
+            this.labelHorari.BackColor = System.Drawing.Color.Transparent;
+            this.labelHorari.ForeColor = System.Drawing.Color.White;
+            this.labelHorari.Name = "labelHorari";
             // 
-            // textBoxNif
+            // textBoxEspai
             // 
-            resources.ApplyResources(this.textBoxNif, "textBoxNif");
-            this.textBoxNif.Name = "textBoxNif";
+            resources.ApplyResources(this.textBoxEspai, "textBoxEspai");
+            this.textBoxEspai.Name = "textBoxEspai";
             // 
-            // labelNif
+            // labelEspai
             // 
-            resources.ApplyResources(this.labelNif, "labelNif");
-            this.labelNif.BackColor = System.Drawing.Color.Transparent;
-            this.labelNif.ForeColor = System.Drawing.Color.White;
-            this.labelNif.Name = "labelNif";
+            resources.ApplyResources(this.labelEspai, "labelEspai");
+            this.labelEspai.BackColor = System.Drawing.Color.Transparent;
+            this.labelEspai.ForeColor = System.Drawing.Color.White;
+            this.labelEspai.Name = "labelEspai";
             // 
-            // textBoxEmail
+            // textBoxAdmin
             // 
-            resources.ApplyResources(this.textBoxEmail, "textBoxEmail");
-            this.textBoxEmail.Name = "textBoxEmail";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Name = "label6";
-            // 
-            // textBoxImg
-            // 
-            resources.ApplyResources(this.textBoxImg, "textBoxImg");
-            this.textBoxImg.Name = "textBoxImg";
+            resources.ApplyResources(this.textBoxAdmin, "textBoxAdmin");
+            this.textBoxAdmin.Name = "textBoxAdmin";
             // 
             // label1
             // 
@@ -169,10 +140,36 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
             // 
-            // textBoxVid
+            // listBoxDies
             // 
-            resources.ApplyResources(this.textBoxVid, "textBoxVid");
-            this.textBoxVid.Name = "textBoxVid";
+            resources.ApplyResources(this.listBoxDies, "listBoxDies");
+            this.listBoxDies.FormattingEnabled = true;
+            this.listBoxDies.Name = "listBoxDies";
+            this.listBoxDies.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            // 
+            // textBoxHfi
+            // 
+            resources.ApplyResources(this.textBoxHfi, "textBoxHfi");
+            this.textBoxHfi.Name = "textBoxHfi";
+            // 
+            // labelGuion
+            // 
+            resources.ApplyResources(this.labelGuion, "labelGuion");
+            this.labelGuion.BackColor = System.Drawing.Color.Transparent;
+            this.labelGuion.ForeColor = System.Drawing.Color.White;
+            this.labelGuion.Name = "labelGuion";
+            // 
+            // textBoxInst
+            // 
+            resources.ApplyResources(this.textBoxInst, "textBoxInst");
+            this.textBoxInst.Name = "textBoxInst";
+            // 
+            // labelInst
+            // 
+            resources.ApplyResources(this.labelInst, "labelInst");
+            this.labelInst.BackColor = System.Drawing.Color.Transparent;
+            this.labelInst.ForeColor = System.Drawing.Color.White;
+            this.labelInst.Name = "labelInst";
             // 
             // label2
             // 
@@ -181,59 +178,37 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
             // 
-            // textBoxAlt
+            // textBoxEntitat
             // 
-            resources.ApplyResources(this.textBoxAlt, "textBoxAlt");
-            this.textBoxAlt.Name = "textBoxAlt";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
-            // 
-            // textBoxLat
-            // 
-            resources.ApplyResources(this.textBoxLat, "textBoxLat");
-            this.textBoxLat.Name = "textBoxLat";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.textBoxEntitat, "textBoxEntitat");
+            this.textBoxEntitat.Name = "textBoxEntitat";
             // 
             // FormActivitat
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
-            this.Controls.Add(this.textBoxLat);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxAlt);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxVid);
+            this.Controls.Add(this.textBoxEntitat);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxImg);
+            this.Controls.Add(this.textBoxInst);
+            this.Controls.Add(this.labelInst);
+            this.Controls.Add(this.textBoxHfi);
+            this.Controls.Add(this.listBoxDies);
+            this.Controls.Add(this.textBoxAdmin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxNif);
-            this.Controls.Add(this.labelNif);
-            this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonAceptar);
-            this.Controls.Add(this.textBoxDir);
-            this.Controls.Add(this.labelAdresa);
-            this.Controls.Add(this.textBoxContra);
-            this.Controls.Add(this.labelContra);
+            this.Controls.Add(this.textBoxEspai);
+            this.Controls.Add(this.labelEspai);
+            this.Controls.Add(this.textBoxHinici);
+            this.Controls.Add(this.labelHorari);
+            this.Controls.Add(this.buttonEnrere);
+            this.Controls.Add(this.labelDies);
+            this.Controls.Add(this.TextBoxEquip);
+            this.Controls.Add(this.labelEquip);
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.labelNom);
-            this.Controls.Add(this.textBoxTemp);
-            this.Controls.Add(this.labelTemp);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.textBoxId);
+            this.Controls.Add(this.labelGuion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -249,27 +224,24 @@
 
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.Label labelTemp;
-        private System.Windows.Forms.TextBox textBoxTemp;
         private System.Windows.Forms.Label labelNom;
         private System.Windows.Forms.TextBox textBoxNom;
-        private System.Windows.Forms.Label labelContra;
-        private System.Windows.Forms.TextBox textBoxContra;
-        private System.Windows.Forms.Label labelAdresa;
-        private System.Windows.Forms.TextBox textBoxDir;
-        private System.Windows.Forms.Button buttonAceptar;
-        private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.TextBox textBoxNif;
-        private System.Windows.Forms.Label labelNif;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxImg;
+        private System.Windows.Forms.Label labelEquip;
+        private System.Windows.Forms.TextBox TextBoxEquip;
+        private System.Windows.Forms.Label labelDies;
+        private System.Windows.Forms.Button buttonEnrere;
+        private System.Windows.Forms.TextBox textBoxHinici;
+        private System.Windows.Forms.Label labelHorari;
+        private System.Windows.Forms.TextBox textBoxEspai;
+        private System.Windows.Forms.Label labelEspai;
+        private System.Windows.Forms.TextBox textBoxAdmin;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxVid;
+        private System.Windows.Forms.ListBox listBoxDies;
+        private System.Windows.Forms.TextBox textBoxHfi;
+        private System.Windows.Forms.Label labelGuion;
+        private System.Windows.Forms.TextBox textBoxInst;
+        private System.Windows.Forms.Label labelInst;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxAlt;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxLat;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxEntitat;
     }
 }

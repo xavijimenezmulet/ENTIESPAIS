@@ -56,7 +56,7 @@ namespace EntiEspais
          **/
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            /*if ( textBoxEmail.Text.Equals( "Email" ) )
+            if ( textBoxEmail.Text.Equals( "Email" ) )
             {
                 MessageBox.Show( "Escriu un Email!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
@@ -81,10 +81,16 @@ namespace EntiEspais
                 MessageBox.Show( "Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
+            else if (!AdministradorsORM.FindAdminByEmailAndPassword(textBoxEmail.Text, textBoxContrassenya.Text))
+            {
+                MessageBox.Show("Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                textBoxEmail.Select();
+            }
             else
-            {*/
+            {
+                Utilitats.adminActual = AdministradorsORM.SelectAdministradorByEmail(textBoxEmail.Text).First();
                 ObridorFormulari.obrirFormPrincipal();
-           // }
+            }
         }
 
         /**

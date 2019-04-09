@@ -16,6 +16,7 @@ namespace EntiEspais.Classes
     public static class Utilitats
     {
         public static int intervalsHores = 96;
+        public static ADMINISTRADORS adminActual;
         /**
          * ENS SERVEIX PER FICAR LA HORA A LA LABEL DEL MENU
          **/
@@ -167,6 +168,92 @@ namespace EntiEspais.Classes
             List<DIA_SEMANA> diaAct = demanda.DIA_SEMANA.ToList();
 
             return diaAct;
+        }
+
+        /**
+         * METODE PER OMPLIR DIES I HORES AL CALENDARI 
+         **/
+        public static string[,] horesYdiesCalendari()
+        {
+            string[,] rows = new string[Utilitats.intervalsHores, 9];
+            List<HORES> horari = HoresORM.SelectHoresPrimaries(111);
+            for (int i = 0; i < Utilitats.intervalsHores; i++)
+            {
+                rows[i, 0] = horari[i].inici.ToString();
+                rows[i, 1] = horari[i].fi.ToString();
+
+            }
+            return rows;
+        }
+
+        /**
+        *METODE PER OMPLIR EQUIPS ASSIGNATS AL CALENDARI 
+        **/
+        public static string[,] omplirMatriuCalendari(ESPAIS espai)
+        {
+            string[,] rows = horesYdiesCalendari();
+
+            List<DEMANDA_ACT> demandesAssignades = DemandaActORM.SelectAllDemandaActAssignades();
+            for (int k = 0; k < demandesAssignades.Count; k++)
+            {
+                if (demandesAssignades[k].id_espai == espai.id)
+                {
+                    EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demandesAssignades[k].id_equip).First();
+                    foreach (DIA_SEMANA dia in demandesAssignades[k].DIA_SEMANA)
+                    {
+                        List<int> intervals = Utilitats.comparaHores(demandesAssignades[k].id_interval_hores);
+                        for (int m = 0; m < intervals.Count; m++)
+                        {
+                            rows[intervals[m], dia.id + 1] = equipDemanda.nom;
+                        }
+                    }
+                }
+            }
+            return rows;
+        }
+
+        /**
+         *METODE PER TROBAR CELA DEL CALENDARI 
+         **/
+        public static int trobarCela(string[,] rows, string hora)
+        {
+            int fila = 0;
+            List<String> llistaHores = new List<string>();
+            for (int i = 0; i < intervalsHores; i++)
+            {
+                llistaHores.Add(rows[i, 0]);
+            }
+
+            for (int i = 0; i < intervalsHores; i++)
+            {
+                if(llistaHores[i] == hora)
+                {
+                    fila = i;
+                }
+            }
+            return fila;
+        }
+
+        /**
+         *METODE PER COMPROBAR SI L'ESPAI ESTA OCUPAT EN LES HORES D'UNA DEMANDA
+         **/
+         public static bool comprobarHoresEspai(DEMANDA_ACT demanda, string[,] rows)
+        {
+            bool ocupat = false;
+            
+            EQUIPS equipDemanda = EquipsORM.SelectAllEquipByid(demanda.id_equip).First();
+            foreach (DIA_SEMANA dia in demanda.DIA_SEMANA)
+            {
+                List<int> intervals = Utilitats.comparaHores(demanda.id_interval_hores);
+                for (int i = 0; i < intervals.Count; i++)
+                {
+                    if (rows[intervals[i], dia.id + 1] != null)
+                    {
+                        ocupat = true;
+                    }
+                }
+            }
+            return ocupat;
         }
         /**
          *METODE PER COMPARAR INTERVALS D'HORES 

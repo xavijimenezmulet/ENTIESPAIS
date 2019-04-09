@@ -37,6 +37,10 @@
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonAfegir = new System.Windows.Forms.Button();
             this.dataGridViewFaqsAndroid = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preguntaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripciónDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceFaqsAndroid = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonMain = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -92,15 +96,11 @@
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
-            this.bindingSourceFaqsAndroid = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preguntaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripciónDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaqsAndroid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFaqsAndroid)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFaqsAndroid)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonModificar
@@ -196,6 +196,37 @@
             this.dataGridViewFaqsAndroid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewFaqsAndroid_UserDeletingRow);
             this.dataGridViewFaqsAndroid.DoubleClick += new System.EventHandler(this.dataGridViewFaqsAndroid_DoubleClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.FillWeight = 1F;
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preguntaDataGridViewTextBoxColumn
+            // 
+            this.preguntaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.preguntaDataGridViewTextBoxColumn.DataPropertyName = "pregunta";
+            this.preguntaDataGridViewTextBoxColumn.FillWeight = 3F;
+            this.preguntaDataGridViewTextBoxColumn.HeaderText = "pregunta";
+            this.preguntaDataGridViewTextBoxColumn.Name = "preguntaDataGridViewTextBoxColumn";
+            this.preguntaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripciónDataGridViewTextBoxColumn
+            // 
+            this.descripciónDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripciónDataGridViewTextBoxColumn.DataPropertyName = "descripción";
+            this.descripciónDataGridViewTextBoxColumn.FillWeight = 6F;
+            this.descripciónDataGridViewTextBoxColumn.HeaderText = "descripción";
+            this.descripciónDataGridViewTextBoxColumn.Name = "descripciónDataGridViewTextBoxColumn";
+            this.descripciónDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceFaqsAndroid
+            // 
+            this.bindingSourceFaqsAndroid.DataSource = typeof(EntiEspais.FAQS);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -225,6 +256,7 @@
             this.toolStripButtonMain.Name = "toolStripButtonMain";
             this.toolStripButtonMain.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonMain.Text = "MENU PRINCIPAL";
+            this.toolStripButtonMain.Click += new System.EventHandler(this.toolStripButtonMain_Click);
             // 
             // toolStripSeparator1
             // 
@@ -239,6 +271,7 @@
             this.toolStripButtonEntitats.Name = "toolStripButtonEntitats";
             this.toolStripButtonEntitats.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonEntitats.Text = "ENTITATS";
+            this.toolStripButtonEntitats.Click += new System.EventHandler(this.toolStripButtonEntitats_Click);
             // 
             // toolStripButtonEquips
             // 
@@ -343,20 +376,21 @@
             this.iniciToolStripMenuItem.Image = global::EntiEspais.Properties.Resources.LOGOPRINCIPAL_copia;
             this.iniciToolStripMenuItem.Name = "iniciToolStripMenuItem";
             this.iniciToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iniciToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.iniciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.iniciToolStripMenuItem.Text = "Inici";
+            this.iniciToolStripMenuItem.Click += new System.EventHandler(this.iniciToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Image = global::EntiEspais.Properties.Resources._040_fired_;
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
             this.sortirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
             // 
             // entitatsToolStripMenuItem
@@ -376,6 +410,7 @@
             this.llistaEntitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.llistaEntitatsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.llistaEntitatsToolStripMenuItem.Text = "Llista Entitats";
+            this.llistaEntitatsToolStripMenuItem.Click += new System.EventHandler(this.llistaEntitatsToolStripMenuItem_Click);
             // 
             // afegirEntitatToolStripMenuItem
             // 
@@ -404,6 +439,7 @@
             this.llistaEquipsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.llistaEquipsToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.llistaEquipsToolStripMenuItem.Text = "Llistat Equips";
+            this.llistaEquipsToolStripMenuItem.Click += new System.EventHandler(this.llistaEquipsToolStripMenuItem_Click);
             // 
             // afegirEquipToolStripMenuItem
             // 
@@ -431,6 +467,7 @@
             this.llistatInstallacionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.llistatInstallacionsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.llistatInstallacionsToolStripMenuItem.Text = "Llistat Instal·lacions";
+            this.llistatInstallacionsToolStripMenuItem.Click += new System.EventHandler(this.llistatInstallacionsToolStripMenuItem_Click);
             // 
             // afegirInstallacióToolStripMenuItem
             // 
@@ -459,6 +496,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click);
             // 
             // afegirEspaiToolStripMenuItem
             // 
@@ -486,6 +524,7 @@
             this.llistatActivitatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.llistatActivitatsToolStripMenuItem.Size = new System.Drawing.Size(286, 22);
             this.llistatActivitatsToolStripMenuItem.Text = "Llistat Activitats";
+            this.llistatActivitatsToolStripMenuItem.Click += new System.EventHandler(this.llistatActivitatsToolStripMenuItem_Click);
             // 
             // afegirActivitatToolStripMenuItem
             // 
@@ -514,6 +553,7 @@
             this.llistatUsuarisToolStripAdministradors.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.llistatUsuarisToolStripAdministradors.Size = new System.Drawing.Size(215, 22);
             this.llistatUsuarisToolStripAdministradors.Text = "Llistat Usuaris";
+            this.llistatUsuarisToolStripAdministradors.Click += new System.EventHandler(this.llistatUsuarisToolStripAdministradors_Click);
             // 
             // afegirUsuariToolStripAdministrador
             // 
@@ -709,37 +749,6 @@
             // 
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
             // 
-            // bindingSourceFaqsAndroid
-            // 
-            this.bindingSourceFaqsAndroid.DataSource = typeof(EntiEspais.FAQS);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.FillWeight = 1F;
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // preguntaDataGridViewTextBoxColumn
-            // 
-            this.preguntaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.preguntaDataGridViewTextBoxColumn.DataPropertyName = "pregunta";
-            this.preguntaDataGridViewTextBoxColumn.FillWeight = 3F;
-            this.preguntaDataGridViewTextBoxColumn.HeaderText = "pregunta";
-            this.preguntaDataGridViewTextBoxColumn.Name = "preguntaDataGridViewTextBoxColumn";
-            this.preguntaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripciónDataGridViewTextBoxColumn
-            // 
-            this.descripciónDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripciónDataGridViewTextBoxColumn.DataPropertyName = "descripción";
-            this.descripciónDataGridViewTextBoxColumn.FillWeight = 6F;
-            this.descripciónDataGridViewTextBoxColumn.HeaderText = "descripción";
-            this.descripciónDataGridViewTextBoxColumn.Name = "descripciónDataGridViewTextBoxColumn";
-            this.descripciónDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // FormFaqsAndroid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,12 +774,12 @@
             this.Activated += new System.EventHandler(this.FormFaqsAndroid_Activated);
             this.Load += new System.EventHandler(this.FormFaqsAndroid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaqsAndroid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFaqsAndroid)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceFaqsAndroid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

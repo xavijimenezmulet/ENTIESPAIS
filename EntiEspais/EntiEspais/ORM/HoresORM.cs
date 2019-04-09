@@ -30,7 +30,19 @@ namespace EntiEspais.ORM
             List<HORES> _hores =
                  (from a in GeneralORM.bd.HORES
                   orderby a.inici
-                  select  a).Distinct().ToList();
+                  select a).Distinct().ToList();
+
+            return _hores;
+
+        }
+
+        //Ens retorna la select amb totes les hores finals sense repetir
+        public static List<HORES> SelectIntervalHoresFi()
+        {
+            List<HORES> _hores =
+                 (from a in GeneralORM.bd.HORES
+                  orderby a.fi
+                  select a).Distinct().ToList();
 
             return _hores;
 
@@ -129,6 +141,19 @@ namespace EntiEspais.ORM
                   select e).ToList();
 
             return _hores;
+        }
+
+        //Ens retorna l'id de quan la hora es 00:00:00
+        public static int selectIdHores()
+        {
+            TimeSpan horaInicio = TimeSpan.Parse("00:00:00");
+            TimeSpan horaFinal = TimeSpan.Parse("00:00:00");
+
+            int id = (from e in GeneralORM.bd.HORES
+                      where e.inici == horaInicio && e.fi == horaFinal
+                      select e.id).First();
+
+            return id;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +50,55 @@
             this.buttonRuta = new System.Windows.Forms.Button();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.comboBoxDillunsInici = new System.Windows.Forms.ComboBox();
+            this.comboBoxDillunsFinal = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxDimartsFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDimartsInici = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxDimecresFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDimecresInici = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxDijousFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDijousInici = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxDivendresFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDivendresInici = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBoxDissabteFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDissabteInici = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBoxDiumengeFinal = new System.Windows.Forms.ComboBox();
+            this.comboBoxDiumengeInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDillunsInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDillunsFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDimartsInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDimartsFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDimecresInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDimecresFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDijousInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDijousFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDivendresInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDivendresFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDissabteInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDissabteFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDiumengeInici = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceDiumengeFinal = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -73,7 +123,7 @@
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.buttonAceptar.ForeColor = System.Drawing.Color.Snow;
             this.buttonAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAceptar.Location = new System.Drawing.Point(108, 298);
+            this.buttonAceptar.Location = new System.Drawing.Point(112, 298);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(160, 23);
             this.buttonAceptar.TabIndex = 31;
@@ -307,13 +357,308 @@
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
+            // comboBoxDillunsInici
+            // 
+            this.comboBoxDillunsInici.DataSource = this.bindingSourceDillunsInici;
+            this.comboBoxDillunsInici.DisplayMember = "inici";
+            this.comboBoxDillunsInici.FormattingEnabled = true;
+            this.comboBoxDillunsInici.Location = new System.Drawing.Point(623, 23);
+            this.comboBoxDillunsInici.Name = "comboBoxDillunsInici";
+            this.comboBoxDillunsInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDillunsInici.TabIndex = 49;
+            this.comboBoxDillunsInici.ValueMember = "id";
+            // 
+            // comboBoxDillunsFinal
+            // 
+            this.comboBoxDillunsFinal.DataSource = this.bindingSourceDillunsFinal;
+            this.comboBoxDillunsFinal.DisplayMember = "fi";
+            this.comboBoxDillunsFinal.FormattingEnabled = true;
+            this.comboBoxDillunsFinal.Location = new System.Drawing.Point(745, 23);
+            this.comboBoxDillunsFinal.Name = "comboBoxDillunsFinal";
+            this.comboBoxDillunsFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDillunsFinal.TabIndex = 50;
+            this.comboBoxDillunsFinal.ValueMember = "id";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(561, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Lunes";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(561, 58);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 54;
+            this.label10.Text = "Martes";
+            // 
+            // comboBoxDimartsFinal
+            // 
+            this.comboBoxDimartsFinal.DataSource = this.bindingSourceDimartsFinal;
+            this.comboBoxDimartsFinal.DisplayMember = "fi";
+            this.comboBoxDimartsFinal.FormattingEnabled = true;
+            this.comboBoxDimartsFinal.Location = new System.Drawing.Point(745, 55);
+            this.comboBoxDimartsFinal.Name = "comboBoxDimartsFinal";
+            this.comboBoxDimartsFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDimartsFinal.TabIndex = 53;
+            this.comboBoxDimartsFinal.ValueMember = "id";
+            // 
+            // comboBoxDimartsInici
+            // 
+            this.comboBoxDimartsInici.DataSource = this.bindingSourceDimartsInici;
+            this.comboBoxDimartsInici.DisplayMember = "inici";
+            this.comboBoxDimartsInici.FormattingEnabled = true;
+            this.comboBoxDimartsInici.Location = new System.Drawing.Point(623, 55);
+            this.comboBoxDimartsInici.Name = "comboBoxDimartsInici";
+            this.comboBoxDimartsInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDimartsInici.TabIndex = 52;
+            this.comboBoxDimartsInici.ValueMember = "id";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(561, 97);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Miércoles";
+            // 
+            // comboBoxDimecresFinal
+            // 
+            this.comboBoxDimecresFinal.DataSource = this.bindingSourceDimecresFinal;
+            this.comboBoxDimecresFinal.DisplayMember = "fi";
+            this.comboBoxDimecresFinal.FormattingEnabled = true;
+            this.comboBoxDimecresFinal.Location = new System.Drawing.Point(745, 94);
+            this.comboBoxDimecresFinal.Name = "comboBoxDimecresFinal";
+            this.comboBoxDimecresFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDimecresFinal.TabIndex = 56;
+            this.comboBoxDimecresFinal.ValueMember = "id";
+            // 
+            // comboBoxDimecresInici
+            // 
+            this.comboBoxDimecresInici.DataSource = this.bindingSourceDimecresInici;
+            this.comboBoxDimecresInici.DisplayMember = "inici";
+            this.comboBoxDimecresInici.FormattingEnabled = true;
+            this.comboBoxDimecresInici.Location = new System.Drawing.Point(623, 94);
+            this.comboBoxDimecresInici.Name = "comboBoxDimecresInici";
+            this.comboBoxDimecresInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDimecresInici.TabIndex = 55;
+            this.comboBoxDimecresInici.ValueMember = "id";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(561, 137);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Jueves";
+            // 
+            // comboBoxDijousFinal
+            // 
+            this.comboBoxDijousFinal.DataSource = this.bindingSourceDijousFinal;
+            this.comboBoxDijousFinal.DisplayMember = "fi";
+            this.comboBoxDijousFinal.FormattingEnabled = true;
+            this.comboBoxDijousFinal.Location = new System.Drawing.Point(745, 134);
+            this.comboBoxDijousFinal.Name = "comboBoxDijousFinal";
+            this.comboBoxDijousFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDijousFinal.TabIndex = 59;
+            this.comboBoxDijousFinal.ValueMember = "id";
+            // 
+            // comboBoxDijousInici
+            // 
+            this.comboBoxDijousInici.DataSource = this.bindingSourceDijousInici;
+            this.comboBoxDijousInici.DisplayMember = "inici";
+            this.comboBoxDijousInici.FormattingEnabled = true;
+            this.comboBoxDijousInici.Location = new System.Drawing.Point(623, 134);
+            this.comboBoxDijousInici.Name = "comboBoxDijousInici";
+            this.comboBoxDijousInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDijousInici.TabIndex = 58;
+            this.comboBoxDijousInici.ValueMember = "id";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(561, 175);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(42, 13);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "Viernes";
+            // 
+            // comboBoxDivendresFinal
+            // 
+            this.comboBoxDivendresFinal.DataSource = this.bindingSourceDivendresFinal;
+            this.comboBoxDivendresFinal.DisplayMember = "fi";
+            this.comboBoxDivendresFinal.FormattingEnabled = true;
+            this.comboBoxDivendresFinal.Location = new System.Drawing.Point(745, 172);
+            this.comboBoxDivendresFinal.Name = "comboBoxDivendresFinal";
+            this.comboBoxDivendresFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDivendresFinal.TabIndex = 62;
+            this.comboBoxDivendresFinal.ValueMember = "id";
+            // 
+            // comboBoxDivendresInici
+            // 
+            this.comboBoxDivendresInici.BackColor = System.Drawing.Color.White;
+            this.comboBoxDivendresInici.DataSource = this.bindingSourceDivendresInici;
+            this.comboBoxDivendresInici.DisplayMember = "inici";
+            this.comboBoxDivendresInici.FormattingEnabled = true;
+            this.comboBoxDivendresInici.Location = new System.Drawing.Point(623, 172);
+            this.comboBoxDivendresInici.Name = "comboBoxDivendresInici";
+            this.comboBoxDivendresInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDivendresInici.TabIndex = 61;
+            this.comboBoxDivendresInici.ValueMember = "id";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(561, 217);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 13);
+            this.label14.TabIndex = 66;
+            this.label14.Text = "Sábado";
+            // 
+            // comboBoxDissabteFinal
+            // 
+            this.comboBoxDissabteFinal.DataSource = this.bindingSourceDissabteFinal;
+            this.comboBoxDissabteFinal.DisplayMember = "fi";
+            this.comboBoxDissabteFinal.FormattingEnabled = true;
+            this.comboBoxDissabteFinal.Location = new System.Drawing.Point(745, 214);
+            this.comboBoxDissabteFinal.Name = "comboBoxDissabteFinal";
+            this.comboBoxDissabteFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDissabteFinal.TabIndex = 65;
+            this.comboBoxDissabteFinal.ValueMember = "id";
+            // 
+            // comboBoxDissabteInici
+            // 
+            this.comboBoxDissabteInici.DataSource = this.bindingSourceDissabteInici;
+            this.comboBoxDissabteInici.DisplayMember = "inici";
+            this.comboBoxDissabteInici.FormattingEnabled = true;
+            this.comboBoxDissabteInici.Location = new System.Drawing.Point(623, 214);
+            this.comboBoxDissabteInici.Name = "comboBoxDissabteInici";
+            this.comboBoxDissabteInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDissabteInici.TabIndex = 64;
+            this.comboBoxDissabteInici.ValueMember = "id";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(561, 259);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(49, 13);
+            this.label15.TabIndex = 69;
+            this.label15.Text = "Domingo";
+            // 
+            // comboBoxDiumengeFinal
+            // 
+            this.comboBoxDiumengeFinal.DataSource = this.bindingSourceDiumengeFinal;
+            this.comboBoxDiumengeFinal.DisplayMember = "fi";
+            this.comboBoxDiumengeFinal.FormattingEnabled = true;
+            this.comboBoxDiumengeFinal.Location = new System.Drawing.Point(745, 256);
+            this.comboBoxDiumengeFinal.Name = "comboBoxDiumengeFinal";
+            this.comboBoxDiumengeFinal.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDiumengeFinal.TabIndex = 68;
+            this.comboBoxDiumengeFinal.ValueMember = "id";
+            // 
+            // comboBoxDiumengeInici
+            // 
+            this.comboBoxDiumengeInici.DataSource = this.bindingSourceDiumengeInici;
+            this.comboBoxDiumengeInici.DisplayMember = "inici";
+            this.comboBoxDiumengeInici.FormattingEnabled = true;
+            this.comboBoxDiumengeInici.Location = new System.Drawing.Point(623, 256);
+            this.comboBoxDiumengeInici.Name = "comboBoxDiumengeInici";
+            this.comboBoxDiumengeInici.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDiumengeInici.TabIndex = 67;
+            this.comboBoxDiumengeInici.ValueMember = "id";
+            // 
+            // bindingSourceDillunsInici
+            // 
+            this.bindingSourceDillunsInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDillunsFinal
+            // 
+            this.bindingSourceDillunsFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDimartsInici
+            // 
+            this.bindingSourceDimartsInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDimartsFinal
+            // 
+            this.bindingSourceDimartsFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDimecresInici
+            // 
+            this.bindingSourceDimecresInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDimecresFinal
+            // 
+            this.bindingSourceDimecresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDijousInici
+            // 
+            this.bindingSourceDijousInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDijousFinal
+            // 
+            this.bindingSourceDijousFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDivendresInici
+            // 
+            this.bindingSourceDivendresInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDivendresFinal
+            // 
+            this.bindingSourceDivendresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDissabteInici
+            // 
+            this.bindingSourceDissabteInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDissabteFinal
+            // 
+            this.bindingSourceDissabteFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDiumengeInici
+            // 
+            this.bindingSourceDiumengeInici.DataSource = typeof(EntiEspais.HORES);
+            // 
+            // bindingSourceDiumengeFinal
+            // 
+            this.bindingSourceDiumengeFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // FormInstalacioAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(571, 516);
+            this.ClientSize = new System.Drawing.Size(896, 516);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.comboBoxDiumengeFinal);
+            this.Controls.Add(this.comboBoxDiumengeInici);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.comboBoxDissabteFinal);
+            this.Controls.Add(this.comboBoxDissabteInici);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.comboBoxDivendresFinal);
+            this.Controls.Add(this.comboBoxDivendresInici);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.comboBoxDijousFinal);
+            this.Controls.Add(this.comboBoxDijousInici);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBoxDimecresFinal);
+            this.Controls.Add(this.comboBoxDimecresInici);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBoxDimartsFinal);
+            this.Controls.Add(this.comboBoxDimartsInici);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBoxDillunsFinal);
+            this.Controls.Add(this.comboBoxDillunsInici);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.gMapControl1);
             this.Controls.Add(this.buttonRuta);
@@ -339,6 +684,20 @@
             this.Name = "FormInstalacioAlta";
             this.Text = "ALTA INSTALACIÓ";
             this.Load += new System.EventHandler(this.FormInstalacioAlta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,5 +726,40 @@
         private System.Windows.Forms.Button buttonRuta;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.ComboBox comboBoxDillunsInici;
+        private System.Windows.Forms.ComboBox comboBoxDillunsFinal;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBoxDimartsFinal;
+        private System.Windows.Forms.ComboBox comboBoxDimartsInici;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxDimecresFinal;
+        private System.Windows.Forms.ComboBox comboBoxDimecresInici;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxDijousFinal;
+        private System.Windows.Forms.ComboBox comboBoxDijousInici;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBoxDivendresFinal;
+        private System.Windows.Forms.ComboBox comboBoxDivendresInici;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBoxDissabteFinal;
+        private System.Windows.Forms.ComboBox comboBoxDissabteInici;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBoxDiumengeFinal;
+        private System.Windows.Forms.ComboBox comboBoxDiumengeInici;
+        private System.Windows.Forms.BindingSource bindingSourceDillunsInici;
+        private System.Windows.Forms.BindingSource bindingSourceDillunsFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDimartsInici;
+        private System.Windows.Forms.BindingSource bindingSourceDimartsFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDimecresInici;
+        private System.Windows.Forms.BindingSource bindingSourceDimecresFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDijousInici;
+        private System.Windows.Forms.BindingSource bindingSourceDijousFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDivendresInici;
+        private System.Windows.Forms.BindingSource bindingSourceDivendresFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDissabteInici;
+        private System.Windows.Forms.BindingSource bindingSourceDissabteFinal;
+        private System.Windows.Forms.BindingSource bindingSourceDiumengeInici;
+        private System.Windows.Forms.BindingSource bindingSourceDiumengeFinal;
     }
 }

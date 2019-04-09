@@ -21,7 +21,7 @@ namespace EntiEspais.ORM
         }
 
         //Alta instalació
-        public static String altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud)
+        public static String altaInstalacio(String nom, String contrasenya, String adresa, String tipus, String email, String ruta_imagen, float altitud, float latitud, ref int id_instalacion)
         {
             String mensaje = "";
             INSTALACIONS _instalacio = new INSTALACIONS();
@@ -39,6 +39,7 @@ namespace EntiEspais.ORM
 
             mensaje = ORM.GeneralORM.SaveChanges();
 
+            id_instalacion = _instalacio.id;
             return mensaje;
         }
 
@@ -46,6 +47,7 @@ namespace EntiEspais.ORM
         public static String eliminarInstalacio(INSTALACIONS _instalacio)
         {
             String mensaje = "";
+
             ORM.GeneralORM.bd.INSTALACIONS.Remove(_instalacio);
 
             mensaje = ORM.GeneralORM.SaveChanges();
@@ -72,6 +74,7 @@ namespace EntiEspais.ORM
 
             return mensaje;
         }
+
         //Retorna el SELECT una instalacio per id
         public static List<INSTALACIONS> selectInstalacioById(int id)
         {

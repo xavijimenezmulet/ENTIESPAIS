@@ -397,6 +397,7 @@
     <Compile Include="ORM\EsportsORM.cs" />
     <Compile Include="ORM\FaqsAndroidORM.cs" />
     <Compile Include="ORM\GeneralORM.cs" />
+    <Compile Include="ORM\HorariInstalacioORM.cs" />
     <Compile Include="ORM\HoresORM.cs" />
     <Compile Include="ORM\InstalacionsORM.cs" />
     <Compile Include="ORM\SexesORM.cs" />

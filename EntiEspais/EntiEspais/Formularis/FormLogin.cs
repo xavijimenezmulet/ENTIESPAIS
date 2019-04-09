@@ -81,11 +81,6 @@ namespace EntiEspais
                 MessageBox.Show( "Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk );
                 textBoxEmail.Select();
             }
-            else if (!AdministradorsORM.FindAdminByEmailAndPassword(textBoxEmail.Text, textBoxContrassenya.Text))
-            {
-                MessageBox.Show("Email o Contrassenya incorrectes!", "ADVERTÈNCIA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                textBoxEmail.Select();
-            }
             else
             {*/
                 ObridorFormulari.obrirFormPrincipal();

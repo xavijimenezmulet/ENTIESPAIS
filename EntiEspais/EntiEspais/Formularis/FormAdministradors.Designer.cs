@@ -159,6 +159,7 @@
             this.sortirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
+            this.sortirToolStripMenuItem.Click += new System.EventHandler(this.sortirToolStripMenuItem_Click);
             // 
             // entitatsToolStripMenuItem
             // 

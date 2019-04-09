@@ -113,18 +113,6 @@
     <Compile Include="FAQS.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
-    <Compile Include="Formularis\FormActivitat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularis\FormActivitat.Designer.cs">
-      <DependentUpon>FormActivitat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularis\FormActivitats.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularis\FormActivitats.Designer.cs">
-      <DependentUpon>FormActivitats.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularis\FormAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,9 +143,7 @@
     <Compile Include="Formularis\FormEspaisTodos.Designer.cs">
       <DependentUpon>FormEspaisTodos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularis\FormEspaisTodosAlta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularis\FormEspaisTodosAlta.cs" />
     <Compile Include="Formularis\FormEspaisTodosAlta.Designer.cs">
       <DependentUpon>FormEspaisTodosAlta.cs</DependentUpon>
     </Compile>
@@ -293,12 +279,6 @@
     <Compile Include="Formularis\FormInstalacions.Designer.cs">
       <DependentUpon>FormInstalacions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularis\FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularis\FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularis\FormModificadorContrassenya.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,9 +303,7 @@
     <Compile Include="Formularis\FormSexes.Designer.cs">
       <DependentUpon>FormSexes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularis\FormTelefonEntitat.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularis\FormTelefonEntitat.cs" />
     <Compile Include="Formularis\FormTelefonEntitat.Designer.cs">
       <DependentUpon>FormTelefonEntitat.cs</DependentUpon>
     </Compile>
@@ -414,15 +392,6 @@
     <Compile Include="TELEFONS_INSTALACIONS.cs">
       <DependentUpon>ModelEntiEspais.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularis\FormActivitat.af-NA.resx">
-      <DependentUpon>FormActivitat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularis\FormActivitat.resx">
-      <DependentUpon>FormActivitat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularis\FormActivitats.resx">
-      <DependentUpon>FormActivitats.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormAdministrador.af-NA.resx">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -515,9 +484,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormInstalacions.resx">
       <DependentUpon>FormInstalacions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularis\FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularis\FormModificadorContrassenya.resx">
       <DependentUpon>FormModificadorContrassenya.cs</DependentUpon>

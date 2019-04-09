@@ -51,54 +51,61 @@
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.comboBoxDillunsInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDillunsInici = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDillunsFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDillunsFinal = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxDimartsFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimartsFinal = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDimartsInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimartsInici = new System.Windows.Forms.BindingSource(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.comboBoxDimecresFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimecresFinal = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDimecresInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDimecresInici = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.comboBoxDijousFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDijousFinal = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDijousInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDijousInici = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxDivendresFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDivendresFinal = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDivendresInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDivendresInici = new System.Windows.Forms.BindingSource(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.comboBoxDissabteFinal = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDissabteFinal = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxDissabteInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDissabteInici = new System.Windows.Forms.BindingSource(this.components);
             this.label15 = new System.Windows.Forms.Label();
             this.comboBoxDiumengeFinal = new System.Windows.Forms.ComboBox();
-            this.comboBoxDiumengeInici = new System.Windows.Forms.ComboBox();
-            this.bindingSourceDillunsInici = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDillunsFinal = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDimartsInici = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDimartsFinal = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDimecresInici = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDimecresFinal = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDijousInici = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDijousFinal = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDivendresInici = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDivendresFinal = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDissabteInici = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDissabteFinal = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceDiumengeInici = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceDiumengeFinal = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxDiumengeInici = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDiumengeInici = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar
@@ -123,7 +130,7 @@
             this.buttonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.buttonAceptar.ForeColor = System.Drawing.Color.Snow;
             this.buttonAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAceptar.Location = new System.Drawing.Point(112, 298);
+            this.buttonAceptar.Location = new System.Drawing.Point(172, 298);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(160, 23);
             this.buttonAceptar.TabIndex = 31;
@@ -368,6 +375,10 @@
             this.comboBoxDillunsInici.TabIndex = 49;
             this.comboBoxDillunsInici.ValueMember = "id";
             // 
+            // bindingSourceDillunsInici
+            // 
+            this.bindingSourceDillunsInici.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDillunsFinal
             // 
             this.comboBoxDillunsFinal.DataSource = this.bindingSourceDillunsFinal;
@@ -378,6 +389,10 @@
             this.comboBoxDillunsFinal.Size = new System.Drawing.Size(116, 21);
             this.comboBoxDillunsFinal.TabIndex = 50;
             this.comboBoxDillunsFinal.ValueMember = "id";
+            // 
+            // bindingSourceDillunsFinal
+            // 
+            this.bindingSourceDillunsFinal.DataSource = typeof(EntiEspais.HORES);
             // 
             // label8
             // 
@@ -408,6 +423,10 @@
             this.comboBoxDimartsFinal.TabIndex = 53;
             this.comboBoxDimartsFinal.ValueMember = "id";
             // 
+            // bindingSourceDimartsFinal
+            // 
+            this.bindingSourceDimartsFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDimartsInici
             // 
             this.comboBoxDimartsInici.DataSource = this.bindingSourceDimartsInici;
@@ -418,6 +437,10 @@
             this.comboBoxDimartsInici.Size = new System.Drawing.Size(116, 21);
             this.comboBoxDimartsInici.TabIndex = 52;
             this.comboBoxDimartsInici.ValueMember = "id";
+            // 
+            // bindingSourceDimartsInici
+            // 
+            this.bindingSourceDimartsInici.DataSource = typeof(EntiEspais.HORES);
             // 
             // label11
             // 
@@ -439,6 +462,10 @@
             this.comboBoxDimecresFinal.TabIndex = 56;
             this.comboBoxDimecresFinal.ValueMember = "id";
             // 
+            // bindingSourceDimecresFinal
+            // 
+            this.bindingSourceDimecresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDimecresInici
             // 
             this.comboBoxDimecresInici.DataSource = this.bindingSourceDimecresInici;
@@ -449,6 +476,10 @@
             this.comboBoxDimecresInici.Size = new System.Drawing.Size(116, 21);
             this.comboBoxDimecresInici.TabIndex = 55;
             this.comboBoxDimecresInici.ValueMember = "id";
+            // 
+            // bindingSourceDimecresInici
+            // 
+            this.bindingSourceDimecresInici.DataSource = typeof(EntiEspais.HORES);
             // 
             // label12
             // 
@@ -470,6 +501,10 @@
             this.comboBoxDijousFinal.TabIndex = 59;
             this.comboBoxDijousFinal.ValueMember = "id";
             // 
+            // bindingSourceDijousFinal
+            // 
+            this.bindingSourceDijousFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDijousInici
             // 
             this.comboBoxDijousInici.DataSource = this.bindingSourceDijousInici;
@@ -480,6 +515,10 @@
             this.comboBoxDijousInici.Size = new System.Drawing.Size(116, 21);
             this.comboBoxDijousInici.TabIndex = 58;
             this.comboBoxDijousInici.ValueMember = "id";
+            // 
+            // bindingSourceDijousInici
+            // 
+            this.bindingSourceDijousInici.DataSource = typeof(EntiEspais.HORES);
             // 
             // label13
             // 
@@ -501,6 +540,10 @@
             this.comboBoxDivendresFinal.TabIndex = 62;
             this.comboBoxDivendresFinal.ValueMember = "id";
             // 
+            // bindingSourceDivendresFinal
+            // 
+            this.bindingSourceDivendresFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDivendresInici
             // 
             this.comboBoxDivendresInici.BackColor = System.Drawing.Color.White;
@@ -512,6 +555,10 @@
             this.comboBoxDivendresInici.Size = new System.Drawing.Size(116, 21);
             this.comboBoxDivendresInici.TabIndex = 61;
             this.comboBoxDivendresInici.ValueMember = "id";
+            // 
+            // bindingSourceDivendresInici
+            // 
+            this.bindingSourceDivendresInici.DataSource = typeof(EntiEspais.HORES);
             // 
             // label14
             // 
@@ -533,6 +580,10 @@
             this.comboBoxDissabteFinal.TabIndex = 65;
             this.comboBoxDissabteFinal.ValueMember = "id";
             // 
+            // bindingSourceDissabteFinal
+            // 
+            this.bindingSourceDissabteFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDissabteInici
             // 
             this.comboBoxDissabteInici.DataSource = this.bindingSourceDissabteInici;
@@ -543,6 +594,10 @@
             this.comboBoxDissabteInici.Size = new System.Drawing.Size(116, 21);
             this.comboBoxDissabteInici.TabIndex = 64;
             this.comboBoxDissabteInici.ValueMember = "id";
+            // 
+            // bindingSourceDissabteInici
+            // 
+            this.bindingSourceDissabteInici.DataSource = typeof(EntiEspais.HORES);
             // 
             // label15
             // 
@@ -564,6 +619,10 @@
             this.comboBoxDiumengeFinal.TabIndex = 68;
             this.comboBoxDiumengeFinal.ValueMember = "id";
             // 
+            // bindingSourceDiumengeFinal
+            // 
+            this.bindingSourceDiumengeFinal.DataSource = typeof(EntiEspais.HORES);
+            // 
             // comboBoxDiumengeInici
             // 
             this.comboBoxDiumengeInici.DataSource = this.bindingSourceDiumengeInici;
@@ -575,61 +634,86 @@
             this.comboBoxDiumengeInici.TabIndex = 67;
             this.comboBoxDiumengeInici.ValueMember = "id";
             // 
-            // bindingSourceDillunsInici
-            // 
-            this.bindingSourceDillunsInici.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDillunsFinal
-            // 
-            this.bindingSourceDillunsFinal.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDimartsInici
-            // 
-            this.bindingSourceDimartsInici.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDimartsFinal
-            // 
-            this.bindingSourceDimartsFinal.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDimecresInici
-            // 
-            this.bindingSourceDimecresInici.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDimecresFinal
-            // 
-            this.bindingSourceDimecresFinal.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDijousInici
-            // 
-            this.bindingSourceDijousInici.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDijousFinal
-            // 
-            this.bindingSourceDijousFinal.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDivendresInici
-            // 
-            this.bindingSourceDivendresInici.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDivendresFinal
-            // 
-            this.bindingSourceDivendresFinal.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDissabteInici
-            // 
-            this.bindingSourceDissabteInici.DataSource = typeof(EntiEspais.HORES);
-            // 
-            // bindingSourceDissabteFinal
-            // 
-            this.bindingSourceDissabteFinal.DataSource = typeof(EntiEspais.HORES);
-            // 
             // bindingSourceDiumengeInici
             // 
             this.bindingSourceDiumengeInici.DataSource = typeof(EntiEspais.HORES);
             // 
-            // bindingSourceDiumengeFinal
+            // button1
             // 
-            this.bindingSourceDiumengeFinal.DataSource = typeof(EntiEspais.HORES);
+            this.button1.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(868, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 70;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonDeleteDilluns_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(867, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 71;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonDeleteDimarts_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(868, 94);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 23);
+            this.button3.TabIndex = 72;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.buttonDeleteDimecres_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(868, 132);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(25, 23);
+            this.button4.TabIndex = 73;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.buttonDeleteDijous_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(868, 170);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(25, 23);
+            this.button5.TabIndex = 74;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.buttonDeleteDivendres_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(867, 214);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(25, 23);
+            this.button6.TabIndex = 75;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.buttonDeleteDissabte_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::EntiEspais.Properties.Resources.add;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Location = new System.Drawing.Point(868, 254);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(25, 23);
+            this.button7.TabIndex = 76;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.buttonDeleteDiumenge_Click);
             // 
             // FormInstalacioAlta
             // 
@@ -637,7 +721,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EntiEspais.Properties.Resources.fondoescritorioopa_copia;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(896, 516);
+            this.ClientSize = new System.Drawing.Size(929, 516);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.comboBoxDiumengeFinal);
             this.Controls.Add(this.comboBoxDiumengeInici);
@@ -686,18 +777,18 @@
             this.Load += new System.EventHandler(this.FormInstalacioAlta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDillunsFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimartsInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDimecresInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDijousInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDivendresInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDissabteInici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDiumengeInici)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,5 +852,12 @@
         private System.Windows.Forms.BindingSource bindingSourceDissabteFinal;
         private System.Windows.Forms.BindingSource bindingSourceDiumengeInici;
         private System.Windows.Forms.BindingSource bindingSourceDiumengeFinal;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

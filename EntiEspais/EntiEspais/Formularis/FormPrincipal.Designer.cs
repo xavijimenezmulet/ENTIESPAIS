@@ -921,6 +921,7 @@
             // 
             // dataGridViewInstalacions
             // 
+            this.dataGridViewInstalacions.AllowUserToAddRows = false;
             this.dataGridViewInstalacions.AllowUserToDeleteRows = false;
             this.dataGridViewInstalacions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -949,7 +950,7 @@
             this.eSPAISDataGridViewTextBoxColumn,
             this.hORARIINSTALACIODataGridViewTextBoxColumn,
             this.tELEFONSINSTALACIONSDataGridViewTextBoxColumn});
-            this.dataGridViewInstalacions.DataSource = this.iNSTALACIONSBindingSource;
+            this.dataGridViewInstalacions.DataSource = this.bindingSourceInstalacions;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1137,6 +1138,10 @@
             // 
             this.Reloj.Enabled = true;
             this.Reloj.Tick += new System.EventHandler(this.Reloj_Tick);
+            // 
+            // bindingSourceInstalacions
+            // 
+            this.bindingSourceInstalacions.DataSource = typeof(EntiEspais.INSTALACIONS);
             // 
             // FormPrincipal
             // 

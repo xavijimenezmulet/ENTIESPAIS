@@ -31,7 +31,7 @@ namespace EntiEspais.ORM
             FAQS a = GeneralORM.bd.FAQS.Find(faq.id);
 
             a.pregunta = faq.pregunta;
-            a.descripción = faq.descripción;
+            a.descripcion = faq.descripcion;
 
             missatgeError = GeneralORM.SaveChanges();
 

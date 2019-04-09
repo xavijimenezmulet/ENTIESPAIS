@@ -38,7 +38,7 @@ namespace EntiEspais.Formularis
             if (this.Text.Equals("MODIFICAR FAQ"))
             {
                 textBoxPregunta.Text = this.f.pregunta.ToString();
-                textBoxResposta.Text = this.f.descripción.ToString();
+                textBoxResposta.Text = this.f.descripcion.ToString();
             }
         }
 
@@ -59,7 +59,7 @@ namespace EntiEspais.Formularis
                 String missatge = "";
 
                 this.f.pregunta = textBoxPregunta.Text.ToString();
-                this.f.descripción = textBoxResposta.Text.ToString();
+                this.f.descripcion = textBoxResposta.Text.ToString();
 
                 missatge = FaqsAndroidORM.InsertFaq(this.f);
 
@@ -79,7 +79,7 @@ namespace EntiEspais.Formularis
                 String missatge = "";
 
                 this.f.pregunta = textBoxPregunta.Text.ToString();
-                this.f.descripción = textBoxResposta.Text.ToString();
+                this.f.descripcion = textBoxResposta.Text.ToString();
 
                 missatge = FaqsAndroidORM.UpdateFaq(this.f);
 

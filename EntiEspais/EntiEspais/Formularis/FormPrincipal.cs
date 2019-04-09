@@ -73,6 +73,7 @@ namespace EntiEspais
             Reloj.Start();  //incia el rellotge
             pictureBoxImagenPrincipal.Select(); //seleccionem imatge perque no es seleccioni ninguna grid
             bindingSourceEntitats.DataSource = EntitatsORM.SelectAllEntitiesByTemporadaActual("2018-2019");
+            bindingSourceInstalacions.DataSource = InstalacionsORM.selectInstalacions();
     
             
         }

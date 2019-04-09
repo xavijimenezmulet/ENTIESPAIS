@@ -744,7 +744,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="pregunta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="HORARI_ACTIVITAT">
           <Key>
@@ -1329,7 +1329,7 @@
               <MappingFragment StoreEntitySet="FAQS">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="pregunta" ColumnName="pregunta" />
-                <ScalarProperty Name="descripción" ColumnName="descripción" />
+                <ScalarProperty Name="descripcion" ColumnName="descripción" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

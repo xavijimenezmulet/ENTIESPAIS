@@ -85,18 +85,18 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonSortir = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewActivitats = new System.Windows.Forms.DataGridView();
+            this.Equip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Instalacio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Espai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Entitat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelHora = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Reloj = new System.Windows.Forms.Timer(this.components);
             this.buttonVeure = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
-            this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Equip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Instalacio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Espai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Entitat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).BeginInit();
@@ -233,6 +233,7 @@
             this.llistatInstallacionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.llistatInstallacionsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.llistatInstallacionsToolStripMenuItem.Text = "Llistat Instal·lacions";
+            this.llistatInstallacionsToolStripMenuItem.Click += new System.EventHandler(this.llistatInstallacionsToolStripMenuItem_Click);
             // 
             // afegirInstallacióToolStripMenuItem
             // 
@@ -242,6 +243,7 @@
             | System.Windows.Forms.Keys.I)));
             this.afegirInstallacióToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.afegirInstallacióToolStripMenuItem.Text = "Afegir Instal·lació";
+            this.afegirInstallacióToolStripMenuItem.Click += new System.EventHandler(this.afegirInstallacióToolStripMenuItem_Click);
             // 
             // espaisToolStripMenuItem
             // 
@@ -261,6 +263,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click);
             // 
             // afegirEspaiToolStripMenuItem
             // 
@@ -270,6 +273,7 @@
             | System.Windows.Forms.Keys.P)));
             this.afegirEspaiToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.afegirEspaiToolStripMenuItem.Text = "Afegir Espai";
+            this.afegirEspaiToolStripMenuItem.Click += new System.EventHandler(this.afegirEspaiToolStripMenuItem_Click);
             // 
             // activitatsToolStripMenuItem
             // 
@@ -317,6 +321,7 @@
             this.llistatUsuarisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.llistatUsuarisToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.llistatUsuarisToolStripMenuItem.Text = "Llistat Usuaris";
+            this.llistatUsuarisToolStripMenuItem.Click += new System.EventHandler(this.llistatUsuarisToolStripMenuItem_Click);
             // 
             // afegirUsuariToolStripMenuItem
             // 
@@ -663,6 +668,34 @@
             this.dataGridViewActivitats.TabIndex = 10;
             this.dataGridViewActivitats.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewActivitats_CellFormatting);
             // 
+            // Equip
+            // 
+            this.Equip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Equip.HeaderText = "Equip";
+            this.Equip.Name = "Equip";
+            this.Equip.ReadOnly = true;
+            // 
+            // Instalacio
+            // 
+            this.Instalacio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Instalacio.HeaderText = "Instal·lació";
+            this.Instalacio.Name = "Instalacio";
+            this.Instalacio.ReadOnly = true;
+            // 
+            // Espai
+            // 
+            this.Espai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Espai.HeaderText = "Espai";
+            this.Espai.Name = "Espai";
+            this.Espai.ReadOnly = true;
+            // 
+            // Entitat
+            // 
+            this.Entitat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Entitat.HeaderText = "Entitat";
+            this.Entitat.Name = "Entitat";
+            this.Entitat.ReadOnly = true;
+            // 
             // labelHora
             // 
             this.labelHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -720,10 +753,6 @@
             this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
-            // bindingSourceActivitats
-            // 
-            this.bindingSourceActivitats.DataSource = typeof(EntiEspais.ACTIVITATS);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -740,33 +769,9 @@
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
             this.nomDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Equip
+            // bindingSourceActivitats
             // 
-            this.Equip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Equip.HeaderText = "Equip";
-            this.Equip.Name = "Equip";
-            this.Equip.ReadOnly = true;
-            // 
-            // Instalacio
-            // 
-            this.Instalacio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Instalacio.HeaderText = "Instal·lació";
-            this.Instalacio.Name = "Instalacio";
-            this.Instalacio.ReadOnly = true;
-            // 
-            // Espai
-            // 
-            this.Espai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Espai.HeaderText = "Espai";
-            this.Espai.Name = "Espai";
-            this.Espai.ReadOnly = true;
-            // 
-            // Entitat
-            // 
-            this.Entitat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Entitat.HeaderText = "Entitat";
-            this.Entitat.Name = "Entitat";
-            this.Entitat.ReadOnly = true;
+            this.bindingSourceActivitats.DataSource = typeof(EntiEspais.ACTIVITATS);
             // 
             // FormActivitats
             // 

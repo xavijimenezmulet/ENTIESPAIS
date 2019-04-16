@@ -27,7 +27,7 @@ namespace EntiEspais.Formularis
 
         private void afegirUsuariToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ObridorFormulari.obrirFormEntitat();
+            ObridorFormulari.obrirFormAdministrador();
         }
 
         private void toolStripButtonSortir_Click_1(object sender, EventArgs e)
@@ -205,6 +205,31 @@ namespace EntiEspais.Formularis
         {
             ObridorFormulari.obrirFormEntitats();
             this.Close();
+        }
+
+        private void llistatUsuarisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormAdministradors();
+        }
+
+        private void llistatEspaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormEspais();
+        }
+
+        private void afegirEspaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.FormEspaisTodosAlta();
+        }
+
+        private void llistatInstallacionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacions();
+        }
+
+        private void afegirInstallacióToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ObridorFormulari.obrirFormInstalacioAlta();
         }
     }
 }

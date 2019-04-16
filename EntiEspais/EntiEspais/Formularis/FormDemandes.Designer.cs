@@ -236,6 +236,7 @@
             this.llistatInstallacionsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.llistatInstallacionsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.llistatInstallacionsToolStripMenuItem.Text = "Llistat Instal·lacions";
+            this.llistatInstallacionsToolStripMenuItem.Click += new System.EventHandler(this.llistatInstallacionsToolStripMenuItem_Click);
             // 
             // afegirInstallacióToolStripMenuItem
             // 
@@ -245,6 +246,7 @@
             | System.Windows.Forms.Keys.I)));
             this.afegirInstallacióToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.afegirInstallacióToolStripMenuItem.Text = "Afegir Instal·lació";
+            this.afegirInstallacióToolStripMenuItem.Click += new System.EventHandler(this.afegirInstallacióToolStripMenuItem_Click);
             // 
             // espaisToolStripMenuItem
             // 
@@ -264,6 +266,7 @@
             this.llistatEspaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.llistatEspaisToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.llistatEspaisToolStripMenuItem.Text = "Llistat Espais";
+            this.llistatEspaisToolStripMenuItem.Click += new System.EventHandler(this.llistatEspaisToolStripMenuItem_Click);
             // 
             // afegirEspaiToolStripMenuItem
             // 
@@ -273,6 +276,7 @@
             | System.Windows.Forms.Keys.P)));
             this.afegirEspaiToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.afegirEspaiToolStripMenuItem.Text = "Afegir Espai";
+            this.afegirEspaiToolStripMenuItem.Click += new System.EventHandler(this.afegirEspaiToolStripMenuItem_Click);
             // 
             // activitatsToolStripMenuItem
             // 
@@ -320,6 +324,7 @@
             this.llistatUsuarisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.llistatUsuarisToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.llistatUsuarisToolStripMenuItem.Text = "Llistat Usuaris";
+            this.llistatUsuarisToolStripMenuItem.Click += new System.EventHandler(this.llistatUsuarisToolStripMenuItem_Click);
             // 
             // afegirUsuariToolStripMenuItem
             // 
